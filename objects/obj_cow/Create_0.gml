@@ -1,0 +1,13 @@
+move = 0
+hsp = 0
+vsp = 0
+grav = 0.5
+grounded = 0
+movespeed = 0
+offscreen = 0
+state = (126 << 0)
+blockinst = -4
+depth = -5
+platformid = -4
+hsp_carry = 0
+vsp_carry = 0
