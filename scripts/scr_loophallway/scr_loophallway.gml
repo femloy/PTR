@@ -15,6 +15,4 @@ function scr_loophallway(argument0)
             }
         }
     }
-    exit;
 }
-

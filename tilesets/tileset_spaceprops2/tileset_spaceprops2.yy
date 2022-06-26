@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_spaceprops2",
-    "path": "sprites/tilespr_tileset_spaceprops2/tilespr_tileset_spaceprops2.yy"
+    "path": "sprites/tilespr_tileset_spaceprops2/tilespr_tileset_spaceprops2.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "spacegroup",
-    "path": "texturegroups/spacegroup"
+    "path": "texturegroups/spacegroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 25,
-  "tile_count": 630,
+  "tile_count": 650,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -652,21 +652,41 @@
       626,
       627,
       628,
-      629
+      629,
+      630,
+      631,
+      632,
+      633,
+      634,
+      635,
+      636,
+      637,
+      638,
+      639,
+      640,
+      641,
+      642,
+      643,
+      644,
+      645,
+      646,
+      647,
+      648,
+      649,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Space",
+    "path": "folders/Tile Sets/Space.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_spaceprops2",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

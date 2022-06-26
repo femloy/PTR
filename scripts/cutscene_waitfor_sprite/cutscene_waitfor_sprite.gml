@@ -14,4 +14,3 @@ function cutscene_waitfor_sprite(argument0)
         cutscene_end_action()
     exit;
 }
-

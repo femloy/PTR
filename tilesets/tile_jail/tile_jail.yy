@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_jail",
-    "path": "sprites/tilespr_tile_jail/tilespr_tile_jail.yy"
+    "path": "sprites/tilespr_tile_jail/tilespr_tile_jail.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "citygroup",
-    "path": "texturegroups/citygroup"
+    "path": "texturegroups/citygroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 33,
-  "tile_count": 1104,
+  "tile_count": 1122,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -1126,21 +1126,39 @@
       1100,
       1101,
       1102,
-      1103
+      1103,
+      1104,
+      1105,
+      1106,
+      1107,
+      1108,
+      1109,
+      1110,
+      1111,
+      1112,
+      1113,
+      1114,
+      1115,
+      1116,
+      1117,
+      1118,
+      1119,
+      1120,
+      1121,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Street",
+    "path": "folders/Tile Sets/Street.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_jail",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

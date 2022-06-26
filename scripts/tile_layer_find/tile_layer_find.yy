@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy"
+    "name": "GMS1 Compatibility Scripts",
+    "path": "folders/Scripts/GMS1 Compatibility Scripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_layer_find",
   "tags": [],
-  "resourceType": "GMScript"
+  "resourceType": "GMScript",
 }

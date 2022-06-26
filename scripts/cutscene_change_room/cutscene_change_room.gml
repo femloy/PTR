@@ -7,4 +7,3 @@ function cutscene_change_room(argument0)
         cutscene_end_action()
     exit;
 }
-

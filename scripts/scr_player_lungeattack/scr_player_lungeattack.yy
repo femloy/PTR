@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy"
+    "name": "States",
+    "path": "folders/Scripts/Player/States.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_player_lungeattack",
   "tags": [],
-  "resourceType": "GMScript"
+  "resourceType": "GMScript",
 }

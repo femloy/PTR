@@ -1,116 +1,35 @@
 {
-  "HTile": false,
-  "VTile": false,
-  "For3D": false,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 128,
   "bbox_right": 319,
   "bbox_top": 32,
   "bbox_bottom": 223,
-  "origin": 0,
-  "bboxMode": 0,
-  "collisionKind": 1,
-  "type": 0,
-  "swfPrecision": 2.525,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
   "width": 320,
   "height": 320,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {
-      "compositeImage": {
-        "FrameId": {
-          "name": "ed7b5055-ad8f-4cd2-907a-f73a2cacb81f",
-          "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-        },
-        "LayerId": null,
-        "resourceVersion": "1.0",
-        "name": "",
-        "tags": [],
-        "resourceType": "GMSpriteBitmap"
-      },
-      "images": [
-        {
-          "FrameId": {
-            "name": "ed7b5055-ad8f-4cd2-907a-f73a2cacb81f",
-            "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-          },
-          "LayerId": {
-            "name": "c6dac749-d8c6-4f6e-b6c8-1fcc36d0ced5",
-            "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-          },
-          "resourceVersion": "1.0",
-          "name": "",
-          "tags": [],
-          "resourceType": "GMSpriteBitmap"
-        }
-      ],
-      "parent": {
-        "name": "spr_tilegolf",
-        "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "ed7b5055-ad8f-4cd2-907a-f73a2cacb81f",
-      "tags": [],
-      "resourceType": "GMSpriteFrame"
-    }
+    {"compositeImage":{"FrameId":{"name":"ed7b5055-ad8f-4cd2-907a-f73a2cacb81f","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ed7b5055-ad8f-4cd2-907a-f73a2cacb81f","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},"LayerId":{"name":"c6dac749-d8c6-4f6e-b6c8-1fcc36d0ced5","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_tilegolf","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},"resourceVersion":"1.0","name":"ed7b5055-ad8f-4cd2-907a-f73a2cacb81f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "tracks": [
-      {
-        "name": "frames",
-        "spriteId": null,
-        "keyframes": {
-          "Keyframes": [
-            {
-              "id": "2d1a4fac-22f6-4a55-b745-118486a1d9a4",
-              "Key": 0.0,
-              "Length": 1.0,
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "Channels": {
-                "0": {
-                  "Id": {
-                    "name": "ed7b5055-ad8f-4cd2-907a-f73a2cacb81f",
-                    "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-                  },
-                  "resourceVersion": "1.0",
-                  "name": "",
-                  "resourceType": "SpriteFrameKeyframe"
-                }
-              },
-              "resourceType": "Keyframe<SpriteFrameKeyframe>"
-            }
-          ],
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>"
-        },
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "resourceVersion": "1.0",
-        "tags": [],
-        "resourceType": "GMSpriteFramesTrack"
-      }
-    ],
-    "visibleRange": null,
-    "spriteId": {
-      "name": "spr_tilegolf",
-      "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-    },
+    "spriteId": {"name":"spr_tilegolf","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -118,14 +37,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {
-      "Keyframes": [],
-      "resourceType": "KeyframeStore<MessageEventKeyframe>"
-    },
-    "moments": {
-      "Keyframes": [],
-      "resourceType": "KeyframeStore<MomentsEventKeyframe>"
-    },
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"2d1a4fac-22f6-4a55-b745-118486a1d9a4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ed7b5055-ad8f-4cd2-907a-f73a2cacb81f","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+    ],
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -139,35 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {
-      "name": "spr_tilegolf",
-      "path": "sprites/spr_tilegolf/spr_tilegolf.yy"
-    },
+    "parent": {"name":"spr_tilegolf","path":"sprites/spr_tilegolf/spr_tilegolf.yy",},
     "resourceVersion": "1.4",
     "name": "spr_tilegolf",
     "tags": [],
-    "resourceType": "GMSequence"
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {
-      "visible": true,
-      "isLocked": false,
-      "blendMode": 0,
-      "opacity": 100.0,
-      "displayName": "default",
-      "resourceVersion": "1.0",
-      "name": "c6dac749-d8c6-4f6e-b6c8-1fcc36d0ced5",
-      "tags": [],
-      "resourceType": "GMImageLayer"
-    }
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c6dac749-d8c6-4f6e-b6c8-1fcc36d0ced5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
+    "name": "Golf",
+    "path": "folders/Sprites/Backgrounds/Golf.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_tilegolf",
   "tags": [],
-  "resourceType": "GMSprite"
+  "resourceType": "GMSprite",
 }

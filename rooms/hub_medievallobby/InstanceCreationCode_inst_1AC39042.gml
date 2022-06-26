@@ -17,7 +17,7 @@ if (global.levelcompletename != "CHATEAU")
             other.backx = backtohubstartx
             other.backy = backtohubstarty
         }
-        scene_info = [[cutscene_medieval_start], [cutscene_waitfor_sprite, 324], [cutscene_medieval_start2], [cutscene_set_player_visible, 0], [cutscene_player_float, 1], [cutscene_player_pos_lerp, 1173, 997, 0.03], [cutscene_wait, 40], [cutscene_medieval_middle], [cutscene_player_pos_lerp, backx, backy, 0.03], [cutscene_set_player_pos, backx, backy], [cutscene_set_player_visible, 1], [cutscene_player_float, 0], [cutscene_medieval_end], [cutscene_save_game]]
+        scene_info = [[cutscene_medieval_start], [cutscene_waitfor_sprite, obj_player1], [cutscene_medieval_start2], [cutscene_set_player_visible, 0], [cutscene_player_float, 1], [cutscene_player_pos_lerp, 1173, 997, 0.03], [cutscene_wait, 40], [cutscene_medieval_middle], [cutscene_player_pos_lerp, backx, backy, 0.03], [cutscene_set_player_pos, backx, backy], [cutscene_set_player_visible, 1], [cutscene_player_float, 0], [cutscene_medieval_end], [cutscene_save_game]]
     }
     else if global.levelcomplete
     {
@@ -32,7 +32,7 @@ else if (global.levelcomplete && (!global.chateaucutscene))
     global.levelcomplete = 0
     global.chateaucutscene = 1
     currentroom = room
-    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, 324], [cutscene_player_idleanim], [cutscene_change_room, 171], [cutscene_set_player_visible, 0], [cutscene_set_player_pos, 1888, 369], [cutscene_wait, 100], [cutscene_change_room, currentroom], [cutscene_set_player_visible, 1], [function()
+    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, obj_player1], [cutscene_player_idleanim], [cutscene_change_room, 171], [cutscene_set_player_visible, 0], [cutscene_set_player_pos, 1888, 369], [cutscene_wait, 100], [cutscene_change_room, currentroom], [cutscene_set_player_visible, 1], [function()
     {
         with (obj_player)
         {

@@ -38,4 +38,3 @@ switch state
         }
         break
 }
-

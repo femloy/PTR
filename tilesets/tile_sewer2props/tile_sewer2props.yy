@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_sewer2props",
-    "path": "sprites/tilespr_tile_sewer2props/tilespr_tile_sewer2props.yy"
+    "path": "sprites/tilespr_tile_sewer2props/tilespr_tile_sewer2props.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "sewergroup",
-    "path": "texturegroups/sewergroup"
+    "path": "texturegroups/sewergroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 24,
-  "tile_count": 560,
+  "tile_count": 576,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -582,21 +582,37 @@
       556,
       557,
       558,
-      559
+      559,
+      560,
+      561,
+      562,
+      563,
+      564,
+      565,
+      566,
+      567,
+      568,
+      569,
+      570,
+      571,
+      572,
+      573,
+      574,
+      575,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Sewer",
+    "path": "folders/Tile Sets/Sewer.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_sewer2props",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

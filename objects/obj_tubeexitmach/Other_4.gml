@@ -3,13 +3,13 @@ switch object_index
     case obj_tubeexitdownexit:
         tube_angle = 270
         break
-    case 839:
+    case obj_tubeexitSjump:
         tube_angle = 90
         break
-    case 8:
+    case obj_tubeenter:
         tube_angle = point_direction(x, y, (x - hsp), (y - vsp))
         break
-    case 14:
+    case obj_tubeexitmach:
         tube_angle = 0
         break
 }

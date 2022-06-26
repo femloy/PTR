@@ -2,7 +2,7 @@ if (global.levelcomplete && (!global.kidspartycutscene))
 {
     currentroom = room
     mechactor = -4
-    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, 324], [cutscene_player_idleanim], [cutscene_change_room, 171], [cutscene_set_player_visible, 0], [cutscene_set_player_pos, 1848, 750], [cutscene_player_float, 1], [cutscene_wait, 50], [function()
+    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, obj_player1], [cutscene_player_idleanim], [cutscene_change_room, 171], [cutscene_set_player_visible, 0], [cutscene_set_player_pos, 1848, 750], [cutscene_player_float, 1], [cutscene_wait, 50], [function()
     {
         mechactor = instance_create(1632, 416, obj_actor)
         mechactor.sprite_index = spr_pizzamech

@@ -9,16 +9,16 @@
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_sewer.mp3",
   "duration": 139.52,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "mu_sewer",
   "tags": [],
-  "resourceType": "GMSound"
+  "resourceType": "GMSound",
 }

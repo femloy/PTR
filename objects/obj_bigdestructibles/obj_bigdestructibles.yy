@@ -7,7 +7,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_destructibles",
-    "path": "objects/obj_destructibles/obj_destructibles.yy"
+    "path": "objects/obj_destructibles/obj_destructibles.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Technical",
+    "path": "folders/Objects/Game settings/Technical.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bigdestructibles",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

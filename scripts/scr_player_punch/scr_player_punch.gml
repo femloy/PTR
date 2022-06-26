@@ -66,23 +66,23 @@ function scr_player_punch()
                     switch sprite_index
                     {
                         case spr_player_kungfu1:
-                        case 2444:
-                        case 2701:
+                        case spr_player_kungfu2:
+                        case spr_player_kungfu3:
                         case spr_shotgunsuplexdash:
                             state = (0 << 0)
                             if (move != xscale && move != 0)
                                 movespeed = 2
                             break
-                        case 1365:
+                        case spr_player_kungfuair1transition:
                             sprite_index = spr_player_kungfuair1
                             break
-                        case 1730:
+                        case spr_player_kungfuair2transition:
                             sprite_index = spr_player_kungfuair2
                             break
-                        case 493:
+                        case spr_player_kungfuair3transition:
                             sprite_index = spr_player_kungfuair3
                             break
-                        case 155:
+                        case spr_player_Sjumpcancelland:
                             sprite_index = spr_player_Sjumpcancelslide
                             break
                     }

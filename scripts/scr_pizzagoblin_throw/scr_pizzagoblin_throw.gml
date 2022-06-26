@@ -1,6 +1,6 @@
 function scr_pizzagoblin_throw()
 {
-    if (!variable_global_exists("throw_frame"))
+    if !variable_global_exists("throw_frame")
     {
         global.throw_frame = 0
         global.throw_frame[444] = 11
@@ -27,6 +27,7 @@ function scr_pizzagoblin_throw()
         global.throw_frame[470] = 3
         global.throw_frame[805] = 7
         global.throw_frame[281] = 11
+		
         global.throw_sprite = 0
         global.throw_sprite[444] = spr_pizzagoblin_throwbomb
         global.throw_sprite[446] = spr_canongoblin_throwbomb
@@ -52,6 +53,7 @@ function scr_pizzagoblin_throw()
         global.throw_sprite[470] = spr_ufolive_shoot
         global.throw_sprite[805] = spr_kentukybomber_attack
         global.throw_sprite[281] = spr_ufogrounded_shoot
+		
         global.reset_timer = 0
         global.reset_timer[444] = 200
         global.reset_timer[446] = 200
@@ -78,22 +80,26 @@ function scr_pizzagoblin_throw()
         global.reset_timer[805] = 100
         global.reset_timer[281] = 100
     }
+	
     hsp = 0
-    if place_meeting(x, (y + 1), obj_railh)
+    if place_meeting(x, y + 1, obj_railh)
         hsp = -5
-    else if place_meeting(x, (y + 1), obj_railh2)
+    else if place_meeting(x, y + 1, obj_railh2)
         hsp = 5
-    if (floor(image_index) == (image_number - 1))
+	
+    if floor(image_index) == image_number - 1
     {
         state = (134 << 0)
         sprite_index = walkspr
     }
-    if (bombreset <= 0 && floor(image_index) == global.throw_frame[object_index])
+	
+    if bombreset <= 0 && floor(image_index) == global.throw_frame[object_index]
     {
         bombreset = global.reset_timer[object_index]
         sprite_index = global.throw_sprite[object_index]
         if point_in_rectangle(x, y, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), (camera_get_view_x(view_camera[0]) + camera_get_view_width(view_camera[0])), (camera_get_view_y(view_camera[0]) + camera_get_view_height(view_camera[0])))
             scr_soundeffect(sfx_enemyprojectile)
+		
         switch object_index
         {
             case obj_pizzagoblin:
@@ -106,16 +112,16 @@ function scr_pizzagoblin_throw()
                     countdown = 80
                 }
                 break
-            case 446:
+            case obj_canongoblin:
                 with (instance_create(x, y, obj_canongoblinbomb))
                     image_xscale = other.image_xscale
                 break
-            case 445:
+            case obj_noisegoblin:
                 with (instance_create(x, y, obj_noisegoblin_arrow))
                 {
                 }
                 break
-            case 440:
+            case obj_cheeserobot:
                 with (instance_create(x, y, obj_cheeseblob))
                 {
                     sprite_index = spr_cheeserobot_goop
@@ -125,7 +131,7 @@ function scr_pizzagoblin_throw()
                     grav = 0
                 }
                 break
-            case 460:
+            case obj_spitcheese:
                 if (spitcheesespr == spr_spitcheese_spit)
                 {
                     with (instance_create((x + (image_xscale * 6)), (y - 6), obj_spitcheesespike))
@@ -145,8 +151,8 @@ function scr_pizzagoblin_throw()
                     }
                 }
                 break
-            case 30:
-            case 462:
+            case obj_trash:
+            case obj_invtrash:
                 with (instance_create((x + (image_xscale * 6)), (y - 6), obj_cheeseball))
                 {
                     image_xscale = other.image_xscale
@@ -154,7 +160,7 @@ function scr_pizzagoblin_throw()
                     vsp = -4
                 }
                 break
-            case 442:
+            case obj_robot:
                 with (instance_create((x + (image_xscale * 4)), y, obj_robotknife))
                 {
                     grav = 0
@@ -162,15 +168,15 @@ function scr_pizzagoblin_throw()
                     hsp = (other.image_xscale * 5)
                 }
                 break
-            case 443:
+            case obj_kentukykenny:
                 with (instance_create(x, y, obj_kentukykenny_projectile))
                     image_xscale = other.image_xscale
                 break
-            case 450:
+            case obj_pizzard:
                 with (instance_create(x, y, obj_pizzard_bolt))
                     image_xscale = other.image_xscale
                 break
-            case 453:
+            case obj_swedishmonkey:
                 if elite
                 {
                     with (instance_create(x, y, obj_evilbanana))
@@ -202,21 +208,21 @@ function scr_pizzagoblin_throw()
                         banana += 1
                 }
                 break
-            case 455:
+            case obj_pepgoblin:
                 with (instance_create(x, y, obj_pepgoblin_kickhitbox))
                 {
                     baddieID = other.id
                     image_xscale = other.image_xscale
                 }
                 break
-            case 777:
+            case obj_pepbat:
                 with (instance_create(x, y, obj_pepgoblin_kickhitbox))
                 {
                     baddieID = other.id
                     image_xscale = other.image_xscale
                 }
                 break
-            case 451:
+            case obj_pickle:
                 attacking = 0
                 with (instance_create(x, y, obj_forkhitbox))
                 {
@@ -225,26 +231,26 @@ function scr_pizzagoblin_throw()
                     sprite_index = other.sprite_index
                 }
                 break
-            case 219:
+            case obj_tank:
                 with (instance_create((x + (image_xscale * 6)), (y - 6), obj_canongoblinbomb))
                 {
                     image_xscale = other.image_xscale
                     hsp = (other.image_xscale * 5)
                 }
                 break
-            case 432:
-            case 408:
+            case obj_thug_blue:
+            case obj_thug_red:
                 with (instance_create((x + (8 * image_xscale)), y, obj_robotknife))
                 {
                     image_xscale = other.image_xscale
                     hsp = (other.image_xscale * 5)
                 }
                 break
-            case 452:
+            case obj_rancher:
                 with (instance_create((x + (image_xscale * 6)), (y + 26), obj_rancher_bullet))
                     image_xscale = other.image_xscale
                 break
-            case 222:
+            case obj_smokingpizzaslice:
                 substate = choose((134 << 0), (126 << 0), (126 << 0))
                 if (substate == (134 << 0))
                     image_xscale = choose(-1, 1, (-image_xscale))
@@ -252,7 +258,7 @@ function scr_pizzagoblin_throw()
                 with (instance_create((x + (50 * image_xscale)), (y + 20), obj_smokingprojectile))
                     image_xscale = other.image_xscale
                 break
-            case 433:
+            case obj_thug_green:
                 with (instance_create((x + (8 * image_xscale)), y, obj_junkenemy))
                 {
                     image_xscale = other.image_xscale
@@ -260,20 +266,20 @@ function scr_pizzagoblin_throw()
                     vsp = -8
                 }
                 break
-            case 470:
+            case obj_miniufo:
                 instance_create(x, y, obj_warplaser)
                 break
-            case 281:
+            case obj_miniufo_grounded:
                 with (instance_create((x + (8 * image_xscale)), y, obj_enemybullet))
                 {
                     sprite_index = spr_ufogrounded_bullet
                     image_xscale = other.image_xscale
                 }
                 break
-            case 805:
+            case obj_kentukybomber:
                 instance_create(x, (y + 70), obj_kentukybomb)
                 break
-            case 195:
+            case obj_bazookabaddie:
                 var xx = (x + (72 * image_xscale))
                 instance_create(xx, y, obj_bazooka)
                 create_particle(xx, y, particle.balloonpop)

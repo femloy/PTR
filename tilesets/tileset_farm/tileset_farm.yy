@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_farm",
-    "path": "sprites/tilespr_tileset_farm/tilespr_tileset_farm.yy"
+    "path": "sprites/tilespr_tileset_farm/tilespr_tileset_farm.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "farmgroup",
-    "path": "texturegroups/farmgroup"
+    "path": "texturegroups/farmgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 15,
-  "tile_count": 238,
+  "tile_count": 240,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -260,21 +260,23 @@
       234,
       235,
       236,
-      237
+      237,
+      238,
+      239,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Farm",
+    "path": "folders/Tile Sets/Farm.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_farm",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_alienfollow",
-    "path": "sprites/spr_alienfollow/spr_alienfollow.yy"
+    "path": "sprites/spr_alienfollow/spr_alienfollow.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": true,
   "parentObjectId": {
     "name": "obj_followcharacter",
-    "path": "objects/obj_followcharacter/obj_followcharacter.yy"
+    "path": "objects/obj_followcharacter/obj_followcharacter.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Followers",
+    "path": "folders/Objects/Level/Followers.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_alienfollow",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

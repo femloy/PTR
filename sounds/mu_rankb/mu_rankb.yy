@@ -9,16 +9,16 @@
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_rankb",
   "duration": 15.637,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "mu_rankb",
   "tags": [],
-  "resourceType": "GMSound"
+  "resourceType": "GMSound",
 }

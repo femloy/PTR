@@ -9,16 +9,16 @@
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_medievalremix",
   "duration": 176.002,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "mu_medievalremix",
   "tags": [],
-  "resourceType": "GMSound"
+  "resourceType": "GMSound",
 }

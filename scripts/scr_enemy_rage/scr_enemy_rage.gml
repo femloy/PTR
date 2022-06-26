@@ -27,7 +27,7 @@ function scr_enemy_rage()
                 }
             }
             break
-        case 176:
+        case obj_soldier:
             hsp = 0
             if (!hitboxcreate)
             {
@@ -45,7 +45,7 @@ function scr_enemy_rage()
                 sprite_index = walkspr
             }
             break
-        case 222:
+        case obj_smokingpizzaslice:
             if (floor(image_index) == 12 && (!shot))
             {
                 shot = 1
@@ -60,7 +60,7 @@ function scr_enemy_rage()
                 ragecooldown = 100
             }
             break
-        case 471:
+        case obj_indiancheese:
             ragedash--
             if (ragedash == 0)
             {
@@ -80,7 +80,7 @@ function scr_enemy_rage()
                 }
             }
             break
-        case 470:
+        case obj_miniufo:
             if (floor(image_index) == 3 && shoot == 0)
             {
                 shoot = 1
@@ -89,7 +89,7 @@ function scr_enemy_rage()
             if (floor(image_index) == (image_number - 1))
                 state = (134 << 0)
             break
-        case 431:
+        case obj_cheeseslime:
             if (floor(image_index) > 10)
             {
                 hsp = (image_xscale * 8)
@@ -107,7 +107,7 @@ function scr_enemy_rage()
                 sprite_index = walkspr
             }
             break
-        case 436:
+        case obj_minijohn:
             hsp = (movespeed * image_xscale)
             if (sprite_index == spr_minijohn_rage1 && floor(image_index) == (image_number - 1))
                 sprite_index = spr_minijohn_rage2
@@ -122,7 +122,7 @@ function scr_enemy_rage()
                 sprite_index = spr_minijohn_charge
             }
             break
-        case 472:
+        case obj_fencer:
             var thespeed = 0
             if (image_index > 7)
                 thespeed = 12
@@ -138,7 +138,7 @@ function scr_enemy_rage()
                 sprite_index = spr_fencer_chargestart
             }
             break
-        case 469:
+        case obj_ancho:
             hsp = 0
             if (sprite_index == spr_ancho_rage1)
                 vsp = 0
@@ -162,7 +162,7 @@ function scr_enemy_rage()
                 sprite_index = spr_ancho
             }
             break
-        case 460:
+        case obj_spitcheese:
             ragedash--
             if (ragedash <= 0)
             {
@@ -179,7 +179,7 @@ function scr_enemy_rage()
                 sprite_index = spr_spitcheese_idle
             }
             break
-        case 219:
+        case obj_tank:
             if (sprite_index != spr_tank_chargestart)
             {
                 if ((x + hsp) == xprevious)
@@ -195,7 +195,7 @@ function scr_enemy_rage()
                 sprite_index = spr_tank_charge
             with (instance_place((x + hsp), y, obj_destructibles))
                 instance_destroy()
-            if ((place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!scr_slope())) or slope_buffer <= 0)
+            if ((place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!scr_slope())) || slope_buffer <= 0)
             {
                 slope_buffer = 8
                 state = (138 << 0)
@@ -206,9 +206,9 @@ function scr_enemy_rage()
                 bombreset = 200
             }
             break
-        case 408:
-        case 432:
-        case 433:
+        case obj_thug_red:
+        case obj_thug_blue:
+        case obj_thug_green:
             if ((!shot) && floor(image_index) == 9)
             {
                 shot = 1

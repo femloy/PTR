@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_warlab",
-    "path": "sprites/tilespr_tile_warlab/tilespr_tile_warlab.yy"
+    "path": "sprites/tilespr_tile_warlab/tilespr_tile_warlab.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "wargroup",
-    "path": "texturegroups/wargroup"
+    "path": "texturegroups/wargroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 25,
-  "tile_count": 610,
+  "tile_count": 625,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -632,21 +632,36 @@
       606,
       607,
       608,
-      609
+      609,
+      610,
+      611,
+      612,
+      613,
+      614,
+      615,
+      616,
+      617,
+      618,
+      619,
+      620,
+      621,
+      622,
+      623,
+      624,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "War",
+    "path": "folders/Tile Sets/War.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_warlab",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

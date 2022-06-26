@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_bulletdisappear",
-    "path": "sprites/spr_bulletdisappear/spr_bulletdisappear.yy"
+    "path": "sprites/spr_bulletdisappear/spr_bulletdisappear.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,35 +22,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 7,
-      "eventType": 7,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":7,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Effects",
+    "path": "folders/Objects/Visuals/Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bulletdisappear",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

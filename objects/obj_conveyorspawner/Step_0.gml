@@ -6,6 +6,7 @@ else
     pos++
     if (pos >= array_length(objectlist))
         pos = 0
+	
     with (instance_create(x, (y - 32), objectlist[pos]))
     {
         switch object_index
@@ -13,13 +14,12 @@ else
             case obj_dashpad:
                 image_xscale = other.dir
                 break
-            case 487:
-                use_collision = 1
+            case obj_superspring:
+                use_collision = true
                 break
-            case 456:
-                use_collision = 1
+            case obj_pinballlauncher:
+                use_collision = true
                 break
         }
-
     }
 }

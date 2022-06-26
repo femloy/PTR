@@ -478,6 +478,7 @@ function __global_object_depths()
     global.__objectNames[236] = "obj_cloudeffect"
     global.__objectNames[237] = "obj_machalleffect"
     global.__objectNames[238] = "obj_mach3effect"
+	
     var len = array_length_1d(global.__objectDepths)
     global.__objectID2Depth = []
     for (var i = 0; i < len; i++)
@@ -486,6 +487,4 @@ function __global_object_depths()
         if (objID >= 0)
             global.__objectID2Depth[objID] = global.__objectDepths[i]
     }
-    exit;
 }
-

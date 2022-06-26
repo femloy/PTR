@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_boxxeddebris",
-    "path": "sprites/spr_boxxeddebris/spr_boxxeddebris.yy"
+    "path": "sprites/spr_boxxeddebris/spr_boxxeddebris.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_parentparticle",
-    "path": "objects/obj_parentparticle/obj_parentparticle.yy"
+    "path": "objects/obj_parentparticle/obj_parentparticle.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,35 +25,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 2,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Particles",
+    "path": "folders/Objects/Visuals/Particles.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_boxxeddebris",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

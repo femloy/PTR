@@ -46,6 +46,4 @@ function scr_ratblock_destroy()
 
         }
     }
-    exit;
 }
-

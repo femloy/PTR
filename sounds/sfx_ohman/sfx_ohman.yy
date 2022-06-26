@@ -9,16 +9,16 @@
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_ohman",
   "duration": 1.114,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfx_ohman",
   "tags": [],
-  "resourceType": "GMSound"
+  "resourceType": "GMSound",
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_beachprops1",
-    "path": "sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy"
+    "path": "sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "beachgroup",
-    "path": "texturegroups/beachgroup"
+    "path": "texturegroups/beachgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 14,
-  "tile_count": 207,
+  "tile_count": 210,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -229,21 +229,24 @@
       203,
       204,
       205,
-      206
+      206,
+      207,
+      208,
+      209,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Beach",
+    "path": "folders/Tile Sets/Beach.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_beachprops1",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

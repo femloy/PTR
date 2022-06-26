@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_castle_tileset",
-    "path": "sprites/tilespr_tile_castle_tileset/tilespr_tile_castle_tileset.yy"
+    "path": "sprites/tilespr_tile_castle_tileset/tilespr_tile_castle_tileset.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 29,
-  "tile_count": 820,
+  "tile_count": 841,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -842,21 +842,42 @@
       816,
       817,
       818,
-      819
+      819,
+      820,
+      821,
+      822,
+      823,
+      824,
+      825,
+      826,
+      827,
+      828,
+      829,
+      830,
+      831,
+      832,
+      833,
+      834,
+      835,
+      836,
+      837,
+      838,
+      839,
+      840,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Mansion",
+    "path": "folders/Tile Sets/Mansion.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_castle_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

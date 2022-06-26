@@ -82,7 +82,6 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
         hsp = 0
         vsp = (-_velocity)
     }
-    exit;
 }
 
 function create_firemouth_afterimage(argument0, argument1, argument2, argument3, argument4)
@@ -97,7 +96,6 @@ function create_firemouth_afterimage(argument0, argument1, argument2, argument3,
         image_blend = make_color_rgb(248, 112, 24)
         alpha = 1.25
     }
-    exit;
 }
 
 function create_blue_afterimage(argument0, argument1, argument2, argument3, argument4)
@@ -112,7 +110,6 @@ function create_blue_afterimage(argument0, argument1, argument2, argument3, argu
         image_blend = make_color_rgb(44, 126, 228)
         alpha = 1.25
     }
-    exit;
 }
 
 function create_blur_afterimage(argument0, argument1, argument2, argument3, argument4)

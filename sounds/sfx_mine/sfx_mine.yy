@@ -9,16 +9,16 @@
   "bitDepth": 1,
   "audioGroupId": {
     "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default"
+    "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_mine.mp3",
   "duration": 0.628,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy"
+    "name": "SFX",
+    "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfx_mine",
   "tags": [],
-  "resourceType": "GMSound"
+  "resourceType": "GMSound",
 }

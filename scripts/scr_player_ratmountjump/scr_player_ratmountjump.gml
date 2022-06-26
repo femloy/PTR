@@ -46,26 +46,26 @@ function scr_player_ratmountjump()
             case spr_lonegustavo_jumpstart:
                 sprite_index = spr_lonegustavo_jump
                 break
-            case 2465:
+            case spr_lonegustavo_dashjump:
                 sprite_index = spr_lonegustavo_dashjump
                 break
-            case 2757:
+            case spr_player_ratmountgroundpound:
                 sprite_index = spr_player_ratmountgroundpoundfall
                 break
-            case 2575:
+            case spr_player_ratmountjump:
                 sprite_index = spr_player_ratmountfall
                 break
-            case 2396:
+            case spr_player_ratmountjump2:
                 sprite_index = spr_player_ratmountfall2
                 break
-            case 379:
+            case spr_player_ratmountballoonend2:
                 sprite_index = spr_player_ratmountballoonend3
                 break
-            case 30:
+            case spr_player_ratmountmushroombounce:
                 jumpAnim = 1
                 image_index = (image_number - 1)
                 break
-            case 1268:
+            case spr_player_ratmountballoonend1:
                 if (vsp > 0)
                 {
                     jumpAnim = 1

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_graveyarddeco",
-    "path": "sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy"
+    "path": "sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "graveyardgroup",
-    "path": "texturegroups/graveyardgroup"
+    "path": "texturegroups/graveyardgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 28,
-  "tile_count": 800,
+  "tile_count": 812,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -822,21 +822,33 @@
       796,
       797,
       798,
-      799
+      799,
+      800,
+      801,
+      802,
+      803,
+      804,
+      805,
+      806,
+      807,
+      808,
+      809,
+      810,
+      811,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Graveyard",
+    "path": "folders/Tile Sets/Graveyard.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_graveyarddeco",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

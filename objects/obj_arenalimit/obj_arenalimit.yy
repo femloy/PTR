@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_camera_1x1",
-    "path": "sprites/spr_camera_1x1/spr_camera_1x1.yy"
+    "path": "sprites/spr_camera_1x1/spr_camera_1x1.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Arenas",
+    "path": "folders/Objects/Room structure/Arenas.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_arenalimit",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

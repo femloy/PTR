@@ -167,7 +167,7 @@ function state_player_jump()
                 case spr_mortdoublejumpstart:
                     sprite_index = spr_mortdoublejump
                     break
-                case 1094:
+                case spr_playerN_doublejump:
                     sprite_index = spr_playerN_doublejumpfall
                     break
                 case spr_airdash1:
@@ -176,7 +176,7 @@ function state_player_jump()
                 case spr_shotgunjump:
                     sprite_index = spr_shotgunfall
                     break
-                case 2349:
+                case spr_playerV_superjump:
                     sprite_index = spr_playerV_fall
                     break
                 case spr_jump:
@@ -185,16 +185,16 @@ function state_player_jump()
                 case spr_suplexcancel:
                     sprite_index = spr_fall
                     break
-                case 878:
+                case spr_player_backflip:
                     sprite_index = spr_fall
                     break
-                case 695:
+                case spr_player_Sjumpstart:
                     sprite_index = spr_player_Sjump
                     break
-                case 508:
+                case spr_player_shotgunjump1:
                     sprite_index = spr_player_shotgunjump2
                     break
-                case 496:
+                case spr_shotgun_shootair:
                     sprite_index = spr_shotgunfall
                     break
                 case spr_shotgunshoot:
@@ -203,11 +203,10 @@ function state_player_jump()
                 case spr_stompprep:
                     sprite_index = spr_stomp
                     break
-                case 2715:
+                case spr_player_groundpoundjump:
                     sprite_index = spr_fall
                     break
             }
-
         }
     }
     else if (sprite_index == spr_stompprep && floor(image_index) == (image_number - 1))

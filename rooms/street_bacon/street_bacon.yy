@@ -255,8 +255,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Street",
+    "path": "folders/Rooms/Levels/Street.yy",
   },
   "resourceVersion": "1.0",
   "name": "street_bacon",

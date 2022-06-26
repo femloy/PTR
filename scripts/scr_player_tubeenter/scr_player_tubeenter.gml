@@ -35,9 +35,6 @@ function scr_player_tubeenter()
                     other.vsp = (vsp * other.stored_vsp)
                     other.tube_vsp = (vsp * other.stored_vsp)
             }
-
         }
     }
-    exit;
 }
-

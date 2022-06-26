@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_pinball3",
-    "path": "sprites/tilespr_tileset_pinball3/tilespr_tileset_pinball3.yy"
+    "path": "sprites/tilespr_tileset_pinball3/tilespr_tileset_pinball3.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "pinballgroup",
-    "path": "texturegroups/pinballgroup"
+    "path": "texturegroups/pinballgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 15,
-  "tile_count": 238,
+  "tile_count": 240,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -260,21 +260,23 @@
       234,
       235,
       236,
-      237
+      237,
+      238,
+      239,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Pinball",
+    "path": "folders/Tile Sets/Pinball.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_pinball3",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

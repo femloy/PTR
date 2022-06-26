@@ -1,116 +1,35 @@
 {
-  "HTile": false,
-  "VTile": false,
-  "For3D": false,
+  "bboxMode": 0,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 4,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 47,
   "bbox_right": 59,
   "bbox_top": 38,
   "bbox_bottom": 73,
-  "origin": 4,
-  "bboxMode": 0,
-  "collisionKind": 1,
-  "type": 0,
-  "swfPrecision": 2.525,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
   "width": 100,
   "height": 100,
   "textureGroupId": {
     "name": "smallgroup",
-    "path": "texturegroups/smallgroup"
+    "path": "texturegroups/smallgroup",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {
-      "compositeImage": {
-        "FrameId": {
-          "name": "626a1bb2-a0ec-4980-88a2-8170a83b4684",
-          "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-        },
-        "LayerId": null,
-        "resourceVersion": "1.0",
-        "name": "",
-        "tags": [],
-        "resourceType": "GMSpriteBitmap"
-      },
-      "images": [
-        {
-          "FrameId": {
-            "name": "626a1bb2-a0ec-4980-88a2-8170a83b4684",
-            "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-          },
-          "LayerId": {
-            "name": "03fabda9-98c0-46bf-a293-9d429bcfab3c",
-            "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-          },
-          "resourceVersion": "1.0",
-          "name": "",
-          "tags": [],
-          "resourceType": "GMSpriteBitmap"
-        }
-      ],
-      "parent": {
-        "name": "spr_phonedebris",
-        "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "626a1bb2-a0ec-4980-88a2-8170a83b4684",
-      "tags": [],
-      "resourceType": "GMSpriteFrame"
-    }
+    {"compositeImage":{"FrameId":{"name":"626a1bb2-a0ec-4980-88a2-8170a83b4684","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"626a1bb2-a0ec-4980-88a2-8170a83b4684","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},"LayerId":{"name":"03fabda9-98c0-46bf-a293-9d429bcfab3c","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_phonedebris","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},"resourceVersion":"1.0","name":"626a1bb2-a0ec-4980-88a2-8170a83b4684","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "tracks": [
-      {
-        "name": "frames",
-        "spriteId": null,
-        "keyframes": {
-          "Keyframes": [
-            {
-              "id": "d3c38084-1fb8-4e08-9dce-af224202789a",
-              "Key": 0.0,
-              "Length": 1.0,
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "Channels": {
-                "0": {
-                  "Id": {
-                    "name": "626a1bb2-a0ec-4980-88a2-8170a83b4684",
-                    "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-                  },
-                  "resourceVersion": "1.0",
-                  "name": "",
-                  "resourceType": "SpriteFrameKeyframe"
-                }
-              },
-              "resourceType": "Keyframe<SpriteFrameKeyframe>"
-            }
-          ],
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>"
-        },
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "resourceVersion": "1.0",
-        "tags": [],
-        "resourceType": "GMSpriteFramesTrack"
-      }
-    ],
-    "visibleRange": null,
-    "spriteId": {
-      "name": "spr_phonedebris",
-      "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-    },
+    "spriteId": {"name":"spr_phonedebris","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -118,14 +37,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {
-      "Keyframes": [],
-      "resourceType": "KeyframeStore<MessageEventKeyframe>"
-    },
-    "moments": {
-      "Keyframes": [],
-      "resourceType": "KeyframeStore<MomentsEventKeyframe>"
-    },
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"d3c38084-1fb8-4e08-9dce-af224202789a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"626a1bb2-a0ec-4980-88a2-8170a83b4684","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+    ],
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -139,35 +58,22 @@
     "yorigin": 50,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {
-      "name": "spr_phonedebris",
-      "path": "sprites/spr_phonedebris/spr_phonedebris.yy"
-    },
+    "parent": {"name":"spr_phonedebris","path":"sprites/spr_phonedebris/spr_phonedebris.yy",},
     "resourceVersion": "1.4",
     "name": "spr_phonedebris",
     "tags": [],
-    "resourceType": "GMSequence"
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {
-      "visible": true,
-      "isLocked": false,
-      "blendMode": 0,
-      "opacity": 100.0,
-      "displayName": "default",
-      "resourceVersion": "1.0",
-      "name": "03fabda9-98c0-46bf-a293-9d429bcfab3c",
-      "tags": [],
-      "resourceType": "GMImageLayer"
-    }
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"03fabda9-98c0-46bf-a293-9d429bcfab3c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
+    "name": "Effects and particles",
+    "path": "folders/Sprites/Effects and particles.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_phonedebris",
   "tags": [],
-  "resourceType": "GMSprite"
+  "resourceType": "GMSprite",
 }

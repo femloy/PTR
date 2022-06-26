@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_banditodynamite",
-    "path": "sprites/spr_banditodynamite/spr_banditodynamite.yy"
+    "path": "sprites/spr_banditodynamite/spr_banditodynamite.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_pizzagoblinbomb",
-    "path": "objects/obj_pizzagoblinbomb/obj_pizzagoblinbomb.yy"
+    "path": "objects/obj_pizzagoblinbomb/obj_pizzagoblinbomb.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,25 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Hitboxes",
+    "path": "folders/Objects/Baddie/Hitboxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_banditobomb",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

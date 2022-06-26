@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_minigolfprops",
-    "path": "sprites/tilespr_tileset_minigolfprops/tilespr_tileset_minigolfprops.yy"
+    "path": "sprites/tilespr_tileset_minigolfprops/tilespr_tileset_minigolfprops.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 32,
-  "tile_count": 1032,
+  "tile_count": 1056,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -1054,21 +1054,45 @@
       1028,
       1029,
       1030,
-      1031
+      1031,
+      1032,
+      1033,
+      1034,
+      1035,
+      1036,
+      1037,
+      1038,
+      1039,
+      1040,
+      1041,
+      1042,
+      1043,
+      1044,
+      1045,
+      1046,
+      1047,
+      1048,
+      1049,
+      1050,
+      1051,
+      1052,
+      1053,
+      1054,
+      1055,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Golf",
+    "path": "folders/Tile Sets/Golf.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_minigolfprops",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

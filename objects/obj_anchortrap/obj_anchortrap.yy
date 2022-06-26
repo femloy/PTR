@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "World 5",
+    "path": "folders/Objects/Room structure/World 5.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_anchortrap",

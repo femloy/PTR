@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_secretportal_spawnopen",
-    "path": "sprites/spr_secretportal_spawnopen/spr_secretportal_spawnopen.yy"
+    "path": "sprites/spr_secretportal_spawnopen/spr_secretportal_spawnopen.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,25 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Objects.yy"
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_secretportalstart",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

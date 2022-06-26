@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_tile_kungfucity",
-    "path": "sprites/tilespr_tileset_tile_kungfucity/tilespr_tileset_tile_kungfucity.yy"
+    "path": "sprites/tilespr_tileset_tile_kungfucity/tilespr_tileset_tile_kungfucity.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "kungfugroup",
-    "path": "texturegroups/kungfugroup"
+    "path": "texturegroups/kungfugroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 10,
-  "tile_count": 96,
+  "tile_count": 100,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -118,21 +118,25 @@
       92,
       93,
       94,
-      95
+      95,
+      96,
+      97,
+      98,
+      99,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Pinball",
+    "path": "folders/Tile Sets/Pinball.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_tile_kungfucity",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

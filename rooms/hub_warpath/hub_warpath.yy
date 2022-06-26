@@ -78,8 +78,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "War",
+    "path": "folders/Rooms/Levels/War.yy",
   },
   "resourceVersion": "1.0",
   "name": "hub_warpath",

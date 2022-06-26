@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_forestprops",
-    "path": "sprites/tilespr_tileset_forestprops/tilespr_tileset_forestprops.yy"
+    "path": "sprites/tilespr_tileset_forestprops/tilespr_tileset_forestprops.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "forestgroup",
-    "path": "texturegroups/forestgroup"
+    "path": "texturegroups/forestgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 13,
-  "tile_count": 180,
+  "tile_count": 182,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -202,21 +202,23 @@
       176,
       177,
       178,
-      179
+      179,
+      180,
+      181,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Forest",
+    "path": "folders/Tile Sets/Forest.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_forestprops",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

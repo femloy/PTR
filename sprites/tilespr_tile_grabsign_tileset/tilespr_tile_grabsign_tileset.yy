@@ -1,116 +1,35 @@
 {
-  "HTile": false,
-  "VTile": false,
-  "For3D": false,
+  "bboxMode": 2,
+  "collisionKind": 1,
+  "type": 0,
+  "origin": 0,
   "preMultiplyAlpha": false,
   "edgeFiltering": false,
   "collisionTolerance": 0,
+  "swfPrecision": 2.525,
   "bbox_left": 0,
   "bbox_right": 215,
   "bbox_top": 0,
   "bbox_bottom": 215,
-  "origin": 0,
-  "bboxMode": 2,
-  "collisionKind": 1,
-  "type": 0,
-  "swfPrecision": 2.525,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
   "width": 216,
   "height": 216,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {
-      "compositeImage": {
-        "FrameId": {
-          "name": "14b2cef2-a6b7-4cc1-babd-108e9924b502",
-          "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-        },
-        "LayerId": null,
-        "resourceVersion": "1.0",
-        "name": "",
-        "tags": [],
-        "resourceType": "GMSpriteBitmap"
-      },
-      "images": [
-        {
-          "FrameId": {
-            "name": "14b2cef2-a6b7-4cc1-babd-108e9924b502",
-            "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-          },
-          "LayerId": {
-            "name": "ed7d3a84-9f82-428f-b1ae-1f797e19ab2c",
-            "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-          },
-          "resourceVersion": "1.0",
-          "name": "",
-          "tags": [],
-          "resourceType": "GMSpriteBitmap"
-        }
-      ],
-      "parent": {
-        "name": "tilespr_tile_grabsign_tileset",
-        "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "14b2cef2-a6b7-4cc1-babd-108e9924b502",
-      "tags": [],
-      "resourceType": "GMSpriteFrame"
-    }
+    {"compositeImage":{"FrameId":{"name":"14b2cef2-a6b7-4cc1-babd-108e9924b502","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"14b2cef2-a6b7-4cc1-babd-108e9924b502","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},"LayerId":{"name":"ed7d3a84-9f82-428f-b1ae-1f797e19ab2c","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_grabsign_tileset","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},"resourceVersion":"1.0","name":"14b2cef2-a6b7-4cc1-babd-108e9924b502","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "tracks": [
-      {
-        "name": "frames",
-        "spriteId": null,
-        "keyframes": {
-          "Keyframes": [
-            {
-              "id": "660f785c-0463-49f3-9fba-050757abd88c",
-              "Key": 0.0,
-              "Length": 1.0,
-              "Stretch": false,
-              "Disabled": false,
-              "IsCreationKey": false,
-              "Channels": {
-                "0": {
-                  "Id": {
-                    "name": "14b2cef2-a6b7-4cc1-babd-108e9924b502",
-                    "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-                  },
-                  "resourceVersion": "1.0",
-                  "name": "",
-                  "resourceType": "SpriteFrameKeyframe"
-                }
-              },
-              "resourceType": "Keyframe<SpriteFrameKeyframe>"
-            }
-          ],
-          "resourceType": "KeyframeStore<SpriteFrameKeyframe>"
-        },
-        "trackColour": 0,
-        "inheritsTrackColour": true,
-        "builtinName": 0,
-        "traits": 0,
-        "interpolation": 1,
-        "tracks": [],
-        "events": [],
-        "isCreationTrack": false,
-        "modifiers": [],
-        "resourceVersion": "1.0",
-        "tags": [],
-        "resourceType": "GMSpriteFramesTrack"
-      }
-    ],
-    "visibleRange": null,
-    "spriteId": {
-      "name": "tilespr_tile_grabsign_tileset",
-      "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-    },
+    "spriteId": {"name":"tilespr_tile_grabsign_tileset","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -118,14 +37,14 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {
-      "Keyframes": [],
-      "resourceType": "KeyframeStore<MessageEventKeyframe>"
-    },
-    "moments": {
-      "Keyframes": [],
-      "resourceType": "KeyframeStore<MomentsEventKeyframe>"
-    },
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "tracks": [
+      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"660f785c-0463-49f3-9fba-050757abd88c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"14b2cef2-a6b7-4cc1-babd-108e9924b502","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+    ],
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -139,35 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {
-      "name": "tilespr_tile_grabsign_tileset",
-      "path": "sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy"
-    },
+    "parent": {"name":"tilespr_tile_grabsign_tileset","path":"sprites/tilespr_tile_grabsign_tileset/tilespr_tile_grabsign_tileset.yy",},
     "resourceVersion": "1.4",
     "name": "tilespr_tile_grabsign_tileset",
     "tags": [],
-    "resourceType": "GMSequence"
+    "resourceType": "GMSequence",
   },
   "layers": [
-    {
-      "visible": true,
-      "isLocked": false,
-      "blendMode": 0,
-      "opacity": 100.0,
-      "displayName": "default",
-      "resourceVersion": "1.0",
-      "name": "ed7d3a84-9f82-428f-b1ae-1f797e19ab2c",
-      "tags": [],
-      "resourceType": "GMImageLayer"
-    }
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ed7d3a84-9f82-428f-b1ae-1f797e19ab2c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy"
+    "name": "Tilesets",
+    "path": "folders/Sprites/Tilesets.yy",
   },
   "resourceVersion": "1.0",
   "name": "tilespr_tile_grabsign_tileset",
   "tags": [],
-  "resourceType": "GMSprite"
+  "resourceType": "GMSprite",
 }

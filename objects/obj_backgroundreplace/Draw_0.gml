@@ -6,6 +6,7 @@ if (backgroundID != -4)
     var ch = camera_get_view_height(view_camera[0])
     var sprw = sprite_get_width(background_spr)
     var sprh = sprite_get_height(background_spr)
+	
     for (var yy = (floor((cy / sprh)) - 1); yy < (round(((cy + ch) / sprh)) + 1); yy++)
     {
         for (var xx = (floor((cx / sprw)) - 1); xx < (round(((cx + cw) / sprw)) + 1); xx++)
@@ -23,6 +24,7 @@ if (backgroundID != -4)
             }
         }
     }
+	
     for (i = 0; i < array_length(chunks); i++)
     {
         b = chunks[i]

@@ -6,6 +6,7 @@ switch state
             hsp = 0
         substate = (0 << 0)
         break
+	
     case (17 << 0):
         key_left = playerid.key_left
         key_right = playerid.key_right
@@ -30,6 +31,7 @@ switch state
                     substate = (92 << 0)
                 }
                 break
+			
             case (92 << 0):
                 if key_jump
                     playerid.input_buffer_jump = 0
@@ -42,6 +44,7 @@ switch state
                     hsp = 0
                 }
                 break
+			
             case (108 << 0):
                 instance_destroy(instance_place(x, (y + vsp), obj_metalblock))
                 with (obj_destructibles)
@@ -61,7 +64,6 @@ switch state
                 }
                 break
         }
-
         break
 }
 

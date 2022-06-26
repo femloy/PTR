@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_golf",
-    "path": "sprites/tilespr_tile_golf/tilespr_tile_golf.yy"
+    "path": "sprites/tilespr_tile_golf/tilespr_tile_golf.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +12,7 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -122,21 +122,21 @@
       96,
       97,
       98,
-      99
+      99,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Golf",
+    "path": "folders/Tile Sets/Golf.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_golf",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

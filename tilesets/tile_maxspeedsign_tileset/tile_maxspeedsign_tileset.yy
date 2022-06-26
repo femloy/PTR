@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_maxspeedsign_tileset",
-    "path": "sprites/tilespr_tile_maxspeedsign_tileset/tilespr_tile_maxspeedsign_tileset.yy"
+    "path": "sprites/tilespr_tile_maxspeedsign_tileset/tilespr_tile_maxspeedsign_tileset.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +12,7 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -31,21 +31,21 @@
       5,
       6,
       7,
-      8
+      8,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Tutorial",
+    "path": "folders/Tile Sets/Tutorial.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_maxspeedsign_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

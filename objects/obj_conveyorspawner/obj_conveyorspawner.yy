@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_factoryspawner",
-    "path": "sprites/spr_factoryspawner/spr_factoryspawner.yy"
+    "path": "sprites/spr_factoryspawner/spr_factoryspawner.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,35 +22,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Objects.yy"
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_conveyorspawner",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

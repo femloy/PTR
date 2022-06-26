@@ -121,8 +121,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Entrance",
+    "path": "folders/Rooms/Levels/Entrance.yy",
   },
   "resourceVersion": "1.0",
   "name": "entrance_lap",

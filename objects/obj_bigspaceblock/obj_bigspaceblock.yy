@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite387",
-    "path": "sprites/sprite387/sprite387.yy"
+    "path": "sprites/sprite387/sprite387.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_destroyable3",
-    "path": "objects/obj_destroyable3/obj_destroyable3.yy"
+    "path": "objects/obj_destroyable3/obj_destroyable3.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,35 +25,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 1,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Blocks",
+    "path": "folders/Objects/Room structure/Blocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bigspaceblock",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

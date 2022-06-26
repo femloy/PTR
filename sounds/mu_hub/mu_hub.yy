@@ -14,8 +14,8 @@
   "soundFile": "mu_hub",
   "duration": 157.93633,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "mu_hub",

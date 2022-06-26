@@ -14,6 +14,4 @@ function cutscene_taxi_start(argument0)
         image_speed = 0.35
     }
     cutscene_end_action()
-    exit;
 }
-

@@ -3,10 +3,10 @@ function string_split(argument0, argument1)
     argument0 += " "
     var _current_str = ""
     var _list = [0]
-    for (var i = 1; i < (string_length(argument0) + 1); i++)
+    for (var i = 1; i < string_length(argument0) + 1; i++)
     {
         var _char = string_char_at(argument0, i)
-        if (_char != argument1)
+        if _char != argument1
             _current_str += _char
         else
         {
@@ -17,62 +17,58 @@ function string_split(argument0, argument1)
     return _list;
 }
 
-function function_overload(argument0, argument1)
+function function_overload(args_array, func)
 {
-    var _size = array_length(argument0)
-    switch (_size - 1)
+    var _size = array_length(args_array)
+    switch _size - 1
     {
         case -1:
-            argument1()
+            func()
             break
         case 0:
-            argument1(argument0[0])
+            func(args_array[0])
             break
         case 1:
-            argument1(argument0[0], argument0[1])
+            func(args_array[0], args_array[1])
             break
         case 2:
-            argument1(argument0[0], argument0[1], argument0[2])
+            func(args_array[0], args_array[1], args_array[2])
             break
         case 3:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3])
+            func(args_array[0], args_array[1], args_array[2], args_array[3])
             break
         case 4:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3], argument0[4])
+            func(args_array[0], args_array[1], args_array[2], args_array[3], args_array[4])
             break
         case 5:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3], argument0[4], argument0[5])
+            func(args_array[0], args_array[1], args_array[2], args_array[3], args_array[4], args_array[5])
             break
         case 6:
-            argument1(argument0[0], argument0[1], argument0[2], argument0[3], argument0[4], argument0[5], argument0[6])
+            func(args_array[0], args_array[1], args_array[2], args_array[3], args_array[4], args_array[5], args_array[6])
             break
     }
-
-    exit;
 }
 
-function DebugCommand(argument0, argument1, argument2, argument3) constructor
+function DebugCommand(command_ident, command_description, command_format, command_func) constructor
 {
-    command_id = argument0
-    description = argument1
-    format = argument2
-    func = argument3
-    function anon_DebugCommand_gml_GlobalScript_scr_debug_commands_1117_DebugCommand_gml_GlobalScript_scr_debug_commands(argument0)
+    command_id = command_ident
+    description = command_description
+    format = command_format
+    func = command_func
+	
+    Invoke = function(args)
     {
-        if (argument0 != undefined)
-            function_overload(argument0, func)
+        if args != undefined
+            function_overload(args, func)
         else
             func()
-        exit;
     }
-
 }
 
 function TextList_Add(argument0, argument1)
 {
-    with (obj_debugcontroller)
+    with obj_debugcontroller
     {
+		
     }
-    exit;
 }
-

@@ -42,7 +42,7 @@ switch sprite_index
             }
         }
         break
-    case 2284:
+    case spr_secretportal_spawnidle:
         if (!drop)
         {
             with (obj_heatafterimage)
@@ -75,7 +75,7 @@ switch sprite_index
             }
         }
         break
-    case 2473:
+    case spr_secretportal_spawnclose:
         if (floor(image_index) == (image_number - 1))
         {
             image_index = (image_number - 1)
@@ -83,4 +83,3 @@ switch sprite_index
         }
         break
 }
-

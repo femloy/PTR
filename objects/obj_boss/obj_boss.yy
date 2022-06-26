@@ -7,7 +7,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_baddie",
-    "path": "objects/obj_baddie/obj_baddie.yy"
+    "path": "objects/obj_baddie/obj_baddie.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Baddie",
+    "path": "folders/Objects/Baddie.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_boss",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

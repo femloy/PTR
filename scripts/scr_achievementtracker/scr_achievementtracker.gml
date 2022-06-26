@@ -23,7 +23,7 @@ function add_achievement_update(argument0, argument1, argument2, argument3)
 
 function add_achievement_notify(argument0, argument1, argument2)
 {
-    q = 
+    var q = 
     {
         name: argument0,
         creation_code: -4,
@@ -49,11 +49,9 @@ function notification_push(argument0, argument1)
     exit;
 }
 
-function achievement_add_variable(argument0, argument1, argument2)
+function achievement_add_variable(argument0, argument1, argument2 = 0)
 {
-    if (argument2 == undefined)
-        argument2 = 0
-    q = 
+    var q = 
     {
         init_value: argument1,
         value: argument1,
@@ -81,14 +79,13 @@ function achievement_unlock(argument0, argument1, argument2)
     }
     with (obj_achievementviewer)
         event_perform(ev_other, ev_room_start)
-    exit;
 }
 
 function achievement_save_variables(argument0)
 {
     for (var i = 0; i < ds_list_size(argument0); i++)
     {
-        b = ds_list_find_value(argument0, i)
+        var b = ds_list_find_value(argument0, i)
         with (b)
         {
             var size = ds_map_size(variables)
@@ -102,14 +99,13 @@ function achievement_save_variables(argument0)
             }
         }
     }
-    exit;
 }
 
 function achievements_load(argument0)
 {
-    for (i = 0; i < ds_list_size(argument0); i++)
+    for (var i = 0; i < ds_list_size(argument0); i++)
     {
-        b = ds_list_find_value(argument0, i)
+        var b = ds_list_find_value(argument0, i)
         with (b)
         {
             unlocked = ini_read_real("achievements", name, 0)
@@ -124,47 +120,34 @@ function achievements_load(argument0)
             }
         }
     }
-    exit;
 }
 
 function achievement_get_struct(argument0)
 {
     var l = obj_achievementtracker.achievements_update
-    b = noone
-    i = 0
-    while (i < ds_list_size(l))
-    {
-        q = ds_list_find_value(l, i)
+    var b = noone
+	
+	for(var i = 0; i < ds_list_size(l); i++)
+	{
+		var q = ds_list_find_value(l, i)
         if (q.name == argument0)
         {
             b = q
             break
         }
-        else
-        {
-            i++
-            continue
-        }
-    }
-    if (b == -4)
+	}
+    if (b == noone)
     {
         l = obj_achievementtracker.achievements_notify
-        i = 0
-        while (i < ds_list_size(l))
-        {
-            b = ds_list_find_value(l, i)
+		for(var i = 0; i < ds_list_size(l); i++)
+		{
+			b = ds_list_find_value(l, i)
             if (q.name == argument0)
             {
                 b = q
                 break
             }
-            else
-            {
-                i++
-                continue
-            }
-        }
+		}
     }
     return b;
 }
-

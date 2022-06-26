@@ -1,12 +1,12 @@
 switch targetRoom
 {
-    case 636:
+    case space_1:
         global.levelcompletename = "SPACE"
         break
-    case 583:
+    case forest_1:
         global.levelcompletename = "FOREST"
         break
-    case 639:
+    case chateau_1:
         global.levelcompletename = "CHATEAU"
         break
     default:

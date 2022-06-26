@@ -11,7 +11,7 @@ if (global.levelcomplete && (!global.warcutscene))
 
     bombactor = noone
     planeactor = -4
-    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, 324], [cutscene_player_idleanim], [cutscene_change_room, 178], [cutscene_set_player_visible, 0], [cutscene_player_float, 1], [cutscene_set_player_pos, 100, 100], [cutscene_wait, 20], [function()
+    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, obj_player1], [cutscene_player_idleanim], [cutscene_change_room, 178], [cutscene_set_player_visible, 0], [cutscene_player_float, 1], [cutscene_set_player_pos, 100, 100], [cutscene_wait, 20], [function()
     {
         planeactor = instance_create(1056, 128, obj_actor)
         planeactor.image_speed = 0.35

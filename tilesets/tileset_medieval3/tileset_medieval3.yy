@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_medieval3",
-    "path": "sprites/tilespr_tileset_medieval3/tilespr_tileset_medieval3.yy"
+    "path": "sprites/tilespr_tileset_medieval3/tilespr_tileset_medieval3.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "medievalgroup",
-    "path": "texturegroups/medievalgroup"
+    "path": "texturegroups/medievalgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 18,
-  "tile_count": 310,
+  "tile_count": 324,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -332,21 +332,35 @@
       306,
       307,
       308,
-      309
+      309,
+      310,
+      311,
+      312,
+      313,
+      314,
+      315,
+      316,
+      317,
+      318,
+      319,
+      320,
+      321,
+      322,
+      323,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Medieval",
+    "path": "folders/Tile Sets/Medieval.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_medieval3",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

@@ -9,6 +9,7 @@ if spawn
                 fake = 1
                 y -= 32
                 break
+			
             default:
                 if scr_solid(x, y)
                 {
@@ -27,6 +28,5 @@ if spawn
                 }
                 break
         }
-
     }
 }

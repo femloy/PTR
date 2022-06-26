@@ -25,10 +25,10 @@ if (bubblespr != -4 && bubblespr != spr_tv_bubbleclosed)
         bubbleindex = 0
         switch bubblespr
         {
-            case 455:
+            case spr_tv_bubbleopen:
                 bubblespr = spr_tv_bubble
                 break
-            case 433:
+            case spr_tv_bubbleclose:
                 bubblespr = spr_tv_bubbleclosed
                 if (prompt == -4 or prompt == "")
                     bubblespr = -4
@@ -161,17 +161,17 @@ switch state
             with (obj_player1)
             {
                 if (mach4mode == 1)
-                    tv_do_expression(2845)
+                    tv_do_expression(spr_tv_exprmach4)
                 else if (state == (121 << 0) or sprite_index == spr_mach3boost)
-                    tv_do_expression(855)
+                    tv_do_expression(spr_tv_exprmach3)
                 else if (state == (107 << 0))
-                    tv_do_expression(1319)
+                    tv_do_expression(spr_tv_exprhurt)
                 else if (state == (196 << 0))
-                    tv_do_expression(1497)
+                    tv_do_expression(spr_tv_hurtG)
                 else if (global.combo >= 3 && (!obj_player.isgustavo))
-                    tv_do_expression(2453)
+                    tv_do_expression(spr_tv_exprcombo)
                 else if (global.stylethreshold >= 3 && (!obj_player.isgustavo))
-                    tv_do_expression(307)
+                    tv_do_expression(spr_tv_exprheat)
             }
         }
         switch sprite_index
@@ -183,19 +183,19 @@ switch state
                     image_index = 0
                 }
                 break
-            case 2536:
+            case spr_tv_open:
                 if (floor(image_index) == (image_number - 1))
                     sprite_index = idlespr
                 break
-            case 2700:
-            case 802:
+            case spr_tv_idle:
+            case spr_tv_idleN:
                 if (idleanim > 0)
                     idleanim--
                 if (sprite_index != idlespr)
                     sprite_index = idlespr
                 if (idleanim <= 0 && floor(image_index) == (image_number - 1))
                 {
-                    sprite_index = choose(1120, 492)
+                    sprite_index = choose(spr_tv_idleanim1, spr_tv_idleanim2)
                     if (!obj_player1.ispeppino)
                     {
                         if (sprite_index == spr_tv_idleanim1)
@@ -206,10 +206,10 @@ switch state
                     image_index = 0
                 }
                 break
-            case 1120:
-            case 492:
-            case 2560:
-            case 2755:
+            case spr_tv_idleanim1:
+            case spr_tv_idleanim2:
+            case spr_tv_idleanim1N:
+            case spr_tv_idleanim2N:
                 if (floor(image_index) == (image_number - 1))
                 {
                     sprite_index = idlespr
@@ -230,7 +230,7 @@ switch state
                 prompt_buffer = prompt_max
                 if (b[0] != "" && b[0] != -4)
                 {
-                    bubblespr = spr_tv_bubbleopen
+                    bubblespr = 455
                     bubbleindex = 0
                     prompt = b[0]
                     promptspd = b[3]
@@ -238,7 +238,7 @@ switch state
                 }
                 else
                 {
-                    if (bubblespr != -4 && bubblespr != 1324)
+                    if (bubblespr != -4 && bubblespr != spr_tv_bubbleclosed)
                         bubblespr = spr_tv_bubbleclose
                     if (bubblespr == spr_tv_bubbleclosed)
                         bubblespr = -4
@@ -325,7 +325,7 @@ switch state
                     }
                 }
                 break
-            case 1497:
+            case spr_tv_hurtG:
                 if (obj_player1.state != (196 << 0))
                 {
                     if (expressionbuffer > 0)
@@ -337,17 +337,17 @@ switch state
                     }
                 }
                 break
-            case 2453:
+            case spr_tv_exprcombo:
                 if (global.combo < 3 or obj_player1.isgustavo)
                 {
                     state = (250 << 0)
                     expressionsprite = -4
                     if (obj_player1.state == (107 << 0))
-                        tv_do_expression(1319)
+                        tv_do_expression(spr_tv_exprhurt)
                 }
                 break
-            case 731:
-            case 263:
+            case spr_tv_exprcollect:
+            case spr_tv_happyG:
                 if (expressionbuffer > 0)
                     expressionbuffer--
                 else
@@ -356,7 +356,7 @@ switch state
                     expressionsprite = -4
                 }
                 break
-            case 855:
+            case spr_tv_exprmach3:
                 with (obj_player1)
                 {
                     if (state != (121 << 0) && (state != (61 << 0) or tauntstoredstate != (121 << 0)) && sprite_index != spr_mach3boost && mach4mode == 0)
@@ -366,7 +366,7 @@ switch state
                     }
                 }
                 break
-            case 2845:
+            case spr_tv_exprmach4:
                 with (obj_player1)
                 {
                     if (mach4mode == 0)
@@ -376,7 +376,7 @@ switch state
                     }
                 }
                 break
-            case 307:
+            case spr_tv_exprheat:
                 _transfo = 0
                 with (obj_player1)
                 {

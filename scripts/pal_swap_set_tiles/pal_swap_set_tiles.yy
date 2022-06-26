@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy"
+    "name": "Retro Palette Swapper",
+    "path": "folders/Scripts/Retro Palette Swapper.yy",
   },
   "resourceVersion": "1.0",
   "name": "pal_swap_set_tiles",
   "tags": [],
-  "resourceType": "GMScript"
+  "resourceType": "GMScript",
 }

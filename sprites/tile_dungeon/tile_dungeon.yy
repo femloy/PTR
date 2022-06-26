@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Dungeon",
+    "path": "folders/Sprites/Backgrounds/Dungeon.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_dungeon",

@@ -1,32 +1,36 @@
 switch targetRoom
 {
-    case 393:
-    case 409:
-    case 425:
-    case 444:
+    case entrance_1:
+    case medieval_1:
+    case ruin_1:
+    case dungeon_1:
         world = 1
         break
-    case 475:
-    case 503:
-    case 518:
-    case 541:
+	
+    case desert_1:
+    case graveyard_1:
+    case farm_1:
+    case ufo_1:
         world = 2
         break
-    case 566:
-    case 583:
-    case 623:
+	
+    case beach_1:
+    case forest_1:
+    case minigolf_1:
         world = 3
         break
-    case 636:
-    case 128:
-    case 86:
-    case 131:
+	
+    case space_1:
+    case city_1:
+    case sewer_1:
+    case war_1:
         world = 4
         break
-    case 472:
-    case 90:
-    case 659:
-    case 125:
+	
+    case factory_1:
+    case freezer_1:
+    case mansion_1:
+    case kidsparty_entrance1:
         world = 5
         break
 }
@@ -40,6 +44,7 @@ toppin[2] = ini_read_real("Toppin", (string(level) + "3"), 0)
 toppin[3] = ini_read_real("Toppin", (string(level) + "4"), 0)
 toppin[4] = ini_read_real("Toppin", (string(level) + "5"), 0)
 ini_close()
+
 switch level
 {
     case "entrance":

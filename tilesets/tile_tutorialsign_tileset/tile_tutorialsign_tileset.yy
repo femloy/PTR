@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_tutorialsign_tileset",
-    "path": "sprites/tilespr_tile_tutorialsign_tileset/tilespr_tile_tutorialsign_tileset.yy"
+    "path": "sprites/tilespr_tile_tutorialsign_tileset/tilespr_tile_tutorialsign_tileset.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 17,
-  "tile_count": 300,
+  "tile_count": 306,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -322,21 +322,27 @@
       296,
       297,
       298,
-      299
+      299,
+      300,
+      301,
+      302,
+      303,
+      304,
+      305,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Tutorial",
+    "path": "folders/Tile Sets/Tutorial.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_tutorialsign_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

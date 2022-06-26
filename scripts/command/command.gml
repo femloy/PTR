@@ -1,59 +1,63 @@
-// umt decompilation is FUCKED
-var _temp_local_var_3;
+/*
+	figuring out what this was supposed to be from just the decompiled UMT code was hellish
+	specially because I didn't know that functions had inheritance until now
+*/
+
 function Command() constructor
 {
-    state = 1
+    static state = 1;
+	static Do = function()
+	{
+		
+	}
+	static Undo = function()
+	{
+		
+	}
+	static OnDelete = function()
+	{
+		
+	}
 }
 
-function PlaceCommand(argument0, argument1, argument2) constructor
+function PlaceCommand(xx, yy, obj) : Command() constructor
 {
-    var _temp_local_var_3 = Command()
-    if true//@@CopyStatic@@(Command)
+    static Do = function()
     {
+        if (instance == noone)
+        {
+            instance = instance_create((snap_tile(x, 32) + object.place_xoffset), (snap_tile(y, 32) + object.place_yoffset), obj_fakeobject)
+            with (instance)
+            {
+                sprite_index = other.object.sprite_index
+                object = other.object.object_index
+            }
+            with (obj_editor)
+            {
+                scr_editor_clear_selectedobjects()
+                ds_list_add(selectedobjects, other.instance)
+            }
+        }
+        else
+            instance_activate_object(instance)
     }
-    else
+
+	static Undo = function()
     {
-        function anon_PlaceCommand_gml_GlobalScript_Command_365_PlaceCommand_gml_GlobalScript_Command()
-        {
-            if (instance == noone)
-            {
-                instance = instance_create((snap_tile(x, 32) + object.place_xoffset), (snap_tile(y, 32) + object.place_yoffset), obj_fakeobject)
-                with (instance)
-                {
-                    sprite_index = other.object.sprite_index
-                    object = other.object.object_index
-                }
-                with (obj_editor)
-                {
-                    scr_editor_clear_selectedobjects()
-                    ds_list_add(selectedobjects, other.instance)
-                }
-            }
-            else
-                instance_activate_object(instance)
-            exit;
-        }
-
-        function anon_PlaceCommand_gml_GlobalScript_Command_867_PlaceCommand_gml_GlobalScript_Command()
-        {
-            instance_deactivate_object(instance)
-            exit;
-        }
-
-        function anon_PlaceCommand_gml_GlobalScript_Command_948_PlaceCommand_gml_GlobalScript_Command()
-        {
-            if (state == 0)
-            {
-                instance_activate_object(instance)
-                instance_destroy(instance)
-            }
-            exit;
-        }
-
+        instance_deactivate_object(instance)
     }
-    x = argument0
-    y = argument1
-    object = argument2
+
+    static OnDelete = function()
+    {
+        if (state == 0)
+        {
+            instance_activate_object(instance)
+            instance_destroy(instance)
+        }
+    }
+	
+    x = xx
+    y = yy
+    object = obj
     instance = noone
 }
-

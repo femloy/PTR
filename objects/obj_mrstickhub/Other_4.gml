@@ -3,7 +3,7 @@ switch room
     case hub_room1:
         world = 1
         break
-    case 619:
+    case hub_room2:
         world = 2
         break
 }

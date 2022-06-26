@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Baddie",
+    "path": "folders/Objects/Baddie.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_arena_pizzaportal",

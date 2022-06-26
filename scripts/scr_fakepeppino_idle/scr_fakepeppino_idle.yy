@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy"
+    "name": "Fakepep States",
+    "path": "folders/Scripts/Fakepep States.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_fakepeppino_idle",
   "tags": [],
-  "resourceType": "GMScript"
+  "resourceType": "GMScript",
 }

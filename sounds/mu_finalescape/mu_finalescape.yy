@@ -14,8 +14,8 @@
   "soundFile": "mu_finalescape.mp3",
   "duration": 0.316508,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Music",
+    "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
   "name": "mu_finalescape",

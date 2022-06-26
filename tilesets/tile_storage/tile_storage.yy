@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_storage",
-    "path": "sprites/tilespr_tile_storage/tilespr_tile_storage.yy"
+    "path": "sprites/tilespr_tile_storage/tilespr_tile_storage.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 22,
-  "tile_count": 495,
+  "tile_count": 506,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -517,21 +517,32 @@
       491,
       492,
       493,
-      494
+      494,
+      495,
+      496,
+      497,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Kids Party",
+    "path": "folders/Tile Sets/Kids Party.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_storage",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

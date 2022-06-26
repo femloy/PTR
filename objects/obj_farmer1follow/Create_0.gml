@@ -11,7 +11,7 @@ switch object_index
     case obj_farmer2follow:
         farmerpos = 1
         break
-    case 185:
+    case obj_farmer3follow:
         farmerpos = 2
         break
 }

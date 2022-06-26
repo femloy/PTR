@@ -33,14 +33,14 @@ switch sprite_index
         if (floor(image_index) == (image_number - 1))
             sprite_index = spr_pizzacar_fall
         break
-    case 2571:
+    case spr_pizzacar_fall:
         if (grounded && vsp > 0)
         {
             sprite_index = spr_pizzacar_land
             image_index = 0
         }
         break
-    case 121:
+    case spr_pizzacar_land:
         if (floor(image_index) == (image_number - 1))
             sprite_index = spr_pizzacar_move
         break
@@ -48,4 +48,3 @@ switch sprite_index
         if ((!grounded) && vsp > 0)
             sprite_index = spr_pizzacar_fall
 }
-

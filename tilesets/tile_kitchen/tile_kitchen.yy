@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_kitchen",
-    "path": "sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy"
+    "path": "sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "kidspartygroup",
-    "path": "texturegroups/kidspartygroup"
+    "path": "texturegroups/kidspartygroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 27,
-  "tile_count": 750,
+  "tile_count": 756,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -772,21 +772,27 @@
       746,
       747,
       748,
-      749
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Kids Party",
+    "path": "folders/Tile Sets/Kids Party.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_kitchen",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

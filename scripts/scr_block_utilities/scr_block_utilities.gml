@@ -18,7 +18,6 @@ function scr_destroy_tiles(argument0, argument1, argument2)
                 scr_destroy_tile((x + ((xx * argument0) * ix)), (y + ((yy * argument0) * iy)), map_id)
         }
     }
-    exit;
 }
 
 function scr_destroy_tile(argument0, argument1, argument2)
@@ -26,7 +25,6 @@ function scr_destroy_tile(argument0, argument1, argument2)
     var data = tilemap_get_at_pixel(argument2, argument0, argument1)
     data = tile_set_empty(data)
     tilemap_set_at_pixel(argument2, data, argument0, argument1)
-    exit;
 }
 
 function scr_solid_line(argument0)
@@ -44,6 +42,4 @@ function scr_destroy_nearby_tiles()
     instance_destroy(instance_place((x - 1), y, obj_tiledestroy))
     instance_destroy(instance_place(x, (y + 1), obj_tiledestroy))
     instance_destroy(instance_place(x, (y - 1), obj_tiledestroy))
-    exit;
 }
-

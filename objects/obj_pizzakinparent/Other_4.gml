@@ -5,21 +5,20 @@ switch object_index
         if (!global.cheesefollow)
             instance_destroy()
         break
-    case 541:
+    case obj_pizzakintomato:
         if (!global.tomatofollow)
             instance_destroy()
         break
-    case 543:
+    case obj_pizzakinpineapple:
         if (!global.pineapplefollow)
             instance_destroy()
         break
-    case 539:
+    case obj_pizzakinshroom:
         if (!global.shroomfollow)
             instance_destroy()
         break
-    case 542:
+    case obj_pizzakinsausage:
         if (!global.sausagefollow)
             instance_destroy()
         break
 }
-

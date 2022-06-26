@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy"
+    "name": "Utilities",
+    "path": "folders/Scripts/Utilities.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_sleep",
   "tags": [],
-  "resourceType": "GMScript"
+  "resourceType": "GMScript",
 }

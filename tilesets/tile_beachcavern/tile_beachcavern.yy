@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_beachcavern",
-    "path": "sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy"
+    "path": "sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "beachgroup",
-    "path": "texturegroups/beachgroup"
+    "path": "texturegroups/beachgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 22,
-  "tile_count": 480,
+  "tile_count": 484,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -502,21 +502,25 @@
       476,
       477,
       478,
-      479
+      479,
+      480,
+      481,
+      482,
+      483,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Beach",
+    "path": "folders/Tile Sets/Beach.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_beachcavern",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

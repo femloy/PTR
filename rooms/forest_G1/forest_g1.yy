@@ -428,8 +428,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Forest",
+    "path": "folders/Rooms/Levels/Forest.yy",
   },
   "resourceVersion": "1.0",
   "name": "forest_G1",

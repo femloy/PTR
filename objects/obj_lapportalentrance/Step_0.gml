@@ -15,7 +15,7 @@ if (floor(image_index) == (image_number - 1))
         case spr_pizzaportal_appear:
             sprite_index = spr_pizzaportalentrancestart
             break
-        case 1645:
+        case spr_pizzaportalentrancestart:
             sprite_index = spr_pizzaportal_disappear
             with (obj_player)
             {
@@ -24,9 +24,8 @@ if (floor(image_index) == (image_number - 1))
             }
             active = 0
             break
-        case 1806:
+        case spr_pizzaportal_disappear:
             instance_destroy()
             break
     }
-
 }

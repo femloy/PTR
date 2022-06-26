@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_plains",
-    "path": "sprites/tilespr_tile_plains/tilespr_tile_plains.yy"
+    "path": "sprites/tilespr_tile_plains/tilespr_tile_plains.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 13,
-  "tile_count": 180,
+  "tile_count": 182,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -202,21 +202,23 @@
       176,
       177,
       178,
-      179
+      179,
+      180,
+      181,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Mansion",
+    "path": "folders/Tile Sets/Mansion.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_plains",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

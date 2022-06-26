@@ -48,14 +48,14 @@ function scr_player_motorcycle()
             if (floor(image_index) == (image_number - 1))
                 sprite_index = spr_player_pizzacarfall
             break
-        case 2722:
+        case spr_player_pizzacarfall:
             if (grounded && vsp > 0)
             {
                 sprite_index = spr_player_pizzacarland
                 image_index = 0
             }
             break
-        case 2630:
+        case spr_player_pizzacarland:
             if (floor(image_index) == (image_number - 1))
                 sprite_index = spr_player_pizzacar
             break

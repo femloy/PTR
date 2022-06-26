@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_indiancheese_walk",
-    "path": "sprites/spr_indiancheese_walk/spr_indiancheese_walk.yy"
+    "path": "sprites/spr_indiancheese_walk/spr_indiancheese_walk.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_dialognpc",
-    "path": "objects/obj_dialognpc/obj_dialognpc.yy"
+    "path": "objects/obj_dialognpc/obj_dialognpc.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,35 +25,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 1,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Cutscenes",
+    "path": "folders/Objects/Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_chieftainNPC",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

@@ -22,11 +22,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Game settings",
+    "path": "folders/Objects/Game settings.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_blank",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

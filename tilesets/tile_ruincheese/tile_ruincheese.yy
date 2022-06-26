@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_ruincheese",
-    "path": "sprites/tilespr_tile_ruincheese/tilespr_tile_ruincheese.yy"
+    "path": "sprites/tilespr_tile_ruincheese/tilespr_tile_ruincheese.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "ruingroup",
-    "path": "texturegroups/ruingroup"
+    "path": "texturegroups/ruingroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 29,
-  "tile_count": 850,
+  "tile_count": 870,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -872,21 +872,41 @@
       846,
       847,
       848,
-      849
+      849,
+      850,
+      851,
+      852,
+      853,
+      854,
+      855,
+      856,
+      857,
+      858,
+      859,
+      860,
+      861,
+      862,
+      863,
+      864,
+      865,
+      866,
+      867,
+      868,
+      869,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Ruin",
+    "path": "folders/Tile Sets/Ruin.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_ruincheese",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

@@ -31,7 +31,7 @@ if (floor(image_index) == (image_number - 1))
         case spr_secretportal_open:
             sprite_index = spr_secretportal_idle
             break
-        case 835:
+        case spr_secretportal_close:
             image_index = (image_number - 1)
             if touched
             {
@@ -57,5 +57,4 @@ if (floor(image_index) == (image_number - 1))
             }
             break
     }
-
 }

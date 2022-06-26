@@ -22,11 +22,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Effects",
+    "path": "folders/Objects/Visuals/Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_blackbars",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

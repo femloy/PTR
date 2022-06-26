@@ -1,7 +1,7 @@
 if (global.levelcomplete && (!global.sewercutscene))
 {
     currentroom = room
-    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, 324], [cutscene_player_idleanim], [cutscene_change_room, 191], [cutscene_set_player_visible, 0], [cutscene_player_float, 1], [cutscene_set_player_pos, 320, 288], [cutscene_wait, 39], [function()
+    scene_info = [[cutscene_entrance_start], [cutscene_waitfor_sprite, obj_player1], [cutscene_player_idleanim], [cutscene_change_room, 191], [cutscene_set_player_visible, 0], [cutscene_player_float, 1], [cutscene_set_player_pos, 320, 288], [cutscene_wait, 39], [function()
     {
         with (obj_hubwater)
         {

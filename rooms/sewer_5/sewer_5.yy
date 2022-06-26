@@ -1261,8 +1261,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Sewer",
+    "path": "folders/Rooms/Levels/Sewer.yy",
   },
   "resourceVersion": "1.0",
   "name": "sewer_5",

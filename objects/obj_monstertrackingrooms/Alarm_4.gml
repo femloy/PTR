@@ -9,7 +9,7 @@ if (monster_active[4] && room != kidsparty_entrance1 && room != kidsparty_entran
     }
     with (obj_pineapplemonster)
     {
-        sprite_index = choose(259, 2645, 2304)
+        sprite_index = choose(spr_monsterpineapple_pose1, spr_monsterpineapple_pose2, spr_monsterpineapple_pose3)
         image_index = 0
     }
     switch n

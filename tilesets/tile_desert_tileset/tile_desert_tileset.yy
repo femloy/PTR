@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_desert_tileset",
-    "path": "sprites/tilespr_tile_desert_tileset/tilespr_tile_desert_tileset.yy"
+    "path": "sprites/tilespr_tile_desert_tileset/tilespr_tile_desert_tileset.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,7 +12,7 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "desertgroup",
-    "path": "texturegroups/desertgroup"
+    "path": "texturegroups/desertgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -232,21 +232,21 @@
       206,
       207,
       208,
-      209
+      209,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Desert",
+    "path": "folders/Tile Sets/Desert.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_desert_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

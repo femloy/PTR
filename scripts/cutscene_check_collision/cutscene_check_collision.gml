@@ -12,4 +12,3 @@ function cutscene_check_collision(argument0, argument1)
         cutscene_end_action()
     exit;
 }
-

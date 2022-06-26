@@ -225,14 +225,13 @@ function state_player_normal()
                 if shotgunAnim
                     sprite_index = spr_shotgunidle
                 break
-            case 2364:
+            case spr_playerV_revolverend:
                 sprite_index = spr_idle
                 break
             case spr_shotgunshoot:
                 sprite_index = spr_shotgunidle
                 break
         }
-
     }
     if grounded
     {

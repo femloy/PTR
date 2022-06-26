@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_tombstone",
-    "path": "sprites/spr_tombstone/spr_tombstone.yy"
+    "path": "sprites/spr_tombstone/spr_tombstone.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_possessable",
-    "path": "objects/obj_possessable/obj_possessable.yy"
+    "path": "objects/obj_possessable/obj_possessable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,35 +25,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bigtombstone",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

@@ -6,6 +6,4 @@ function cutscene_dungeon_middle()
         instance_destroy()
     }
     cutscene_end_action()
-    exit;
 }
-

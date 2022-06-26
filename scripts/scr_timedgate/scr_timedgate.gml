@@ -12,7 +12,6 @@ function scr_timedgate_object(argument0)
         }
         instance_destroy()
     }
-    exit;
 }
 
 function timedgate_trigger()
@@ -31,7 +30,6 @@ function timedgate_trigger()
             }
         }
     }
-    exit;
 }
 
 function timedgate_add_objects(argument0, argument1)
@@ -42,6 +40,4 @@ function timedgate_add_objects(argument0, argument1)
             timedgate = 0
         scr_timedgate_object(argument1)
     }
-    exit;
 }
-

@@ -24,27 +24,32 @@ with (ID)
             if (state != (153 << 0))
                 instance_destroy(other)
             break
-        case 578:
+		
+        case obj_badrat:
             other.x = (x + (image_xscale * 16))
             if (state != (80 << 0))
                 instance_destroy(other)
             break
-        case 104:
-        case 26:
-        case 178:
+		
+        case obj_farmerbaddie:
+        case obj_farmerbaddie2:
+        case obj_farmerbaddie3:
             other.x = (x + (image_xscale * 16))
             if (state != (80 << 0))
                 instance_destroy(other)
             break
-        case 264:
+		
+        case obj_peppinoclone:
             other.x = (x - (image_xscale * 10))
             if (state != (80 << 0))
                 instance_destroy(other)
             break
-        case 800:
+		
+        case obj_motodude:
             other.x = (x + (image_xscale * 32))
             break
-        case 442:
+		
+        case obj_robot:
             if (state != (104 << 0) && state != (23 << 0) && state != (91 << 0))
             {
                 hitboxcreate = 0
@@ -55,39 +60,45 @@ with (ID)
             else if (state == (104 << 0) or state == (91 << 0))
                 other.x = (x + (image_xscale * 20))
             break
-        case 176:
+		
+        case obj_soldier:
             other.x = (x + (image_xscale * 24))
             if (state != (125 << 0))
                 instance_destroy(other)
             break
-        case 471:
+		
+        case obj_indiancheese:
             if (state != (134 << 0) && sprite_index != spr_indiancheese_howl)
             {
                 hitboxcreate = 0
                 instance_destroy(other)
             }
             break
-        case 408:
-        case 432:
-        case 433:
+		
+        case obj_thug_red:
+        case obj_thug_blue:
+        case obj_thug_green:
             if (state != (80 << 0))
             {
                 instance_destroy(other)
                 punchinst = -4
             }
             break
-        case 824:
+		
+        case obj_weeniesquire:
             if (state != (80 << 0))
             {
                 hitboxcreate = 0
                 instance_destroy(other)
             }
             break
-        case 436:
+		
+        case obj_minijohn:
             if (state != (125 << 0) && state != (80 << 0))
                 instance_destroy(other)
             break
-        case 464:
+		
+        case obj_ninja:
             if (state != (128 << 0) && state != (80 << 0))
                 instance_destroy(other)
             if (state == (80 << 0))
@@ -97,25 +108,29 @@ with (ID)
                 other.x = (x + (image_xscale * 24))
             }
             break
-        case 599:
+		
+        case obj_boulder:
             if (!hitwall)
                 instance_destroy(other)
             break
-        case 773:
+		
+        case obj_snickexe:
             if (obj_player1.instakillmove or obj_player1.state == (42 << 0))
             {
                 instance_destroy(other)
                 hitboxcreate = 0
             }
             break
-        case 451:
+		
+        case obj_pickle:
             if (state != (129 << 0))
                 instance_destroy(other)
             break
-        case 463:
-        case 472:
-        case 439:
-        case 469:
+		
+        case obj_peasanto:
+        case obj_fencer:
+        case obj_snowman:
+        case obj_ancho:
             if (state != (128 << 0) && state != (125 << 0))
             {
                 hitboxcreate = 0

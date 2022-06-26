@@ -9,6 +9,4 @@ function scr_do_noisejetpack()
         image_index = 0
         vsp = -11
     }
-    exit;
 }
-

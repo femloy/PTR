@@ -1,5 +1,5 @@
 image_speed = 0
 baddieid = obj_null
-content = obj_hardmode
+content = 0
 mask_index = spr_baddiespawner
 refresh = 100

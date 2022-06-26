@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_dungeon2",
-    "path": "sprites/tilespr_tileset_dungeon2/tilespr_tileset_dungeon2.yy"
+    "path": "sprites/tilespr_tileset_dungeon2/tilespr_tileset_dungeon2.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "dungeongroup",
-    "path": "texturegroups/dungeongroup"
+    "path": "texturegroups/dungeongroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 23,
-  "tile_count": 530,
+  "tile_count": 552,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -552,21 +552,43 @@
       526,
       527,
       528,
-      529
+      529,
+      530,
+      531,
+      532,
+      533,
+      534,
+      535,
+      536,
+      537,
+      538,
+      539,
+      540,
+      541,
+      542,
+      543,
+      544,
+      545,
+      546,
+      547,
+      548,
+      549,
+      550,
+      551,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Dungeon",
+    "path": "folders/Tile Sets/Dungeon.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_dungeon2",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

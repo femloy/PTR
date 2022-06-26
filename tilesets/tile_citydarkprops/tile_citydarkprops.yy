@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_citydarkprops",
-    "path": "sprites/tilespr_tile_citydarkprops/tilespr_tile_citydarkprops.yy"
+    "path": "sprites/tilespr_tile_citydarkprops/tilespr_tile_citydarkprops.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "citygroup",
-    "path": "texturegroups/citygroup"
+    "path": "texturegroups/citygroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 17,
-  "tile_count": 288,
+  "tile_count": 289,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -310,21 +310,22 @@
       284,
       285,
       286,
-      287
+      287,
+      288,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Street",
+    "path": "folders/Tile Sets/Street.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_citydarkprops",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

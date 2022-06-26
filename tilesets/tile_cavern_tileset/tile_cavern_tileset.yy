@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_cavern_tileset",
-    "path": "sprites/tilespr_tile_cavern_tileset/tilespr_tile_cavern_tileset.yy"
+    "path": "sprites/tilespr_tile_cavern_tileset/tilespr_tile_cavern_tileset.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "desertgroup",
-    "path": "texturegroups/desertgroup"
+    "path": "texturegroups/desertgroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 28,
-  "tile_count": 810,
+  "tile_count": 812,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -832,21 +832,23 @@
       806,
       807,
       808,
-      809
+      809,
+      810,
+      811,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Desert",
+    "path": "folders/Tile Sets/Desert.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_cavern_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

@@ -9,6 +9,4 @@ function cutscene_player_check_ground(argument0)
     }
     if finish
         cutscene_end_action()
-    exit;
 }
-

@@ -1,6 +1,6 @@
 image_speed = 0
 baddieid = obj_null
-content = obj_hardmode
+content = 0
 refresh = 20
 depth = 1
 hsp = 0

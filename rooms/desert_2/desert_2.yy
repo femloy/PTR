@@ -275,8 +275,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Desert",
+    "path": "folders/Rooms/Old Levels/Desert.yy",
   },
   "resourceVersion": "1.0",
   "name": "desert_2",

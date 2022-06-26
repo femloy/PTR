@@ -230,7 +230,7 @@ function scr_vigilante_throwing()
             case spr_playerV_land:
                 sprite_index = spr_playerV_idle
                 break
-            case 2366:
+            case spr_playerV_dynamitethrow:
                 sprite_index = spr_playerV_idle
                 break
         }
@@ -285,13 +285,13 @@ function scr_vigilante_revolver()
             case spr_playerV_land:
                 sprite_index = spr_playerV_idle
                 break
-            case 2360:
+            case spr_playerV_revolverstart:
                 sprite_index = spr_playerV_revolverhold
                 break
-            case 2363:
+            case spr_playerV_revolvershoot:
                 sprite_index = spr_playerV_revolverend
                 break
-            case 2364:
+            case spr_playerV_revolverend:
                 sprite_index = spr_playerV_idle
                 break
         }
@@ -337,7 +337,7 @@ function scr_vigilante_dynamite()
             case spr_playerV_land:
                 sprite_index = spr_playerV_idle
                 break
-            case 2366:
+            case spr_playerV_dynamitethrow:
                 sprite_index = spr_playerV_idle
                 break
         }

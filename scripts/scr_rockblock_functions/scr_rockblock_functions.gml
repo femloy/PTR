@@ -32,6 +32,7 @@ function scr_rockblock_tag()
             scr_rockblock_tag()
         }
     }
+	
     with (instance_place((x + 1), y, obj_destructiblerockblock))
     {
         if (!destroy)
@@ -64,6 +65,4 @@ function scr_rockblock_tag()
             scr_rockblock_tag()
         }
     }
-    exit;
 }
-

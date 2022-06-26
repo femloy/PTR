@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tileset_chateaudecorations",
-    "path": "sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy"
+    "path": "sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "chateaugroup",
-    "path": "texturegroups/chateaugroup"
+    "path": "texturegroups/chateaugroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 13,
-  "tile_count": 174,
+  "tile_count": 182,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -196,21 +196,29 @@
       170,
       171,
       172,
-      173
+      173,
+      174,
+      175,
+      176,
+      177,
+      178,
+      179,
+      180,
+      181,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Chateau",
+    "path": "folders/Tile Sets/Chateau.yy",
   },
   "resourceVersion": "1.0",
   "name": "tileset_chateaudecorations",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

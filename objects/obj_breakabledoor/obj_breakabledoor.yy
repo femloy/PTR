@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_breakabledoor",
-    "path": "sprites/spr_breakabledoor/spr_breakabledoor.yy"
+    "path": "sprites/spr_breakabledoor/spr_breakabledoor.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_destructibles",
-    "path": "objects/obj_destructibles/obj_destructibles.yy"
+    "path": "objects/obj_destructibles/obj_destructibles.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,48 +25,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 1,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 4,
-      "collisionObjectId": {
-        "name": "obj_swordhitbox",
-        "path": "objects/obj_swordhitbox/obj_swordhitbox.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 4,
-      "eventType": 7,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_swordhitbox","path":"objects/obj_swordhitbox/obj_swordhitbox.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_breakabledoor",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_saloonalt",
-    "path": "sprites/tilespr_tile_saloonalt/tilespr_tile_saloonalt.yy"
+    "path": "sprites/tilespr_tile_saloonalt/tilespr_tile_saloonalt.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 31,
-  "tile_count": 984,
+  "tile_count": 992,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -1006,21 +1006,29 @@
       980,
       981,
       982,
-      983
+      983,
+      984,
+      985,
+      986,
+      987,
+      988,
+      989,
+      990,
+      991,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Saloon",
+    "path": "folders/Tile Sets/Saloon.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_saloonalt",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

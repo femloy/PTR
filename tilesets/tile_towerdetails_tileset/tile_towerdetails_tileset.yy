@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_towerdetails_tileset",
-    "path": "sprites/tilespr_tile_towerdetails_tileset/tilespr_tile_towerdetails_tileset.yy"
+    "path": "sprites/tilespr_tile_towerdetails_tileset/tilespr_tile_towerdetails_tileset.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
@@ -12,7 +12,7 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "entrancegroup",
-    "path": "texturegroups/entrancegroup"
+    "path": "texturegroups/entrancegroup",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -3866,21 +3866,21 @@
       3840,
       3841,
       3842,
-      3843
+      3843,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Tower",
+    "path": "folders/Tile Sets/Tower.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_towerdetails_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_tile_street",
-    "path": "sprites/tilespr_tile_street/tilespr_tile_street.yy"
+    "path": "sprites/tilespr_tile_street/tilespr_tile_street.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -12,12 +12,12 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 30,
-  "tile_count": 920,
+  "tile_count": 930,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -942,21 +942,31 @@
       916,
       917,
       918,
-      919
+      919,
+      920,
+      921,
+      922,
+      923,
+      924,
+      925,
+      926,
+      927,
+      928,
+      929,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "name": "Street",
+    "path": "folders/Tile Sets/Street.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_street",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

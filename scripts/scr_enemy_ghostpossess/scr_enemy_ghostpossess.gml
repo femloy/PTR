@@ -46,7 +46,7 @@ function scr_enemy_ghostpossess()
                     hsp = 0
                 }
                 break
-            case 431:
+            case obj_cheeseslime:
                 if playerid.key_slap2
                 {
                     ragedash = 100
@@ -57,7 +57,7 @@ function scr_enemy_ghostpossess()
                     hsp = 0
                 }
                 break
-            case 471:
+            case obj_indiancheese:
                 if playerid.key_jump
                     playerid.input_buffer_jump = 0
                 if (playerid.input_buffer_jump < 8 && grounded && vsp > 0)
@@ -117,7 +117,7 @@ function scr_enemy_ghostpossess()
                 if (ragedash <= 0)
                     sprite_index = spr_forknight_walk
                 break
-            case 431:
+            case obj_cheeseslime:
                 image_speed = 0.5
                 if (floor(image_index) > 10)
                 {
@@ -133,7 +133,7 @@ function scr_enemy_ghostpossess()
                 if (floor(image_index) == (image_number - 1))
                     sprite_index = spr_slimemove
                 break
-            case 471:
+            case obj_indiancheese:
                 hsp = 0
                 if (ragedash > 0)
                     ragedash--
@@ -153,8 +153,5 @@ function scr_enemy_ghostpossess()
                 }
                 break
         }
-
     }
-    exit;
 }
-
