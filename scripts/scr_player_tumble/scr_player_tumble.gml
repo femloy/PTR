@@ -27,11 +27,11 @@ function scr_player_tumble()
     {
         sprite_index = spr_player_poundcancel1
         image_index = 0
-        state = (108 << 0)
+        state = states.freefall
         vsp = -6
     }
     if (movespeed <= 2 && sprite_index != spr_player_breakdance)
-        state = (0 << 0)
+        state = states.normal
     if ((!scr_slope()) && sprite_index == spr_tumblestart && floor(image_index) < 11)
         image_index = 11
     if (sprite_index == spr_mach2jump && grounded)
@@ -105,9 +105,9 @@ function scr_player_tumble()
             with (instance_create(x, y, obj_jumpdust))
                 image_xscale = other.xscale
             if (movespeed >= 12)
-                state = (121 << 0)
+                state = states.mach3
             else
-                state = (104 << 0)
+                state = states.mach2
             image_index = 0
             sprite_index = spr_rollgetup
         }
@@ -118,12 +118,12 @@ function scr_player_tumble()
         {
             if (movespeed > 6)
             {
-                state = (105 << 0)
+                state = states.machslide
                 sprite_index = spr_machslidestart
                 image_index = 0
             }
             else
-                state = (0 << 0)
+                state = states.normal
         }
     }
     if (sprite_index == spr_player_Sjumpcancelslide or sprite_index == spr_breakdancesuper or sprite_index == spr_machroll or sprite_index == spr_tumble or sprite_index == spr_tumblestart or sprite_index == spr_player_machroll or sprite_index == spr_player_mach2jump)

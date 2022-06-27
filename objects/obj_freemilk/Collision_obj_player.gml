@@ -1,6 +1,6 @@
 with (other)
 {
-    if (state == (10 << 0) && sprite_index == spr_firemouth)
+    if (state == states.firemouth && sprite_index == spr_firemouth)
     {
         sprite_index = spr_firemouthend
         image_index = 0

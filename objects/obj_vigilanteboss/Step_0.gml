@@ -5,60 +5,60 @@ targetspot = instance_nearest(x, y, obj_vigi_attackspot)
 wastedhits = (8 - elitehit)
 switch state
 {
-    case (134 << 0):
+    case states.walk:
         scr_vigilante_walk()
         break
-    case (37 << 0):
+    case states.climbwall:
         scr_vigilante_climbwall()
         break
-    case (100 << 0):
+    case states.crouch:
         scr_vigilante_crouch()
         break
-    case (92 << 0):
+    case states.jump:
         scr_vigilante_jump()
         break
-    case (1 << 0):
+    case states.revolver:
         scr_vigilante_revolver()
         break
-    case (74 << 0):
+    case states.throwing:
         scr_vigilante_throwing()
         break
-    case (122 << 0):
+    case states.freefallprep:
         scr_vigilante_freefallprep()
         break
-    case (108 << 0):
+    case states.freefall:
         scr_vigilante_freefall()
         break
-    case (111 << 0):
+    case states.freefallland:
         scr_vigilante_freefallland()
         break
-    case (2 << 0):
+    case states.dynamite:
         scr_vigilante_dynamite()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
 }
 
-if (state != (108 << 0) && state != (111 << 0))
+if (state != states.freefall && state != states.freefallland)
     hit = 0
-if (state == (100 << 0))
+if (state == states.crouch)
     mask_index = spr_crouchmask
 else
     mask_index = spr_player_mask
-if (state == (138 << 0))
+if (state == states.stun)
 {
     movespeed = 0
     if thrown
@@ -71,13 +71,13 @@ if (state == (138 << 0))
 }
 else
     savedthrown = false
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state == (92 << 0))
+if (state == states.jump)
 {
     use_collision = 0
     x += hsp
@@ -87,17 +87,17 @@ if (state == (92 << 0))
 }
 else
     use_collision = 1
-if (state == (138 << 0) or state == (153 << 0) or state == (134 << 0) or state == (100 << 0) or state == (37 << 0) or (!use_collision))
+if (state == states.stun or state == states.shoulderbash or state == states.walk or state == states.crouch or state == states.climbwall or (!use_collision))
     invincible = 1
 else
     invincible = 0
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {

@@ -1,11 +1,11 @@
 var _baddieID = other.baddieID
 if (!instance_exists(_baddieID))
     exit;
-if (_baddieID.state != (4 << 0) && (!_baddieID.invincible) && _baddieID.hittable && _baddieID.state != (17 << 0))
+if (_baddieID.state != states.grabbed && (!_baddieID.invincible) && _baddieID.hittable && _baddieID.state != states.ghostpossess)
 {
     with (playerid)
     {
-        if ((floor(image_index) < 4 or (global.attackstyle == 3 && image_index < 6)) && (state == (43 << 0) or state == (42 << 0)) && state != (61 << 0) && _baddieID.state != (137 << 0))
+        if ((floor(image_index) < 4 or (global.attackstyle == 3 && image_index < 6)) && (state == states.lungeattack or state == states.handstandjump) && state != states.chainsaw && _baddieID.state != states.hit)
         {
             var lag = 5
             var baddie_id = _baddieID.id
@@ -17,7 +17,7 @@ if (_baddieID.state != (4 << 0) && (!_baddieID.invincible) && _baddieID.hittable
                 {
                     hp -= 0.5
                     instance_create(x, y, obj_bangeffect)
-                    state = (137 << 0)
+                    state = states.hit
                     image_xscale = (-other.xscale)
                     hit_connected = 1
                     hithsp = (((other.x + (((other.movespeed + 0.5) * 60) * other.xscale)) - x) / 60)
@@ -38,9 +38,9 @@ if (_baddieID.state != (4 << 0) && (!_baddieID.invincible) && _baddieID.hittable
                 lunge_hits++
                 finisher_hits++
                 lunge_hit_buffer = 100
-                if (state == (42 << 0))
+                if (state == states.handstandjump)
                 {
-                    state = (43 << 0)
+                    state = states.lungeattack
                     randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch])
                     image_index = 0
                 }
@@ -48,7 +48,7 @@ if (_baddieID.state != (4 << 0) && (!_baddieID.invincible) && _baddieID.hittable
                 tauntstoredsprite = sprite_index
                 tauntstoredmovespeed = movespeed
                 tauntstoredvsp = 0
-                state = (61 << 0)
+                state = states.chainsaw
                 hitLag = lag
                 hitX = x
                 if hit_connected

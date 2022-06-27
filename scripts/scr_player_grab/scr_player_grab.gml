@@ -139,7 +139,7 @@ function scr_player_grab()
             vsp = -4
             sprite_index = spr_player_kungfujump
             image_index = 0
-            state = (80 << 0)
+            state = states.punch
             movespeed = -6
         }
         with (instance_place((x + xscale), y, obj_destructibles))
@@ -178,7 +178,7 @@ function scr_player_grab()
             move = xscale
         hsp = (xscale * movespeed)
         movespeed = hsp
-        state = (6 << 0)
+        state = states.finishingblow
         if (!key_up)
             sprite_index = choose(spr_finishingblow1, spr_finishingblow2, spr_finishingblow3, spr_finishingblow4, spr_finishingblow5)
         else if key_up
@@ -192,7 +192,7 @@ function scr_player_grab()
         hsp = (xscale * movespeed)
         movespeed = hsp
         swingdingendcooldown = 0
-        state = (6 << 0)
+        state = states.finishingblow
         sprite_index = spr_swingdingend
         image_index = 0
     }
@@ -200,7 +200,7 @@ function scr_player_grab()
     {
         sprite_index = spr_piledriver
         vsp = -5
-        state = (76 << 0)
+        state = states.superslam
         image_index = 0
         image_speed = 0.35
     }
@@ -208,7 +208,7 @@ function scr_player_grab()
         instance_create(x, (y + 43), obj_cloudeffect)
     if (key_down && grounded && sprite_index != spr_swingding && sprite_index != spr_swingdingend)
     {
-        state = (100 << 0)
+        state = states.crouch
         landAnim = 0
         crouchAnim = 1
         image_index = 0
@@ -224,7 +224,7 @@ function scr_player_grab()
         image_speed = 0.5
     if (grabbingenemy && (!instance_exists(baddiegrabbedID)))
     {
-        state = (0 << 0)
+        state = states.normal
         landAnim = 0
         image_index = 0
     }

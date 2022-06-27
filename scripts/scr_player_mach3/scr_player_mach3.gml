@@ -118,7 +118,7 @@ function scr_player_mach3()
 	{
 	    sprite_index = spr_machslidestart
 	    scr_soundeffect(sfx_break)
-	    state = (105 << 0)
+	    state = states.machslide
 	    image_index = 0
 	    launched = 0
 	}
@@ -126,7 +126,7 @@ function scr_player_mach3()
 	{
 	    scr_soundeffect(sfx_machslideboost)
 	    sprite_index = spr_mach3boost
-	    state = (105 << 0)
+	    state = states.machslide
 	    image_index = 0
 	}
 	if (key_down && fightball == 0)
@@ -134,7 +134,7 @@ function scr_player_mach3()
 	    particle_set_scale(particle.jumpdust, xscale, 1)
 	    create_particle(x, y, particle.jumpdust, 0)
 	    flash = 0
-	    state = (5 << 0)
+	    state = states.tumble
 	    image_index = 0
 	    vsp = 10
 	    if (!grounded)
@@ -149,12 +149,12 @@ function scr_player_mach3()
 	    wallspeed = movespeed
 	    if (vsp > 0)
 	        wallspeed -= vsp
-	    state = (37 << 0)
+	    state = states.climbwall
 	}
 	if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
 	{
 	    wallspeed = movespeed
-	    state = (37 << 0)
+	    state = states.climbwall
 	}
 	if key_slap2
 	{
@@ -162,7 +162,7 @@ function scr_player_mach3()
 	    suplexmove = 1
 	    suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, false)
 	    sfx_gain(suplexdashsnd)
-	    state = (42 << 0)
+	    state = states.handstandjump
 	    if (movespeed < 5)
 	        movespeed = 5
 	    image_index = 0
@@ -198,7 +198,7 @@ function scr_player_mach3()
 	            scr_soundeffect(sfx_bumpwall)
 	            hsp = 0
 	            flash = 0
-	            state = (106 << 0)
+	            state = states.bump
 	            hsp = (-6 * xscale)
 	            vsp = -6
 	            mach2 = 0
@@ -215,7 +215,7 @@ function scr_player_mach3()
 	                scr_soundeffect(sfx_bumpwall)
 	                hsp = 0
 	                flash = 0
-	                state = (106 << 0)
+	                state = states.bump
 	                hsp = (-6 * xscale)
 	                vsp = -6
 	                mach2 = 0
@@ -266,7 +266,7 @@ function scr_player_mach3()
 	if (key_up && fightball == 0 && character == "P" && grounded && sprite_index != spr_dashpadmach && (!(place_meeting(x, y, obj_dashpad))))
 	{
 	    sprite_index = spr_superjumpprep
-	    state = (99 << 0)
+	    state = states.Sjumpprep
 	    hsp = 0
 	    image_index = 0
 	}
@@ -274,7 +274,7 @@ function scr_player_mach3()
 	{
 	    randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch])
 	    image_index = 0
-	    state = (43 << 0)
+	    state = states.lungeattack
 	}
 	exit;
 }

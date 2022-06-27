@@ -9,4 +9,4 @@ shootspr = spr_placeholder_tank
 spr_dead = spr_placeholder_tank
 hp = 3
 stopfiring = 100
-state = (0 << 0)
+state = states.normal

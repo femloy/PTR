@@ -1,10 +1,10 @@
-if (state != (74 << 0) && state != (138 << 0) && state != (4 << 0))
+if (state != states.throwing && state != states.stun && state != states.grabbed)
 {
-    if (other.state == (134 << 0))
+    if (other.state == states.walk)
     {
         golfid = other.id
         shot = 0
-        state = (74 << 0)
+        state = states.throwing
         sprite_index = spr_golfburger_golf
         image_index = 0
         if (shootdir == 0)
@@ -12,6 +12,6 @@ if (state != (74 << 0) && state != (138 << 0) && state != (4 << 0))
         else
             image_xscale = shootdir
     }
-    else if (other.state == (156 << 0))
+    else if (other.state == states.thrown)
         instance_destroy()
 }

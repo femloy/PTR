@@ -23,7 +23,7 @@ function scr_player_bombdelete()
         movespeed -= 0.1
     if key_slap2
     {
-        state = (0 << 0)
+        state = states.normal
         with (instance_create(x, y, obj_bomb))
         {
             hsp = (other.xscale * 10)

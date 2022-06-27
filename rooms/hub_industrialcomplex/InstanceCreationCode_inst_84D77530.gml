@@ -7,7 +7,7 @@ scene_info = [[cutscene_do_dialog, [dialog_create("Lets blow this thing then")]]
         with (instance_create(x, y, obj_pizzagoblinbomb))
         {
             defused = 1
-            state = (0 << 0)
+            state = states.normal
             movespeed = 7
             vsp = -8
         }

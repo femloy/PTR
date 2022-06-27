@@ -1,16 +1,16 @@
 var _actor = 0
 with (obj_player)
 {
-    if (state == (146 << 0))
+    if (state == states.actor)
         _actor = 1
 }
 if _actor
     exit;
 with (other)
 {
-    if (key_up && grounded && ((character != "M" && y == (other.y + 50)) or (character == "M" && y == (other.y + 55))) && (!instance_exists(obj_fadeout)) && state != (112 << 0) && state != (95 << 0) && ((obj_player1.spotlight == 1 && object_index == obj_player1) or (obj_player1.spotlight == 0 && object_index == obj_player2)))
+    if (key_up && grounded && ((character != "M" && y == (other.y + 50)) or (character == "M" && y == (other.y + 55))) && (!instance_exists(obj_fadeout)) && state != states.door && state != states.comingoutdoor && ((obj_player1.spotlight == 1 && object_index == obj_player1) or (obj_player1.spotlight == 0 && object_index == obj_player2)))
     {
-        if (state == (0 << 0) or state == (103 << 0) or state == (104 << 0) or state == (58 << 0) or state == (121 << 0) or state == (99 << 0))
+        if (state == states.normal or state == states.mach1 or state == states.mach2 or state == states.pogo or state == states.mach3 or state == states.Sjumpprep)
         {
             global.currentsavefile = other.file
             obj_player1.lastroom = room
@@ -27,7 +27,7 @@ with (other)
             obj_player2.targetDoor = other.targetDoor
             obj_player2.targetRoom = other.targetRoom
             obj_player.image_index = 0
-            obj_player.state = (112 << 0)
+            obj_player.state = states.door
             obj_player.mach2 = 0
             if (instance_exists(obj_player2) && global.coop == true)
             {
@@ -45,7 +45,7 @@ with (other)
             other.visited = 1
             instance_create(x, y, obj_fadeout)
         }
-        else if (state == (183 << 0))
+        else if (state == states.bombdelete)
         {
             instance_create(x, y, obj_bombexplosion)
             var str = concat("saveData", other.file, ".ini")

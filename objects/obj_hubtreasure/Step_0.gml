@@ -7,7 +7,7 @@ if (playerid != noone)
     }
     x = playerid.x
     y = (playerid.y - 35)
-    if (playerid.state != (46 << 0))
+    if (playerid.state != states.gottreasure)
         instance_destroy()
 }
 
@@ -19,13 +19,13 @@ if (!got)
 		var _player = ds_list_find_value(global.instancelist, i)
         with (_player)
         {
-            if (state != (186 << 0))
+            if (state != states.gotoplayer)
             {
                 if grounded
                 {
                     hsp = 0
                     vsp = 0
-                    state = (46 << 0)
+                    state = states.gottreasure
                     scr_soundeffect(sfx_secretfound)
                     with (other)
                     {

@@ -2,7 +2,7 @@ if (player < obj_hardmode)
 {
     if (start == 1)
     {
-        if (other.state != (84 << 0) && other.state != (61 << 0) && other.state != (137 << 0) && other.state != (186 << 0))
+        if (other.state != states.backbreaker && other.state != states.chainsaw && other.state != states.hit && other.state != states.gotoplayer)
         {
             player = other.id
             player.visible = false
@@ -23,7 +23,7 @@ if (player < obj_hardmode)
             player.alarm[7] = 50
             player.alarm[5] = 2
             player.hurted = 1
-            player.state = (84 << 0)
+            player.state = states.backbreaker
         }
     }
 }

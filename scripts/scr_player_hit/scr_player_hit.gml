@@ -22,7 +22,7 @@ function scr_player_hit()
             y -= 5
         movespeed = abs(hithsp)
         vsp = hitvsp
-        state = (156 << 0)
+        state = states.thrown
         stunned = hitstunned
     }
     exit;

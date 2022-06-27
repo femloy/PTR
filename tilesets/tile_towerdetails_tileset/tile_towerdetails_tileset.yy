@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_towerdetails_tileset",
-    "path": "sprites/tilespr_tile_towerdetails_tileset/tilespr_tile_towerdetails_tileset.yy",
+    "name": "tile_towerdetails",
+    "path": "sprites/tile_towerdetails/tile_towerdetails.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "entrancegroup",

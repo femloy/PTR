@@ -3,24 +3,24 @@ if (trashbuffer > 0)
     trashbuffer--
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         with (obj_player)
         {
-            if (other.state == (0 << 0) && state != (209 << 0) && other.trashbuffer <= 0 && place_meeting(x, y, other))
+            if (other.state == states.normal && state != states.trashjumpprep && other.trashbuffer <= 0 && place_meeting(x, y, other))
             {
-                state = (209 << 0)
+                state = states.trashjumpprep
                 sprite_index = spr_player_trashstart
                 image_index = 0
                 xscale = other.image_xscale
                 other.shot = 0
                 other.playerid = id
-                other.state = (209 << 0)
+                other.state = states.trashjumpprep
                 other.sprite_index = spr_trash_flingstart
                 other.image_index = 0
             }
         }
         break
-    case (209 << 0):
+    case states.trashjumpprep:
         with (playerid)
         {
             if (floor(image_index) == (image_number - 1))
@@ -66,7 +66,7 @@ switch state
                     sprite_index = spr_player_trashjump
                     image_index = 0
                     movespeed = 0
-                    state = (210 << 0)
+                    state = states.trashjump
                     vsp = -25
                 }
             }
@@ -74,7 +74,7 @@ switch state
         if (floor(image_index) == (image_number - 1))
         {
             sprite_index = spr_trash
-            state = (0 << 0)
+            state = states.normal
             trashbuffer = 30
         }
         break

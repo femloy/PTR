@@ -4,13 +4,13 @@ function scr_player_shotgundash()
     hsp = (xscale * movespeed)
     if (floor(image_index) == (image_number - 1) or (!key_attack))
     {
-        state = (66 << 0)
+        state = states.shotgun
         sprite_index = spr_shotgunidle
         landAnim = 0
         movespeed = 6
         if (!grounded)
         {
-            state = (57 << 0)
+            state = states.shotgunjump
             sprite_index = spr_shotgunfall
         }
     }

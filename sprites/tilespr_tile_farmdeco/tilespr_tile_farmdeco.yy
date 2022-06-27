@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 1008,
-  "height": 1044,
+  "width": 800,
+  "height": 1056,
   "textureGroupId": {
     "name": "farmgroup",
     "path": "texturegroups/farmgroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2903b3d5-3c36-43bd-8a08-a13630840d45","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2903b3d5-3c36-43bd-8a08-a13630840d45","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"LayerId":{"name":"f6d44c63-ea3a-43b3-aa85-4463b9c6694b","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_farmdeco","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"resourceVersion":"1.0","name":"2903b3d5-3c36-43bd-8a08-a13630840d45","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"abfe4497-9611-43a4-b276-6bfb4452a6f6","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"abfe4497-9611-43a4-b276-6bfb4452a6f6","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"LayerId":{"name":"b661018d-64da-4f65-971c-78197e198c0b","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_farmdeco","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"resourceVersion":"1.0","name":"abfe4497-9611-43a4-b276-6bfb4452a6f6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_farmdeco","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d53a52f9-7e94-4800-b3bd-4280d3a43714","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2903b3d5-3c36-43bd-8a08-a13630840d45","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"26a4b524-2ab6-43ff-881d-65edf68c1ffe","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"abfe4497-9611-43a4-b276-6bfb4452a6f6","path":"sprites/tilespr_tile_farmdeco/tilespr_tile_farmdeco.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f6d44c63-ea3a-43b3-aa85-4463b9c6694b","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b661018d-64da-4f65-971c-78197e198c0b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

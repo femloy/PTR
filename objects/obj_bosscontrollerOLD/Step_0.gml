@@ -1,23 +1,23 @@
-if ((!instance_exists(bossID)) && bossID != noone && state != (98 << 0) && (!fakedeath))
+if ((!instance_exists(bossID)) && bossID != noone && state != states.victory && (!fakedeath))
 {
-    state = (98 << 0)
+    state = states.victory
     alarm[1] = (room_speed * 4)
 }
 if (player_hp <= 0)
 {
     fakedeath = 0
-    if (state != (8 << 0) && state != (89 << 0))
+    if (state != states.transitioncutscene && state != states.gameover)
     {
         if (endroundfunc != -4)
             endroundfunc()
         depth = (obj_player1.depth + 1)
-        state = (8 << 0)
+        state = states.transitioncutscene
         with (bossID)
             player_destroy(lastplayerid)
     }
-    else if (bossID.state != (61 << 0) && state != (89 << 0))
+    else if (bossID.state != states.chainsaw && state != states.gameover)
     {
-        state = (89 << 0)
+        state = states.gameover
         alarm[1] = (room_speed * 4)
     }
 }
@@ -26,21 +26,21 @@ if instance_exists(bossID)
     if (bossID.destroyed && (!fakedeath))
     {
         depth = (bossID.depth + 1)
-        state = (8 << 0)
+        state = states.transitioncutscene
     }
 }
 switch state
 {
-    case (144 << 0):
+    case states.arenaintro:
         with (obj_player)
         {
-            state = (146 << 0)
+            state = states.actor
             xscale = (x > (room_width / 2) ? -1 : 1)
             image_blend = make_colour_hsv(0, 0, 255)
         }
         with (par_boss)
         {
-            state = (146 << 0)
+            state = states.actor
             x = xstart
         }
         if (playerx != 0)
@@ -59,20 +59,21 @@ switch state
         if (intro_buffer > 0)
             intro_buffer--
         else if use_countdown
-            state = (145 << 0)
+            state = states.arenaround
         else
         {
-            state = (0 << 0)
+            state = states.normal
             with (obj_player)
             {
                 if (object_index != obj_player2 or global.coop)
-                    state = (0 << 0)
+                    state = states.normal
             }
             with (par_boss)
-                state = (0 << 0)
+                state = states.normal
         }
         break
-    case (145 << 0):
+	
+    case states.arenaround:
         var round_yto = 437
         round_y = Approach(round_y, round_yto, 7)
         if (round_y != round_yto)
@@ -94,9 +95,9 @@ switch state
             instance_destroy(obj_noisebossbomb)
             with (obj_player)
             {
-                if (state != (146 << 0) && state != (95 << 0) && state != (137 << 0) && (!instance_exists(obj_fadeout)))
+                if (state != states.actor && state != states.comingoutdoor && state != states.hit && (!instance_exists(obj_fadeout)))
                 {
-                    if (state == (137 << 0) or state == (61 << 0))
+                    if (state == states.hit or state == states.chainsaw)
                     {
                         hitLag = 0
                         x = hitX
@@ -109,24 +110,24 @@ switch state
                     image_speed = 0.35
                     xscale = (x > (room_width / 2) ? -1 : 1)
                     image_blend = make_colour_hsv(0, 0, 255)
-                    state = (146 << 0)
+                    state = states.actor
                     visible = true
                     image_alpha = 1
                 }
-                if (state == (146 << 0))
+                if (state == states.actor)
                     state_player_arenaround()
             }
             with (par_boss)
             {
-                if (state == (137 << 0) or state == (61 << 0))
+                if (state == states.hit or state == states.chainsaw)
                 {
                     hitLag = 0
                     x = hitX
                     y = hitY
                 }
-                if (colliding && state != (180 << 0) && state != (181 << 0))
+                if (colliding && state != states.boss_cardboard && state != states.boss_cardboardend)
                 {
-                    state = (145 << 0)
+                    state = states.arenaround
                     attack_cooldown = attack_max[(phase - 1)]
                 }
             }
@@ -138,22 +139,23 @@ switch state
             minutes = maxminutes
             seconds = maxseconds
             round_timer = round_timermax
-            bell_sprite = 2081
+            bell_sprite = spr_bosstimer_bell
             alarm[0] = 1
-            state = (0 << 0)
+            state = states.normal
             with (obj_player)
             {
                 if (object_index == obj_player1 or global.coop)
-                    state = (0 << 0)
+                    state = states.normal
             }
             with (par_boss)
-                state = (0 << 0)
+                state = states.normal
         }
         break
-    case (0 << 0):
+	
+    case states.normal:
         bell_sprite = spr_bosstimer_bell
         round_y = Approach(round_y, round_ystart, 4)
-        if (super >= supermax && obj_player.state != (252 << 0))
+        if (super >= supermax && obj_player.state != states.playersuperattack)
         {
             var p = 0
             with (obj_player)
@@ -162,8 +164,8 @@ switch state
                 {
                     other.super = 0
                     p = 1
-                    state = (252 << 0)
-                    superattackstate = (8 << 0)
+                    state = states.playersuperattack
+                    superattackstate = states.transitioncutscene
                     var lag = 60
                     hitX = x
                     hitY = y
@@ -177,7 +179,7 @@ switch state
                         hitX = x
                         hitY = y
                         hitLag = lag
-                        state = (252 << 0)
+                        state = states.playersuperattack
                         sprite_index = stunfallspr
                     }
                 }
@@ -201,18 +203,18 @@ switch state
             case 2:
                 super_portrait_index += 0.35
                 super_portrait_x += 1
-                if (obj_player.state != (252 << 0) or obj_player.superattackstate != (8 << 0))
+                if (obj_player.state != states.playersuperattack or obj_player.superattackstate != states.transitioncutscene)
                     super_portrait_state = 0
                 break
         }
-
         break
-    case (8 << 0):
+	
+    case states.transitioncutscene:
         instance_destroy(obj_baddiespawner)
         instance_destroy(obj_baddie)
         if (player_hp > 0)
         {
-            if ((!instance_exists(bossID)) or bossID.state != (137 << 0))
+            if ((!instance_exists(bossID)) or bossID.state != states.hit)
             {
                 fade -= 0.05
                 fade = clamp(fade, 0, 1)
@@ -223,7 +225,7 @@ switch state
             var hit = 0
             with (obj_player)
             {
-                if (state == (137 << 0))
+                if (state == states.hit)
                     hit = 1
             }
             if (!hit)
@@ -233,8 +235,9 @@ switch state
             }
         }
         break
-    case (98 << 0):
-    case (89 << 0):
+	
+    case states.victory:
+    case states.gameover:
         fade -= 0.05
         fade = clamp(fade, 0, 1)
         break
@@ -243,13 +246,13 @@ switch state
 bell_index += 0.35
 portrait1_index += 0.35
 portrait2_index += 0.35
-if (state == (0 << 0) && instance_exists(bossID))
+if (state == states.normal && instance_exists(bossID))
 {
-    if (obj_player1.state == (137 << 0) or obj_player1.state == (156 << 0))
+    if (obj_player1.state == states.hit or obj_player1.state == states.thrown)
         portrait1_sprite = portrait1_hurt
     else
         portrait1_sprite = portrait1_idle
-    if (bossID.state == (137 << 0) or bossID.state == (138 << 0))
+    if (bossID.state == states.hit or bossID.state == states.stun)
         portrait2_sprite = portrait2_hurt
     else
         portrait2_sprite = portrait2_idle

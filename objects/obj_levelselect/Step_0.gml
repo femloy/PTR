@@ -29,7 +29,7 @@ if !instance_exists(obj_option)
         {
             global.leveltosave = _levelinfo[2]
             global.leveltorestart = _levelinfo[1]
-            state = (95 << 0)
+            state = states.comingoutdoor
             movespeed = 0
             hsp = 0
             vsp = 0

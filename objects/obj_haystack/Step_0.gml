@@ -3,12 +3,12 @@ if (sprite_index != spr_haystackburning && sprite_index != spr_haystackburningup
 {
     with (obj_peasanto)
     {
-        if (state == (128 << 0) && place_meeting((x + hsp), y, other))
+        if (state == states.charge && place_meeting((x + hsp), y, other))
             other.sprite_index = spr_haystackburningup
     }
     with (obj_player)
     {
-        if ((state == (10 << 0) && (place_meeting((x + hsp), y, other) or place_meeting(x, (y + 1), other))) or (state == (9 << 0) && place_meeting(x, (y + 1), other)))
+        if ((state == states.firemouth && (place_meeting((x + hsp), y, other) or place_meeting(x, (y + 1), other))) or (state == states.fireass && place_meeting(x, (y + 1), other)))
             other.sprite_index = spr_haystackburningup
     }
 }
@@ -41,7 +41,7 @@ else if (sprite_index == spr_haystackburning)
     }
     with (instance_place(x, (y - 1), obj_baddie))
     {
-        if (state != (4 << 0))
+        if (state != states.grabbed)
             instance_destroy()
     }
     if (ds_list_find_index(global.saveroom, id) == -1)
@@ -56,7 +56,7 @@ else if (sprite_index == spr_haystackburning)
     playerid = instance_place(x, (y - 1), obj_player)
     with (playerid)
     {
-        if (state != (9 << 0) && state != (47 << 0))
+        if (state != states.fireass && state != states.knightpep)
         {
             if (character == "V")
                 scr_hurtplayer(id)
@@ -64,9 +64,9 @@ else if (sprite_index == spr_haystackburning)
             {
                 scr_losepoints()
                 scr_soundeffect(sfx_scream3)
-                if (state != (9 << 0))
+                if (state != states.fireass)
                     tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt.transfo, spr_tv_fireass, 3), "fireass")
-                state = (9 << 0)
+                state = states.fireass
                 image_index = 0
                 vsp = -5
                 sprite_index = spr_fireass
@@ -74,7 +74,7 @@ else if (sprite_index == spr_haystackburning)
         }
     }
 }
-if (state == (8 << 0))
+if (state == states.transitioncutscene)
 {
     hsp = (movespeed * dir)
     if (place_meeting((x + sign(hsp)), y, obj_solid) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or place_meeting((x + sign(hsp)), (y - 4), obj_solid)))
@@ -83,6 +83,6 @@ if (state == (8 << 0))
     {
         x = x_to
         hsp = 0
-        state = (0 << 0)
+        state = states.normal
     }
 }

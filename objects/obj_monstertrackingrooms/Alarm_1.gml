@@ -19,7 +19,7 @@ if (room_place(blob_pos.x, blob_pos.y) != room_get_name(room))
         with (obj_blobmonster)
         {
             investigatestate = 0
-            state = (221 << 0)
+            state = states.robotinvestigate
         }
     }
 }

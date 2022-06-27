@@ -4,15 +4,15 @@ function scr_ratblock_destroy()
     {
         if ((other.sprite_index == spr_rattumbleblock or other.sprite_index == spr_rattumbleblock_big) && sprite_index == spr_tumble && (place_meeting((x + 1), y, other) or place_meeting((x - 1), y, other)))
             instance_destroy(other)
-        if (state != (11 << 0) && state != (52 << 0) && ((!scr_transformationcheck()) or state == (113 << 0)) && (place_meeting((x + 1), y, other) or place_meeting((x - 1), y, other) or place_meeting(x, (y + 1), other) or place_meeting(x, (y - 1), other)))
+        if (state != states.mort && state != states.bombgrab && ((!scr_transformationcheck()) or state == states.barrel) && (place_meeting((x + 1), y, other) or place_meeting((x - 1), y, other) or place_meeting(x, (y + 1), other) or place_meeting(x, (y - 1), other)))
         {
             switch state
             {
-                case (113 << 0):
+                case states.barrel:
                     if (!(place_meeting(x, (y - 12), other)))
                         instance_destroy(other)
                     break
-                case (51 << 0):
+                case states.bombpep:
                     if (sprite_index != spr_bombpepend && sprite_index != spr_bombpepintro)
                     {
                         instance_create(x, y, obj_bombexplosion)
@@ -22,20 +22,20 @@ function scr_ratblock_destroy()
                         vsp = -4
                         image_index = 0
                         sprite_index = spr_bombpepend
-                        state = (51 << 0)
+                        state = states.bombpep
                         bombpeptimer = 0
                     }
                     break
-                case (186 << 0):
-                case (150 << 0):
-                case (146 << 0):
-                case (33 << 0):
-                case (34 << 0):
-                case (35 << 0):
-                case (47 << 0):
-                case (49 << 0):
+                case states.gotoplayer:
+                case states.tube:
+                case states.actor:
+                case states.boxxedpep:
+                case states.boxxedpepspin:
+                case states.boxxedpepjump:
+                case states.knightpep:
+                case states.knightpepbump:
                     break
-                case (5 << 0):
+                case states.tumble:
                     if (other.sprite_index == spr_rattumbleblock or other.sprite_index == spr_rattumbleblock_big)
                         instance_destroy(other)
                     break

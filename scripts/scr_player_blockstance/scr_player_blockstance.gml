@@ -6,7 +6,7 @@ function scr_player_blockstance()
         sprite_index = spr_player_airattack
     if ((!key_attack) && sprite_index != spr_player_airattackstart)
     {
-        state = (0 << 0)
+        state = states.normal
         landAnim = 0
     }
     exit;

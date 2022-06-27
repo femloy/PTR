@@ -8,12 +8,12 @@ function scr_player_ridecow()
     {
         if has_mort
         {
-            state = (12 << 0)
+            state = states.mortjump
             sprite_index = spr_fall
         }
         else
         {
-            state = (92 << 0)
+            state = states.jump
             sprite_index = spr_fall
         }
         exit;
@@ -30,12 +30,12 @@ function scr_player_ridecow()
         image_index = 0
         if has_mort
         {
-            state = (12 << 0)
+            state = states.mortjump
             sprite_index = spr_jump
         }
         else
         {
-            state = (92 << 0)
+            state = states.jump
             sprite_index = spr_jump
         }
     }

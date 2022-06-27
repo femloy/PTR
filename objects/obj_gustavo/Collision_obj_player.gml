@@ -6,6 +6,6 @@ if (sprite_index == spr_gustavo_showpizza)
     global.failcutscene = 0
     global.pizzadelivery = 1
     global.hp = 8
-    state = (0 << 0)
+    state = states.normal
     global.heattime = 60
 }

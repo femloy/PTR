@@ -20,7 +20,7 @@ function scr_enemy_rage()
                     instance_destroy()
                 if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_slope))))
                 {
-                    state = (138 << 0)
+                    state = states.stun
                     stunned = 100
                     vsp = -8
                     hsp = ((-image_xscale) * 5)
@@ -41,7 +41,7 @@ function scr_enemy_rage()
             if (floor(image_index) == (image_number - 1))
             {
                 ragebuffer = 100
-                state = (134 << 0)
+                state = states.walk
                 sprite_index = walkspr
             }
             break
@@ -56,7 +56,7 @@ function scr_enemy_rage()
             {
                 shot = 0
                 sprite_index = spr_pizzaslug_walk
-                state = (134 << 0)
+                state = states.walk
                 ragecooldown = 100
             }
             break
@@ -66,7 +66,7 @@ function scr_enemy_rage()
             {
                 ragecooldown = 200
                 ragedash = 50
-                state = (134 << 0)
+                state = states.walk
                 sprite_index = walkspr
             }
             if ((!shot) && ragedash < 30)
@@ -87,7 +87,7 @@ function scr_enemy_rage()
                 instance_create(x, y, obj_warplaserhoming)
             }
             if (floor(image_index) == (image_number - 1))
-                state = (134 << 0)
+                state = states.walk
             break
         case obj_cheeseslime:
             if (floor(image_index) > 10)
@@ -103,7 +103,7 @@ function scr_enemy_rage()
                 hsp = 0
             if (floor(image_index) == (image_number - 1))
             {
-                state = (134 << 0)
+                state = states.walk
                 sprite_index = walkspr
             }
             break
@@ -118,7 +118,7 @@ function scr_enemy_rage()
                     targetplayer = 323
                 movespeed = 4
                 image_xscale = (-(sign((x - targetplayer.x))))
-                state = (141 << 0)
+                state = states.chase
                 sprite_index = spr_minijohn_charge
             }
             break
@@ -132,7 +132,7 @@ function scr_enemy_rage()
                 with (instance_create(x, y, obj_forkhitbox))
                     ID = other.id
                 charging = 1
-                state = (128 << 0)
+                state = states.charge
                 movespeed = 5
                 vsp = -7
                 sprite_index = spr_fencer_chargestart
@@ -158,7 +158,7 @@ function scr_enemy_rage()
             }
             if (floor(image_index) == (image_number - 1) && sprite_index == spr_ancho_rage3)
             {
-                state = (134 << 0)
+                state = states.walk
                 sprite_index = spr_ancho
             }
             break
@@ -175,7 +175,7 @@ function scr_enemy_rage()
             }
             if (floor(image_index) == (image_number - 1))
             {
-                state = (134 << 0)
+                state = states.walk
                 sprite_index = spr_spitcheese_idle
             }
             break
@@ -198,7 +198,7 @@ function scr_enemy_rage()
             if ((place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!scr_slope())) || slope_buffer <= 0)
             {
                 slope_buffer = 8
-                state = (138 << 0)
+                state = states.stun
                 hsp = ((-image_xscale) * 7)
                 vsp = -6
                 sprite_index = spr_tank_hitwall
@@ -221,7 +221,7 @@ function scr_enemy_rage()
             if (floor(image_index) == (image_number - 1))
             {
                 ragecooldown = 100
-                state = (134 << 0)
+                state = states.walk
             }
             break
     }

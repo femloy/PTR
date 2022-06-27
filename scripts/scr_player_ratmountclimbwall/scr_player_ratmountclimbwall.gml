@@ -13,7 +13,7 @@ function scr_player_ratmountclimbwall()
         image_index = (image_number - 1)
     if ((!grounded) && (!(place_meeting((x + 1), y, obj_solid))) && (!(place_meeting((x - 1), y, obj_solid))))
     {
-        state = (192 << 0)
+        state = states.ratmountjump
         jumpAnim = 0
         sprite_index = spr_player_ratmountfall
     }
@@ -21,7 +21,7 @@ function scr_player_ratmountclimbwall()
     {
         if key_jump2
         {
-            state = (198 << 0)
+            state = states.ratmountbounce
             xscale *= -1
             vsp = -14
             ratmount_fallingspeed = 0
@@ -30,7 +30,7 @@ function scr_player_ratmountclimbwall()
         }
         else
         {
-            state = (192 << 0)
+            state = states.ratmountjump
             sprite_index = spr_player_ratmountfall
         }
     }

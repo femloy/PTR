@@ -1,6 +1,6 @@
-if (state == (107 << 0))
+if (state == states.hurt)
 {
-    state = (0 << 0)
+    state = states.normal
     movespeed = 0
     if scr_solid(x, y)
     {
@@ -9,8 +9,8 @@ if (state == (107 << 0))
             y += ty
     }
 }
-else if (state == (196 << 0))
+else if (state == states.ratmounthurt)
 {
-    state = (191 << 0)
+    state = states.ratmount
     movespeed = 0
 }

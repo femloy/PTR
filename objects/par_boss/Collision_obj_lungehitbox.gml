@@ -3,7 +3,7 @@ if ((!attacking) && (!invincible) && lungehurt)
     var p = other.playerid
     with (p)
     {
-        if (state == (43 << 0) && ds_list_find_index(hitlist, other.id) == -1)
+        if (state == states.lungeattack && ds_list_find_index(hitlist, other.id) == -1)
         {
             ds_list_add(hitlist, other.id)
             with (other)

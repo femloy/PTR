@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state == (42 << 0) or state == (80 << 0))
+    if (state == states.handstandjump or state == states.punch)
     {
-        state = (31 << 0)
+        state = states.rideweenie
         movespeed = hsp
         sprite_index = spr_rideweenie
         xscale = other.image_xscale

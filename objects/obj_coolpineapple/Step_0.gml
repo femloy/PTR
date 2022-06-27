@@ -2,45 +2,45 @@ if (room == rm_editor)
     exit;
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         grav = 0.5
         scr_enemy_idle()
         break
-    case (128 << 0):
+    case states.charge:
         grav = 0.5
         scr_enemy_charge()
         break
-    case (130 << 0):
+    case states.turn:
         grav = 0.5
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         grav = 0.5
         scr_enemy_walk()
         break
-    case (136 << 0):
+    case states.land:
         grav = 0.5
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         grav = 0.5
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         grav = 0.5
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         grav = 0.5
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         grav = 0.5
         scr_enemy_grabbed()
         break
 }
 
-if ((!hitboxcreate) && state == (134 << 0))
+if ((!hitboxcreate) && state == states.walk)
 {
     hitboxcreate = 1
     with (instance_create(x, y, obj_forkhitbox))
@@ -51,17 +51,17 @@ if ((!hitboxcreate) && state == (134 << 0))
 }
 if (inv_timer <= 0)
     scr_scareenemy()
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (sprite_index == scaredspr)
     inv_timer = 0
-if (state == (134 << 0))
+if (state == states.walk)
 {
     grav = 0.5
     if point_in_camera(x, y, view_camera[0])
@@ -69,7 +69,7 @@ if (state == (134 << 0))
         var _taunt = 0
         with (obj_player)
         {
-            if (state == (84 << 0))
+            if (state == states.backbreaker)
                 _taunt = 1
         }
         if _taunt
@@ -82,18 +82,18 @@ if (state == (134 << 0))
             taunt_storedstate = state
             taunt_storedmovespeed = movespeed
             taunt_storedhsp = hsp
-            state = (84 << 0)
+            state = states.backbreaker
             hsp = 0
             vsp = 0
             grav = 0
         }
     }
 }
-if (state != (84 << 0) && instance_exists(taunteffect_inst))
+if (state != states.backbreaker && instance_exists(taunteffect_inst))
     instance_destroy(taunteffect_inst)
 switch state
 {
-    case (84 << 0):
+    case states.backbreaker:
         image_speed = 0
         image_index = index
         hsp = 0
@@ -104,12 +104,12 @@ switch state
         {
             sprite_index = walkspr
             grav = taunt_storedgrav
-            state = (134 << 0)
+            state = states.walk
             hsp = taunt_storedhsp
             movespeed = taunt_storedmovespeed
         }
         break
-    case (147 << 0):
+    case states.parry:
         image_speed = 0.35
         if (trail_count > 0)
             trail_count--
@@ -139,7 +139,7 @@ switch state
             movespeed = taunt_storedmovespeed
         }
         break
-    case (80 << 0):
+    case states.punch:
         if (sprite_index == spr_coolpinea_ragestart)
         {
             hsp = 0
@@ -175,7 +175,7 @@ switch state
             else
             {
                 sprite_index = walkspr
-                state = (134 << 0)
+                state = states.walk
                 breakdanceinst = -4
             }
         }
@@ -184,9 +184,9 @@ switch state
 
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {

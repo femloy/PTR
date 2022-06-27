@@ -1,4 +1,4 @@
-if (buffer <= 0 && other.state != (16 << 0) && other.grounded)
+if (buffer <= 0 && other.state != states.ghost && other.grounded)
 {
     buffer = 50
     with (other)
@@ -17,6 +17,6 @@ if (buffer <= 0 && other.state != (16 << 0) && other.grounded)
         }
         with (instance_create(x, y, obj_gravecorpse))
             playerid = other.id
-        state = (211 << 0)
+        state = states.trashroll
     }
 }

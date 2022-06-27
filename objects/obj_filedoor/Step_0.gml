@@ -1,7 +1,7 @@
 if (distance_to_object(obj_player1) < 50)
 {
     var str = ""
-    if (obj_player1.state == (183 << 0))
+    if (obj_player1.state == states.bombdelete)
         str = "DELETE "
     with (obj_tv)
     {

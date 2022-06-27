@@ -1,15 +1,15 @@
 scr_initenemy()
 with (obj_player1)
 {
-    state = (191 << 0)
+    state = states.ratmount
     brick = 1
 }
 elite = true
 hit = 0
 elitehit = 8
 wastedhits = 0
-state = (134 << 0)
-walkstate = (134 << 0)
+state = states.walk
+walkstate = states.walk
 targetspot = instance_nearest(x, y, obj_noise_pogospot)
 oldtargetspot = targetspot
 movespeed = 0
@@ -17,8 +17,8 @@ move = 0
 wallspeed = 0
 bounced = 0
 afterimage_buffer = 0
-savedstate = (134 << 0)
-substate = (134 << 0)
+savedstate = states.walk
+substate = states.walk
 attackpool = -4
 attackbuffer = 100
 placedtraps = 0

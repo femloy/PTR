@@ -21,6 +21,4 @@ function scr_player_runonball()
     if (!key_attack)
         mach2 = 0
     image_speed = 0.35
-    exit;
 }
-

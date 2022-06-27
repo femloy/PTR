@@ -1,4 +1,4 @@
-if (other.state != (4 << 0) && other.state != (138 << 0))
+if (other.state != states.grabbed && other.state != states.stun)
 {
     if (!collisioned)
         event_user(0)

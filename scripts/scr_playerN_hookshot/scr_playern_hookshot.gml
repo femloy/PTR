@@ -10,7 +10,7 @@ function scr_playerN_hookshot()
         instance_create(x, y, obj_washingmachine)
         sprite_index = spr_jump
         stompAnim = 0
-        state = (92 << 0)
+        state = states.jump
         jumpAnim = 1
         jumpstop = 0
         image_index = 0
@@ -37,7 +37,7 @@ function scr_playerN_hookshot()
             if (grounded && point_in_camera(x, y, view_camera[0]))
             {
                 image_index = 0
-                state = (126 << 0)
+                state = states.idle
                 vsp = -7
                 hsp = 0
             }

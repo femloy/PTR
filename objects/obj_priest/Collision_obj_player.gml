@@ -3,13 +3,13 @@ with (other)
 {
     if (!scr_transformationcheck())
     {
-        if (state == (11 << 0) or state == (12 << 0) or state == (14 << 0) or state == (12 << 0) or state == (33 << 0) or state == (35 << 0) or state == (34 << 0))
+        if (state == states.mort or state == states.mortjump or state == states.morthook or state == states.mortjump or state == states.boxxedpep or state == states.boxxedpepjump or state == states.boxxedpepspin)
         {
             if (hsp != 0)
                 xscale = sign(hsp)
             movespeed = abs(hsp)
         }
-        state = (0 << 0)
+        state = states.normal
         dir = xscale
         _transfo = 1
         create_particle(x, y, particle.genericpoofeffect)

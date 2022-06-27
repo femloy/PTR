@@ -25,7 +25,7 @@ function scr_player_ratmount()
         xscale = move
         if (abs(movespeed) > 2 && grounded)
         {
-            state = (204 << 0)
+            state = states.ratmountskid
             movespeed = abs(movespeed)
         }
     }
@@ -121,13 +121,13 @@ function scr_player_ratmount()
             sprite_index = spr_player_ratmountgroundpound
         image_index = 0
         jumpAnim = 1
-        state = (192 << 0)
+        state = states.ratmountjump
         vsp = -11
         jumpstop = 0
     }
     if ((!grounded) && sprite_index != spr_player_ratmountswallow)
     {
-        state = (192 << 0)
+        state = states.ratmountjump
         jumpAnim = 0
         if brick
             sprite_index = spr_player_ratmountfall
@@ -145,7 +145,7 @@ function scr_player_ratmount()
     else if (key_slap2 && (!brick))
     {
         ratmountpunchtimer = 25
-        state = (259 << 0)
+        state = states.ratmountpunch
         image_index = 0
         if (move != 0)
             xscale = move
@@ -162,7 +162,7 @@ function scr_player_ratmount()
     }
     if ((key_down && grounded && vsp > 0) or scr_solid(x, y))
     {
-        state = (260 << 0)
+        state = states.ratmountcrouch
         if (brick == 1)
         {
             with (instance_create(x, y, obj_brickcomeback))
@@ -182,7 +182,7 @@ function scr_player_ratmount()
 
 function ratmount_dotaunt()
 {
-    if (key_taunt2 && state != (84 << 0) && brick)
+    if (key_taunt2 && state != states.backbreaker && brick)
     {
         scr_soundeffect(sfx_taunt)
         tauntstoredisgustavo = 1
@@ -191,7 +191,7 @@ function ratmount_dotaunt()
         tauntstoredsprite = sprite_index
         tauntstoredstate = state
         tauntstoredvsp = vsp
-        state = (84 << 0)
+        state = states.backbreaker
         sprite_index = spr_player_ratmounttaunt
         with (instance_create(x, y, obj_taunteffect))
             player = other.id
@@ -204,12 +204,12 @@ function ratmount_kickbrick()
     var _pad = 32
     with (instance_create((x + (image_xscale * _pad)), y, obj_brickball))
     {
-        if (other.state == (192 << 0) or other.state == (198 << 0))
+        if (other.state == states.ratmountjump or other.state == states.ratmountbounce)
             up = 1
         image_xscale = other.xscale
         xoffset = _pad
     }
-    state = (197 << 0)
+    state = states.ratmountgroundpound
     sprite_index = spr_lonegustavo_kick
     image_index = 0
     image_speed = 0.35

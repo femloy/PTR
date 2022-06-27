@@ -5,7 +5,7 @@ if (!fakedeath)
     {
         if (object_index == obj_player1 or global.coop)
         {
-            state = (0 << 0)
+            state = states.normal
             targetDoor = "A"
         }
     }
@@ -19,7 +19,7 @@ else
     round_max = extrarounds_count
     fakedeath = 0
     timer_buffer = timer_max
-    state = (145 << 0)
+    state = states.arenaround
     fade = 1
     with (par_boss)
     {
@@ -32,7 +32,7 @@ else
         targetstunned = 0
         phase++
         phase = clamp(phase, 0, max_phase)
-        state = (145 << 0)
+        state = states.arenaround
         vsp = -11
     }
 }

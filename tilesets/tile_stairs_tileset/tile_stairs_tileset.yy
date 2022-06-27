@@ -1,18 +1,18 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_stairs_tileset",
-    "path": "sprites/tilespr_tile_stairs_tileset/tilespr_tile_stairs_tileset.yy"
+    "name": "tile_stairs",
+    "path": "sprites/tile_stairs/tile_stairs.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -86,21 +86,21 @@
       60,
       61,
       62,
-      63
+      63,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
   "name": "tile_stairs_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_golf",
-    "path": "sprites/tilespr_tile_golf/tilespr_tile_golf.yy",
+    "name": "spr_tilegolf",
+    "path": "sprites/spr_tilegolf/spr_tilegolf.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",

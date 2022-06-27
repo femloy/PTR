@@ -7,13 +7,13 @@ if (image_speed < 0.2)
 current = place_meeting(x, (y + 1), obj_current)
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         scr_pizzaball_normal()
         break
-    case (5 << 0):
+    case states.tumble:
         scr_pizzaball_roll()
         break
-    case (148 << 0):
+    case states.golf:
         scr_pizzaball_golf()
         break
 }
@@ -28,5 +28,5 @@ with (instance_place(x, (y + 1), obj_destructibleplatform))
     if (falling == 1)
         image_speed = 0.35
 }
-if (grounded && obj_player.state == (111 << 0))
+if (grounded && obj_player.state == states.freefallland)
     vsp = -11

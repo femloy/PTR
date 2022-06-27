@@ -2,9 +2,9 @@ with (other)
 {
     if key_up2
     {
-        if (state == (0 << 0))
-            state = (191 << 0)
-        else if (state == (191 << 0))
-            state = (0 << 0)
+        if (state == states.normal)
+            state = states.ratmount
+        else if (state == states.ratmount)
+            state = states.normal
     }
 }

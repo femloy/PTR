@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "tilespr_tileset_tile_citydark",
-    "path": "sprites/tilespr_tileset_tile_citydark/tilespr_tileset_tile_citydark.yy",
+    "name": "sprite_tile_citydark",
+    "path": "sprites/sprite_tile_citydark/sprite_tile_citydark.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
@@ -17,7 +17,7 @@
   "out_tilehborder": 2,
   "out_tilevborder": 2,
   "out_columns": 7,
-  "tile_count": 49,
+  "tile_count": 48,
   "autoTileSets": [],
   "tileAnimationFrames": [],
   "tileAnimationSpeed": 15.0,
@@ -71,7 +71,6 @@
       45,
       46,
       47,
-      48,
     ],
     "SerialiseFrameCount": 1,
   },

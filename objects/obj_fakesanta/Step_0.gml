@@ -6,24 +6,24 @@ if (activated == 1)
 {
     switch state
     {
-        case (138 << 0):
+        case states.stun:
             scr_enemy_stun()
             break
-        case (137 << 0):
+        case states.hit:
             scr_enemy_hit()
             break
-        case (4 << 0):
+        case states.grabbed:
             scr_enemy_grabbed()
             break
-        case (154 << 0):
+        case states.pummel:
             scr_enemy_pummel()
             break
-        case (155 << 0):
+        case states.staggered:
             scr_enemy_staggered()
             break
     }
 
-    if (state == (134 << 0))
+    if (state == states.walk)
     {
         highest_y = -250
         var _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, (obj_player1.y - 270), obj_solid, false, true)
@@ -82,7 +82,7 @@ if (activated == 1)
         x = lerp(x, (obj_player1.x + hsp), 0.08)
         y = lerp(y, ((obj_player1.y + obj_player1.vsp) + vsp), 0.04)
     }
-    else if (state == (80 << 0))
+    else if (state == states.punch)
     {
         var ii = floor(image_index)
         hsp = 0
@@ -91,12 +91,12 @@ if (activated == 1)
         {
         }
         if (ii == (image_number - 1))
-            state = (134 << 0)
+            state = states.walk
     }
     if (flash == 1 && alarm[2] <= 0)
         alarm[2] = (0.15 * room_speed)
-    if (state != (4 << 0))
+    if (state != states.grabbed)
         depth = 0
-    if (state != (138 << 0))
+    if (state != states.stun)
         thrown = false
 }

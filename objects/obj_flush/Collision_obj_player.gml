@@ -1,6 +1,6 @@
-if (state == (223 << 0))
+if (state == states.flushidle)
 {
-    state = (224 << 0)
+    state = states.flushtransition
     image_index = 0
     switch type
     {
@@ -18,7 +18,7 @@ if (state == (223 << 0))
     var _found = 0
     with (obj_flush)
     {
-        if (state == (223 << 0) && trigger == other.trigger)
+        if (state == states.flushidle && trigger == other.trigger)
             _found = 1
     }
     if (!_found)

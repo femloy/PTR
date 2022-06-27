@@ -10,15 +10,15 @@ if (!global.coop)
     obj_player1.spotlight = 1
     x = -1000
     y = 500
-    state = (18 << 0)
+    state = states.titlescreen
     if instance_exists(obj_coopflag)
         instance_destroy(obj_coopflag)
     if instance_exists(obj_cooppointer)
         instance_destroy(obj_cooppointer)
 }
-else if (key_start && (!fightball) && obj_player1.state != (121 << 0) && obj_player1.state != (4 << 0))
-    state = (186 << 0)
-if ((!visible) && state == (95 << 0))
+else if (key_start && (!fightball) && obj_player1.state != states.mach3 && obj_player1.state != states.grabbed)
+    state = states.gotoplayer
+if ((!visible) && state == states.comingoutdoor)
 {
     coopdelay++
     image_index = 0

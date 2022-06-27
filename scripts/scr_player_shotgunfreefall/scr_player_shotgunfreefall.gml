@@ -43,7 +43,7 @@ function scr_player_shotgunfreefall()
         hsp = 0
         if (floor(image_index) == (image_number - 1))
         {
-            state = (66 << 0)
+            state = states.shotgun
             sprite_index = spr_shotgunland
             image_index = 0
             landAnim = 1

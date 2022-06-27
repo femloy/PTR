@@ -2,7 +2,7 @@ with (obj_player1)
 {
     if (shotgunAnim == 1)
     {
-        if (state != (0 << 0) && state != (100 << 0) && state != (71 << 0) && state != (111 << 0) && state != (92 << 0) && state != (42 << 0))
+        if (state != states.normal && state != states.crouch && state != states.shotgunfreefall && state != states.freefallland && state != states.jump && state != states.handstandjump)
             other.visible = true
         else
             other.visible = false

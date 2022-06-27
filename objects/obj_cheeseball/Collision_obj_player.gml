@@ -1,6 +1,6 @@
-if (other.state != (186 << 0) && other.state != (61 << 0))
+if (other.state != states.gotoplayer && other.state != states.chainsaw)
 {
-    if (other.state == (47 << 0) or other.state == (38 << 0) or other.state == (21 << 0))
+    if (other.state == states.knightpep or other.state == states.knightpepslopes or other.state == states.cheeseball)
     {
         repeat (8)
         {
@@ -21,7 +21,7 @@ if (other.state != (186 << 0) && other.state != (61 << 0))
         other.movespeed = 8
         other.x = x
         other.y = y
-        other.state = (21 << 0)
+        other.state = states.cheeseball
         other.stop_buffer = other.stop_max
         repeat (8)
         {

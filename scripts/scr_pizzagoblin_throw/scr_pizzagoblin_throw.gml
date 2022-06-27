@@ -89,7 +89,7 @@ function scr_pizzagoblin_throw()
 	
     if floor(image_index) == image_number - 1
     {
-        state = (134 << 0)
+        state = states.walk
         sprite_index = walkspr
     }
 	
@@ -251,8 +251,8 @@ function scr_pizzagoblin_throw()
                     image_xscale = other.image_xscale
                 break
             case obj_smokingpizzaslice:
-                substate = choose((134 << 0), (126 << 0), (126 << 0))
-                if (substate == (134 << 0))
+                substate = choose(states.walk, states.idle, states.idle)
+                if (substate == states.walk)
                     image_xscale = choose(-1, 1, (-image_xscale))
                 substate_buffer = substate_max
                 with (instance_create((x + (50 * image_xscale)), (y + 20), obj_smokingprojectile))

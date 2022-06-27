@@ -7,7 +7,7 @@ else
     if (s != other.state)
     {
         with (obj_noiseboss)
-            state = (134 << 0)
+            state = states.walk
         hsp = (image_xscale * 5)
         vsp = -11
         use_collision = 0

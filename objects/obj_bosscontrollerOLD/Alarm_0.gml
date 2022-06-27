@@ -1,8 +1,8 @@
-if (state == (8 << 0))
+if (state == states.transitioncutscene)
     exit;
-if (state == (98 << 0))
+if (state == states.victory)
     exit;
-if (obj_player.state != (252 << 0))
+if (obj_player.state != states.playersuperattack)
 {
     round_timer--
     if (round_timer <= 0)
@@ -16,7 +16,7 @@ if (obj_player.state != (252 << 0))
             round_count++
             minutes = maxminutes
             seconds = maxseconds
-            state = (145 << 0)
+            state = states.arenaround
             timer_buffer = timer_max
             bell_sprite = 1436
             bell_index = 0
@@ -25,8 +25,8 @@ if (obj_player.state != (252 << 0))
             {
                 phase++
                 phase = clamp(phase, 0, max_phase)
-                if (colliding && state != (180 << 0) && state != (181 << 0))
-                    state = (145 << 0)
+                if (colliding && state != states.boss_cardboard && state != states.boss_cardboardend)
+                    state = states.arenaround
             }
         }
         else if instance_exists(bossID)
@@ -36,7 +36,7 @@ if (obj_player.state != (252 << 0))
             if (b_hp <= p_hp)
             {
                 depth = (obj_player1.depth + 1)
-                state = (8 << 0)
+                state = states.transitioncutscene
                 with (bossID)
                 {
                     with (lastplayerid)
@@ -44,7 +44,7 @@ if (obj_player.state != (252 << 0))
                         xscale = 1
                         suplexmove = 1
                         sfx_gain(suplexdashsnd)
-                        state = (42 << 0)
+                        state = states.handstandjump
                         movespeed = 10
                         image_index = random_range(0, (image_number - 1))
                         sprite_index = spr_player_groundedattack
@@ -66,5 +66,5 @@ if (obj_player.state != (252 << 0))
         }
     }
 }
-if (state != (145 << 0) && state != (98 << 0) && state != (8 << 0))
+if (state != states.arenaround && state != states.victory && state != states.transitioncutscene)
     alarm[0] = 1

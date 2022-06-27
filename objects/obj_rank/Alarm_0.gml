@@ -7,6 +7,6 @@ with (obj_player)
     room = rm_levelselect
     x = -100
     y = -100
-    state = (18 << 0)
+    state = states.titlescreen
     image_blend = c_white
 }

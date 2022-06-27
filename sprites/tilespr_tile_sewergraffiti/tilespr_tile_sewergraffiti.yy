@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 864,
-  "height": 864,
+  "width": 512,
+  "height": 1152,
   "textureGroupId": {
     "name": "sewergroup",
     "path": "texturegroups/sewergroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"feaa83d5-4cb4-4856-bfa1-fd60b30074e2","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"feaa83d5-4cb4-4856-bfa1-fd60b30074e2","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"LayerId":{"name":"367693e3-6a1f-455a-a011-50e6c90e6705","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_sewergraffiti","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"resourceVersion":"1.0","name":"feaa83d5-4cb4-4856-bfa1-fd60b30074e2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"dacca84f-b67f-4c41-9d41-5bfcd6b1a029","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"dacca84f-b67f-4c41-9d41-5bfcd6b1a029","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"LayerId":{"name":"046e3483-c3c7-4a9e-a6e5-6830ad598d8f","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_sewergraffiti","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"resourceVersion":"1.0","name":"dacca84f-b67f-4c41-9d41-5bfcd6b1a029","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_sewergraffiti","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"bee009b3-54db-4be1-83ef-7ed3ffbc003b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"feaa83d5-4cb4-4856-bfa1-fd60b30074e2","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"f35d961c-2440-4566-b432-dbcaf38dd79e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dacca84f-b67f-4c41-9d41-5bfcd6b1a029","path":"sprites/tilespr_tile_sewergraffiti/tilespr_tile_sewergraffiti.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"367693e3-6a1f-455a-a011-50e6c90e6705","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"046e3483-c3c7-4a9e-a6e5-6830ad598d8f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

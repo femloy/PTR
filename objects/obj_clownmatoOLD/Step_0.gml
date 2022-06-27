@@ -1,6 +1,6 @@
 switch state
 {
-    case (134 << 0):
+    case states.walk:
         scr_enemy_walk()
         if ((sprite_index == spr_clownmato_land or sprite_index == spr_clownmato_bounce) && floor(image_index) == (image_number - 1))
         {
@@ -14,7 +14,7 @@ switch state
             vsp = (-jumpspeed)
         }
         break
-    case (138 << 0):
+    case states.stun:
         sprite_index = stunspr
         if grounded
             hsp = 0
@@ -23,7 +23,7 @@ switch state
         if (stuntouchbuffer > 0)
             stuntouchbuffer--
         else
-            state = (134 << 0)
+            state = states.walk
         break
 }
 

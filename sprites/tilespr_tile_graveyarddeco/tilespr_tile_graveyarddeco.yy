@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 1008,
-  "height": 1044,
+  "width": 800,
+  "height": 1056,
   "textureGroupId": {
     "name": "graveyardgroup",
     "path": "texturegroups/graveyardgroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"90384bc9-c7c5-4810-93ef-4cce416ce9c4","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"90384bc9-c7c5-4810-93ef-4cce416ce9c4","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"LayerId":{"name":"993b141c-c59c-46f8-9381-e9d3c3d286da","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_graveyarddeco","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"resourceVersion":"1.0","name":"90384bc9-c7c5-4810-93ef-4cce416ce9c4","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"664f6d49-f4b5-4779-80a1-48ca503546d4","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"664f6d49-f4b5-4779-80a1-48ca503546d4","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"LayerId":{"name":"1d995e80-fb14-4d06-bf07-935a845c13d5","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_graveyarddeco","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"resourceVersion":"1.0","name":"664f6d49-f4b5-4779-80a1-48ca503546d4","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_graveyarddeco","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"54a79ec3-e305-4da3-9e36-c9f461d66d69","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"90384bc9-c7c5-4810-93ef-4cce416ce9c4","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"01059476-2dc6-42df-8236-ddfe061d225a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"664f6d49-f4b5-4779-80a1-48ca503546d4","path":"sprites/tilespr_tile_graveyarddeco/tilespr_tile_graveyarddeco.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"993b141c-c59c-46f8-9381-e9d3c3d286da","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1d995e80-fb14-4d06-bf07-935a845c13d5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

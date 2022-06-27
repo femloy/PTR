@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_pizzamart",
-    "path": "sprites/tilespr_tile_pizzamart/tilespr_tile_pizzamart.yy",
+    "name": "spr_pizzamarttile",
+    "path": "sprites/spr_pizzamarttile/spr_pizzamarttile.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "desertgroup",

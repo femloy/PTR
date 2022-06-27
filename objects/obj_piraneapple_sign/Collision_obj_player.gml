@@ -7,7 +7,7 @@ if (!active)
         {
             with (instance_create(x, y, obj_piraneapple))
             {
-                state = (8 << 0)
+                state = states.transitioncutscene
                 sign_id = _sign_id
             }
         }

@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 648,
-  "height": 648,
+  "width": 320,
+  "height": 1056,
   "textureGroupId": {
     "name": "medievalgroup",
     "path": "texturegroups/medievalgroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b398ca0e-ce5a-456d-81e3-4be1ac95ea0e","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b398ca0e-ce5a-456d-81e3-4be1ac95ea0e","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"LayerId":{"name":"3a69bdf8-6ad8-4bcf-9f22-6c99b8415530","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_medievaldeco2","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"resourceVersion":"1.0","name":"b398ca0e-ce5a-456d-81e3-4be1ac95ea0e","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"13726d23-f1a9-4f4d-a1ae-83b1634c11e6","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"13726d23-f1a9-4f4d-a1ae-83b1634c11e6","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"LayerId":{"name":"a2e193d1-9899-423d-9ea0-041bf5fd4fc2","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_medievaldeco2","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"resourceVersion":"1.0","name":"13726d23-f1a9-4f4d-a1ae-83b1634c11e6","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_medievaldeco2","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c26f6789-fa1f-460d-b1fd-d891a09d2ad5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b398ca0e-ce5a-456d-81e3-4be1ac95ea0e","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"20118be2-6379-4eac-ae31-e8fd9472dd9c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"13726d23-f1a9-4f4d-a1ae-83b1634c11e6","path":"sprites/tilespr_tile_medievaldeco2/tilespr_tile_medievaldeco2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,12 +65,12 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3a69bdf8-6ad8-4bcf-9f22-6c99b8415530","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a2e193d1-9899-423d-9ea0-041bf5fd4fc2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Tilesets",
-    "path": "folders/Sprites/Tilesets.yy",
+    "name": "Medieval",
+    "path": "folders/Sprites/Tilesets/Medieval.yy",
   },
   "resourceVersion": "1.0",
   "name": "tilespr_tile_medievaldeco2",

@@ -1,4 +1,4 @@
-if ((!instance_exists(baddieID)) or baddieID.state != (5 << 0))
+if ((!instance_exists(baddieID)) or baddieID.state != states.tumble)
 {
     instance_destroy()
     exit;

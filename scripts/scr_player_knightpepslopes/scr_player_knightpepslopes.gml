@@ -46,7 +46,7 @@ function scr_player_knightpepslopes()
         vsp = -6
         sprite_index = spr_knightpep_bump
         image_index = floor((image_number - 1))
-        state = (49 << 0)
+        state = states.knightpepbump
         scr_soundeffect(sfx_groundpound)
     }
     if scr_slope()
@@ -68,7 +68,7 @@ function scr_player_knightpepslopes()
         vsp = -5
         hsp = 0
         movespeed = 0
-        state = (47 << 0)
+        state = states.knightpep
     }
     exit;
 }

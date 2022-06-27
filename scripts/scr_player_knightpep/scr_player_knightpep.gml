@@ -181,7 +181,7 @@ function scr_player_knightpep()
             movespeed = 8
         with (instance_place(x, (y + 1), obj_slope))
             other.xscale = (-sign(image_xscale))
-        state = (38 << 0)
+        state = states.knightpepslopes
         sprite_index = spr_knightpepdownslope
         slope_buffer = 20
     }

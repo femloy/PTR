@@ -2,18 +2,18 @@ if (room == rm_editor)
     exit;
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         scr_enemy_idle()
         break
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         break
-    case (206 << 0):
+    case states.blockstance:
         if (!instance_exists(playerid))
         {
-            state = (134 << 0)
+            state = states.walk
             break
         }
         else
@@ -25,8 +25,8 @@ switch state
             {
                 with (playerid)
                 {
-                    if (state == (152 << 0))
-                        other.state = (134 << 0)
+                    if (state == states.policetaxi)
+                        other.state = states.walk
                     else if (!launched)
                     {
                         var _xs = 0
@@ -36,21 +36,21 @@ switch state
                         var m = (abs((x - other.x)) > dis ? abs(hsp) : (abs(hsp) - max(0, (abs(hsp) - 2))))
                         if (hsp == 0)
                             m = _xs
-                        if (!((state == (105 << 0) && sprite_index == spr_mach3boost)))
+                        if (!((state == states.machslide && sprite_index == spr_mach3boost)))
                             hsp_carry = (_xs * abs(m))
                         else
                             hsp_carry = (-hsp)
-                        if (state == (121 << 0) or (state == (105 << 0) && sprite_index == spr_mach3boost))
+                        if (state == states.mach3 or (state == states.machslide && sprite_index == spr_mach3boost))
                             launch = 1
-                        if (state == (105 << 0) && sprite_index == spr_mach3boost && launch)
+                        if (state == states.machslide && sprite_index == spr_mach3boost && launch)
                             movespeed -= 0.6
                         freefallsmash = 0
-                        if (state == (78 << 0) or state == (37 << 0) or state == (99 << 0) or state == (97 << 0) or state == (123 << 0) or y < (other.y - 400))
+                        if (state == states.grind or state == states.climbwall or state == states.Sjumpprep or state == states.Sjump or state == states.Sjumpland or y < (other.y - 400))
                         {
                             scr_soundeffect(sfx_bumpwall)
                             vsp = -4
                             hsp = (-3 * xscale)
-                            state = (106 << 0)
+                            state = states.bump
                             sprite_index = spr_bump
                             image_index = 0
                         }
@@ -63,7 +63,7 @@ switch state
                         {
                             launched = 0
                             other.attract_player = 0
-                            state = (0 << 0)
+                            state = states.normal
                         }
                         if other.attract_player
                         {
@@ -71,12 +71,12 @@ switch state
                             x = other.x
                             y = other.y
                             sprite_index = spr_machfreefall
-                            state = (92 << 0)
+                            state = states.jump
                             other.attract_player = 0
                         }
                         if launched
                         {
-                            other.state = (134 << 0)
+                            other.state = states.walk
                             instance_destroy(other)
                             global.combotime = 60
                         }
@@ -103,47 +103,47 @@ switch state
             }
             break
         }
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
-    case (125 << 0):
+    case states.rage:
         scr_enemy_rage()
         break
-    case (17 << 0):
+    case states.ghostpossess:
         scr_enemy_ghostpossess()
         break
 }
 
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (134 << 0))
+if (state != states.walk)
     attract_player = 0
 var _dis = 300
-if (state == (134 << 0) && obj_player1.isgustavo && (!obj_player1.cutscene) && obj_player1.state != (119 << 0) && ((distance_to_object(obj_player) < _dis && obj_player1.brick) or distance_to_object(obj_ratmountgroundpound) < _dis or (distance_to_object(obj_brickcomeback) < _dis && instance_exists(obj_brickcomeback) && (!obj_brickcomeback.trapped)) or distance_to_object(obj_brickball) < _dis))
+if (state == states.walk && obj_player1.isgustavo && (!obj_player1.cutscene) && obj_player1.state != states.taxi && ((distance_to_object(obj_player) < _dis && obj_player1.brick) or distance_to_object(obj_ratmountgroundpound) < _dis or (distance_to_object(obj_brickcomeback) < _dis && instance_exists(obj_brickcomeback) && (!obj_brickcomeback.trapped)) or distance_to_object(obj_brickball) < _dis))
 {
-    state = (206 << 0)
+    state = states.blockstance
     sprite_index = spr_hamkuff_chain1
     var x1 = obj_player1.x
     var y1 = obj_player1.y
@@ -175,14 +175,14 @@ if (state == (134 << 0) && obj_player1.isgustavo && (!obj_player1.cutscene) && o
     {
         brick = 0
         sprite_index = spr_lonegustavo_idle
-        state = (191 << 0)
+        state = states.ratmount
     }
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false

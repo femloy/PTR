@@ -30,7 +30,7 @@ function scr_player_trashroll()
     if key_jump
     {
         dir = xscale
-        state = (104 << 0)
+        state = states.mach2
         sprite_index = spr_mach2jump
         jumpstop = 0
         vsp = -11
@@ -38,7 +38,7 @@ function scr_player_trashroll()
     }
     if (((place_meeting((x + xscale), y, obj_solid) or place_meeting((x + xscale), y, obj_ghostwall)) && (!(place_meeting((x + hsp), y, obj_rollblock))) && (!(place_meeting((x + hsp), y, obj_rattumble)))) or place_meeting(x, y, obj_timedgate))
     {
-        state = (106 << 0)
+        state = states.bump
         hsp = ((-xscale) * 3)
         vsp = -3
     }

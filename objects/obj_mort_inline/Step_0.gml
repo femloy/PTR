@@ -1,6 +1,6 @@
 with (obj_player)
 {
-    if ((object_index != obj_player2 or global.coop) && state != (146 << 0) && (!instance_exists(obj_dialogcontroller)))
+    if ((object_index != obj_player2 or global.coop) && state != states.actor && (!instance_exists(obj_dialogcontroller)))
     {
         if ((other.dir > 0 && x > (other.x - 50)) or (other.dir < 0 && x < (other.x + 50)))
         {
@@ -17,7 +17,7 @@ if (waitforhurt && (!instance_exists(obj_dialogcontroller)))
     var b = 0
     with (obj_player)
     {
-        if (state == (107 << 0))
+        if (state == states.hurt)
             b = 1
     }
     if (!b)

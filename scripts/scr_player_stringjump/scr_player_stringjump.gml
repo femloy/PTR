@@ -21,7 +21,7 @@ function scr_player_stringjump()
         movespeed = 0
     if (grounded && vsp > 0)
     {
-        state = (0 << 0)
+        state = states.normal
         landAnim = 1
         sprite_index = spr_land
         create_particle(x, y, particle.landcloud, 0)

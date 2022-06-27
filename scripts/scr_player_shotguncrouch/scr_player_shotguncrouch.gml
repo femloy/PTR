@@ -20,7 +20,7 @@ function scr_player_shotguncrouch()
         sprite_index = spr_shotgunduck
     if ((!grounded) && input_buffer_jump >= 8)
     {
-        state = (68 << 0)
+        state = states.shotguncrouchjump
         movespeed = 0
         sprite_index = spr_crouchfall
         image_index = 0
@@ -30,19 +30,19 @@ function scr_player_shotguncrouch()
         input_buffer_jump = 8
         sprite_index = spr_crouchjump
         image_index = 0
-        state = (68 << 0)
+        state = states.shotguncrouchjump
         vsp = -8
     }
     if (grounded && vsp > 0 && (!key_down) && (!(scr_solid(x, (y - 16)))) && (!(scr_solid(x, (y - 32)))))
     {
-        state = (66 << 0)
+        state = states.shotgun
         landAnim = 1
         sprite_index = spr_shotgunland
         image_index = 0
     }
     if key_slap2
     {
-        state = (69 << 0)
+        state = states.shotgunshoot
         sprite_index = spr_shotgunshoot
         image_index = 0
         with (instance_create(x, y, obj_pistoleffect))

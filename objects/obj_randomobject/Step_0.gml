@@ -1,13 +1,13 @@
 mask_index = spr_player_mask
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         launch_buffer = 120
         break
-    case (17 << 0):
+    case states.ghostpossess:
         switch substate
         {
-            case (0 << 0):
+            case states.normal:
                 var moveH = (playerid.key_left + playerid.key_right)
                 var moveV = (playerid.key_down - playerid.key_up)
                 if (moveH != 0 or moveV != 0)
@@ -21,9 +21,9 @@ switch state
                 if (launch_buffer > 0)
                     launch_buffer--
                 else
-                    substate = (92 << 0)
+                    substate = states.jump
                 break
-            case (92 << 0):
+            case states.jump:
                 var spd = 24
                 hsp = (moveX * spd)
                 vsp = (moveY * spd)
@@ -43,10 +43,10 @@ switch state
                     instance_destroy()
                     with (playerid)
                     {
-                        state = (16 << 0)
+                        state = states.ghost
                         visible = true
                     }
-                    state = (0 << 0)
+                    state = states.normal
                 }
                 break
         }

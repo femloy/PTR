@@ -1,4 +1,4 @@
-state = (0 << 0)
+state = states.normal
 hub_array[0] = [hub_reception, "RECEPTION"]
 hub_array[1] = [hub_pizzatowerlobby, "PIZZA TOWER LOBBY"]
 hub_array[2] = [hub_farmland, "FARMLAND"]

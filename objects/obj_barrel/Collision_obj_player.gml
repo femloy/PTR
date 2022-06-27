@@ -1,12 +1,12 @@
 if active
 {
-    if (place_meeting(x, (y - 1), other) && other.vsp > 1 && other.state != (113 << 0) && other.state != (116 << 0) && other.state != (114 << 0) && other.state != (115 << 0))
+    if (place_meeting(x, (y - 1), other) && other.vsp > 1 && other.state != states.barrel && other.state != states.barrelslide && other.state != states.barreljump && other.state != states.barrelclimbwall)
     {
         with (other)
         {
             instance_create(x, y, obj_genericpoofeffect)
             movespeed = hsp
-            state = (113 << 0)
+            state = states.barrel
             image_index = 0
         }
         active = 0

@@ -23,7 +23,7 @@ function scr_player_animatronic()
     {
         repeat (3)
             create_debris(x, y, spr_metalblockdebris)
-        state = (0 << 0)
+        state = states.normal
     }
     if (animatronic_collect_buffer > 0)
         animatronic_collect_buffer--

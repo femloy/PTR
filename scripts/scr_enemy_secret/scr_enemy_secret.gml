@@ -14,7 +14,7 @@ function scr_enemy_secret()
         if (grounded && vsp > 0)
         {
             invincible = savedsecretinvincible
-            state = (134 << 0)
+            state = states.walk
             sprite_index = walkspr
         }
     }

@@ -1,16 +1,16 @@
 with (other)
 {
-    if (key_up && ladderbuffer == 0 && (state == (0 << 0) or state == (58 << 0) or state == (104 << 0) or state == (121 << 0) or state == (103 << 0) or state == (57 << 0) or state == (92 << 0) or state == (60 << 0)) && state != (107 << 0) && state != (105 << 0) && state != (108 << 0) && state != (111 << 0))
+    if (key_up && ladderbuffer == 0 && (state == states.normal or state == states.pogo or state == states.mach2 or state == states.mach3 or state == states.mach1 or state == states.shotgunjump or state == states.jump or state == states.highjump) && state != states.hurt && state != states.machslide && state != states.freefall && state != states.freefallland)
     {
-        state = (93 << 0)
+        state = states.ladder
         x = (other.x + 16)
         y = floor(y)
         if ((y % 2) == 1)
             y -= 1
     }
-    if (key_up && ladderbuffer == 0 && (state == (192 << 0) or state == (191 << 0)))
+    if (key_up && ladderbuffer == 0 && (state == states.ratmountjump or state == states.ratmount))
     {
-        state = (261 << 0)
+        state = states.ratmountladder
         if (brick == 1)
         {
             with (instance_create(x, y, obj_brickcomeback))

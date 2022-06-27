@@ -18,7 +18,7 @@ function scr_player_machfreefall()
     if (scr_solid((x + 1), y) && image_xscale == 1)
     {
         machhitAnim = 0
-        state = (106 << 0)
+        state = states.bump
         hsp = -2.5
         vsp = -2.5
         mach2 = 0
@@ -28,7 +28,7 @@ function scr_player_machfreefall()
     else if (scr_solid((x - 1), y) && image_xscale == -1)
     {
         machhitAnim = 0
-        state = (106 << 0)
+        state = states.bump
         hsp = 2.5
         vsp = -2.5
         mach2 = 0
@@ -43,7 +43,7 @@ function scr_player_machfreefall()
             shake_mag_acc = (40 / room_speed)
         }
         bounce = 0
-        state = (111 << 0)
+        state = states.freefallland
         jumpstop = 0
         image_index = 0
         with (instance_create(x, (y + 35), obj_bangeffect))
@@ -55,7 +55,7 @@ function scr_player_machfreefall()
             if (shakestun && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0)
             {
                 image_index = 0
-                state = (137 << 0)
+                state = states.hit
                 vsp = -7
                 hsp = 0
                 stunned = 200
@@ -70,7 +70,7 @@ function scr_player_machfreefall()
         sprite_index = spr_player_hanstandjump
         stompAnim = 0
         hsp = 0
-        state = (42 << 0)
+        state = states.handstandjump
         jumpAnim = 1
         jumpstop = 0
         image_index = 0

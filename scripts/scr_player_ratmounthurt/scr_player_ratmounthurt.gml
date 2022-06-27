@@ -10,7 +10,7 @@ function scr_player_ratmounthurt()
     alarm[7] = 20
     if (grounded && vsp > 0)
     {
-        state = (191 << 0)
+        state = states.ratmount
         movespeed = 0
     }
     if brick

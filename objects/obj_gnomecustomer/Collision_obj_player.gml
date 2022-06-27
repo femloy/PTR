@@ -1,4 +1,4 @@
-if (other.state == (186 << 0))
+if (other.state == states.gotoplayer)
     exit;
 if (!instance_exists(obj_deliverytimer))
     exit;

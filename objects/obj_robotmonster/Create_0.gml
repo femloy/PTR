@@ -7,7 +7,7 @@ grav = 0.5
 grounded = false
 movespeed = 8
 event_inherited()
-state = (217 << 0)
+state = states.robotidle
 use_hallway = 1
 idlespr = spr_monstershroom_idle
 walkspr = spr_monstershroom_walk

@@ -2,18 +2,18 @@ if place_meeting(x, y, obj_player)
 {
     with (obj_player)
     {
-        if (state == (103 << 0) or state == (104 << 0))
+        if (state == states.mach1 or state == states.mach2)
         {
-            state = (6 << 0)
+            state = states.finishingblow
             sprite_index = spr_player_finishingblow1
             image_index = 0
             hsp = 0
             movespeed = 0
         }
-        if (state == (121 << 0))
+        if (state == states.mach3)
         {
             hsp = ((-xscale) * 3)
-            state = (106 << 0)
+            state = states.bump
             mach2 = 0
             image_index = 0
             vsp = -5
@@ -26,7 +26,7 @@ if (grabbed == 1)
     image_xscale = (-obj_player.xscale)
     grav = 0
     obj_player.baddiegrabbedID = id
-    if (obj_player.state == (55 << 0) or obj_player.state == (79 << 0) or obj_player.state == (74 << 0) or obj_player.state == (75 << 0) or obj_player.state == (20 << 0))
+    if (obj_player.state == states.grabbing or obj_player.state == states.grab or obj_player.state == states.throwing or obj_player.state == states.slam or obj_player.state == states.tacklecharge)
     {
         grounded = false
         x = obj_player.x
@@ -45,7 +45,7 @@ if (grabbed == 1)
     with (obj_player)
     {
         move = (key_left2 + key_right2)
-        if (!((state == (79 << 0) or state == (55 << 0) or state == (74 << 0) or state == (75 << 0) or state == (20 << 0) or state == (80 << 0) or state == (76 << 0) or state == (81 << 0) or state == (82 << 0) or state == (83 << 0))))
+        if (!((state == states.grab or state == states.grabbing or state == states.throwing or state == states.slam or state == states.tacklecharge or state == states.punch or state == states.superslam or state == states.backkick or state == states.uppunch or state == states.shoulder)))
         {
             other.x = x
             other.y = y
@@ -53,7 +53,7 @@ if (grabbed == 1)
         }
     }
     hsp = 0
-    if (obj_player.state == (80 << 0))
+    if (obj_player.state == states.punch)
     {
         instance_create((x + (obj_player.xscale * 30)), y, obj_bumpeffect)
         grabbed = 0
@@ -72,7 +72,7 @@ if (grabbed == 1)
             shake_mag_acc = (3 / room_speed)
         }
     }
-    if (obj_player.state == (83 << 0))
+    if (obj_player.state == states.shoulder)
     {
         grav = 0.5
         instance_create(x, (y + 20), obj_bumpeffect)
@@ -100,7 +100,7 @@ if (grabbed == 1)
             shake_mag_acc = (3 / room_speed)
         }
     }
-    if (obj_player.state == (74 << 0))
+    if (obj_player.state == states.throwing)
     {
         grav = 0.5
         grabbed = 0
@@ -110,7 +110,7 @@ if (grabbed == 1)
         hsp = ((-image_xscale) * 10)
         vsp = -10
     }
-    if (obj_player.state == (82 << 0))
+    if (obj_player.state == states.uppunch)
     {
         instance_create((x + ((-obj_player.xscale) * 15)), (y - 50), obj_bumpeffect)
         grav = 0.5
@@ -129,12 +129,12 @@ if (grabbed == 1)
             shake_mag_acc = (3 / room_speed)
         }
     }
-    if (obj_player.state == (20 << 0))
+    if (obj_player.state == states.tacklecharge)
     {
         x = (obj_player.x + (obj_player.xscale * 15))
         y = obj_player.y
     }
-    if (obj_player.state == (76 << 0))
+    if (obj_player.state == states.superslam)
     {
         if (obj_player.character == "P")
         {

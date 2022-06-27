@@ -1,1 +1,1 @@
-attack = (0 << 0)
+attack = states.normal

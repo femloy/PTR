@@ -1,4 +1,4 @@
-if (state == (148 << 0))
+if (state == states.golf)
     exit;
 hsp = (14 * other.image_xscale)
 image_xscale = other.image_xscale

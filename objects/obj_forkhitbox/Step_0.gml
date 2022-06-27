@@ -11,7 +11,7 @@ with (ID)
 {
     if (object_index == obj_coolpineapple or object_index == obj_ghostknight or object_index == obj_forknight or object_index == obj_noisey or object_index == obj_smokingpizzaslice)
     {
-        if (state != (134 << 0) && state != (125 << 0))
+        if (state != states.walk && state != states.rage)
         {
             hitboxcreate = 0
             instance_destroy(other)
@@ -21,13 +21,13 @@ with (ID)
     {
         case obj_pepperman:
             other.x = (x + (image_xscale * 8))
-            if (state != (153 << 0))
+            if (state != states.shoulderbash)
                 instance_destroy(other)
             break
 		
         case obj_badrat:
             other.x = (x + (image_xscale * 16))
-            if (state != (80 << 0))
+            if (state != states.punch)
                 instance_destroy(other)
             break
 		
@@ -35,13 +35,13 @@ with (ID)
         case obj_farmerbaddie2:
         case obj_farmerbaddie3:
             other.x = (x + (image_xscale * 16))
-            if (state != (80 << 0))
+            if (state != states.punch)
                 instance_destroy(other)
             break
 		
         case obj_peppinoclone:
             other.x = (x - (image_xscale * 10))
-            if (state != (80 << 0))
+            if (state != states.punch)
                 instance_destroy(other)
             break
 		
@@ -50,25 +50,25 @@ with (ID)
             break
 		
         case obj_robot:
-            if (state != (104 << 0) && state != (23 << 0) && state != (91 << 0))
+            if (state != states.mach2 && state != states.slap && state != states.tackle)
             {
                 hitboxcreate = 0
                 instance_destroy(other)
             }
-            else if (state == (23 << 0))
+            else if (state == states.slap)
                 other.x = (x + (image_xscale * 32))
-            else if (state == (104 << 0) or state == (91 << 0))
+            else if (state == states.mach2 or state == states.tackle)
                 other.x = (x + (image_xscale * 20))
             break
 		
         case obj_soldier:
             other.x = (x + (image_xscale * 24))
-            if (state != (125 << 0))
+            if (state != states.rage)
                 instance_destroy(other)
             break
 		
         case obj_indiancheese:
-            if (state != (134 << 0) && sprite_index != spr_indiancheese_howl)
+            if (state != states.walk && sprite_index != spr_indiancheese_howl)
             {
                 hitboxcreate = 0
                 instance_destroy(other)
@@ -78,7 +78,7 @@ with (ID)
         case obj_thug_red:
         case obj_thug_blue:
         case obj_thug_green:
-            if (state != (80 << 0))
+            if (state != states.punch)
             {
                 instance_destroy(other)
                 punchinst = -4
@@ -86,7 +86,7 @@ with (ID)
             break
 		
         case obj_weeniesquire:
-            if (state != (80 << 0))
+            if (state != states.punch)
             {
                 hitboxcreate = 0
                 instance_destroy(other)
@@ -94,14 +94,14 @@ with (ID)
             break
 		
         case obj_minijohn:
-            if (state != (125 << 0) && state != (80 << 0))
+            if (state != states.rage && state != states.punch)
                 instance_destroy(other)
             break
 		
         case obj_ninja:
-            if (state != (128 << 0) && state != (80 << 0))
+            if (state != states.charge && state != states.punch)
                 instance_destroy(other)
-            if (state == (80 << 0))
+            if (state == states.punch)
             {
                 if (image_index > 14)
                     instance_destroy(other)
@@ -115,7 +115,7 @@ with (ID)
             break
 		
         case obj_snickexe:
-            if (obj_player1.instakillmove or obj_player1.state == (42 << 0))
+            if (obj_player1.instakillmove or obj_player1.state == states.handstandjump)
             {
                 instance_destroy(other)
                 hitboxcreate = 0
@@ -123,7 +123,7 @@ with (ID)
             break
 		
         case obj_pickle:
-            if (state != (129 << 0))
+            if (state != states.pizzagoblinthrow)
                 instance_destroy(other)
             break
 		
@@ -131,7 +131,7 @@ with (ID)
         case obj_fencer:
         case obj_snowman:
         case obj_ancho:
-            if (state != (128 << 0) && state != (125 << 0))
+            if (state != states.charge && state != states.rage)
             {
                 hitboxcreate = 0
                 instance_destroy(other)

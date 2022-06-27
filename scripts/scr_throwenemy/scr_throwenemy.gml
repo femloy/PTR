@@ -25,7 +25,7 @@ function scr_throwenemy()
             alarm[1] = 5
             stunned = 1000
             thrown = true
-            state = (138 << 0)
+            state = states.stun
         }
     }
     exit;

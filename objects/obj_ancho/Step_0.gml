@@ -2,69 +2,69 @@ if (room == rm_editor)
     exit;
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         scr_enemy_idle()
         break
-    case (128 << 0):
+    case states.charge:
         scr_enemy_charge()
         break
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         scr_enemy_walk()
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
-    case (125 << 0):
+    case states.rage:
         scr_enemy_rage()
         break
 }
 
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
-if (state == (134 << 0) && y > ystart && (!(scr_solid(x, (y - 1)))))
+if (state == states.walk && y > ystart && (!(scr_solid(x, (y - 1)))))
     y--
-if (state == (134 << 0) && y < ystart && (!(scr_solid(x, (y + 1)))))
+if (state == states.walk && y < ystart && (!(scr_solid(x, (y + 1)))))
     y++
-if (state == (138 << 0))
+if (state == states.stun)
     grav = 0.5
 else
     grav = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (128 << 0))
+if (state != states.charge)
     scr_scareenemy()
 if (sprite_index == spr_ancho_chargestart && floor(image_index) == (image_number - 1))
 {
-    if (hitboxcreate == 0 && state == (128 << 0))
+    if (hitboxcreate == 0 && state == states.charge)
     {
         hitboxcreate = 1
         with (instance_create(x, y, obj_forkhitbox))
@@ -78,9 +78,9 @@ if (ragebuffer > 0)
     ragebuffer--
 if (player.x > (x - 400) && player.x < (x + 400) && y <= (player.y + 60) && y >= (player.y - 60) && important == 0)
 {
-    if (state != (125 << 0) && ragebuffer == 0 && elite && (state == (134 << 0) or state == (128 << 0)))
+    if (state != states.rage && ragebuffer == 0 && elite && (state == states.walk or state == states.charge))
     {
-        state = (125 << 0)
+        state = states.rage
         sprite_index = spr_ancho_rage1
         if (x != player.x)
             image_xscale = (-(sign((x - player.x))))
@@ -97,20 +97,20 @@ if (player.x > (x - 400) && player.x < (x + 400) && y <= (player.y + 60) && y >=
         }
         create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale)
     }
-    else if (x != player.x && state != (128 << 0) && y == ystart && important == 0)
+    else if (x != player.x && state != states.charge && y == ystart && important == 0)
     {
-        if (state == (134 << 0))
+        if (state == states.walk)
         {
             image_index = 0
             image_xscale = (-(sign((x - obj_player.x))))
-            state = (128 << 0)
+            state = states.charge
             sprite_index = spr_ancho_chargestart
         }
     }
 }
-if (state == (138 << 0) or state == (134 << 0))
+if (state == states.stun or state == states.walk)
     movespeed = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {

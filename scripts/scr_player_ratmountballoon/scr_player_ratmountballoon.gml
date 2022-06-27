@@ -21,7 +21,7 @@ function scr_player_ratmountballoon()
     if _jump
     {
         create_particle(x, y, particle.ratmountballooncloud, 0)
-        state = (192 << 0)
+        state = states.ratmountjump
         sprite_index = spr_player_ratmountballoonend1
         image_index = 0
         jumpAnim = 1

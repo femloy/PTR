@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tileset_entrance",
-    "path": "sprites/tilespr_tileset_entrance/tilespr_tileset_entrance.yy",
+    "name": "tile_entrance1",
+    "path": "sprites/tile_entrance1/tile_entrance1.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "entrancegroup",

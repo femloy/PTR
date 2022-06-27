@@ -24,7 +24,7 @@ function scr_player_grabbing()
     {
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, false)
         sfx_gain(suplexdashsnd)
-        state = (55 << 0)
+        state = states.grabbing
         image_index = 0
         vsp = 0
         sprite_index = spr_player_suplexdash
@@ -37,10 +37,10 @@ function scr_player_grabbing()
     if (sprite_index == airattackdash && floor(image_index) == (image_number - 1))
     {
         sprite_index = spr_fall
-        state = (92 << 0)
+        state = states.jump
     }
     if (floor(image_index) == (image_number - 1) && (sprite_index == attackdash or sprite_index == spr_player_Sjump))
-        state = (0 << 0)
+        state = states.normal
     if (floor(image_index) == (image_number - 1) && sprite_index == airattackdashstart)
         sprite_index = airattackdash
     grav = 0
@@ -49,7 +49,7 @@ function scr_player_grabbing()
         scr_soundeffect(sfx_bumpwall)
         grav = 0.5
         movespeed = 0
-        state = (106 << 0)
+        state = states.bump
         hsp = -2.5
         vsp = -3
         mach2 = 0
@@ -63,7 +63,7 @@ function scr_player_grabbing()
         scr_soundeffect(sfx_bumpwall)
         grav = 0.5
         movespeed = 0
-        state = (106 << 0)
+        state = states.bump
         hsp = 2.5
         vsp = -3
         mach2 = 0
@@ -85,11 +85,11 @@ function scr_player_grabbing()
         {
             sprite_index = spr_player_suplexcancel
             grav = 0.5
-            state = (92 << 0)
+            state = states.jump
         }
         else
         {
-            state = (0 << 0)
+            state = states.normal
             grav = 0.5
         }
     }

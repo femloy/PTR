@@ -28,7 +28,7 @@ function scr_player_slipbanan()
     if (sprite_index == spr_slipbanan2)
     {
         if (floor(image_index) == (image_number - 1) && abs(hsp) <= 2)
-            state = (0 << 0)
+            state = states.normal
     }
     if (scr_solid((x + xscale), y) && (!scr_slope()) && (scr_solid_slope((x + sign(hsp)), y) or place_meeting((x + sign(hsp)), y, obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))))
     {

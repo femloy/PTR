@@ -35,7 +35,7 @@ if (instance_number(obj_baddie) < 20)
     {
         instance_create(x, y, obj_pizzaportalfade)
         important = 1
-        state = (138 << 0)
+        state = states.stun
         stunned = 50
     }
 }

@@ -9,7 +9,7 @@ function scr_player_finishingblow()
     if (floor(image_index) == (image_number - 1))
     {
         movespeed = abs(movespeed)
-        state = (0 << 0)
+        state = states.normal
     }
     if (floor(image_index) == 0 && (!instance_exists(obj_swordhitbox)))
     {

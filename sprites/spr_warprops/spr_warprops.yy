@@ -10,7 +10,7 @@
   "bbox_left": 0,
   "bbox_right": 319,
   "bbox_top": 0,
-  "bbox_bottom": 1143,
+  "bbox_bottom": 1531,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -21,8 +21,8 @@
     "path": "texturegroups/wargroup",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 32,
+  "gridY": 32,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"fee9ae91-2c84-466d-9359-1badc7d03e64","path":"sprites/spr_warprops/spr_warprops.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"fee9ae91-2c84-466d-9359-1badc7d03e64","path":"sprites/spr_warprops/spr_warprops.yy",},"LayerId":{"name":"7c914f14-3e7f-4e35-b398-9df37747c67c","path":"sprites/spr_warprops/spr_warprops.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},

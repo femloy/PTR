@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tileset_tile_kungfustructure",
-    "path": "sprites/tilespr_tileset_tile_kungfustructure/tilespr_tileset_tile_kungfustructure.yy",
+    "name": "sprite_tile_kungfustructure",
+    "path": "sprites/sprite_tile_kungfustructure/sprite_tile_kungfustructure.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "kungfugroup",

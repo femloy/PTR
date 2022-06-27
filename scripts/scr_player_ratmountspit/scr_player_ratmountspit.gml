@@ -7,7 +7,7 @@ function scr_player_ratmountspit()
         scr_enemy_ratgrabbed()
     if (floor(image_index) == (image_number - 1))
     {
-        state = (191 << 0)
+        state = states.ratmount
         ratgrabbedID = -4
     }
     exit;

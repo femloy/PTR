@@ -11,7 +11,7 @@ if (sprite_index == spr_gustavo_givepizza)
         sprite_index = spr_gustavo_point
     }
 }
-if (state == (0 << 0))
+if (state == states.normal)
 {
     var player = instance_nearest(x, y, obj_player)
     if (player.x != x)

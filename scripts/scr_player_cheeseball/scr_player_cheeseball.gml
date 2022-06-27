@@ -46,7 +46,7 @@ function scr_player_cheeseball()
         image_index = 0
         movespeed = 0
         cheesepeptimer = 2
-        state = (26 << 0)
+        state = states.cheesepepjump
         sprite_index = spr_cheesepepfall
         repeat (8)
             create_debris((x + random_range(-8, 8)), (y + random_range(-8, 8)), spr_cheesechunk)

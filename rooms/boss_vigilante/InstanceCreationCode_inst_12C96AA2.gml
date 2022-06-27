@@ -1,1 +1,1 @@
-attack = (2 << 0)
+attack = states.dynamite

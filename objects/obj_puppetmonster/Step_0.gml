@@ -2,26 +2,26 @@ image_speed = 0.35
 depth = -10
 switch state
 {
-    case (217 << 0):
+    case states.robotidle:
         sprite_index = spr_introidle
         image_speed = 0.35
         break
-    case (218 << 0):
+    case states.robotintro:
         if (sprite_index != spr_intro)
         {
             sprite_index = spr_intro
             image_index = 0
         }
         if (floor(image_index) == (image_number - 1))
-            state = (220 << 0)
+            state = states.robotchase
         break
-    case (219 << 0):
+    case states.robotroaming:
         sprite_index = spr_monstertomato_idle
         x = (camera_get_view_x(view_camera[0]) + 480)
         y = (camera_get_view_y(view_camera[0]) + yy)
         switch substate
         {
-            case (135 << 0):
+            case states.fall:
                 yy += 2
                 if (yy > 440)
                 {
@@ -30,13 +30,13 @@ switch state
                     if (pid != noone)
                     {
                         playerid = pid
-                        substate = (141 << 0)
+                        substate = states.chase
                     }
                     else
-                        substate = (92 << 0)
+                        substate = states.jump
                 }
                 break
-            case (92 << 0):
+            case states.jump:
                 yy -= 3
                 if (yy < -100)
                 {
@@ -47,10 +47,10 @@ switch state
                         monster_pos[other.monsterid].x = last_puppet_pos.x
                         monster_pos[other.monsterid].y = last_puppet_pos.y
                     }
-                    state = (217 << 0)
+                    state = states.robotidle
                 }
                 break
-            case (141 << 0):
+            case states.chase:
                 yy -= 10
                 if (yy < -100)
                     scr_puppet_appear(playerid)
@@ -58,7 +58,7 @@ switch state
         }
 
         break
-    case (220 << 0):
+    case states.robotchase:
         playerid = instance_nearest(x, y, obj_player)
         sprite_index = spr_monstertomato_chase
         var dir = point_direction(x, y, playerid.x, playerid.y)
@@ -72,6 +72,6 @@ switch state
         break
 }
 
-if (state != (217 << 0))
+if (state != states.robotidle)
     inactivebuffer = 900
-depth = (state == (219 << 0) ? 100 : -6)
+depth = (state == states.robotroaming ? 100 : -6)

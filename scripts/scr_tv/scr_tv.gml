@@ -2,7 +2,7 @@ function tv_set_idle()
 {
     with (obj_tv)
     {
-        state = (0 << 0)
+        state = states.normal
         sprite_index = spr_tv_idle
     }
 }
@@ -11,7 +11,7 @@ function tv_reset()
 {
     with (obj_tv)
     {
-        state = (0 << 0)
+        state = states.normal
         sprite_index = spr_tv_idle
         ds_list_clear(tvprompts_list)
     }
@@ -110,7 +110,7 @@ function tv_do_expression(spr)
     {
         if (expressionsprite != spr && bubblespr == -4)
         {
-            state = (250 << 0)
+            state = states.tv_whitenoise
             expressionsprite = spr
             sprite_index = spr_tv_whitenoise
 			
@@ -123,7 +123,7 @@ function tv_do_expression(spr)
                 case spr_tv_exprcollect:
                     expressionbuffer = 150
                     if obj_player.isgustavo
-                        expressionsprite = 263
+                        expressionsprite = spr_tv_happyG
                     break
             }
         }

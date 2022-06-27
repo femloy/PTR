@@ -12,7 +12,7 @@ function scr_player_debugstate()
     if (key_jump or key_slap2)
     {
         image_speed = 0.35
-        state = (0 << 0)
+        state = states.normal
     }
     exit;
 }

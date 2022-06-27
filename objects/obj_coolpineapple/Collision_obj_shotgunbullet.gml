@@ -1,4 +1,4 @@
-if (state != (147 << 0) && state != (84 << 0))
+if (state != states.parry && state != states.backbreaker)
     exit;
 with (other)
 {
@@ -8,10 +8,10 @@ with (other)
         _dir = sign((x - other.x))
     spd = (_maxhsp * _dir)
 }
-if (state != (147 << 0))
+if (state != states.parry)
 {
     sprite_index = parryspr
     movespeed = 8
-    state = (147 << 0)
+    state = states.parry
     image_index = 0
 }

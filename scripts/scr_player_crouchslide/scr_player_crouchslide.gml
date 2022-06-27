@@ -39,16 +39,16 @@ function scr_player_crouchslide()
     if (grounded && key_attack && (!(scr_solid((x + 27), (y - 32)))) && (!(scr_solid((x - 27), (y - 32)))) && (!(scr_solid(x, (y - 32)))) && (!(scr_solid(x, (y - 16)))))
     {
         movespeed = 8
-        state = (104 << 0)
+        state = states.mach2
         image_index = 0
         sprite_index = spr_rollgetup
     }
     if (((movespeed <= 5 or (scr_solid((x + 1), y) && xscale == 1) or (scr_solid((x - 1), y) && xscale == -1)) && (!(place_meeting((x + sign(hsp)), y, obj_slope)))) or movespeed <= 0)
-        state = (100 << 0)
+        state = states.crouch
     if (scr_solid((x + 1), y) && xscale == 1 && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or scr_solid_slope((x + sign(hsp)), y)))
-        state = (100 << 0)
+        state = states.crouch
     if (scr_solid((x - 1), y) && xscale == -1 && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or scr_solid_slope((x + sign(hsp)), y)))
-        state = (100 << 0)
+        state = states.crouch
     if ((!instance_exists(obj_slidecloud)) && grounded && movespeed > 5)
     {
         with (instance_create(x, y, obj_slidecloud))

@@ -14,14 +14,14 @@ function scr_player_crouch()
     if ((!grounded) && (!key_jump))
     {
         jumpAnim = 0
-        state = (101 << 0)
+        state = states.crouchjump
         movespeed = 4
         crouchAnim = 1
         image_index = 0
     }
     if (grounded && (!key_down) && (!(scr_solid(x, (y - 16)))) && (!(scr_solid(x, (y - 32)))) && (!key_jump))
     {
-        state = (0 << 0)
+        state = states.normal
         movespeed = 0
         crouchAnim = 1
         jumpAnim = 1
@@ -66,7 +66,7 @@ function scr_player_crouch()
     {
         scr_soundeffect(sfx_jump)
         vsp = -8
-        state = (101 << 0)
+        state = states.crouchjump
         movespeed = 4
         image_index = 0
         crouchAnim = 1
@@ -76,7 +76,7 @@ function scr_player_crouch()
     {
         if (move == 0)
             movespeed = 0
-        state = (2 << 0)
+        state = states.dynamite
         image_index = 0
         sprite_index = spr_playerV_dynamitethrow
         with (instance_create(x, y, obj_dynamite))
@@ -92,7 +92,7 @@ function scr_player_crouch()
     {
         if (move == 0)
             movespeed = 0
-        state = (1 << 0)
+        state = states.revolver
         image_index = 0
         sprite_index = spr_playerV_revolverstart
     }

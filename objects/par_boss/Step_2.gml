@@ -5,7 +5,7 @@ else if (inv_timer == 0)
     inv_timer = -1
     invincible = 0
 }
-if (grounded && state != (137 << 0) && state != (138 << 0))
+if (grounded && state != states.hit && state != states.stun)
 {
     if (jugglecount > 0)
         jugglecount--

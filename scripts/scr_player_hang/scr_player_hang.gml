@@ -11,7 +11,7 @@ function scr_player_hang()
         scr_soundeffect(sfx_woosh)
         jumpstop = 0
         vsp = -15
-        state = (92 << 0)
+        state = states.jump
         sprite_index = spr_playerN_noisebombspinjump
         image_index = 0
         with (instance_create(x, y, obj_jumpdust))

@@ -6,7 +6,7 @@ if (playerid.supercharged == 0)
 }
 x = playerid.x
 y = playerid.y
-if (playerid.state != (95 << 0) && playerid.state != (112 << 0))
+if (playerid.state != states.comingoutdoor && playerid.state != states.door)
     visible = playerid.visible
 else
     visible = false

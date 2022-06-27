@@ -1,19 +1,19 @@
 event_inherited()
-state = (145 << 0)
-ds_map_set(player_hurtstates, (42 << 0), 30)
-ds_map_set(player_hurtstates, (41 << 0), 50)
-ds_map_set(player_hurtstates, (104 << 0), 20)
-ds_map_set(player_hurtstates, (121 << 0), 30)
-ds_map_set(player_hurtstates, (108 << 0), 20)
-ds_map_set(player_hurtstates, (80 << 0), 20)
-ds_map_set(player_hurtstates, (5 << 0), 20)
-ds_map_set(player_hurtstates, (97 << 0), 20)
-ds_map_set(boss_hurtstates, (83 << 0), 60)
-ds_map_set(boss_hurtstates, (153 << 0), 60)
-ds_map_set(boss_hurtstates, (157 << 0), 90)
-ds_map_set(boss_hurtstates, (76 << 0), 200)
-ds_map_set(boss_hurtstates, (80 << 0), 30)
-ds_map_set(boss_hurtstates, (108 << 0), 70)
+state = states.arenaround
+ds_map_set(player_hurtstates, states.handstandjump, 30)
+ds_map_set(player_hurtstates, states.chainsawbump, 50)
+ds_map_set(player_hurtstates, states.mach2, 20)
+ds_map_set(player_hurtstates, states.mach3, 30)
+ds_map_set(player_hurtstates, states.freefall, 20)
+ds_map_set(player_hurtstates, states.punch, 20)
+ds_map_set(player_hurtstates, states.tumble, 20)
+ds_map_set(player_hurtstates, states.Sjump, 20)
+ds_map_set(boss_hurtstates, states.shoulder, 60)
+ds_map_set(boss_hurtstates, states.shoulderbash, 60)
+ds_map_set(boss_hurtstates, states.boss_supershoulderbash, 90)
+ds_map_set(boss_hurtstates, states.superslam, 200)
+ds_map_set(boss_hurtstates, states.punch, 30)
+ds_map_set(boss_hurtstates, states.freefall, 70)
 stunfallspr = spr_pepperman_hurtplayer
 walkspr = spr_pepperman_move
 idlespr = spr_pepperman_idle
@@ -83,7 +83,7 @@ function player_destroy(argument0)
 
 function boss_destroy(argument0)
 {
-    hitstate = (0 << 0)
+    hitstate = states.normal
     SUPER_boss_destroy(argument0)
     with (obj_peppermanbrick)
         instance_destroy()
@@ -127,23 +127,23 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if (argument1.state != (84 << 0) or argument1.parry_inst == -4)
+    if (argument1.state != states.backbreaker or argument1.parry_inst == -4)
     {
         var _prevstate = state
         SUPER_player_hurt(argument0, argument1)
-        if (_prevstate == (153 << 0) or _prevstate == (157 << 0) or _prevstate == (83 << 0) or _prevstate == (76 << 0))
+        if (_prevstate == states.shoulderbash or _prevstate == states.boss_supershoulderbash or _prevstate == states.shoulder or _prevstate == states.superslam)
         {
             with (obj_camera)
             {
                 shake_mag = 3
                 shake_mag_acc = (3 / room_speed)
             }
-            hitstate = (138 << 0)
+            hitstate = states.stun
             stunned = 70
             hitvsp = -4
             hithsp = ((-image_xscale) * 8)
         }
-        else if (_prevstate == (84 << 0))
+        else if (_prevstate == states.backbreaker)
         {
             with (obj_camera)
             {
@@ -152,7 +152,7 @@ function player_hurt(argument0, argument1)
             }
             sprite_index = spr_pepperman_throw
             image_index = 0
-            hitstate = (147 << 0)
+            hitstate = states.parry
             hitvsp = 0
             hithsp = 0
             movespeed = 8
@@ -161,32 +161,32 @@ function player_hurt(argument0, argument1)
         {
             hithsp = 0
             hitvsp = -4
-            hitstate = (0 << 0)
+            hitstate = states.normal
         }
     }
-    else if (state == (76 << 0))
+    else if (state == states.superslam)
     {
         with (argument1)
         {
-            if (state == (137 << 0) or state == (61 << 0))
+            if (state == states.hit or state == states.chainsaw)
             {
                 x = hitX
                 y = hitY
             }
-            if (other.state == (137 << 0) or other.state == (61 << 0))
+            if (other.state == states.hit or other.state == states.chainsaw)
             {
                 other.x = hitX
                 other.y = hitY
             }
             sprite_index = spr_idle
-            state = (162 << 0)
+            state = states.boss_fistmatch
             hitX = x
             hitY = y
             hsp = 0
             vsp = 0
             movespeed = 0
             other.sprite_index = other.idlespr
-            other.state = (162 << 0)
+            other.state = states.boss_fistmatch
             other.image_xscale = (-xscale)
             other.hitX = (x + (xscale * 16))
             other.hitY = y

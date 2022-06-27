@@ -1,11 +1,11 @@
-if (place_meeting(x, y, other) && other.state != (5 << 0) && other.state != (84 << 0) && other.state != (106 << 0) && other.y > other.yprevious && other.y < y)
+if (place_meeting(x, y, other) && other.state != states.tumble && other.state != states.backbreaker && other.state != states.bump && other.y > other.yprevious && other.y < y)
 {
     if (!other.isgustavo)
     {
         other.y = (y - 49)
-        other.state = (78 << 0)
+        other.state = states.grind
     }
-    else if (other.state != (202 << 0))
+    else if (other.state != states.ratmountgrind)
     {
         with (other)
         {
@@ -17,6 +17,6 @@ if (place_meeting(x, y, other) && other.state != (5 << 0) && other.state != (84 
             brick = 0
         }
         other.y = (y + 8)
-        other.state = (202 << 0)
+        other.state = states.ratmountgrind
     }
 }

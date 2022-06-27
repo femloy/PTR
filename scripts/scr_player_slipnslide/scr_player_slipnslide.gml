@@ -18,14 +18,14 @@ function scr_player_slipnslide()
     crouchslideAnim = 1
     if (movespeed <= 0)
     {
-        state = (0 << 0)
+        state = states.normal
         movespeed = 0
         mach2 = 0
         image_index = 0
     }
     if (scr_solid((x + xscale), y) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or scr_solid_slope((x + sign(hsp)), y)) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))))
     {
-        state = (92 << 0)
+        state = states.jump
         vsp = -14
         jumpstop = 1
     }
@@ -50,7 +50,7 @@ function scr_player_slipnslide()
         vsp = -5
         sprite_index = spr_slipbanan1
         image_index = 0
-        state = (165 << 0)
+        state = states.slipbanan
     }
     if (sprite_index == spr_slipnslide && place_meeting(x, (y + 1), obj_current))
         sprite_index = spr_currentplayer

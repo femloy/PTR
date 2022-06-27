@@ -23,7 +23,7 @@ function scr_player_cheesepepjump()
         movespeed = Approach(movespeed, 0, 0.25)
     if (place_meeting((x + sign(movespeed)), y, obj_solid) && (!(place_meeting(x, (y + 1), obj_slope))))
     {
-        state = (25 << 0)
+        state = states.cheesepepstick
         sprite_index = spr_cheesepepstickside
         hsp = 0
         vsp = 0
@@ -36,7 +36,7 @@ function scr_player_cheesepepjump()
     {
         repeat (3)
             create_debris((x + random_range(-8, 8)), (y + 43), spr_cheesechunk)
-        state = (24 << 0)
+        state = states.cheesepep
         sprite_index = spr_cheesepepland
         image_index = 0
         movespeed = abs(movespeed)

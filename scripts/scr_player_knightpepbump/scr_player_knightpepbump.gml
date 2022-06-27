@@ -5,7 +5,7 @@ function scr_player_knightpepbump()
     hsp = ((-xscale) * movespeed)
     if (grounded && vsp > 0)
     {
-        state = (47 << 0)
+        state = states.knightpep
         sprite_index = spr_knightpepland
         image_index = 0
         scr_soundeffect(sfx_groundpound)

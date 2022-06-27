@@ -1,7 +1,7 @@
-if (state == (153 << 0))
+if (state == states.shoulderbash)
 {
     var s = other.state
     scr_hurtplayer(other)
-    if (s != other.state && other.state == (107 << 0))
+    if (s != other.state && other.state == states.hurt)
         pepperman_nearestspot()
 }

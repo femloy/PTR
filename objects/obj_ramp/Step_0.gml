@@ -8,12 +8,12 @@ if place_meeting(x, (y - s), obj_player)
     with (obj_player)
     {
         var by = 4
-        if (state == (121 << 0))
+        if (state == states.mach3)
             by = 10
         var bx = 8
-        if (state == (121 << 0) or state == (201 << 0))
+        if (state == states.mach3 or state == states.ratmounttumble)
             bx = 18
-        if ((state == (104 << 0) or state == (201 << 0) or state == (211 << 0) or state == (5 << 0) or state == (121 << 0) or state == (187 << 0)) && y <= (other.y + by) && xscale == sign(other.image_xscale) && place_meeting(x, (y + s), other))
+        if ((state == states.mach2 or state == states.ratmounttumble or state == states.trashroll or state == states.tumble or state == states.mach3 or state == states.trickjump) && y <= (other.y + by) && xscale == sign(other.image_xscale) && place_meeting(x, (y + s), other))
         {
             vsp = -12
             movespeed = 14
@@ -22,10 +22,10 @@ if place_meeting(x, (y - s), obj_player)
             if isgustavo
             {
                 sprite_index = spr_player_ratmountwalljump
-                state = (203 << 0)
+                state = states.ratmounttrickjump
             }
             else
-                state = (187 << 0)
+                state = states.trickjump
             if (!other.used)
             {
                 ramp = 1

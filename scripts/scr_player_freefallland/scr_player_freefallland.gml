@@ -20,7 +20,7 @@ function scr_player_freefallland()
         facehurt = 1
         sprite_index = spr_facehurtup
         image_index = 0
-        state = (0 << 0)
+        state = states.normal
         jumpstop = 1
     }
     image_speed = 0.35

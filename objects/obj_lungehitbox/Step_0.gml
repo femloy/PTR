@@ -1,4 +1,4 @@
-if (playerid.state != (43 << 0) && playerid.state != (42 << 0))
+if (playerid.state != states.lungeattack && playerid.state != states.handstandjump)
 {
     instance_destroy()
     exit;

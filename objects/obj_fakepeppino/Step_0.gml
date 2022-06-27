@@ -18,7 +18,7 @@ if (!touched)
     image_speed = 0.35
     switch state
     {
-        case (0 << 0):
+        case states.normal:
             if (sprite_index != spr_fakepeppino_land)
             {
                 if (x != xprevious)
@@ -40,7 +40,7 @@ if (!touched)
             }
             if (!grounded)
             {
-                state = (92 << 0)
+                state = states.jump
                 if (vsp < 0)
                 {
                     with (instance_create(x, y, obj_highjumpcloud1))
@@ -61,7 +61,7 @@ if (!touched)
                 }
             }
             break
-        case (92 << 0):
+        case states.jump:
             if (floor(image_index) == (image_number - 1))
             {
                 if (sprite_index == spr_fakepeppino_jumpstart)
@@ -74,7 +74,7 @@ if (!touched)
                 create_particle(x, y, particle.landcloud, 0)
                 sprite_index = spr_fakepeppino_land
                 image_index = 0
-                state = (0 << 0)
+                state = states.normal
             }
             break
     }

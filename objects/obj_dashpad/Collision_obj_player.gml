@@ -1,6 +1,6 @@
 with (other)
 {
-    if (state != (186 << 0) && state != (146 << 0))
+    if (state != states.gotoplayer && state != states.actor)
     {
         var changecoord = 1
         if place_meeting(x, y, obj_superspring)
@@ -28,7 +28,7 @@ with (other)
                 }
             }
             machhitAnim = 0
-            state = (121 << 0)
+            state = states.mach3
             xscale = sign(other.image_xscale)
             if (movespeed < 14)
             {
@@ -52,13 +52,13 @@ with (other)
                 else
                     movespeed += (xscale * 0.5)
                 sprite_index = spr_boxxedpepwalk
-                state = (33 << 0)
+                state = states.boxxedpep
             }
             if isgustavo
             {
                 ratmount_movespeed = 12
                 gustavodash = 51
-                state = (191 << 0)
+                state = states.ratmount
                 if (abs(movespeed) < 12)
                     movespeed = (other.image_xscale * 12)
             }

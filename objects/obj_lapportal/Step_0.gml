@@ -8,7 +8,7 @@ if global.panic
         {
             if (other.playerid == noone && place_meeting(x, y, other))
             {
-                state = (146 << 0)
+                state = states.actor
                 visible = false
                 other.sprite_index = spr_pizzaportalend
                 other.image_index = 0

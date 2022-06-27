@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state != (265 << 0))
+    if (state != states.antigrav)
     {
-        state = (265 << 0)
+        state = states.antigrav
         vsp = 0
         scr_soundeffect(sfx_antigravstart)
         with (obj_antigravbubble)

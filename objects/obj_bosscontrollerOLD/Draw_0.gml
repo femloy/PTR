@@ -1,4 +1,4 @@
-if (state == (8 << 0) or state == (98 << 0) or state == (89 << 0))
+if (state == states.transitioncutscene or state == states.victory or state == states.gameover)
 {
     draw_set_alpha(fade)
     var cx = camera_get_view_x(view_camera[0])
@@ -11,7 +11,7 @@ if (state == (8 << 0) or state == (98 << 0) or state == (89 << 0))
 var _super_bg = 0
 with (obj_player)
 {
-    if (state == (252 << 0) && superattackstate == (80 << 0))
+    if (state == states.playersuperattack && superattackstate == states.punch)
         _super_bg = 1
 }
 if _super_bg

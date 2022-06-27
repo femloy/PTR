@@ -1,4 +1,4 @@
-if ((!instance_exists(baddieID)) or (!baddieID.thrown) or baddieID.state != (138 << 0))
+if ((!instance_exists(baddieID)) or (!baddieID.thrown) or baddieID.state != states.stun)
 {
     instance_destroy()
     exit;

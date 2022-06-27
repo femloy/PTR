@@ -16,7 +16,7 @@ function scr_player_knightpepattack()
     {
         movespeed = 0
         sprite_index = spr_knightpep_idle
-        state = (47 << 0)
+        state = states.knightpep
     }
     if (scr_slope() && sprite_index != spr_knightpepthunder)
     {
@@ -24,7 +24,7 @@ function scr_player_knightpepattack()
         knightmomentum = 0
         with (instance_place(x, (y + 1), obj_slope))
             other.xscale = (-sign(image_xscale))
-        state = (38 << 0)
+        state = states.knightpepslopes
         sprite_index = spr_knightpepdownslope
         slope_buffer = 20
     }
@@ -37,13 +37,13 @@ function scr_player_knightpepattack()
         if (movespeed <= 8)
             movespeed = 8
         vsp = -11
-        state = (38 << 0)
+        state = states.knightpepslopes
         sprite_index = spr_knightpep_doublejump
         image_index = 0
     }
     if ((!grounded) && (!doublejump))
     {
-        state = (47 << 0)
+        state = states.knightpep
         sprite_index = spr_knightpepjump
         image_index = 0
     }

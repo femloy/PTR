@@ -2,7 +2,7 @@ with (other)
 {
     x = roomstartx
     y = roomstarty
-    state = (0 << 0)
+    state = states.normal
     other.x = other.xstart
     other.y = other.ystart
 }

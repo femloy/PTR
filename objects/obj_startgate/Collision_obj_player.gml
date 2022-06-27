@@ -16,7 +16,7 @@ switch targetRoom
 
 with (obj_player1)
 {
-    if (place_meeting(x, y, other) && key_up && grounded && (state == (0 << 0) or state == (103 << 0) or state == (104 << 0) or state == (121 << 0)) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != (98 << 0) && state != (95 << 0) && obj_player1.spotlight == 1)
+    if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal or state == states.mach1 or state == states.mach2 or state == states.mach3) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != states.victory && state != states.comingoutdoor && obj_player1.spotlight == 1)
     {
         audio_stop_all()
         global.leveltosave = other.level
@@ -26,7 +26,7 @@ with (obj_player1)
         mach2 = 0
         obj_camera.chargecamera = 0
         image_index = 0
-        state = (98 << 0)
+        state = states.victory
         obj_player2.backtohubstartx = x
         obj_player2.backtohubstarty = y
         obj_player2.backtohubroom = room
@@ -39,14 +39,14 @@ with (obj_player1)
                 mach2 = 0
                 obj_camera.chargecamera = 0
                 image_index = 0
-                state = (98 << 0)
+                state = states.victory
             }
         }
     }
 }
 with (obj_player2)
 {
-    if (place_meeting(x, y, other) && key_up && grounded && (state == (0 << 0) or state == (103 << 0) or state == (104 << 0) or state == (121 << 0)) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != (98 << 0) && state != (95 << 0) && obj_player1.spotlight == 0)
+    if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal or state == states.mach1 or state == states.mach2 or state == states.mach3) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != states.victory && state != states.comingoutdoor && obj_player1.spotlight == 0)
     {
         audio_stop_all()
         global.leveltosave = other.level
@@ -56,7 +56,7 @@ with (obj_player2)
         mach2 = 0
         obj_camera.chargecamera = 0
         image_index = 0
-        state = (98 << 0)
+        state = states.victory
         obj_player1.backtohubstartx = x
         obj_player1.backtohubstarty = y
         obj_player1.backtohubroom = room
@@ -69,12 +69,12 @@ with (obj_player2)
                 mach2 = 0
                 obj_camera.chargecamera = 0
                 image_index = 0
-                state = (98 << 0)
+                state = states.victory
             }
         }
     }
 }
-if ((floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == (98 << 0)) or (floor(obj_player2.image_index) == (obj_player2.image_number - 1) && obj_player2.state == (98 << 0)))
+if ((floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == states.victory) or (floor(obj_player2.image_index) == (obj_player2.image_number - 1) && obj_player2.state == states.victory))
 {
     with (obj_player)
     {

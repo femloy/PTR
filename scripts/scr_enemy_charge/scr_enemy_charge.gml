@@ -27,7 +27,7 @@ function scr_enemy_charge()
         {
             if place_meeting((x + image_xscale), y, obj_solid)
                 image_xscale *= -1
-            state = (134 << 0)
+            state = states.walk
             image_index = 0
             image_speed = 0.35
             sprite_index = spr_indiancheese_land
@@ -60,7 +60,7 @@ function scr_enemy_charge()
         hsp = (image_xscale * movespeed)
         if place_meeting((x + hsp), y, obj_solid)
         {
-            state = (138 << 0)
+            state = states.stun
             stunned = 100
         }
     }
@@ -70,7 +70,7 @@ function scr_enemy_charge()
         hsp = (image_xscale * 2)
         if (grounded && vsp > 0)
         {
-            state = (134 << 0)
+            state = states.walk
             sprite_index = idlespr
         }
         if (alarm[4] == -1)

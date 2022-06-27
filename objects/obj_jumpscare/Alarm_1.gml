@@ -3,7 +3,7 @@ if (!global.panic)
     with (obj_player1)
     {
         lastroom = room
-        state = (0 << 0)
+        state = states.normal
         room_goto(targetRoom)
         if (targetDoor == "S")
         {
@@ -17,7 +17,7 @@ else
     with (obj_player)
     {
         if check_player_coop()
-            state = (225 << 0)
+            state = states.animatronic
     }
     instance_destroy()
 }

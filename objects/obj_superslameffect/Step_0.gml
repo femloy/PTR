@@ -1,5 +1,5 @@
 x = playerid.x
 y = playerid.y
-if (playerid.state != (108 << 0))
+if (playerid.state != states.freefall)
     instance_destroy()
 visible = (!(room == rank_room))

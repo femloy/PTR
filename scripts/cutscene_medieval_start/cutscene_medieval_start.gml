@@ -2,7 +2,7 @@ function cutscene_medieval_start()
 {
     with (obj_player)
     {
-        state = (146 << 0)
+        state = states.actor
         sprite_index = spr_walkfront
         image_speed = 0.35
         other.xscale = xscale

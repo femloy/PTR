@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 792,
-  "height": 792,
+  "width": 640,
+  "height": 800,
   "textureGroupId": {
     "name": "beachgroup",
     "path": "texturegroups/beachgroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"84b93417-5785-4621-99e2-8caf23a9acf0","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84b93417-5785-4621-99e2-8caf23a9acf0","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"LayerId":{"name":"c999f394-0f24-4521-9512-5fd66e05fc6a","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_beachcavern","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"resourceVersion":"1.0","name":"84b93417-5785-4621-99e2-8caf23a9acf0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"497f5bd4-33db-4940-b357-d50c1658a36f","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"497f5bd4-33db-4940-b357-d50c1658a36f","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"LayerId":{"name":"f4586505-ff08-4c74-bd77-9afafe0de2d5","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_beachcavern","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"resourceVersion":"1.0","name":"497f5bd4-33db-4940-b357-d50c1658a36f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_beachcavern","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"82f6564f-b824-40c2-b450-69c59ec7c451","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84b93417-5785-4621-99e2-8caf23a9acf0","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"bd1f5146-5e5f-4862-955a-c41385230dd2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"497f5bd4-33db-4940-b357-d50c1658a36f","path":"sprites/tilespr_tile_beachcavern/tilespr_tile_beachcavern.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c999f394-0f24-4521-9512-5fd66e05fc6a","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f4586505-ff08-4c74-bd77-9afafe0de2d5","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

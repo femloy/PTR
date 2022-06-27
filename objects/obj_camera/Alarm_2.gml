@@ -12,7 +12,7 @@ if (global.miniboss == true)
         instance_create(x, y, obj_bangeffect)
         repeat (6)
             instance_create(x, y, obj_slapstar)
-        state = (7 << 0)
+        state = states.ejected
         vsp = -10
         audio_stop_all()
         scr_soundeffect(mu_timesup)

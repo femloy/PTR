@@ -1,10 +1,10 @@
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         hsp = 0
         vsp = 0
         break
-    case (135 << 0):
+    case states.fall:
         var num = instance_place_list(x, ((y + vsp) + 1), 332, global.instancelist, 0)
         for (var i = 0; i < num; i++)
             instance_destroy(ds_list_find_value(global.instancelist, i))
@@ -15,7 +15,7 @@ switch state
         {
             scr_soundeffect(sfx_groundpound)
             create_particle(x, y, particle.landcloud)
-            state = (92 << 0)
+            state = states.jump
             with (obj_camera)
             {
                 shake_mag = 5
@@ -23,10 +23,10 @@ switch state
             }
         }
         break
-    case (92 << 0):
+    case states.jump:
         y = Approach(y, ystart, 2)
         if (y == ystart)
-            state = (0 << 0)
+            state = states.normal
         break
 }
 

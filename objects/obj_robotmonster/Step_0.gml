@@ -1,11 +1,11 @@
 targetplayer = instance_nearest(x, y, obj_player)
 switch state
 {
-    case (217 << 0):
+    case states.robotidle:
         sprite_index = spr_introidle
         image_speed = 0.35
         break
-    case (218 << 0):
+    case states.robotintro:
         image_speed = 0.35
         if (sprite_index != spr_intro)
         {
@@ -14,11 +14,11 @@ switch state
         }
         if (floor(image_index) == (image_number - 1))
         {
-            state = (220 << 0)
+            state = states.robotchase
             sprite_index = chasespr
         }
         break
-    case (219 << 0):
+    case states.robotroaming:
         targetplayer = instance_nearest(x, y, obj_player)
         image_speed = 0.35
         sprite_index = walkspr
@@ -27,9 +27,9 @@ switch state
             image_xscale *= -1
         scr_monster_detect_audio()
         if scr_monster_detect(300, room_height, targetplayer)
-            state = (220 << 0)
+            state = states.robotchase
         break
-    case (220 << 0):
+    case states.robotchase:
         if (sprite_index != spr_monstercheese_jump)
             sprite_index = chasespr
         var t = grounded
@@ -81,7 +81,7 @@ switch state
             if (t && place_meeting((x + hsp), y, obj_monstersolid) && (!(place_meeting((x + hsp), y, obj_monsterslope))))
             {
                 grav *= -1
-                state = (135 << 0)
+                state = states.fall
                 hsp = 0
                 sprite_index = spr_monstercheese_jump
                 image_index = 0
@@ -89,38 +89,38 @@ switch state
             else if (t && ys < 0 && point_in_camera(x, y, view_camera[0]) && targetplayer.x > (x - 200) && targetplayer.x < (x + 200))
             {
                 grav *= -1
-                state = (135 << 0)
+                state = states.fall
                 sprite_index = spr_monstercheese_jump
                 image_index = 0
             }
         }
         break
-    case (135 << 0):
+    case states.fall:
         image_speed = 0.5
         if (floor(image_index) == (image_number - 1))
             image_index = (image_number - 1)
         if scr_monster_solid(x, (y + (grav * 2)))
         {
             ys *= -1
-            state = (220 << 0)
+            state = states.robotchase
         }
         break
-    case (222 << 0):
+    case states.robotseeking:
         targetplayer = instance_nearest(x, y, obj_player)
         hsp = (image_xscale * 6)
         if (place_meeting((x + sign(hsp)), y, obj_monstersolid) && ((!(place_meeting((x + sign(hsp)), y, obj_monsterslope))) or place_meeting((x + sign(hsp)), (y - 4), obj_solid)))
-            state = (219 << 0)
+            state = states.robotroaming
         if scr_monster_detect(300, room_height, targetplayer)
-            state = (220 << 0)
+            state = states.robotchase
         break
-    case (221 << 0):
+    case states.robotinvestigate:
         scr_monsterinvestigate(10, spr_monstershroom_chase, spr_monstershroom_idle)
         break
 }
 
 if (object_index == obj_robotmonster or object_index == obj_hillbillymonster)
 {
-    if (state == (220 << 0) or state == (222 << 0) or state == (221 << 0))
+    if (state == states.robotchase or state == states.robotseeking or state == states.robotinvestigate)
     {
         instance_destroy(instance_place((x + hsp), y, obj_wirewall))
         instance_destroy(instance_place((x + hsp), y, obj_destructibles))

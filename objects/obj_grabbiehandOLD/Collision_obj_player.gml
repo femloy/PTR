@@ -1,10 +1,10 @@
-if (other.state == (186 << 0))
+if (other.state == states.gotoplayer)
     exit;
 if (sprite_index == spr_grabbiehand_fall && player == -4)
 {
     with (other)
     {
-        if (state == (33 << 0))
+        if (state == states.boxxedpep)
         {
             var i = 0
             var p = id
@@ -29,7 +29,7 @@ if (sprite_index == spr_grabbiehand_fall && player == -4)
             with (instance_create(x, y, obj_boxxeddebris))
                 image_index = 4
         }
-        if (state == (24 << 0) or state == (25 << 0))
+        if (state == states.cheesepep or state == states.cheesepepstick)
         {
             repeat (8)
             {
@@ -51,7 +51,7 @@ if (sprite_index == spr_grabbiehand_fall && player == -4)
     player = other.id
     other.image_index = 0
     other.sprite_index = spr_player_catched
-    other.state = (106 << 0)
+    other.state = states.bump
     other.x = x
     other.y = y
     other.vsp = 0
@@ -63,7 +63,7 @@ if (sprite_index == spr_grabbiehand_catch)
         player = other.id
     other.vsp = 0
     other.hsp = 0
-    other.state = (106 << 0)
+    other.state = states.bump
     other.sprite_index = spr_player_catched
     other.x = x
     other.y = y

@@ -7,7 +7,7 @@ function scr_enemy_land()
     if (floor(image_index) == (image_number - 1))
     {
         sprite_index = idlespr
-        state = (126 << 0)
+        state = states.idle
         image_index = 0
     }
     if place_meeting(x, (y + 1), obj_railparent)

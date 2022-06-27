@@ -1,10 +1,10 @@
-if (state == (150 << 0))
+if (state == states.tube)
 {
     if (floor(image_index) >= 11)
     {
         with (playerid)
         {
-            state = (150 << 0)
+            state = states.tube
             tube_id = other.id
             if (other.stored_spd == 0)
                 other.stored_spd = 1
@@ -21,7 +21,7 @@ if (state == (150 << 0))
             with (other)
             {
                 playerid = -1
-                state = (0 << 0)
+                state = states.normal
             }
         }
     }

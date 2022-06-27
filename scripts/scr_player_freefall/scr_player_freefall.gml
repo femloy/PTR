@@ -61,7 +61,7 @@ function scr_player_freefall()
             with (instance_place(x, (y + 1), obj_slope))
             {
                 other.xscale = (-sign(image_xscale))
-                other.state = (5 << 0)
+                other.state = states.tumble
                 other.sprite_index = other.spr_crouchslip
                 if (other.freefallsmash > 20)
                     other.movespeed = 12
@@ -81,7 +81,7 @@ function scr_player_freefall()
             else
                 sprite_index = spr_shotgunjump2
             image_index = 0
-            state = (111 << 0)
+            state = states.freefallland
             jumpAnim = 1
             jumpstop = 0
             with (obj_camera)
@@ -95,7 +95,7 @@ function scr_player_freefall()
                 {
                     if (shakestun && grounded && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0 && (!invincible) && groundpound)
                     {
-                        state = (138 << 0)
+                        state = states.stun
                         if (stunned < 60)
                             stunned = 60
                         vsp = -11
@@ -123,7 +123,7 @@ function scr_player_freefall()
     {
         if (!key_down)
         {
-            state = (92 << 0)
+            state = states.jump
             sprite_index = spr_fall
             image_index = 0
         }

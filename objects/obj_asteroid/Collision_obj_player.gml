@@ -1,2 +1,2 @@
-if (other.state == (184 << 0))
+if (other.state == states.rocket)
     instance_destroy()

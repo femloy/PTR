@@ -6,7 +6,7 @@ function scr_player_slap()
         if (fallinganimation >= 40 && fallinganimation < 80)
         {
             sprite_index = spr_player_facestomp
-            state = (92 << 0)
+            state = states.jump
         }
     }
     move = (key_left + key_right)
@@ -101,21 +101,21 @@ function scr_player_slap()
     if (floor(image_index) == (image_number - 1) && slapbuffer == 8)
     {
         if (mach2 >= 35)
-            state = (104 << 0)
+            state = states.mach2
         else if (mach2 >= 100)
-            state = (121 << 0)
+            state = states.mach3
         else if grounded
         {
             if (move != 0)
                 dir = move
-            state = (0 << 0)
+            state = states.normal
         }
         else if (!grounded)
         {
             if (move != 0)
                 dir = move
             sprite_index = spr_player_fall
-            state = (92 << 0)
+            state = states.jump
         }
     }
     if ((!instance_exists(obj_cloudeffect)) && grounded && move != 0 && (floor(image_index) == 4 or floor(image_index) == 10))

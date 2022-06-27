@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_lamp_tileset",
-    "path": "sprites/tilespr_tile_lamp_tileset/tilespr_tile_lamp_tileset.yy",
+    "name": "tile_lamp",
+    "path": "sprites/tile_lamp/tile_lamp.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",

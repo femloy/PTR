@@ -1,4 +1,4 @@
-if (baddieID.state != (4 << 0) && baddieID.state != (154 << 0))
+if (baddieID.state != states.grabbed && baddieID.state != states.pummel)
 {
     var _playerinst = other.id
     baddiecollisionbox_update(_playerinst)

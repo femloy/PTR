@@ -8,5 +8,5 @@ if (place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretporta
     visible = false
 else
     visible = playerid.visible
-if (playerid.state != (265 << 0) && playerid.state != (61 << 0) && (playerid.state != (84 << 0) or playerid.tauntstoredstate != (265 << 0)))
+if (playerid.state != states.antigrav && playerid.state != states.chainsaw && (playerid.state != states.backbreaker or playerid.tauntstoredstate != states.antigrav))
     instance_destroy()

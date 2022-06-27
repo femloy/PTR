@@ -104,7 +104,7 @@ function scr_pizzaball_normal()
 function scr_pizzaball_roll()
 {
     kicked = 0
-    state = (0 << 0)
+    state = states.normal
     exit;
 }
 

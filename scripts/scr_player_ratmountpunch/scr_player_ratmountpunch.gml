@@ -15,7 +15,7 @@ function scr_player_ratmountpunch()
     ratmountpunchtimer--
     if (ratmountpunchtimer < 0)
     {
-        state = (191 << 0)
+        state = states.ratmount
         if (hsp != 0)
         {
             dir = sign(hsp)

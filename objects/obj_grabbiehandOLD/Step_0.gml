@@ -48,7 +48,7 @@ if grabbing
     }
     if (distance_to_pos(x, y, dropspotx, dropspoty, 5, 5) && (!released))
     {
-        player.state = (108 << 0)
+        player.state = states.freefall
         player.x = dropspotx
         player.y = dropspoty
         player = -4

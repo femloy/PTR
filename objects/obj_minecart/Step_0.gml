@@ -2,17 +2,17 @@ mask_index = spr_player_mask
 var _destroy = 0
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         if (grounded && vsp > 0)
         {
             hsp = Approach(hsp, 0, 0.5)
             if (!(place_meeting(x, y, obj_minecart_rail)))
                 _destroy = 1
         }
-        substate = (0 << 0)
+        substate = states.normal
         break
 	
-    case (17 << 0):
+    case states.ghostpossess:
         key_left = playerid.key_left
         key_right = playerid.key_right
         key_jump = playerid.key_jump
@@ -22,7 +22,7 @@ switch state
         var deccel = 0.2
         switch substate
         {
-            case (0 << 0):
+            case states.normal:
                 if place_meeting((x + sign(hsp)), y, obj_solid)
                     movespeed = 0
                 if (move != 0)
@@ -47,20 +47,20 @@ switch state
                 if (playerid.input_buffer_jump < 8)
                 {
                     playerid.input_buffer_jump = 8
-                    substate = (92 << 0)
+                    substate = states.jump
                     vsp = -11
                 }
                 if ((!grounded) && vsp > 0)
-                    substate = (92 << 0)
+                    substate = states.jump
                 if (!(place_meeting(x, y, obj_minecart_rail)))
                     _destroy = 1
                 break
-            case (92 << 0):
+            case states.jump:
                 hsp = (xscale * movespeed)
                 if place_meeting((x + sign(hsp)), y, obj_solid)
                     movespeed = 0
                 if (grounded && vsp > 0)
-                    substate = (0 << 0)
+                    substate = states.normal
                 break
         }
         break
@@ -77,11 +77,13 @@ if _destroy
 {
     instance_destroy()
     instance_create(xstart, ystart, obj_minecart)
-    create_particle(xstart, ystart, (9 << 0))
+	
+    create_particle(xstart, ystart, particle.genericpoofeffect)
     create_particle(x, y, particle.genericpoofeffect)
+	
     with (playerid)
     {
-        state = (16 << 0)
+        state = states.ghost
         visible = true
     }
 }

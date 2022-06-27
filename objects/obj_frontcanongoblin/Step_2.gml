@@ -1,4 +1,4 @@
-if (state != (8 << 0))
+if (state != states.transitioncutscene)
     captain_index += 0.35
 else
     captain_index += 0.6

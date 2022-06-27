@@ -1,9 +1,9 @@
 with (other)
 {
-    if (state != (184 << 0) && state != (146 << 0) && state != (185 << 0) && state != (186 << 0))
+    if (state != states.rocket && state != states.actor && state != states.rocketslide && state != states.gotoplayer)
     {
         xscale = other.image_xscale
-        state = (184 << 0)
+        state = states.rocket
         tv_push_prompt_once(tv_create_prompt("This is the rocket transformation text", tvprompt.transfo, spr_tv_rocket, 3), "rocket")
         sprite_index = spr_rocketstart
         image_index = 0

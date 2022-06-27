@@ -1,6 +1,6 @@
 with (other)
 {
-    if (state != (4 << 0))
+    if (state != states.grabbed)
     {
         if place_meeting(x, (y - 1), obj_solid)
             ventilator_vsp = 5

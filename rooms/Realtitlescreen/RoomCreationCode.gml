@@ -278,8 +278,8 @@ global.smallnumber_color1 = make_colour_rgb(255, 255, 255)
 global.smallnumber_color2 = make_colour_rgb(248, 0, 0)
 global.optimize = 0
 global.autotile = 1
-global.font_small = font_add_sprite_ext(spr_smallfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!._1234567890:?", 1, -2)
-global.smallnumber_fnt = font_add_sprite_ext(spr_smallnumber, "1234567890-", 1, 0)
+global.font_small = font_add_sprite_ext(spr_smallfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!._1234567890:?", true, -2)
+global.smallnumber_fnt = font_add_sprite_ext(spr_smallnumber, "1234567890-", true, 0)
 global.pigreduction = 0
 global.pigtotal = 0
 global.levelcomplete = 0
@@ -360,7 +360,7 @@ global.chateauswap = -4
 global.warcutscene = -4
 pal_swap_init_system(shd_pal_swapper)
 with (obj_player1)
-    state = (0 << 0)
+    state = states.normal
 global.loadeditor = 0
 room_goto(hub_loadingscreen)
 instance_destroy(obj_cutscene_handler)

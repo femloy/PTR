@@ -1,2 +1,2 @@
 alarm[0] = 2
-sprite = 1209
+sprite = spr_supercharge

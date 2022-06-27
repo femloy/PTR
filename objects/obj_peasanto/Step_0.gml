@@ -1,54 +1,54 @@
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         scr_enemy_idle()
         break
-    case (128 << 0):
+    case states.charge:
         scr_enemy_charge()
         break
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         scr_enemy_walk()
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
 }
 
-if (state == (138 << 0) && stunned > 40 && birdcreated == 0)
+if (state == states.stun && stunned > 40 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
-if (place_meeting((x + hsp), y, obj_iceblock) && state == (128 << 0))
+if (place_meeting((x + hsp), y, obj_iceblock) && state == states.charge)
 {
     with (instance_place((x + hsp), y, obj_iceblock))
         instance_destroy()
 }
 targetplayer = instance_nearest(x, y, obj_player)
-if (state == (134 << 0) && attack_cooldown <= 0)
+if (state == states.walk && attack_cooldown <= 0)
 {
     if (x != targetplayer.x && targetplayer.x > (x - 200) && targetplayer.x < (x + 200) && targetplayer.y < (y + 50) && targetplayer.y > (y - 50))
     {
         flame_buffer = flame_max
-        state = (128 << 0)
+        state = states.charge
         image_xscale = sign((targetplayer.x - x))
         sprite_index = spr_peasanto_flameattack
         image_index = 0
@@ -56,7 +56,7 @@ if (state == (134 << 0) && attack_cooldown <= 0)
         hitboxcreate = 0
     }
 }
-if (state == (128 << 0))
+if (state == states.charge)
 {
     if (!hitboxcreate)
     {
@@ -66,7 +66,7 @@ if (state == (128 << 0))
     }
     if (flame_buffer <= 0)
     {
-        state = (134 << 0)
+        state = states.walk
         sprite_index = walkspr
         attack_cooldown = attack_max
     }
@@ -79,9 +79,9 @@ if (attack_cooldown > 0)
     attack_cooldown--
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {

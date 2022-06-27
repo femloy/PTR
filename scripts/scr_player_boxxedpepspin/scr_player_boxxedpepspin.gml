@@ -28,7 +28,7 @@ function scr_player_boxxedpepspin()
     instance_destroy(instance_place((x + hsp), y, obj_destructibles))
     if (!key_slap)
     {
-        state = (35 << 0)
+        state = states.boxxedpepjump
         sprite_index = spr_boxxedpepair
     }
     exit;

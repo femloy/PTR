@@ -1,4 +1,4 @@
-if (state == (150 << 0))
+if (state == states.tube)
 {
     if (floor(image_index) >= 6)
     {
@@ -19,7 +19,7 @@ if (state == (150 << 0))
                     x += sign(other.image_xscale)
             }
             machhitAnim = 0
-            state = (121 << 0)
+            state = states.mach3
             if (movespeed < 14)
                 movespeed = 14
             var p = (object_index == obj_player1 ? 0 : 1)
@@ -33,7 +33,7 @@ if (state == (150 << 0))
             with (other)
             {
                 playerid = -1
-                state = (0 << 0)
+                state = states.normal
             }
         }
     }

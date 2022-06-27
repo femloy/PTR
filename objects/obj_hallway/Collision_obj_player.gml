@@ -1,4 +1,4 @@
-if (obj_player1.state == (208 << 0))
+if (obj_player1.state == states.debugstate)
     exit;
 with (other)
 {

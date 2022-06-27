@@ -7,12 +7,12 @@ function scr_player_barrelclimbwall()
     if (!key_attack)
     {
         movespeed = 0
-        state = (114 << 0)
+        state = states.barreljump
         sprite_index = spr_player_barrelfall
     }
     if (grounded && vsp > 0)
     {
-        state = (116 << 0)
+        state = states.barrelslide
         if scr_solid((x + xscale), y)
             xscale *= -1
         movespeed = (xscale * 10)

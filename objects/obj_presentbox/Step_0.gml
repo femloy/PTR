@@ -77,13 +77,13 @@ switch global.boxhp
 
 with (instance_place(x, y, obj_player))
 {
-    if ((state == (42 << 0) or state == (80 << 0) or state == (43 << 0)) && other.sprite_index != spr_present)
+    if ((state == states.handstandjump or state == states.punch or state == states.lungeattack) && other.sprite_index != spr_present)
     {
-        if (state == (42 << 0) or state == (80 << 0) or state == (43 << 0))
+        if (state == states.handstandjump or state == states.punch or state == states.lungeattack)
         {
             sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_punch)
             image_index = 0
-            state = (91 << 0)
+            state = states.tackle
             movespeed = 3
             vsp = -3
         }

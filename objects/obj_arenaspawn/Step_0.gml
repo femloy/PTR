@@ -1,9 +1,9 @@
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         if (obj_player1.x <= x)
         {
-            state = (145 << 0)
+            state = states.arenaround
             round_count = 10
             with (obj_arenagate)
             {
@@ -19,29 +19,29 @@ switch state
             }
         }
         break
-    case (144 << 0):
+    case states.arenaintro:
         with (obj_player)
-            state = (46 << 0)
+            state = states.gottreasure
         if (cutscene_count > 0)
             cutscene_count--
         else
         {
             with (obj_player)
             {
-                state = (0 << 0)
+                state = states.normal
                 image_index = 0
             }
-            state = (145 << 0)
+            state = states.arenaround
             round_count = 10
         }
         break
-    case (145 << 0):
+    case states.arenaround:
         if (round_count > 0)
             round_count--
         else
-            state = (142 << 0)
+            state = states.spawnenemy
         break
-    case (142 << 0):
+    case states.spawnenemy:
         if (!ds_list_empty(baddielist))
         {
             for (var i = 0; i < ds_list_size(baddielist); i++)
@@ -67,7 +67,7 @@ switch state
         wave_minutes = minutes
         wave_seconds = seconds
         round_count = round_max
-        state = (143 << 0)
+        state = states.arena
         with (obj_arenadoor)
         {
             wave = other.wave
@@ -80,7 +80,7 @@ switch state
             }
         }
         break
-    case (143 << 0):
+    case states.arena:
         var _doorfinish = 1
         with (obj_arenadoor)
         {
@@ -109,19 +109,19 @@ switch state
             }
             else
             {
-                state = (142 << 0)
+                state = states.spawnenemy
                 round_count = round_max
             }
         }
         break
-    case (8 << 0):
+    case states.transitioncutscene:
         if (floor(image_index) == (image_number - 1))
-            state = (98 << 0)
+            state = states.victory
         break
-    case (98 << 0):
+    case states.victory:
         instance_destroy()
         break
 }
 
-if (state != (0 << 0) && state != (144 << 0))
+if (state != states.normal && state != states.arenaintro)
     visible = false

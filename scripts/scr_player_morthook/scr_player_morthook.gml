@@ -6,7 +6,7 @@ function scr_player_morthook()
     vsp = 0
     if (!instance_exists(morthookID))
     {
-        state = (12 << 0)
+        state = states.mortjump
         sprite_index = spr_fall
         exit;
     }
@@ -22,7 +22,7 @@ function scr_player_morthook()
         }
         else if (floor(image_index) == (image_number - 1))
         {
-            state = (12 << 0)
+            state = states.mortjump
             sprite_index = spr_mortdoublejumpstart
             image_index = 0
             vsp = -14

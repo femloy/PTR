@@ -2,7 +2,7 @@ scr_initenemy()
 elite = true
 elitehit = 9
 wastedhits = 0
-state = (134 << 0)
+state = states.walk
 hitboxID = -4
 oldtargetspot = -4
 targetspot = -4

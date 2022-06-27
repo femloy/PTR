@@ -47,7 +47,7 @@ function scr_player_Sjumpprep()
                 scr_soundeffect(sfx_superjumprelease)
                 instance_create(x, y, obj_explosioneffect)
                 sprite_index = spr_superjump
-                state = (97 << 0)
+                state = states.Sjump
                 vsp = -17
                 image_index = 0
             }
@@ -64,14 +64,14 @@ function scr_player_Sjumpprep()
                 {
                     if (pizzapepper == 0)
                     {
-                        state = (121 << 0)
+                        state = states.mach3
                         sprite_index = spr_playerN_jetpackboost
                         instance_create(x, y, obj_jumpdust)
                         movespeed = 15
                     }
                     else
                     {
-                        state = (121 << 0)
+                        state = states.mach3
                         sprite_index = spr_crazyrun
                         instance_create(x, y, obj_jumpdust)
                         movespeed = 21
@@ -82,7 +82,7 @@ function scr_player_Sjumpprep()
                     scr_soundeffect(sfx_superjumprelease)
                     instance_create(x, y, obj_explosioneffect)
                     sprite_index = spr_superjump
-                    state = (97 << 0)
+                    state = states.Sjump
                     vsp = -15
                 }
             }

@@ -13,7 +13,7 @@ function scr_enemy_hit()
             _player = obj_player1
         else
             _player = 323
-        if (obj_player.tauntstoredstate == (104 << 0) or obj_player.tauntstoredstate == (5 << 0) or obj_player.state == (104 << 0) or obj_player.state == (5 << 0))
+        if (obj_player.tauntstoredstate == states.mach2 or obj_player.tauntstoredstate == states.tumble or obj_player.state == states.mach2 or obj_player.state == states.tumble)
             thrown = false
         else
             thrown = true
@@ -34,7 +34,7 @@ function scr_enemy_hit()
             instance_create(x, y, obj_genericpoofeffect)
         }
         stunned = 200
-        state = (138 << 0)
+        state = states.stun
     }
     exit;
 }

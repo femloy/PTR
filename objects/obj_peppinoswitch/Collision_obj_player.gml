@@ -7,7 +7,7 @@ if (global.switchbuffer == 0)
         hsp = 0
         vsp = 0
         visible = false
-        state = (146 << 0)
+        state = states.actor
     }
     create_particle(x, y, particle.genericpoofeffect)
     sprite_index = spr_peppinoswitch1

@@ -1,6 +1,6 @@
-if ((!graffiti) && other.state == (84 << 0) && global.graffiticutscene)
+if ((!graffiti) && other.state == states.backbreaker && global.graffiticutscene)
 {
-    other.state = (85 << 0)
+    other.state = states.graffiti
     other.sprite_index = other.spr_victory
     other.image_index = 0
     global.factorygraffiti = 1

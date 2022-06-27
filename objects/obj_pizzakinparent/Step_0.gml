@@ -1,5 +1,5 @@
 visible = ((room == rank_room or room == timesuproom) ? false : playerid.visible)
-if (obj_player.state == (87 << 0))
+if (obj_player.state == states.pizzathrow)
     visible = false
 playerid = (obj_player1.spotlight ? obj_player1 : obj_player2)
 var roomname = string_letters(room_get_name(room))

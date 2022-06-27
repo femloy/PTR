@@ -1,5 +1,5 @@
-if ((!playerid.state) == (121 << 0) && (!playerid.state) == (104 << 0))
+if ((!playerid.state) == states.mach3 && (!playerid.state) == states.mach2)
     instance_destroy()
 visible = playerid.visible
-if (playerid.state == (104 << 0))
+if (playerid.state == states.mach2)
     image_alpha = (playerid.movespeed / 16)

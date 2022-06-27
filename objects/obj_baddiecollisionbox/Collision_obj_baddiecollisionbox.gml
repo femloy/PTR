@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && baddieID.thrown != 1 && (!other.baddieID.mach3destroy) && baddieID.state != (137 << 0) && other.baddieID.thrown == true && other.baddieID.state != (137 << 0) && baddieID.killbyenemy && baddieID != other.id && baddieID.state != (4 << 0) && (!baddieID.invincible) && baddieID.instantkillable && ((global.attackstyle != 2 && (!global.kungfu)) or baddieID.hp <= 0) && (!global.kungfu))
+if (instance_exists(baddieID) && baddieID.thrown != 1 && (!other.baddieID.mach3destroy) && baddieID.state != states.hit && other.baddieID.thrown == true && other.baddieID.state != states.hit && baddieID.killbyenemy && baddieID != other.id && baddieID.state != states.grabbed && (!baddieID.invincible) && baddieID.instantkillable && ((global.attackstyle != 2 && (!global.kungfu)) or baddieID.hp <= 0) && (!global.kungfu))
 {
     scr_soundeffect(sfx_punch)
     if (!baddieID.important)
@@ -17,7 +17,7 @@ if (instance_exists(baddieID) && baddieID.thrown != 1 && (!other.baddieID.mach3d
             baddieID.hp -= 1
         instance_create(baddieID.x, baddieID.y, obj_parryeffect)
         baddieID.alarm[3] = 3
-        baddieID.state = (137 << 0)
+        baddieID.state = states.hit
         baddieID.image_xscale = other.baddieID.image_xscale
         instance_create(x, y, obj_slapstar)
         instance_create(x, y, obj_slapstar)

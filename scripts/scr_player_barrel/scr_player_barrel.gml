@@ -49,7 +49,7 @@ function scr_player_barrel()
                 if (sign(movespeed) == 1)
                     xscale = move
             }
-            state = (114 << 0)
+            state = states.barreljump
             sprite_index = spr_player_barreljump
             image_index = 0
             jumpstop = 0
@@ -59,14 +59,14 @@ function scr_player_barrel()
         {
             movespeed = (xscale * 7)
             instance_create(x, y, obj_jumpdust)
-            state = (116 << 0)
+            state = states.barrelslide
             sprite_index = spr_player_barrelslipnslide
             image_index = 0
         }
     }
     else
     {
-        state = (114 << 0)
+        state = states.barreljump
         sprite_index = spr_player_barrelfall
         image_index = 0
         if (vsp < 0)

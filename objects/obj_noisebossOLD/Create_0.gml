@@ -1,38 +1,38 @@
 event_inherited()
-attack_pool[0] = [(42 << 0), (92 << 0)]
-attack_pool[1] = [(77 << 0), (167 << 0)]
-attack_pool[2] = [(42 << 0), (74 << 0), (168 << 0)]
-attack_pool[3] = [(58 << 0), (169 << 0)]
-attack_pool[4] = [(170 << 0), (172 << 0), (173 << 0)]
-attack_pool[5] = [(42 << 0), (92 << 0), (77 << 0), (167 << 0), (74 << 0), (168 << 0), (58 << 0), (169 << 0), (170 << 0), (172 << 0), (173 << 0)]
-attack_pool[6] = [(42 << 0), (92 << 0), (77 << 0), (167 << 0)]
-attack_pool[7] = [(42 << 0), (74 << 0), (168 << 0), (58 << 0), (169 << 0)]
-attack_pool[8] = [(170 << 0), (172 << 0), (173 << 0)]
-attack_type[(42 << 0)] = [(1 << 0), (1 << 0)]
-attack_type[(92 << 0)] = [(3 << 0), (1 << 0)]
-attack_type[(77 << 0)] = [(2 << 0), (2 << 0)]
-attack_type[(167 << 0)] = [(3 << 0), (3 << 0)]
-attack_type[(74 << 0)] = [(3 << 0), (3 << 0)]
-attack_type[(168 << 0)] = [(2 << 0), (2 << 0)]
-attack_type[(58 << 0)] = [(3 << 0), (3 << 0)]
-attack_type[(169 << 0)] = [(3 << 0), (3 << 0)]
-attack_type[(170 << 0)] = [(3 << 0), (3 << 0)]
-attack_type[(172 << 0)] = [(3 << 0), (3 << 0)]
-attack_type[(173 << 0)] = [(1 << 0), (1 << 0)]
-current_behaviour = (0 << 0)
-current_attack = (42 << 0)
-state = (145 << 0)
-ds_map_set(player_hurtstates, (42 << 0), 30000)
-ds_map_set(player_hurtstates, (41 << 0), 50)
-ds_map_set(player_hurtstates, (104 << 0), 20)
-ds_map_set(player_hurtstates, (121 << 0), 30)
-ds_map_set(boss_hurtstates, (80 << 0), 30)
-ds_map_set(boss_hurtstates, (42 << 0), 30)
-ds_map_set(boss_hurtstates, (102 << 0), 30)
-ds_map_set(boss_hurtstates, (77 << 0), 60)
-ds_map_set(boss_hurtstates, (58 << 0), 30)
-ds_map_set(boss_hurtstates, (171 << 0), 80)
-ds_map_set(boss_hurtstates, (173 << 0), 80)
+attack_pool[0] = [states.handstandjump, states.jump]
+attack_pool[1] = [states.skateboard, states.boss_skateboardturn]
+attack_pool[2] = [states.handstandjump, states.throwing, states.boss_bombkick]
+attack_pool[3] = [states.pogo, states.boss_bombpogo]
+attack_pool[4] = [states.boss_jetpackstart, states.boss_jetpackcancel, states.boss_jetpackspin]
+attack_pool[5] = [states.handstandjump, states.jump, states.skateboard, states.boss_skateboardturn, states.throwing, states.boss_bombkick, states.pogo, states.boss_bombpogo, states.boss_jetpackstart, states.boss_jetpackcancel, states.boss_jetpackspin]
+attack_pool[6] = [states.handstandjump, states.jump, states.skateboard, states.boss_skateboardturn]
+attack_pool[7] = [states.handstandjump, states.throwing, states.boss_bombkick, states.pogo, states.boss_bombpogo]
+attack_pool[8] = [states.boss_jetpackstart, states.boss_jetpackcancel, states.boss_jetpackspin]
+attack_type[states.handstandjump] = [states.revolver, states.revolver]
+attack_type[states.jump] = [states.boots, states.revolver]
+attack_type[states.skateboard] = [states.dynamite, states.dynamite]
+attack_type[states.boss_skateboardturn] = [states.boots, states.boots]
+attack_type[states.throwing] = [states.boots, states.boots]
+attack_type[states.boss_bombkick] = [states.dynamite, states.dynamite]
+attack_type[states.pogo] = [states.boots, states.boots]
+attack_type[states.boss_bombpogo] = [states.boots, states.boots]
+attack_type[states.boss_jetpackstart] = [states.boots, states.boots]
+attack_type[states.boss_jetpackcancel] = [states.boots, states.boots]
+attack_type[states.boss_jetpackspin] = [states.revolver, states.revolver]
+current_behaviour = states.normal
+current_attack = states.handstandjump
+state = states.arenaround
+ds_map_set(player_hurtstates, states.handstandjump, 30000)
+ds_map_set(player_hurtstates, states.chainsawbump, 50)
+ds_map_set(player_hurtstates, states.mach2, 20)
+ds_map_set(player_hurtstates, states.mach3, 30)
+ds_map_set(boss_hurtstates, states.punch, 30)
+ds_map_set(boss_hurtstates, states.handstandjump, 30)
+ds_map_set(boss_hurtstates, states.crouchslide, 30)
+ds_map_set(boss_hurtstates, states.skateboard, 60)
+ds_map_set(boss_hurtstates, states.pogo, 30)
+ds_map_set(boss_hurtstates, states.boss_jetpack, 80)
+ds_map_set(boss_hurtstates, states.boss_jetpackspin, 80)
 phase = 1
 max_phase = 9
 max_hp = (500 * max_phase)
@@ -120,7 +120,7 @@ function boss_destroy(argument0)
         {
             alarm[1] = (room_speed * 4)
             fakedeath = 1
-            state = (8 << 0)
+            state = states.transitioncutscene
             depth = (other.depth + 1)
         }
     }
@@ -146,7 +146,7 @@ function boss_hurt(argument0, argument1)
         targetstunned = 150
     var ps = state
     SUPER_boss_hurt(argument0, argument1)
-    if (ps == (58 << 0))
+    if (ps == states.pogo)
         movespeed = 0
     targetxscale = (-argument1.xscale)
     exit;
@@ -169,7 +169,7 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if ((!argument1.inv_frames) && (argument1.state != (84 << 0) or argument1.parry_inst == -4))
+    if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
     {
         hitstate = state
         hithsp = hsp
@@ -180,15 +180,15 @@ function player_hurt(argument0, argument1)
             inv_frames = 1
             alarm[1] = 15
         }
-        if (hitstate == (77 << 0) or hitstate == (171 << 0))
+        if (hitstate == states.skateboard or hitstate == states.boss_jetpack)
         {
-            stunned = (hitstate == (77 << 0) ? 30 : 70)
+            stunned = (hitstate == states.skateboard ? 30 : 70)
             with (obj_camera)
             {
                 shake_mag = 3
                 shake_mag_acc = (3 / room_speed)
             }
-            hitstate = (138 << 0)
+            hitstate = states.stun
             movespeed = 0
             hitvsp = -4
             hithsp = ((-image_xscale) * 8)

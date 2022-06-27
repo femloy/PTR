@@ -11,13 +11,13 @@ function scr_player_cheesepepfling()
             movespeed = fling
             hsp = (movespeed * xscale)
             vsp = -6
-            state = (28 << 0)
+            state = states.cheesepeplaunch
             sprite_index = spr_cheesepepjumpstart
             image_index = 0
         }
         else
         {
-            state = (24 << 0)
+            state = states.cheesepep
             sprite_index = spr_cheesepepintro
             image_index = 0
         }

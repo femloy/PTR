@@ -1,7 +1,7 @@
 if (grounded && grabbed == 0 && (!ratgrabbed))
     thrown = false
 if (!ratgrabbed)
-    state = (0 << 0)
+    state = states.normal
 if (ratgrabbed && ratplayerid.ratgrabbedID != id)
     ratgrabbed = 0
 if (grabbed == 1 && (!ratgrabbed))
@@ -9,12 +9,12 @@ if (grabbed == 1 && (!ratgrabbed))
     image_xscale = (-playerid.xscale)
     grav = 0
     playerid.baddiegrabbedID = id
-    if (playerid.state == (6 << 0) or playerid.state == (55 << 0) or playerid.state == (79 << 0) or playerid.state == (74 << 0) or playerid.state == (75 << 0) or playerid.state == (20 << 0))
+    if (playerid.state == states.finishingblow or playerid.state == states.grabbing or playerid.state == states.grab or playerid.state == states.throwing or playerid.state == states.slam or playerid.state == states.tacklecharge)
     {
         grav = 0
         grounded = false
         x = playerid.x
-        if (playerid.sprite_index != spr_player_haulingstart && playerid.state != (6 << 0))
+        if (playerid.sprite_index != spr_player_haulingstart && playerid.state != states.finishingblow)
             y = (playerid.y - 60)
         else if (floor(playerid.image_index) == 0)
             y = (playerid.y - 20)
@@ -29,7 +29,7 @@ if (grabbed == 1 && (!ratgrabbed))
     with (playerid)
     {
         move = (key_left2 + key_right2)
-        if (!((state == (6 << 0) or state == (79 << 0) or state == (55 << 0) or state == (74 << 0) or state == (75 << 0) or state == (20 << 0) or state == (80 << 0) or state == (76 << 0) or state == (81 << 0) or state == (82 << 0) or state == (83 << 0))))
+        if (!((state == states.finishingblow or state == states.grab or state == states.grabbing or state == states.throwing or state == states.slam or state == states.tacklecharge or state == states.punch or state == states.superslam or state == states.backkick or state == states.uppunch or state == states.shoulder)))
         {
             other.grav = 0.5
             other.x = x
@@ -38,12 +38,12 @@ if (grabbed == 1 && (!ratgrabbed))
         }
     }
     hsp = 0
-    if (playerid.state == (6 << 0))
+    if (playerid.state == states.finishingblow)
     {
         x = (playerid.x + (playerid.xscale * 50))
         y = playerid.y
     }
-    if (playerid.state == (79 << 0) && playerid.sprite_index == playerid.spr_swingding)
+    if (playerid.state == states.grab && playerid.sprite_index == playerid.spr_swingding)
     {
         if (floor(playerid.image_index) == 0)
         {
@@ -94,7 +94,7 @@ if (grabbed == 1 && (!ratgrabbed))
             y = playerid.y
         }
     }
-    if (playerid.state == (83 << 0))
+    if (playerid.state == states.shoulder)
     {
         grav = 0.5
         instance_create(x, (y + 20), obj_bumpeffect)
@@ -122,7 +122,7 @@ if (grabbed == 1 && (!ratgrabbed))
             shake_mag_acc = (3 / room_speed)
         }
     }
-    if (playerid.state == (74 << 0))
+    if (playerid.state == states.throwing)
     {
         grav = 0.5
         grabbed = 0
@@ -132,7 +132,7 @@ if (grabbed == 1 && (!ratgrabbed))
         hsp = ((-image_xscale) * 10)
         vsp = -10
     }
-    if (playerid.state == (82 << 0))
+    if (playerid.state == states.uppunch)
     {
         instance_create((x + ((-playerid.xscale) * 15)), (y - 50), obj_bumpeffect)
         grav = 0.5
@@ -149,12 +149,12 @@ if (grabbed == 1 && (!ratgrabbed))
             shake_mag_acc = (3 / room_speed)
         }
     }
-    if (playerid.state == (20 << 0))
+    if (playerid.state == states.tacklecharge)
     {
         x = (playerid.x + (playerid.xscale * 15))
         y = playerid.y
     }
-    if (playerid.state == (76 << 0))
+    if (playerid.state == states.superslam)
     {
         if (playerid.character == "P")
         {
@@ -246,7 +246,7 @@ if (place_meeting(x, y, obj_swordhitbox) && thrown == false)
         shake_mag = 3
         shake_mag_acc = (3 / room_speed)
     }
-    state = (107 << 0)
+    state = states.hurt
     if scr_solid(x, y)
     {
         x = playerid.x

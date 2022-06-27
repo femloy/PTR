@@ -1,43 +1,43 @@
 var player = instance_nearest(x, y, obj_player)
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         scr_enemy_idle()
         break
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         scr_enemy_walk()
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (141 << 0):
+    case states.chase:
         scr_enemy_chase()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
-    case (125 << 0):
+    case states.rage:
         scr_enemy_rage()
         break
-    case (80 << 0):
+    case states.punch:
         if (sprite_index == spr_minijohn_punchstart)
         {
             image_speed = 0.35
@@ -66,13 +66,13 @@ switch state
                 instance_destroy()
             if (floor(image_index) == (image_number - 1))
             {
-                state = (141 << 0)
+                state = states.chase
                 ragecooldown = 100
                 sprite_index = spr_minijohn_charge
             }
         }
         break
-    case (189 << 0):
+    case states.underground:
         hsp = 0
         if underground
         {
@@ -102,19 +102,19 @@ switch state
         }
         else if grounded
         {
-            state = (141 << 0)
+            state = states.chase
             sprite_index = spr_minijohn_charge
         }
         break
 }
 
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state == (141 << 0) && ragecooldown <= 0)
+if (state == states.chase && ragecooldown <= 0)
 {
     if (player.x > (x - 400) && player.x < (x + 400) && y <= (player.y + 60) && y >= (player.y - 60))
     {
@@ -128,7 +128,7 @@ if (state == (141 << 0) && ragecooldown <= 0)
             flash = 1
             alarm[4] = 5
             ragecooldown = 100
-            state = (125 << 0)
+            state = states.rage
             create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale)
             with (instance_create(x, y, obj_forkhitbox))
             {
@@ -142,19 +142,19 @@ if (state == (141 << 0) && ragecooldown <= 0)
             sprite_index = spr_minijohn_punchstart
             image_index = 0
             ragecooldown = 100
-            state = (80 << 0)
+            state = states.punch
         }
     }
 }
 if (ragecooldown > 0)
     ragecooldown--
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (141 << 0))
+if (state != states.chase)
     momentum = 0
-if (state == (134 << 0) or state == (126 << 0))
+if (state == states.walk or state == states.idle)
 {
     var targetplayer = obj_player1
     if (obj_player1.spotlight == 0)
@@ -162,24 +162,24 @@ if (state == (134 << 0) or state == (126 << 0))
     movespeed = 4
     if (targetplayer.x != x)
         image_xscale = (-(sign((x - targetplayer.x))))
-    state = (141 << 0)
+    state = states.chase
 }
 if instance_exists(obj_player2)
 {
     if (obj_player2.x > (x - 400) && obj_player2.x < (x + 400) && y <= (obj_player2.y + 60) && y >= (obj_player2.y - 60))
     {
-        if (state != (126 << 0) && obj_player2.state == (121 << 0))
+        if (state != states.idle && obj_player2.state == states.mach3)
         {
-            state = (126 << 0)
+            state = states.idle
             sprite_index = scaredspr
             if (x != obj_player2.x)
                 image_xscale = (-(sign((x - obj_player2.x))))
         }
     }
 }
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {
@@ -191,7 +191,7 @@ if (boundbox == 0)
         other.boundbox = 1
     }
 }
-if (state == (189 << 0))
+if (state == states.underground)
 {
     invincible = 1
     if (sprite_index != spr_minijohn_underground && sprite_index != spr_minijohn_undergroundout)

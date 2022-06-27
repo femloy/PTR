@@ -1,6 +1,6 @@
 with (obj_player)
 {
-    state = (18 << 0)
+    state = states.titlescreen
     x = -100
     y = -100
 }

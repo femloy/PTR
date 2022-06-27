@@ -2,8 +2,8 @@ function scr_monster_activate()
 {
     with (obj_monster)
     {
-        if (state == (217 << 0))
-            state = (218 << 0)
+        if (state == states.robotidle)
+            state = states.robotintro
     }
     with (obj_monstergate)
     {
@@ -16,7 +16,6 @@ function scr_monster_activate()
         }
     }
     warbg_init()
-    exit;
 }
 
 function get_triangle_points(argument0, argument1, argument2, argument3, argument4)
@@ -38,7 +37,7 @@ function scr_monster_detect(argument0, argument1, argument2)
         {
             with (argument2)
             {
-                if (state != (100 << 0) or ((!(scr_solid(x, (y - 24)))) && (!(place_meeting(x, (y - 24), obj_platform)))))
+                if (state != states.crouch or ((!(scr_solid(x, (y - 24)))) && (!(place_meeting(x, (y - 24), obj_platform)))))
                     detect = 1
             }
         }
@@ -65,39 +64,39 @@ function scr_puppet_appear(argument0)
     while collision_line(argument0.x, argument0.y, (argument0.x + (_xdir * argument0.xscale)), argument0.y, obj_solid, false, true)
     {
         _xdir--
+		
         i++
         if (i > room_width)
         {
             x = argument0.x
             break
         }
-        else
-            continue
     }
+	
     x = (argument0.x + (abs(_xdir) * argument0.xscale))
     y = argument0.y
-    state = (220 << 0)
-    substate = (135 << 0)
+    state = states.robotchase
+    substate = states.fall
     playerid = argument0
+	
     while place_meeting(x, y, obj_solid)
     {
         x += (argument0.x > x ? 1 : -1)
+		
         i++
         if (i > room_width)
         {
             x = argument0.x
             break
         }
-        else
-            continue
     }
+	
     var _col = collision_line(x, y, x, (y - room_height), obj_solid, true, false)
     if (_col != -4)
     {
         while (!(place_meeting(x, (y - 1), obj_solid)))
             y--
     }
-    exit;
 }
 
 function scr_monsterinvestigate(argument0, argument1, argument2)
@@ -131,7 +130,7 @@ function scr_monsterinvestigate(argument0, argument1, argument2)
                 waitbuffer--
             else
             {
-                state = (219 << 0)
+                state = states.robotroaming
                 image_xscale *= -1
                 instance_create(x, y, obj_patroller)
             }
@@ -139,8 +138,7 @@ function scr_monsterinvestigate(argument0, argument1, argument2)
     }
 
     if scr_monster_detect(300, room_height, targetplayer)
-        state = (220 << 0)
-    exit;
+        state = states.robotchase
 }
 
 function scr_monster_detect_audio()
@@ -149,7 +147,7 @@ function scr_monster_detect_audio()
     {
         if (!(point_in_camera(x, y, view_camera[0])))
         {
-            state = (221 << 0)
+            state = states.robotinvestigate
             investigatestate = 0
         }
         else
@@ -157,15 +155,14 @@ function scr_monster_detect_audio()
             targetplayer = instance_nearest(x, y, obj_player)
             if (object_index == obj_blobmonster)
             {
-                state = (135 << 0)
+                state = states.fall
                 gravdir *= -1
                 chase = 0
             }
             else
-                state = (220 << 0)
+                state = states.robotchase
         }
     }
-    exit;
 }
 
 function scr_monster_audio_check()
@@ -174,4 +171,3 @@ function scr_monster_audio_check()
         return true;
     return false;
 }
-

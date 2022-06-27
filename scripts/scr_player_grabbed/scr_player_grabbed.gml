@@ -4,12 +4,12 @@ function scr_player_grabbed()
     if (fightball == 0)
         xscale = (-_obj_player.xscale)
     _obj_player.baddiegrabbedID = id
-    if (_obj_player.state == (121 << 0) && fightball == 1)
+    if (_obj_player.state == states.mach3 && fightball == 1)
     {
         x = _obj_player.x
         y = _obj_player.y
     }
-    if (_obj_player.state == (55 << 0) or _obj_player.state == (79 << 0) or _obj_player.state == (74 << 0) or _obj_player.state == (75 << 0) or _obj_player.state == (20 << 0))
+    if (_obj_player.state == states.grabbing or _obj_player.state == states.grab or _obj_player.state == states.throwing or _obj_player.state == states.slam or _obj_player.state == states.tacklecharge)
     {
         x = _obj_player.x
         if (_obj_player.sprite_index != _obj_player.spr_haulingstart)
@@ -43,29 +43,29 @@ function scr_player_grabbed()
                 shake_mag_acc = (3 / room_speed)
             }
         }
-        if (!((state == (79 << 0) or (state == (121 << 0) && fightball == 1) or state == (191 << 0) or state == (193 << 0) or state == (192 << 0) or state == (194 << 0) or state == (6 << 0) or state == (55 << 0) or state == (74 << 0) or state == (75 << 0) or state == (20 << 0) or state == (80 << 0) or state == (76 << 0) or state == (81 << 0) or state == (82 << 0) or state == (83 << 0))))
+        if (!((state == states.grab or (state == states.mach3 && fightball == 1) or state == states.ratmount or state == states.ratmountattack or state == states.ratmountjump or state == states.ratmountspit or state == states.finishingblow or state == states.grabbing or state == states.throwing or state == states.slam or state == states.tacklecharge or state == states.punch or state == states.superslam or state == states.backkick or state == states.uppunch or state == states.shoulder)))
         {
             baddiegrabbedID = obj_null
             other.x = _obj_player.x
             other.y = _obj_player.y
-            other.state = (107 << 0)
+            other.state = states.hurt
             other.alarm[8] = 60
             other.alarm[7] = 120
             other.image_index = 0
         }
     }
-    if (_obj_player.state == (191 << 0) or _obj_player.state == (192 << 0))
+    if (_obj_player.state == states.ratmount or _obj_player.state == states.ratmountjump)
     {
         visible = false
         x = _obj_player.x
         y = _obj_player.y
     }
-    if (_obj_player.state == (20 << 0))
+    if (_obj_player.state == states.tacklecharge)
     {
         x = (_obj_player.x + (_obj_player.xscale * 20))
         y = _obj_player.y
     }
-    if (_obj_player.state == (6 << 0) && _obj_player.image_index < 5)
+    if (_obj_player.state == states.finishingblow && _obj_player.image_index < 5)
     {
         x = (_obj_player.x + (_obj_player.xscale * 60))
         y = (_obj_player.y + 14)
@@ -83,7 +83,7 @@ function scr_player_grabbed()
             shake_mag = 3
             shake_mag_acc = (3 / room_speed)
         }
-        state = (107 << 0)
+        state = states.hurt
         if (scr_solid(x, y) or collision_line(x, y, _obj_player.x, _obj_player.y, obj_solid, false, true) != -4)
         {
             x = _obj_player.x
@@ -106,7 +106,7 @@ function scr_player_grabbed()
             }
         }
     }
-    if (_obj_player.state == (76 << 0) && _obj_player.sprite_index == _obj_player.spr_piledriver)
+    if (_obj_player.state == states.superslam && _obj_player.sprite_index == _obj_player.spr_piledriver)
     {
         if (_obj_player.character == "P" && _obj_player.ispeppino)
         {
@@ -157,7 +157,7 @@ function scr_player_grabbed()
             y = (_obj_player.y - 40)
         }
     }
-    if (_obj_player.state == (79 << 0) && _obj_player.sprite_index == _obj_player.spr_swingding)
+    if (_obj_player.state == states.grab && _obj_player.sprite_index == _obj_player.spr_swingding)
     {
         if (floor(_obj_player.image_index) == 0)
         {
@@ -204,7 +204,7 @@ function scr_player_grabbed()
     {
         with (_obj_player)
         {
-            state = (92 << 0)
+            state = states.jump
             vsp = -8
             sprite_index = spr_machfreefall
         }
@@ -214,13 +214,13 @@ function scr_player_grabbed()
         flash = 1
         x = _obj_player.x
         y = _obj_player.y
-        state = (107 << 0)
+        state = states.hurt
         hithsp = ((-image_xscale) * 10)
         hitvsp = -10
         other.alarm[8] = 60
         other.alarm[7] = 120
     }
-    if (_obj_player.state != (121 << 0))
+    if (_obj_player.state != states.mach3)
         sprite_index = spr_hurt
     else
     {

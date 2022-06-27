@@ -1,3 +1,3 @@
 draw_self()
-if (drop && dropstate != (0 << 0))
+if (drop && dropstate != states.normal)
     draw_sprite(handsprite, handindex, x, hand_y)

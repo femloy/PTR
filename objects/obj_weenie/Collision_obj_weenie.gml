@@ -1,8 +1,8 @@
-if (state == (138 << 0) && thrown && other.state != (5 << 0) && other.state != (138 << 0))
+if (state == states.stun && thrown && other.state != states.tumble && other.state != states.stun)
 {
     with (other)
     {
-        state = (138 << 0)
+        state = states.stun
         vsp = -5
         stunstate = 0
         stunned = 100

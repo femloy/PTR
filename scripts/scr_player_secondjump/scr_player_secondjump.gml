@@ -33,7 +33,7 @@ function scr_player_secondjump()
     {
         instance_create(x, y, obj_highjumpcloud1)
         vsp = -14
-        state = (60 << 0)
+        state = states.highjump
         jumpAnim = 1
         jumpstop = 0
         image_index = 0
@@ -48,7 +48,7 @@ function scr_player_secondjump()
         if key_attack
             landAnim = 0
         input_buffer_highjump = 0
-        state = (0 << 0)
+        state = states.normal
         jumpAnim = 1
         jumpstop = 0
         image_index = 0
@@ -74,7 +74,7 @@ function scr_player_secondjump()
         mach2 = 0
         image_index = 0
         vsp = -7
-        state = (122 << 0)
+        state = states.freefallprep
     }
     exit;
 }

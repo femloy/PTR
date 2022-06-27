@@ -16,8 +16,8 @@ switch sprite_index
                 vsp = 0
                 cutscene = 1
                 visible = false
-                if ((!isgustavo) && state != (47 << 0) && state != (38 << 0) && state != (49 << 0))
-                    state = (0 << 0)
+                if ((!isgustavo) && state != states.knightpep && state != states.knightpepslopes && state != states.knightpepbump)
+                    state = states.normal
             }
         }
         waitbuffer = 80
@@ -29,13 +29,13 @@ switch sprite_index
             {
                 if (object_index != obj_player2 or global.coop)
                 {
-                    if ((!isgustavo) && state != (47 << 0) && state != (38 << 0) && state != (49 << 0))
+                    if ((!isgustavo) && state != states.knightpep && state != states.knightpepslopes && state != states.knightpepbump)
                     {
                         visible = true
                         cutscene = 0
                         sprite_index = spr_bodyslamstart
                         image_index = 0
-                        state = (122 << 0)
+                        state = states.freefallprep
                         vsp = (character == "P" ? -5 : -7)
                     }
                 }

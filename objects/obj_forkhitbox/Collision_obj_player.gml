@@ -1,4 +1,4 @@
-if (instance_exists(ID) && ID.object_index == obj_badrat && other.state == (5 << 0))
+if (instance_exists(ID) && ID.object_index == obj_badrat && other.state == states.tumble)
     exit;
 var h = other.hurted
 scr_hurtplayer(other)

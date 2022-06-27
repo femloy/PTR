@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 468,
-  "height": 504,
+  "width": 928,
+  "height": 224,
   "textureGroupId": {
     "name": "chateaugroup",
     "path": "texturegroups/chateaugroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3f73cf64-0620-4fe5-8542-525287a3f847","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3f73cf64-0620-4fe5-8542-525287a3f847","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"LayerId":{"name":"1da1a43b-b5af-4866-a230-1a2086cfc75f","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tileset_chateaudecorations","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"resourceVersion":"1.0","name":"3f73cf64-0620-4fe5-8542-525287a3f847","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"cb683fe7-d226-4d61-a394-cc18624e239f","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"cb683fe7-d226-4d61-a394-cc18624e239f","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"LayerId":{"name":"5871978f-2c6c-4944-b7cc-826d45882518","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tileset_chateaudecorations","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"resourceVersion":"1.0","name":"cb683fe7-d226-4d61-a394-cc18624e239f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tileset_chateaudecorations","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e01ba886-ca4b-4121-afec-d904c5b0dd72","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f73cf64-0620-4fe5-8542-525287a3f847","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"309b6c5b-e884-406f-9ad3-b4277fcc61db","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cb683fe7-d226-4d61-a394-cc18624e239f","path":"sprites/tilespr_tileset_chateaudecorations/tilespr_tileset_chateaudecorations.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1da1a43b-b5af-4866-a230-1a2086cfc75f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5871978f-2c6c-4944-b7cc-826d45882518","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

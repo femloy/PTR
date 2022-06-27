@@ -12,7 +12,7 @@ if use_dark
         }
     }
 }
-if (obj_player1.finisher or obj_player2.finisher or (obj_player.state == (252 << 0) && obj_player.superattackstate == (8 << 0)))
+if (obj_player1.finisher or obj_player2.finisher or (obj_player.state == states.playersuperattack && obj_player.superattackstate == states.transitioncutscene))
     finisher_alpha = Approach(finisher_alpha, 0.3, 0.1)
 else if (finisher_alpha > 0)
     finisher_alpha = Approach(finisher_alpha, 0, 0.02)
@@ -26,7 +26,7 @@ var _kungfu = global.kungfu
 with (obj_baddie)
 {
     var _stun = 0
-    if (state == (138 << 0) && thrown == false)
+    if (state == states.stun && thrown == false)
         _stun = 25
     if (visible && object_index != obj_pizzaball && bbox_in_camera(view_camera[0], 32))
     {
@@ -57,7 +57,7 @@ with (obj_baddie)
             shader_reset()
         if (object_index == obj_hamkuff)
         {
-            if (state == (206 << 0) && instance_exists(playerid))
+            if (state == states.blockstance && instance_exists(playerid))
             {
                 var x1 = (x + 3)
                 var y1 = (y + 30)
@@ -118,7 +118,7 @@ shader_set(shd_hit)
 with (obj_baddie)
 {
     _stun = 0
-    if (state == (138 << 0))
+    if (state == states.stun)
         _stun = 25
     if (visible && flash && bbox_in_camera(view_camera[0], 32))
         draw_sprite_ext(sprite_index, image_index, x, (y + _stun), (xscale * image_xscale), yscale, angle, image_blend, image_alpha)

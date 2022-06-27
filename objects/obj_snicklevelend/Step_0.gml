@@ -1,8 +1,8 @@
-if (floor(image_index) == (image_number - 1) && obj_player.state != (112 << 0))
+if (floor(image_index) == (image_number - 1) && obj_player.state != states.door)
 {
     with (obj_player)
     {
-        state = (112 << 0)
+        state = states.door
         image_index = 0
     }
     alarm[0] = 200

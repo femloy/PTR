@@ -12,7 +12,7 @@ obj_player.x = 608
 obj_player.hsp = 0
 obj_player.y = 498
 obj_player.sprite_index = spr_player_levelcomplete
-obj_player.state = (88 << 0)
+obj_player.state = states.bossintro
 if (reset == 0)
 {
     instance_create(x, y, obj_bangeffect)

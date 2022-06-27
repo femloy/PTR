@@ -11,7 +11,7 @@ function scr_pizzaball_hit()
         var s = -1
         with (instance_nearest(x, y, obj_player))
             s = tauntstoredstate
-        if (s != (104 << 0))
+        if (s != states.mach2)
             scr_pizzaball_go_to_thrown((hithsp * 1.5), -12)
         else
             scr_pizzaball_go_to_thrown((hithsp * 0.5), (hitvsp * 0.5))
@@ -26,13 +26,13 @@ function scr_pizzaball_grabbed()
     {
         sprite_index = spr_golfidle
         image_index = 0
-        state = (148 << 0)
+        state = states.golf
         golfid = other.id
         hsp = 0
         vsp = 0
     }
     player = pl
-    state = (148 << 0)
+    state = states.golf
 }
 
 function scr_pizzaball_go_to_thrown(argument0, argument1, argument2)
@@ -47,6 +47,6 @@ function scr_pizzaball_go_to_thrown(argument0, argument1, argument2)
         jumpspeed = 12
     vsp = (-jumpspeed)
     bounced = 0
-    state = (156 << 0)
-    substate = (156 << 0)
+    state = states.thrown
+    substate = states.thrown
 }

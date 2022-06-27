@@ -1,6 +1,6 @@
 with (other)
 {
-    if (key_up && grounded && ((state == (191 << 0) && brick) or state == (0 << 0) or state == (103 << 0) or state == (104 << 0) or state == (58 << 0) or state == (121 << 0) or state == (99 << 0)) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != (119 << 0) && ((obj_player1.spotlight == 1 && object_index == obj_player1) or (obj_player1.spotlight == 0 && object_index == obj_player2)))
+    if (key_up && grounded && ((state == states.ratmount && brick) or state == states.normal or state == states.mach1 or state == states.mach2 or state == states.pogo or state == states.mach3 or state == states.Sjumpprep) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != states.taxi && ((obj_player1.spotlight == 1 && object_index == obj_player1) or (obj_player1.spotlight == 0 && object_index == obj_player2)))
     {
         with (other)
         {
@@ -9,7 +9,7 @@ with (other)
             obj_player1.sprite_index = obj_player1.spr_idle
             obj_player1.hsp = 0
             obj_player1.vsp = 0
-            obj_player1.state = (119 << 0)
+            obj_player1.state = states.taxi
             scr_soundeffect(sfx_taxi2)
             playerid = obj_player1
             sprite_index = spr_taximove
@@ -25,7 +25,7 @@ with (other)
                 obj_player2.visible = false
                 obj_player2.hsp = 0
                 obj_player2.vsp = 0
-                obj_player2.state = (119 << 0)
+                obj_player2.state = states.taxi
                 obj_player2.cutscene = 1
             }
         }

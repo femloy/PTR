@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 1044,
-  "height": 1044,
+  "width": 640,
+  "height": 1376,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c63ac664-45c6-48ef-87a3-0275ff299eb7","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c63ac664-45c6-48ef-87a3-0275ff299eb7","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"LayerId":{"name":"70e0f1de-3380-42e0-a88a-43adf650cbe5","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tileset_freezerfridge","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"resourceVersion":"1.0","name":"c63ac664-45c6-48ef-87a3-0275ff299eb7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"300be539-5f4e-4e48-ad00-54d8223a772a","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"300be539-5f4e-4e48-ad00-54d8223a772a","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"LayerId":{"name":"dc19b419-ddfc-47d3-942e-d40074428551","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tileset_freezerfridge","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"resourceVersion":"1.0","name":"300be539-5f4e-4e48-ad00-54d8223a772a","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tileset_freezerfridge","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6a604608-c50f-4965-b6c0-48924392ee3c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c63ac664-45c6-48ef-87a3-0275ff299eb7","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"e84620dd-b8a5-4392-8d5f-7896a445ac60","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"300be539-5f4e-4e48-ad00-54d8223a772a","path":"sprites/tilespr_tileset_freezerfridge/tilespr_tileset_freezerfridge.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"70e0f1de-3380-42e0-a88a-43adf650cbe5","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"dc19b419-ddfc-47d3-942e-d40074428551","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

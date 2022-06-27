@@ -1,4 +1,4 @@
-if ((other.state == (42 << 0) or other.state == (43 << 0)) && state != (148 << 0))
+if ((other.state == states.handstandjump or other.state == states.lungeattack) && state != states.golf)
 {
     var _player = other.id
     var _pizzaball = id
@@ -6,7 +6,7 @@ if ((other.state == (42 << 0) or other.state == (43 << 0)) && state != (148 << 0
     {
         if scr_transformationcheck()
         {
-            if (state != (148 << 0))
+            if (state != states.golf)
             {
                 golfid = _pizzaball
                 image_speed = 0.35
@@ -16,8 +16,8 @@ if ((other.state == (42 << 0) or other.state == (43 << 0)) && state != (148 << 0
                 hsp = 0
                 movespeed = 0
                 slopespeed = 0
-                state = (148 << 0)
-                _pizzaball.state = (148 << 0)
+                state = states.golf
+                _pizzaball.state = states.golf
                 _pizzaball.player = id
                 if (xscale > 0)
                     _pizzaball.m_angle = 0

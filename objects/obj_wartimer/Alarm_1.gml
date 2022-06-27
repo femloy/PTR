@@ -5,7 +5,7 @@ if (room != rank_room)
     {
         targetDoor = "A"
         room = timesuproom
-        state = (64 << 0)
+        state = states.timesup
         sprite_index = spr_Timesup
         image_index = 0
         audio_stop_all()

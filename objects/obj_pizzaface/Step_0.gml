@@ -9,7 +9,7 @@ if (image_alpha == 1)
 }
 else
     image_alpha += 0.01
-if (place_meeting(x, y, playerid) && (!playerid.cutscene) && playerid.state != (146 << 0) && (!instance_exists(obj_fadeout)) && (!instance_exists(obj_endlevelfade)) && image_alpha == 1)
+if (place_meeting(x, y, playerid) && (!playerid.cutscene) && playerid.state != states.actor && (!instance_exists(obj_fadeout)) && (!instance_exists(obj_endlevelfade)) && image_alpha == 1)
 {
     if instance_exists(obj_toppinwarrior)
     {
@@ -36,7 +36,7 @@ if (place_meeting(x, y, playerid) && (!playerid.cutscene) && playerid.state != (
             instance_destroy(obj_fadeout)
             targetDoor = "A"
             room = timesuproom
-            state = (64 << 0)
+            state = states.timesup
             sprite_index = spr_Timesup
             image_index = 0
             audio_stop_all()

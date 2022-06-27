@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 936,
-  "height": 936,
+  "width": 544,
+  "height": 1280,
   "textureGroupId": {
     "name": "graveyardgroup",
     "path": "texturegroups/graveyardgroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"198f981d-04c0-4964-a7ea-96c04769f6de","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"198f981d-04c0-4964-a7ea-96c04769f6de","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"LayerId":{"name":"d25d4284-fc5e-4c54-9ffb-78ce60d75fa1","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_graveyardmine","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"resourceVersion":"1.0","name":"198f981d-04c0-4964-a7ea-96c04769f6de","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d4b14abd-752e-4ebe-ada2-582426d21877","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d4b14abd-752e-4ebe-ada2-582426d21877","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"LayerId":{"name":"f5def91a-d5f2-4cf5-acb3-681f028b73cc","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_graveyardmine","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"resourceVersion":"1.0","name":"d4b14abd-752e-4ebe-ada2-582426d21877","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_graveyardmine","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"280b3533-3d0b-47d5-bc93-d03f9855538f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"198f981d-04c0-4964-a7ea-96c04769f6de","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"8ebd165f-38c3-4ef9-8bb7-1d099f3fb8e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d4b14abd-752e-4ebe-ada2-582426d21877","path":"sprites/tilespr_tile_graveyardmine/tilespr_tile_graveyardmine.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d25d4284-fc5e-4c54-9ffb-78ce60d75fa1","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f5def91a-d5f2-4cf5-acb3-681f028b73cc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

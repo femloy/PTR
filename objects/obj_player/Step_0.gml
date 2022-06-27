@@ -7,545 +7,545 @@ var prevmask = mask_index
 
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         scr_player_normal()
         break
-    case (1 << 0):
+    case states.revolver:
         scr_player_revolver()
         break
-    case (2 << 0):
+    case states.dynamite:
         scr_player_dynamite()
         break
-    case (3 << 0):
+    case states.boots:
         scr_player_boots()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_player_grabbed()
         break
-    case (6 << 0):
+    case states.finishingblow:
         scr_player_finishingblow()
         break
-    case (5 << 0):
+    case states.tumble:
         scr_player_tumble()
         break
-    case (18 << 0):
+    case states.titlescreen:
         scr_player_titlescreen()
         break
-    case (7 << 0):
+    case states.ejected:
         scr_player_ejected()
         break
-    case (10 << 0):
+    case states.firemouth:
         scr_player_firemouth()
         break
-    case (9 << 0):
+    case states.fireass:
         scr_player_fireass()
         break
-    case (8 << 0):
+    case states.transitioncutscene:
         scr_player_transitioncutscene()
         break
-    case (19 << 0):	
+    case states.hookshot:	
         scr_playerN_hookshot()
         break
-    case (23 << 0):
+    case states.slap:
         scr_player_slap()
         break
-    case (20 << 0):
+    case states.tacklecharge:
         scr_player_tacklecharge()
         break
-    case (24 << 0):
+    case states.cheesepep:
         scr_player_cheesepep()
         break
-    case (26 << 0):
+    case states.cheesepepjump:
         scr_player_cheesepepjump()
         break
-    case (27 << 0):
+    case states.cheesepepfling:
         scr_player_cheesepepfling()
         break
-    case (21 << 0):
+    case states.cheeseball:
         scr_player_cheeseball()
         break
-    case (22 << 0):
+    case states.cheeseballclimbwall:
         scr_player_cheeseballclimbwall()
         break
-    case (29 << 0):
+    case states.cheesepepstickside:
         scr_player_cheesepepstickside()
         break
-    case (30 << 0):
+    case states.cheesepepstickup:
         scr_player_cheesepepstickup()
         break
-    case (25 << 0):
+    case states.cheesepepstick:
         scr_player_cheesepepstick()
         break		
-    case (28 << 0):
+    case states.cheesepeplaunch:
         scr_player_cheesepeplaunch()
         break
-    case (33 << 0):
+    case states.boxxedpep:
         scr_player_boxxedpep()
         break
-    case (35 << 0):
+    case states.boxxedpepjump:
         scr_player_boxxedpepjump()
         break
-    case (34 << 0):
+    case states.boxxedpepspin:
         scr_player_boxxedpepspin()
         break
-    case (36 << 0):
+    case states.pistolaim:
         scr_player_pistolaim()
         break
-    case (37 << 0):
+    case states.climbwall:
         scr_player_climbwall()
         break
-    case (38 << 0):
+    case states.knightpepslopes:
         scr_player_knightpepslopes()
         break
-    case (39 << 0):
+    case states.portal:
         scr_player_portal()
         break
-    case (40 << 0):
+    case states.secondjump:
         scr_player_secondjump()
         break
-    case (41 << 0):
+    case states.chainsawbump:
         scr_player_chainsawbump()
         break
-    case (42 << 0):
+    case states.handstandjump:
         scr_player_handstandjump()
         break
-    case (43 << 0):
+    case states.lungeattack:
         scr_player_lungeattack()
         break
-    case (44 << 0):
+    case states.lungegrab:
         scr_player_lungegrab()
         break
-    case (45 << 0):
+    case states.dashtumble:
         scr_player_dashtumble()
         break
-    case (153 << 0):
+    case states.shoulderbash:
         scr_player_shoulderbash()
         break
-    case (46 << 0):
+    case states.gottreasure:
         scr_player_gottreasure()
         break
-    case (47 << 0):
+    case states.knightpep:
         scr_player_knightpep()
         break
-    case (48 << 0):
+    case states.knightpepattack:
         scr_player_knightpepattack()
         break
-    case (49 << 0):
+    case states.knightpepbump:
         scr_player_knightpepbump()
         break
-    case (50 << 0):
+    case states.meteorpep:
         scr_player_meteorpep()
         break
-    case (51 << 0):
+    case states.bombpep:
         scr_player_bombpep()
         break
-    case (54 << 0):
+    case states.bombpepup:
         scr_player_bombpepup()
         break
-    case (53 << 0):
+    case states.bombpepside:
         scr_player_bombpepside()
         break
-    case (52 << 0):
+    case states.bombgrab:
         scr_player_bombgrab()
         break
-    case (55 << 0):
+    case states.grabbing:
         scr_player_grabbing()
         break
-    case (56 << 0):
+    case states.chainsawpogo:
         scr_player_chainsawpogo()
         break
-    case (57 << 0):
+    case states.shotgunjump:
         scr_player_shotgunjump()
         break
-    case (59 << 0):
+    case states.stunned:
         scr_player_stunned()
         break
-    case (60 << 0):
+    case states.highjump:
         scr_player_highjump()
         break
-    case (61 << 0):
+    case states.chainsaw:
         scr_player_chainsaw()
         break
-    case (137 << 0):
+    case states.hit:
         scr_player_hit()
         break
-    case (156 << 0):
+    case states.thrown:
         scr_player_thrown()
         break
-    case (62 << 0):
+    case states.facestomp:
         scr_player_facestomp()
         break
-    case (64 << 0):
+    case states.timesup:
         scr_player_timesup()
         break
-    case (65 << 0):
+    case states.machroll:
         scr_player_machroll()
         break
-    case (72 << 0):
+    case states.pistol:
         scr_player_pistol()
         break
-    case (66 << 0):
+    case states.shotgun:
         scr_player_shotgun()
         break
-    case (67 << 0):
+    case states.shotguncrouch:
         scr_player_shotguncrouch()
         break
-    case (68 << 0):
+    case states.shotguncrouchjump:
         scr_player_shotguncrouchjump()
         break
-    case (69 << 0):
+    case states.shotgunshoot:
         scr_player_shotgunshoot()
         break
-    case (71 << 0):
+    case states.shotgunfreefall:
         scr_player_shotgunfreefall()
         break
-    case (70 << 0):
+    case states.shotgundash:
         scr_player_shotgundash()
         break
-    case (73 << 0):
+    case states.machfreefall:
         scr_player_machfreefall()
         break
-    case (74 << 0):
+    case states.throwing:
         scr_player_throwing()
         break
-    case (76 << 0):
+    case states.superslam:
         scr_player_superslam()
         break
-    case (75 << 0):
+    case states.slam:
         scr_player_slam()
         break
-    case (77 << 0):
+    case states.skateboard:
         scr_player_skateboard()
         break
-    case (78 << 0):
+    case states.grind:
         scr_player_grind()
         break
-    case (79 << 0):
+    case states.grab:
         scr_player_grab()
         break
-    case (80 << 0):
+    case states.punch:
         scr_player_punch()
         break
-    case (81 << 0):
+    case states.backkick:
         scr_player_backkick()
         break
-    case (82 << 0):
+    case states.uppunch:
         scr_player_uppunch()
         break
-    case (83 << 0):
+    case states.shoulder:
         scr_player_shoulder()
         break
-    case (84 << 0):
+    case states.backbreaker:
         scr_player_backbreaker()
         break
-    case (85 << 0):
+    case states.graffiti:
         scr_player_graffiti()
         break
-    case (86 << 0):
+    case states.bossdefeat:
         scr_player_bossdefeat()
         break
-    case (88 << 0):
+    case states.bossintro:
         scr_player_bossintro()
         break
-    case (96 << 0):
+    case states.smirk:
         scr_player_smirk()
         break
-    case (87 << 0):
+    case states.pizzathrow:
         scr_player_pizzathrow()
         break
-    case (89 << 0):
+    case states.gameover:
         scr_player_gameover()
         break
-    case (123 << 0):
+    case states.Sjumpland:
         scr_player_Sjumpland()
         break
-    case (122 << 0):
+    case states.freefallprep:
         scr_player_freefallprep()
         break
-    case (120 << 0):
+    case states.runonball:
         scr_player_runonball()
         break
-    case (118 << 0):
+    case states.boulder:
         scr_player_boulder()
         break
-    case (90 << 0):
+    case states.keyget:
         scr_player_keyget()
         break
-    case (91 << 0):
+    case states.tackle:
         scr_player_tackle()
         break
-    case (94 << 0):
+    case states.slipnslide:
         scr_player_slipnslide()
         break
-    case (93 << 0):
+    case states.ladder:
         scr_player_ladder()
         break
-    case (92 << 0):
+    case states.jump:
         scr_player_jump()
         break
-    case (98 << 0):
+    case states.victory:
         scr_player_victory()
         break
-    case (95 << 0):
+    case states.comingoutdoor:
         scr_player_comingoutdoor()
         break
-    case (97 << 0):
+    case states.Sjump:
         scr_player_Sjump()
         break
-    case (99 << 0):
+    case states.Sjumpprep:
         scr_player_Sjumpprep()
         break
-    case (100 << 0):
+    case states.crouch:
         scr_player_crouch()
         break
-    case (101 << 0):
+    case states.crouchjump:
         scr_player_crouchjump()
         break
-    case (102 << 0):
+    case states.crouchslide:
         scr_player_crouchslide()
         break
-    case (103 << 0):
+    case states.mach1:
         scr_player_mach1()
         break
-    case (104 << 0):
+    case states.mach2:
         scr_player_mach2()
         break
-    case (121 << 0):
+    case states.mach3:
         scr_player_mach3()
         break
-    case (105 << 0):
+    case states.machslide:
         scr_player_machslide()
         break
-    case (106 << 0):
+    case states.bump:
         scr_player_bump()
         break
-    case (107 << 0):
+    case states.hurt:
         scr_player_hurt()
         break
-    case (108 << 0):
+    case states.freefall:
         scr_player_freefall()
         break
-    case (111 << 0):
+    case states.freefallland:
         scr_player_freefallland()
         break
-    case (109 << 0):
+    case states.hang:
         scr_player_hang()
         break
-    case (112 << 0):
+    case states.door:
         scr_player_door()
         break
-    case (113 << 0):
+    case states.barrel:
         scr_player_barrel()
         break
-    case (114 << 0):
+    case states.barreljump:
         scr_player_barreljump()
         break
-    case (116 << 0):
+    case states.barrelslide:
         scr_player_barrelslide()
         break
-    case (115 << 0):
+    case states.barrelclimbwall:
         scr_player_barrelclimbwall()
         break
-    case (117 << 0):
+    case states.current:
         scr_player_current()
         break
-    case (119 << 0):
+    case states.taxi:
         scr_player_taxi()
         break
-    case (152 << 0):
+    case states.policetaxi:
         scr_player_taxi()
         break
-    case (58 << 0):
+    case states.pogo:
         scr_player_pogo()
         break
-    case (31 << 0):
+    case states.rideweenie:
         scr_player_rideweenie()
         break
-    case (32 << 0):
+    case states.motorcycle:
         scr_player_motorcycle()
         break
-    case (124 << 0):
+    case states.faceplant:
         scr_player_faceplant()
         break
-    case (16 << 0):
+    case states.ghost:
         scr_player_ghost()
         break
-    case (17 << 0):
+    case states.ghostpossess:
         scr_player_ghostpossess()
         break
-    case (11 << 0):
+    case states.mort:
         scr_player_mort()
         break
-    case (12 << 0):
+    case states.mortjump:
         scr_player_mortjump()
         break
-    case (13 << 0):
+    case states.mortattack:
         scr_player_mortattack()
         break
-    case (14 << 0):
+    case states.morthook:
         scr_player_morthook()
         break
-    case (15 << 0):
+    case states.hook:
         scr_player_hook()
         break
-    case (144 << 0):
+    case states.arenaintro:
         scr_player_arenaintro()
         break
-    case (146 << 0):
+    case states.actor:
         scr_player_actor()
         break
-    case (147 << 0):
+    case states.parry:
         scr_player_parry()
         break
-    case (148 << 0):
+    case states.golf:
         scr_player_golf()
         break
-    case (150 << 0):
+    case states.tube:
         scr_player_tube()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_player_pummel()
         break
-    case (165 << 0):
+    case states.slipbanan:
         scr_player_slipbanan()
         break
-    case (183 << 0):
+    case states.bombdelete:
         scr_player_bombdelete()
         break
-    case (184 << 0):
+    case states.rocket:
         scr_player_rocket()
         break
-    case (185 << 0):
+    case states.rocketslide:
         scr_player_rocketslide()
         break
-    case (186 << 0):
+    case states.gotoplayer:
         scr_player_gotoplayer()
         break
-    case (187 << 0):
+    case states.trickjump:
         scr_player_trickjump()
         break
-    case (190 << 0):
+    case states.ridecow:
         scr_player_ridecow()
         break
-    case (191 << 0):
+    case states.ratmount:
         scr_player_ratmount()
         break
-    case (196 << 0):
+    case states.ratmounthurt:
         scr_player_ratmounthurt()
         break
-    case (192 << 0):
+    case states.ratmountjump:
         scr_player_ratmountjump()
         break
-    case (193 << 0):
+    case states.ratmountattack:
         scr_player_ratmountattack()
         break
-    case (194 << 0):
+    case states.ratmountspit:
         scr_player_ratmountspit()
         break
-    case (195 << 0):
+    case states.ratmountclimbwall:
         scr_player_ratmountclimbwall()
         break
-    case (197 << 0):
+    case states.ratmountgroundpound:
         scr_player_ratmountgroundpound()
         break
-    case (198 << 0):
+    case states.ratmountbounce:
         scr_player_ratmountbounce()
         break
-    case (200 << 0):
+    case states.ratmountballoon:
         scr_player_ratmountballoon()
         break	
-    case (202 << 0):
+    case states.ratmountgrind:
         scr_player_ratmountgrind()
         break
-    case (201 << 0):
+    case states.ratmounttumble:
         scr_player_ratmounttumble()
         break
-    case (259 << 0):
+    case states.ratmountpunch:
         scr_player_ratmountpunch()
         break
-    case (203 << 0):
+    case states.ratmounttrickjump:
         scr_player_ratmounttrickjump()
         break
-    case (204 << 0):
+    case states.ratmountskid:
         scr_player_ratmountskid()
         break
-    case (206 << 0):
+    case states.blockstance:
         scr_player_blockstance()
         break
-    case (207 << 0):
+    case states.balloon:
         scr_player_balloon()
         break
-    case (208 << 0):
+    case states.debugstate:
         scr_player_debugstate()
         break
-    case (210 << 0):
+    case states.trashjump:
         scr_player_trashjump()
         break
-    case (211 << 0):
+    case states.trashroll:
         scr_player_trashroll()
         break
-    case (212 << 0):
+    case states.stringfling:
         scr_player_stringfling()
         break
-    case (213 << 0):
+    case states.stringjump:
         scr_player_stringjump()
         break
-    case (214 << 0):
+    case states.stringfall:
         scr_player_stringfall()
         break
-    case (215 << 0):
+    case states.noisejetpack:
         scr_player_noisejetpack()
         break
-    case (216 << 0):
+    case states.spiderweb:
         scr_player_spiderweb()
         break
-    case (225 << 0):
+    case states.animatronic:
         scr_player_animatronic()
         break
-    case (252 << 0):
+    case states.playersuperattack:
         scr_player_playersuperattack()
         break
-    case (254 << 0):
+    case states.jetpackjump:
         scr_player_jetpackjump()
         break
-    case (257 << 0):
+    case states.bee:
         scr_player_bee()
         break
-    case (260 << 0):
+    case states.ratmountcrouch:
         scr_player_ratmountcrouch()
         break
-    case (261 << 0):
+    case states.ratmountladder:
         scr_player_ratmountladder()
         break
-    case (265 << 0):
+    case states.antigrav:
         scr_player_antigrav()
         break
 }
 
 if (prevstate != state)
 {
-    if (prevstate == (211 << 0) && prevsprite != 1727 && prevsprite != 1636)
+    if (prevstate == states.trashroll && prevsprite != spr_player_corpsestart && prevsprite != spr_player_corpsesurf)
         create_debris(x, y, spr_player_trashlid)
 }
 if (!(place_meeting(x, (y + 1), obj_railparent)))
 {
-    if (state == (121 << 0) or state == (104 << 0) or state == (5 << 0))
+    if (state == states.mach3 or state == states.mach2 or state == states.tumble)
         railmovespeed = Approach(railmovespeed, 0, 0.1)
     else
         railmovespeed = Approach(railmovespeed, 0, 0.5)
 }
-if (state != (42 << 0) && state != (5 << 0))
+if (state != states.handstandjump && state != states.tumble)
     crouchslipbuffer = 0
-if (state != (121 << 0))
+if (state != states.mach3)
     mach4mode = 0
 if (ratshootbuffer > 0)
     ratshootbuffer--
-if (state != (225 << 0))
+if (state != states.animatronic)
 {
     animatronic_buffer = 360
     animatronic_collect_buffer = 0
 }
-if (state == (33 << 0) && grounded && vsp > 0)
+if (state == states.boxxedpep && grounded && vsp > 0)
     boxxedpepjump = boxxedpepjumpmax
 if (verticalbuffer > 0)
     verticalbuffer--
@@ -556,12 +556,12 @@ else if (superchargecombo_buffer == 0)
     superchargecombo_buffer = -1
     global.combotime = 4
 }
-if (state != (0 << 0))
+if (state != states.normal)
     breakdance_speed = 0.25
-if ((!grounded) && (state == (187 << 0) or state == (92 << 0) or state == (103 << 0) or state == (104 << 0) or state == (121 << 0)) && key_jump && global.noisejetpack == 1)
+if ((!grounded) && (state == states.trickjump or state == states.jump or state == states.mach1 or state == states.mach2 or state == states.mach3) && key_jump && global.noisejetpack == 1)
 {
     vsp = -14
-    state = (254 << 0)
+    state = states.jetpackjump
     sprite_index = spr_player_jetpackstart
     doublejump = 0
     with (instance_create(x, y, obj_highjumpcloud2))
@@ -569,15 +569,15 @@ if ((!grounded) && (state == (187 << 0) or state == (92 << 0) or state == (103 <
 }
 if (walljumpbuffer > 0)
     walljumpbuffer--
-if (grounded && vsp > 0 && state != (215 << 0))
+if (grounded && vsp > 0 && state != states.noisejetpack)
     jetpackfuel = jetpackmax
 if tauntstoredisgustavo
 {
     isgustavo = 1
-    if (state != (84 << 0) && state != (147 << 0) && state != (85 << 0))
+    if (state != states.backbreaker && state != states.parry && state != states.graffiti)
         tauntstoredisgustavo = 0
 }
-if (state != (121 << 0) && (state != (105 << 0) or sprite_index != spr_mach3boost))
+if (state != states.mach3 && (state != states.machslide or sprite_index != spr_mach3boost))
 {
     launch = 0
     launched = 0
@@ -587,17 +587,17 @@ if (launch_buffer > 0)
     launch_buffer--
 else
     launched = 0
-if (state != (6 << 0))
+if (state != states.finishingblow)
     finishingblow = 0
 if (dash_doubletap > 0)
     dash_doubletap--
 if (cow_buffer > 0)
     cow_buffer--
-if (state == (43 << 0))
+if (state == states.lungeattack)
     lunge_buffer = 14
 if (blur_effect > 0)
     blur_effect--
-else if (breakdance_speed >= 0.6 or mach4mode == 1 or boxxeddash == 1 or state == (16 << 0) or state == (5 << 0) or state == (198 << 0) or state == (193 << 0) or state == (42 << 0) or state == (116 << 0) or (state == (79 << 0) && sprite_index == spr_swingding && swingdingdash <= 0) or (state == (80 << 0) && (sprite_index == spr_player_breakdanceuppercut or sprite_index == spr_player_breakdanceuppercutend)) or state == (108 << 0) or state == (43 << 0))
+else if (breakdance_speed >= 0.6 or mach4mode == 1 or boxxeddash == 1 or state == states.ghost or state == states.tumble or state == states.ratmountbounce or state == states.ratmountattack or state == states.handstandjump or state == states.barrelslide or (state == states.grab && sprite_index == spr_swingding && swingdingdash <= 0) or (state == states.punch && (sprite_index == spr_player_breakdanceuppercut or sprite_index == spr_player_breakdanceuppercutend)) or state == states.freefall or state == states.lungeattack)
 {
     if (visible && (!(place_meeting(x, y, obj_secretportal))) && (!(place_meeting(x, y, obj_secretportalstart))))
     {
@@ -606,29 +606,29 @@ else if (breakdance_speed >= 0.6 or mach4mode == 1 or boxxeddash == 1 or state =
             playerid = other.id
     }
 }
-if (state != (61 << 0) && state != (106 << 0) && state != (33 << 0) && state != (34 << 0) && state != (35 << 0))
+if (state != states.chainsaw && state != states.bump && state != states.boxxedpep && state != states.boxxedpepspin && state != states.boxxedpepjump)
 {
     boxxed = 0
     boxxeddash = 0
 }
-if (state != (79 << 0))
+if (state != states.grab)
     grabbingenemy = 0
-if (state != (104 << 0) && state != (121 << 0) && state != (187 << 0) && state != (201 << 0) && state != (203 << 0))
+if (state != states.mach2 && state != states.mach3 && state != states.trickjump && state != states.ratmounttumble && state != states.ratmounttrickjump)
 {
     ramp = 0
     ramp_points = 0
 }
-if (state != (112 << 0) && state != (61 << 0) && state != (137 << 0) && place_meeting(x, y, obj_boxofpizza))
-    state = (100 << 0)
+if (state != states.door && state != states.chainsaw && state != states.hit && place_meeting(x, y, obj_boxofpizza))
+    state = states.crouch
 if (shoot_buffer > 0)
     shoot_buffer--
 if (cheesepep_buffer > 0)
     cheesepep_buffer--
-if (state != (29 << 0))
+if (state != states.cheesepepstickside)
     yscale = 1
 if (invhurt_buffer > 0)
     invhurt_buffer--
-if (state == (107 << 0))
+if (state == states.hurt)
 {
     if (hurt_buffer > 0)
         hurt_buffer--
@@ -645,7 +645,7 @@ else
     hurt_buffer = -1
 }
 if (room == Realtitlescreen && instance_exists(obj_mainmenuselect))
-    state = (18 << 0)
+    state = states.titlescreen
 if (wallclingcooldown < 10)
     wallclingcooldown++
 if ((!instance_exists(superchargedeffectid)) && supercharged)
@@ -656,11 +656,11 @@ if ((!instance_exists(superchargedeffectid)) && supercharged)
         other.superchargedeffectid = id
     }
 }
-if (state != (97 << 0))
+if (state != states.Sjump)
     sjumpvsp = -12
-if (state != (108 << 0))
+if (state != states.freefall)
     freefallvsp = 20
-if (supercharge > 9 && state != (84 << 0))
+if (supercharge > 9 && state != states.backbreaker)
     supercharged = 1
 if ((!instance_exists(pizzashieldid)) && pizzashield == 1)
 {
@@ -670,7 +670,7 @@ if ((!instance_exists(pizzashieldid)) && pizzashield == 1)
         other.pizzashieldid = id
     }
 }
-if (visible == false && state == (95 << 0))
+if (visible == false && state == states.comingoutdoor)
 {
     coopdelay++
     image_index = 0
@@ -682,12 +682,12 @@ if (visible == false && state == (95 << 0))
 }
 if (global.coop == true)
 {
-    if ((state == (80 << 0) or state == (42 << 0)) && (!((obj_player2.state == (80 << 0) or obj_player2.state == (42 << 0)))))
+    if ((state == states.punch or state == states.handstandjump) && (!((obj_player2.state == states.punch or obj_player2.state == states.handstandjump))))
         fightballadvantage = 1
-    else if (!((obj_player2.state == (80 << 0) or obj_player2.state == (42 << 0))))
+    else if (!((obj_player2.state == states.punch or obj_player2.state == states.handstandjump)))
         fightballadvantage = 0
 }
-if (state != (58 << 0) && state != (84 << 0))
+if (state != states.pogo && state != states.backbreaker)
 {
     pogospeed = 6
     pogospeedprev = 0
@@ -709,7 +709,7 @@ if (pogochargeactive == 1)
 }
 else
     flashflicker = 0
-if (state != (74 << 0))
+if (state != states.throwing)
     kickbomb = 0
 if (pogocharge == 0)
 {
@@ -725,22 +725,22 @@ if (flashflicker == 1)
         flashflickertime = 0
     }
 }
-if (state != (121 << 0) && state != (4 << 0))
+if (state != states.mach3 && state != states.grabbed)
     fightball = 0
-if (state != (4 << 0) && state != (107 << 0))
+if (state != states.grabbed && state != states.hurt)
 {
-    if (grounded && state != (55 << 0))
+    if (grounded && state != states.grabbing)
         suplexmove = 0
 }
-if (state != (108 << 0) && (state != (61 << 0) or tauntstoredstate != (108 << 0)) && (state != (84 << 0) or tauntstoredstate != (108 << 0)))
+if (state != states.freefall && (state != states.chainsaw or tauntstoredstate != states.freefall) && (state != states.backbreaker or tauntstoredstate != states.freefall))
     freefallsmash = -14
-if (global.playerhealth <= 0 && state != (89 << 0))
+if (global.playerhealth <= 0 && state != states.gameover)
 {
     image_index = 0
     sprite_index = spr_playerV_dead
-    state = (89 << 0)
+    state = states.gameover
 }
-if (state == (89 << 0) && y > (room_height * 2))
+if (state == states.gameover && y > (room_height * 2))
 {
     targetDoor = "A"
     scr_playerreset()
@@ -759,14 +759,14 @@ if (state == (89 << 0) && y > (room_height * 2))
         room = rm_levelselect
     }
 }
-if (baddiegrabbedID == obj_null && (state == (79 << 0) or state == (76 << 0) or state == (20 << 0)))
-    state = (0 << 0)
-if (!((state == (79 << 0) or state == (76 << 0) or state == (104 << 0))))
+if (baddiegrabbedID == obj_null && (state == states.grab or state == states.superslam or state == states.tacklecharge))
+    state = states.normal
+if (!((state == states.grab or state == states.superslam or state == states.mach2)))
 {
     baddiegrabbedID = obj_null
     heavy = 0
 }
-if (cutscene == 1 && state != (186 << 0))
+if (cutscene == 1 && state != states.gotoplayer)
     global.heattime = 60
 if (anger == 0)
     angry = 0
@@ -775,25 +775,25 @@ if (anger > 0)
     angry = 1
     anger -= 1
 }
-if (sprite_index == spr_winding && state != (0 << 0))
+if (sprite_index == spr_winding && state != states.normal)
     windingAnim = 0
-if (state != (79 << 0))
+if (state != states.grab)
     swingdingbuffer = 0
-if (state == (265 << 0) or state == (184 << 0) or state == (185 << 0))
+if (state == states.antigrav or state == states.rocket or state == states.rocketslide)
     grav = 0
-else if (state == (113 << 0))
+else if (state == states.barrel)
     grav = 0.6
-else if (state == (16 << 0) or state == (17 << 0))
+else if (state == states.ghost or state == states.ghostpossess)
     grav = 0
-else if (boxxed && state != (34 << 0))
+else if (boxxed && state != states.boxxedpepspin)
     grav = 0.3
-else if (state == (254 << 0))
+else if (state == states.jetpackjump)
     grav = 0.5
-else if (state == (34 << 0))
+else if (state == states.boxxedpepspin)
     grav = 0.6
 else
     grav = 0.5
-if (state == (113 << 0) && key_jump2 && (!jumpstop))
+if (state == states.barrel && key_jump2 && (!jumpstop))
     grav = 0.4
 if (sprite_index == spr_player_idlevomit && image_index > 28 && image_index < 43)
     instance_create((x + random_range(-5, 5)), (y + 46), obj_vomit)
@@ -802,7 +802,7 @@ if (sprite_index == spr_player_idlevomitblood && image_index > 28 && image_index
     with (instance_create((x + random_range(-5, 5)), (y + 46), obj_vomit))
         sprite_index = spr_vomit2
 }
-if (global.stylethreshold >= 2 && (!instance_exists(angryeffectid)) && state == (0 << 0) && character != "V")
+if (global.stylethreshold >= 2 && (!instance_exists(angryeffectid)) && state == states.normal && character != "V")
 {
     with (instance_create(x, y, obj_angrycloud))
     {
@@ -824,7 +824,7 @@ if (object_index == obj_player1)
             }
         }
     }
-    if (!((state == (112 << 0) or state == (150 << 0) or state == (119 << 0) or state == (46 << 0) or state == (98 << 0) or state == (46 << 0) or state == (146 << 0) or state == (95 << 0) or (state == (47 << 0) && (sprite_index == spr_knightpepstart or sprite_index == spr_knightpepthunder)) or instance_exists(obj_fadeout) or place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretportalstart))))
+    if (!((state == states.door or state == states.tube or state == states.taxi or state == states.gottreasure or state == states.victory or state == states.gottreasure or state == states.actor or state == states.comingoutdoor or (state == states.knightpep && (sprite_index == spr_knightpepstart or sprite_index == spr_knightpepthunder)) or instance_exists(obj_fadeout) or place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretportalstart))))
     {
         if (global.combotime > 0)
             global.combotime -= 0.15
@@ -841,7 +841,7 @@ if (object_index == obj_player1)
     if (global.heattime <= 0 && global.style > -1 && global.stylelock == 0)
         global.style -= 0.05
 }
-if (key_jump && (!grounded) && (state == (104 << 0) or state == (121 << 0)) && (state != ((37 << 0) & walljumpbuffer)) <= 0)
+if (key_jump && (!grounded) && (state == states.mach2 or state == states.mach3) && (state != (states.climbwall & walljumpbuffer)) <= 0)
     input_buffer_walljump = 24
 if (input_buffer_jump < 8)
     input_buffer_jump++
@@ -863,56 +863,56 @@ if (input_buffer_slap < 8)
     input_buffer_slap++
 if (key_particles == 1)
     create_particle((x + random_range(-25, 25)), (y + random_range(-35, 25)), particle.keyparticles, 0)
-if (inv_frames == 0 && hurted == 0 && state != (16 << 0))
+if (inv_frames == 0 && hurted == 0 && state != states.ghost)
     image_alpha = 1
-if (state == (80 << 0) or (state == (92 << 0) && sprite_index == spr_playerN_noisebombspinjump) or state == (20 << 0) or state == (77 << 0) or state == (47 << 0) or state == (24 << 0) or state == (38 << 0) or state == (48 << 0) or state == (51 << 0) or state == (62 << 0) or state == (73 << 0) or state == (62 << 0) or state == (121 << 0) or state == (108 << 0) or state == (97 << 0))
+if (state == states.punch or (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) or state == states.tacklecharge or state == states.skateboard or state == states.knightpep or state == states.cheesepep or state == states.knightpepslopes or state == states.knightpepattack or state == states.bombpep or state == states.facestomp or state == states.machfreefall or state == states.facestomp or state == states.mach3 or state == states.freefall or state == states.Sjump)
     attacking = 1
 else
     attacking = 0
-if (state == (74 << 0) or state == (81 << 0) or state == (83 << 0) or state == (82 << 0))
+if (state == states.throwing or state == states.backkick or state == states.shoulder or state == states.uppunch)
     grabbing = 1
 else
     grabbing = 0
-if ((state == (198 << 0) && vsp >= 0) or sprite_index == spr_player_Sjumpcancel or sprite_index == spr_swingding or sprite_index == spr_tumble or state == (34 << 0) or state == (211 << 0) or state == (210 << 0) or state == (70 << 0) or (state == (71 << 0) && (sprite_index == spr_shotgunjump2 or sprite_index == spr_shotgunjump3)) or state == (97 << 0) or state == (184 << 0) or state == (185 << 0) or state == (41 << 0) or state == (80 << 0) or state == (124 << 0) or state == (31 << 0) or state == (121 << 0) or (state == (92 << 0) && sprite_index == spr_playerN_noisebombspinjump) or state == (108 << 0) or state == (9 << 0) or state == (254 << 0) or state == (10 << 0) or state == (19 << 0) or state == (254 << 0) or state == (77 << 0) or state == (63 << 0) or state == (97 << 0) or state == (73 << 0) or state == (20 << 0) or (state == (76 << 0) && sprite_index == spr_piledriver) or state == (47 << 0) or state == (48 << 0) or state == (38 << 0) or state == (187 << 0) or state == (24 << 0) or state == (21 << 0) or state == (201 << 0) or state == (197 << 0) or state == (259 << 0) or state == (265 << 0) or ratmount_movespeed == 12 or state == (165 << 0) or state == (153 << 0))
+if ((state == states.ratmountbounce && vsp >= 0) or sprite_index == spr_player_Sjumpcancel or sprite_index == spr_swingding or sprite_index == spr_tumble or state == states.boxxedpepspin or state == states.trashroll or state == states.trashjump or state == states.shotgundash or (state == states.shotgunfreefall && (sprite_index == spr_shotgunjump2 or sprite_index == spr_shotgunjump3)) or state == states.Sjump or state == states.rocket or state == states.rocketslide or state == states.chainsawbump or state == states.punch or state == states.faceplant or state == states.rideweenie or state == states.mach3 or (state == states.jump && sprite_index == spr_playerN_noisebombspinjump) or state == states.freefall or state == states.fireass or state == states.jetpackjump or state == states.firemouth or state == states.hookshot or state == states.jetpackjump or state == states.skateboard or state == states.mach4 or state == states.Sjump or state == states.machfreefall or state == states.tacklecharge or (state == states.superslam && sprite_index == spr_piledriver) or state == states.knightpep or state == states.knightpepattack or state == states.knightpepslopes or state == states.trickjump or state == states.cheesepep or state == states.cheeseball or state == states.ratmounttumble or state == states.ratmountgroundpound or state == states.ratmountpunch or state == states.antigrav or ratmount_movespeed == 12 or state == states.slipbanan or state == states.shoulderbash)
     instakillmove = 1
 else
     instakillmove = 0
-if (state == (198 << 0) && vsp < 0)
+if (state == states.ratmountbounce && vsp < 0)
     stunmove = 1
 else
     stunmove = 0
 if (flash == 1 && alarm[0] <= 0)
     alarm[0] = (0.15 * room_speed)
-if (state != (93 << 0))
+if (state != states.ladder)
     hooked = 0
-if (state != (121 << 0) && state != (105 << 0))
+if (state != states.mach3 && state != states.machslide)
     autodash = 0
-if ((state != (92 << 0) && state != (101 << 0) && state != (23 << 0)) or vsp < 0)
+if ((state != states.jump && state != states.crouchjump && state != states.slap) or vsp < 0)
     fallinganimation = 0
-if (state != (111 << 0) && state != (0 << 0) && state != (105 << 0) && state != (92 << 0))
+if (state != states.freefallland && state != states.normal && state != states.machslide && state != states.jump)
     facehurt = 0
-if (state != (0 << 0) && state != (105 << 0))
+if (state != states.normal && state != states.machslide)
     machslideAnim = 0
-if (state != (0 << 0) && state != (191 << 0))
+if (state != states.normal && state != states.ratmount)
 {
     idle = 0
     dashdust = 0
 }
-if (state != (103 << 0) && state != (26 << 0) && state != (92 << 0) && state != (19 << 0) && state != (42 << 0) && state != (0 << 0) && state != (104 << 0) && state != (121 << 0) && state != (122 << 0) && state != (47 << 0) && state != (66 << 0) && state != (38 << 0))
+if (state != states.mach1 && state != states.cheesepepjump && state != states.jump && state != states.hookshot && state != states.handstandjump && state != states.normal && state != states.mach2 && state != states.mach3 && state != states.freefallprep && state != states.knightpep && state != states.shotgun && state != states.knightpepslopes)
     momemtum = 0
-if (state != (97 << 0) && state != (99 << 0))
+if (state != states.Sjump && state != states.Sjumpprep)
     a = 0
-if (state != (62 << 0))
+if (state != states.facestomp)
     facestompAnim = 0
-if (state != (108 << 0) && state != (62 << 0) && state != (76 << 0) && state != (111 << 0))
+if (state != states.freefall && state != states.facestomp && state != states.superslam && state != states.freefallland)
     superslam = 0
-if (state != (104 << 0))
+if (state != states.mach2)
     machpunchAnim = 0
 if (ladderbuffer > 0)
     ladderbuffer--
-if (state != (92 << 0))
+if (state != states.jump)
     stompAnim = 0
-if (state == (121 << 0) or state == (104 << 0) or ratmount_movespeed == 12)
+if (state == states.mach3 or state == states.mach2 or ratmount_movespeed == 12)
 {
     if (macheffect == 0)
     {
@@ -925,12 +925,12 @@ if (state == (121 << 0) or state == (104 << 0) or ratmount_movespeed == 12)
         }
     }
 }
-if ((!(state == (121 << 0))) && (!(state == (104 << 0))) && ratmount_movespeed < 12)
+if ((!(state == states.mach3)) && (!(state == states.mach2)) && ratmount_movespeed < 12)
     macheffect = 0
 if (toomuchalarm1 > 0)
 {
     toomuchalarm1 -= 1
-    if (toomuchalarm1 <= 0 && (state == (121 << 0) or state == (104 << 0) or ratmount_movespeed == 12))
+    if (toomuchalarm1 <= 0 && (state == states.mach3 or state == states.mach2 or ratmount_movespeed == 12))
     {
         with (create_mach3effect(x, y, sprite_index, (image_index - 1)))
         {
@@ -940,7 +940,7 @@ if (toomuchalarm1 > 0)
         toomuchalarm1 = 6
     }
 }
-if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_verticalhallway))) && (!verticalhallway) && room != custom_lvl_room && state != (89 << 0) && state != (186 << 0))
+if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_verticalhallway))) && (!verticalhallway) && room != custom_lvl_room && state != states.gameover && state != states.gotoplayer)
 {
     x = roomstartx
     y = roomstarty
@@ -950,12 +950,12 @@ if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_vertical
         shake_mag = 3
         shake_mag_acc = (3 / room_speed)
     }
-    if (state == (17 << 0))
+    if (state == states.ghostpossess)
     {
-        state = (16 << 0)
+        state = states.ghost
         sprite_index = spr_ghostidle
     }
-    state = (146 << 0)
+    state = states.actor
     visible = false
     hsp = 0
     vsp = 0
@@ -964,9 +964,9 @@ if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_vertical
     {
         playerid = other.id
         if (!other.isgustavo)
-            sprite = choose(264, 896, 2780)
+            sprite = choose(spr_technicaldifficulty1, spr_technicaldifficulty2, spr_technicaldifficulty3)
         else
-            sprite = 2787
+            sprite = spr_technicaldifficulty4
     }
     with (obj_ghostfollow)
     {
@@ -977,14 +977,14 @@ if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_vertical
 }
 if (character == "S")
 {
-    if (state == (101 << 0) or state == (100 << 0))
-        state = (0 << 0)
+    if (state == states.crouchjump or state == states.crouch)
+        state = states.normal
 }
 if (character != "M")
 {
     if (!(scr_solid_player(x, y)))
     {
-        if (state != (260 << 0) && state != (35 << 0) && state != (34 << 0) && (!((state == (106 << 0) && sprite_index == spr_tumbleend))) && state != (116 << 0) && state != (115 << 0) && sprite_index != spr_player_breakdancesuper && sprite_index != spr_player_barrelslipnslide && sprite_index != spr_player_barrelroll && sprite_index != spr_bombpepintro && sprite_index != spr_knightpepthunder && state != (59 << 0) && state != (100 << 0) && state != (67 << 0) && state != (68 << 0) && state != (33 << 0) && state != (72 << 0) && sprite_index != spr_player_crouchshoot && state != (99 << 0) && state != (102 << 0) && state != (61 << 0) && state != (65 << 0) && state != (107 << 0) && state != (101 << 0) && state != (30 << 0) && state != (29 << 0) && state != (5 << 0))
+        if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && (!((state == states.bump && sprite_index == spr_tumbleend))) && state != states.barrelslide && state != states.barrelclimbwall && sprite_index != spr_player_breakdancesuper && sprite_index != spr_player_barrelslipnslide && sprite_index != spr_player_barrelroll && sprite_index != spr_bombpepintro && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && state != states.pistol && sprite_index != spr_player_crouchshoot && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
             mask_index = spr_player_mask
         else
             mask_index = spr_crouchmask
@@ -994,16 +994,16 @@ if (character != "M")
 }
 else
     mask_index = spr_pepperman_mask
-if (state == (46 << 0) or sprite_index == spr_knightpepstart or sprite_index == spr_knightpepthunder or state == (90 << 0) or state == (61 << 0) or state == (112 << 0) or state == (7 << 0) or state == (98 << 0) or state == (95 << 0) or state == (89 << 0) or state == (186 << 0) or state == (152 << 0) or state == (146 << 0) or place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretportalstart))
+if (state == states.gottreasure or sprite_index == spr_knightpepstart or sprite_index == spr_knightpepthunder or state == states.keyget or state == states.chainsaw or state == states.door or state == states.ejected or state == states.victory or state == states.comingoutdoor or state == states.gameover or state == states.gotoplayer or state == states.policetaxi or state == states.actor or place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretportalstart))
     cutscene = 1
 else
     cutscene = 0
-if (((place_meeting(x, y, obj_door) && (!(place_meeting(x, y, obj_doorblocked)))) or place_meeting(x, y, obj_taxi) or place_meeting(x, y, obj_dialognpc) or place_meeting(x, y, obj_dresser) or place_meeting(x, y, obj_keydoor) or place_meeting(x, y, obj_filedoor) or place_meeting(x, y, obj_optiondoor) or (place_meeting(x, y, obj_exitgate) && global.panic == true)) && (!instance_exists(obj_uparrow)) && scr_solid(x, (y + 1)) && state == (0 << 0) && obj_player1.spotlight == 1)
+if (((place_meeting(x, y, obj_door) && (!(place_meeting(x, y, obj_doorblocked)))) or place_meeting(x, y, obj_taxi) or place_meeting(x, y, obj_dialognpc) or place_meeting(x, y, obj_dresser) or place_meeting(x, y, obj_keydoor) or place_meeting(x, y, obj_filedoor) or place_meeting(x, y, obj_optiondoor) or (place_meeting(x, y, obj_exitgate) && global.panic == true)) && (!instance_exists(obj_uparrow)) && scr_solid(x, (y + 1)) && state == states.normal && obj_player1.spotlight == 1)
 {
     with (instance_create(x, y, obj_uparrow))
         playerid = other.object_index
 }
-if (movespeed >= 16 && state == (121 << 0) && (!instance_exists(speedlineseffectid)))
+if (movespeed >= 16 && state == states.mach3 && (!instance_exists(speedlineseffectid)))
 {
     with (instance_create(x, y, obj_speedlines))
     {
@@ -1014,16 +1014,16 @@ if (movespeed >= 16 && state == (121 << 0) && (!instance_exists(speedlineseffect
 with (obj_ratblock)
     scr_ratblock_destroy()
 scr_collide_destructibles()
-if (state != (17 << 0) && state != (186 << 0) && state != (208 << 0) && state != (18 << 0) && state != (150 << 0) && state != (4 << 0) && state != (112 << 0) && state != (97 << 0) && state != (7 << 0) && state != (95 << 0) && state != (118 << 0) && state != (90 << 0) && state != (98 << 0) && state != (39 << 0) && state != (64 << 0) && state != (46 << 0) && state != (89 << 0))
+if (state != states.ghostpossess && state != states.gotoplayer && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.boulder && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover)
     scr_collide_player()
-if (state == (150 << 0) or state == (186 << 0) or state == (208 << 0))
+if (state == states.tube or state == states.gotoplayer or state == states.debugstate)
 {
     x += hsp
     y += vsp
 }
-if (state == (118 << 0))
+if (state == states.boulder)
     scr_collide_player()
-if (state != (95 << 0))
+if (state != states.comingoutdoor)
     image_blend = c_white
 prevstate = state
 prevsprite = sprite_index

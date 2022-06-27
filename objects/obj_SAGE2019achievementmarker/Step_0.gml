@@ -3,7 +3,7 @@ if (picy == 640)
     if (snickshotgun == 0 && global.SAGEshotgunsnick == 1)
     {
         up = 1
-        sprite = 2067
+        sprite = bg_SAGEsnickshotgun
         snickshotgun = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -11,7 +11,7 @@ if (picy == 640)
     else if (dungeonbackup == 0 && global.SAGEdungeonbackup == 1)
     {
         up = 1
-        sprite = 2068
+        sprite = bg_SAGEdungeonbackup
         dungeonbackup = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -19,7 +19,7 @@ if (picy == 640)
     else if (srank == 0 && global.SAGEsrank == 1)
     {
         up = 1
-        sprite = 2069
+        sprite = bg_SAGEsrank
         srank = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -27,7 +27,7 @@ if (picy == 640)
     else if (snicksrank == 0 && global.SAGEsnicksrank == 1)
     {
         up = 1
-        sprite = 2070
+        sprite = bg_SAGEsnicksrank
         snicksrank = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -35,7 +35,7 @@ if (picy == 640)
     else if (combo10 == 0 && global.SAGEcombo10 == 1)
     {
         up = 1
-        sprite = 2071
+        sprite = bg_SAGEcombo10
         combo10 = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -43,7 +43,7 @@ if (picy == 640)
     else if (secret == 0 && global.SAGEsecret == 1)
     {
         up = 1
-        sprite = 2072
+        sprite = bg_SAGEsecret
         secret = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -51,7 +51,7 @@ if (picy == 640)
     else if (knight == 0 && global.SAGEknight == 1)
     {
         up = 1
-        sprite = 2073
+        sprite = bg_SAGEknight
         knight = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -59,7 +59,7 @@ if (picy == 640)
     else if (toppin == 0 && global.SAGEtoppin == 1)
     {
         up = 1
-        sprite = 2074
+        sprite = bg_SAGEtoppin
         toppin = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)
@@ -67,7 +67,7 @@ if (picy == 640)
     else if (treasure == 0 && global.SAGEtreasure == 1)
     {
         up = 1
-        sprite = 2075
+        sprite = bg_SAGEtreasure
         treasure = 1
         alarm[0] = 250
         scr_soundeffect(sfx_collectgiantpizza)

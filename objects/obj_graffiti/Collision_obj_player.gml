@@ -1,6 +1,6 @@
-if (ds_list_find_index(global.saveroom, id) == -1 && other.state == (84 << 0))
+if (ds_list_find_index(global.saveroom, id) == -1 && other.state == states.backbreaker)
 {
-    other.state = (85 << 0)
+    other.state = states.graffiti
     other.sprite_index = other.spr_victory
     other.image_index = 0
     sprite_index = spr_graffiti_drawn

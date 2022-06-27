@@ -11,18 +11,18 @@ function scr_player_grind()
     {
         if (movespeed < 12 or skateboarding)
         {
-            state = (104 << 0)
+            state = states.mach2
             sprite_index = spr_mach2jump
         }
         else
         {
-            state = (121 << 0)
+            state = states.mach3
             sprite_index = spr_mach3jump
         }
     }
     if (place_meeting((x + xscale), y, obj_solid) && (!(place_meeting(x, (y + 18), obj_grindrailslope))) && (!(place_meeting(x, (y + 1), obj_slope))))
     {
-        state = (106 << 0)
+        state = states.bump
         hsp = ((-xscale) * 5)
         vsp = 1
     }
@@ -37,12 +37,12 @@ function scr_player_grind()
         }
         if (movespeed < 12 or skateboarding)
         {
-            state = (104 << 0)
+            state = states.mach2
             sprite_index = spr_mach2jump
         }
         else
         {
-            state = (121 << 0)
+            state = states.mach3
             sprite_index = spr_mach3jump
         }
     }

@@ -18,7 +18,7 @@ function scr_blob_normal()
         {
             image_yscale *= -1
             y -= (46 * image_yscale)
-            state = (135 << 0)
+            state = states.fall
         }
     }
     else if place_meeting((x + hsp), y, obj_hallway)
@@ -33,7 +33,7 @@ function scr_blob_fall()
     if grounded
     {
         changeside_buffer = 20
-        state = (0 << 0)
+        state = states.normal
     }
     exit;
 }
@@ -54,7 +54,7 @@ function scr_blob_chase()
     if (place_meeting((x + hsp), y, obj_solid) && (!scr_slope()) && grounded)
     {
         image_xscale *= -1
-        state = (0 << 0)
+        state = states.normal
     }
     exit;
 }

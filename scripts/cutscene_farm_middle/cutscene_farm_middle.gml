@@ -19,7 +19,7 @@ function cutscene_farm_end()
 {
     with (obj_player)
     {
-        state = (0 << 0)
+        state = states.normal
         x = backtohubstartx
         y = backtohubstarty
     }

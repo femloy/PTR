@@ -1,13 +1,13 @@
 mask_index = spr_player_mask
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         if grounded
             hsp = 0
-        substate = (0 << 0)
+        substate = states.normal
         break
 	
-    case (17 << 0):
+    case states.ghostpossess:
         key_left = playerid.key_left
         key_right = playerid.key_right
         key_jump = playerid.key_jump
@@ -17,7 +17,7 @@ switch state
         playerid.xscale = xscale
         switch substate
         {
-            case (0 << 0):
+            case states.normal:
                 hsp = 0
                 if key_jump
                     playerid.input_buffer_jump = 0
@@ -28,24 +28,24 @@ switch state
                     if (move != 0)
                         xscale = sign(move)
                     hsp = (xscale * 6)
-                    substate = (92 << 0)
+                    substate = states.jump
                 }
                 break
 			
-            case (92 << 0):
+            case states.jump:
                 if key_jump
                     playerid.input_buffer_jump = 0
                 if grounded
-                    substate = (0 << 0)
+                    substate = states.normal
                 if playerid.key_down2
                 {
-                    substate = (108 << 0)
+                    substate = states.freefall
                     vsp = 20
                     hsp = 0
                 }
                 break
 			
-            case (108 << 0):
+            case states.freefall:
                 instance_destroy(instance_place(x, (y + vsp), obj_metalblock))
                 with (obj_destructibles)
                 {
@@ -54,7 +54,7 @@ switch state
                 }
                 if grounded
                 {
-                    substate = (0 << 0)
+                    substate = states.normal
                     scr_soundeffect(sfx_groundpound)
                     with (obj_camera)
                     {

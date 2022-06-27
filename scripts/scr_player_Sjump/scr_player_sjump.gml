@@ -47,7 +47,7 @@ function scr_player_Sjump()
         }
         scr_soundeffect(sfx_groundpound)
         image_index = 0
-        state = (123 << 0)
+        state = states.Sjumpland
         machhitAnim = 0
     }
     else if (key_slap2 && character == "P" && sprite_index != spr_superspringplayer && sprite_index != spr_player_Sjumpcancelstart)
@@ -66,7 +66,7 @@ function scr_player_Sjump()
             movespeed = 12
             image_index = 0
             sprite_index = spr_player_Sjumpcancel
-            state = (80 << 0)
+            state = states.punch
             with (instance_create(x, y, obj_crazyruneffect))
                 image_xscale = other.xscale
         }
@@ -77,7 +77,7 @@ function scr_player_Sjump()
         scr_soundeffect(sfx_woosh)
         jumpstop = 0
         vsp = -15
-        state = (92 << 0)
+        state = states.jump
         sprite_index = spr_playerN_noisebombspinjump
         image_index = 0
         with (instance_create(x, y, obj_jumpdust))
@@ -92,7 +92,7 @@ function scr_player_Sjump()
     }
     if (character == "V" && floor(image_index) == (image_number - 1))
     {
-        state = (92 << 0)
+        state = states.jump
         sprite_index = spr_playerV_fall
     }
     image_speed = 0.5

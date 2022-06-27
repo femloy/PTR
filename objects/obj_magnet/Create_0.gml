@@ -1,5 +1,5 @@
 cooldown = 0
-state = (0 << 0)
+state = states.normal
 ballID = -4
 hsp = 0
 vsp = 0

@@ -1,6 +1,6 @@
 padding = 16
 rpadding = 20
-savedstate = (0 << 0)
+savedstate = states.normal
 dialog = -4
 currenttext = -4
 currentdialog = 0

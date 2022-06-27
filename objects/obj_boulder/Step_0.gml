@@ -1,24 +1,24 @@
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         if (!active)
         {
             hsp = 0
             vsp = 0
             sprite_index = spr_meatball_idle
-            if (point_in_camera(x, y, view_camera[0]) && (obj_camera.shake_mag >= 10 or obj_player.state == (111 << 0)))
+            if (point_in_camera(x, y, view_camera[0]) && (obj_camera.shake_mag >= 10 or obj_player.state == states.freefallland))
             {
                 active = 1
                 sprite_index = spr_meatball_roll
             }
         }
         else if grounded
-            state = (134 << 0)
+            state = states.walk
         break
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         hsp = (image_xscale * b_movespeed)
         if (b_movespeed < 6)
             b_movespeed += 0.5
@@ -39,13 +39,13 @@ switch state
         with (instance_place((x + sign(hsp)), y, obj_destructibles))
             instance_destroy()
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         if (global.attackstyle != 2)
         {
             switch hp
@@ -104,7 +104,7 @@ switch state
             vsp = 0
             image_index = 0
             sprite_index = walkspr
-            state = (134 << 0)
+            state = states.walk
         }
         if place_meeting(x, (y + 1), obj_railparent)
         {
@@ -113,35 +113,35 @@ switch state
         }
         grav = 0.5
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
-    case (125 << 0):
+    case states.rage:
         scr_enemy_rage()
         break
-    case (17 << 0):
+    case states.ghostpossess:
         scr_enemy_ghostpossess()
         break
 }
 
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
-if (state == (138 << 0))
+if (state == states.stun)
 {
     if (stuntouchbuffer > 0)
         stuntouched = 1
@@ -158,9 +158,9 @@ if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
 angle = 0
 flash = 0
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {

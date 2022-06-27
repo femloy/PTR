@@ -39,7 +39,7 @@ function scr_player_mortjump()
         if (input_buffer_jump < 8)
         {
             input_buffer_jump = 8
-            state = (12 << 0)
+            state = states.mortjump
             vsp = -14
             sprite_index = spr_player_mortjumpstart
             image_index = 0
@@ -50,7 +50,7 @@ function scr_player_mortjump()
         }
         else
         {
-            state = (11 << 0)
+            state = states.mort
             landAnim = 1
             sprite_index = spr_land
             image_index = 0
@@ -62,7 +62,7 @@ function scr_player_mortjump()
         jumpstop = 0
         input_buffer_jump = 8
         doublejump = 1
-        state = (12 << 0)
+        state = states.mortjump
         sprite_index = spr_player_mortdoublejump
         image_index = 0
         vsp = -11

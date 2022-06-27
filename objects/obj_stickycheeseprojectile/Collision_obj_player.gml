@@ -8,6 +8,6 @@ with (other)
     cheesepeptimer = 2
     sprite_index = spr_cheesepepfall
     image_index = 0
-    state = (26 << 0)
+    state = states.cheesepepjump
 }
 instance_destroy()

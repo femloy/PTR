@@ -15,7 +15,7 @@ function scr_player_trickjump()
     }
     if (scr_solid((x + xscale), y) && (!scr_slope()) && (scr_solid_slope((x + sign(hsp)), y) or place_meeting((x + sign(hsp)), y, obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))))
     {
-        state = (106 << 0)
+        state = states.bump
         image_index = 0
         sprite_index = spr_player_wallsplat
     }
@@ -28,15 +28,15 @@ function scr_player_trickjump()
         {
             sprite_index = spr_rollgetup
             if (movespeed < 12)
-                state = (104 << 0)
+                state = states.mach2
             else
-                state = (121 << 0)
+                state = states.mach3
         }
         else
         {
             ramp_points = 0
             scr_soundeffect(sfx_groundpound)
-            state = (111 << 0)
+            state = states.freefallland
             sprite_index = spr_bodyslamland
             image_index = 0
         }

@@ -1,4 +1,4 @@
-if (state == (224 << 0))
+if (state == states.flushtransition)
 {
     if (floor(image_index) == (image_number - 1))
     {

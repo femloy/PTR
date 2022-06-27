@@ -1,4 +1,4 @@
-if (state == (148 << 0))
+if (state == states.golf)
     exit;
 create_particle(x, y, particle.balloonpop, 0)
 vsp = -14

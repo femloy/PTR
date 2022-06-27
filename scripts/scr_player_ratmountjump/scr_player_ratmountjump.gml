@@ -89,7 +89,7 @@ function scr_player_ratmountjump()
         }
         brick = 0
         movespeed = hsp
-        state = (197 << 0)
+        state = states.ratmountgroundpound
         image_index = 0
         sprite_index = spr_lonegustavo_groundpoundstart
     }
@@ -97,7 +97,7 @@ function scr_player_ratmountjump()
         ratmount_kickbrick()
     else if (key_slap2 && (!brick))
     {
-        state = (259 << 0)
+        state = states.ratmountpunch
         vsp = -6
         ratmountpunchtimer = 25
         image_index = 0
@@ -108,7 +108,7 @@ function scr_player_ratmountjump()
     }
     if (key_jump && brick)
     {
-        state = (197 << 0)
+        state = states.ratmountgroundpound
         sprite_index = spr_lonegustavo_jumpstart
         image_index = 0
         image_speed = 0.35
@@ -122,7 +122,7 @@ function scr_player_ratmountjump()
     }
     if (key_jump2 && grounded && brick && vsp > 0)
     {
-        state = (198 << 0)
+        state = states.ratmountbounce
         sprite_index = spr_player_ratmountbounce
         image_index = 0
         tauntstoredvsp = -14
@@ -132,7 +132,7 @@ function scr_player_ratmountjump()
     {
         doublejump = 0
         create_particle(x, y, particle.landcloud, 0)
-        state = (191 << 0)
+        state = states.ratmount
         landAnim = 1
         jumpstop = 0
         if brick

@@ -1,5 +1,5 @@
 event_inherited()
-if (state == (138 << 0))
+if (state == states.stun)
 {
     if (!(scr_solid(x, y)))
         scr_collide()

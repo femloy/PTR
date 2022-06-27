@@ -19,8 +19,8 @@ function pepperman_decide_attack_phase6()
         attack_cooldown = attack_max[(phase - 1)]
         readjusting = 0
         if (hp <= superattack_hpthreshold)
-            state = (158 << 0)
-        if (state != (158 << 0))
+            state = states.boss_superattackstart
+        if (state != states.boss_superattackstart)
         {
             var fakephase = irandom(100)
             if (fakephase > 60)
@@ -54,21 +54,21 @@ function pepperman_decide_attack_phase5()
         attack_cooldown = attack_max[(phase - 1)]
         groundpound_fakeout = 1
         readjusting = 0
-        state = (irandom(100) > 50 ? choose((128 << 0), (128 << 0), (83 << 0)) : (92 << 0))
-        if (state == (128 << 0))
+        state = (irandom(100) > 50 ? choose(states.charge, states.charge, states.shoulder) : states.jump)
+        if (state == states.charge)
         {
             sprite_index = spr_pepperman_shoulderstart
             image_index = 0
             image_xscale = (targetplayer.x != x ? sign((targetplayer.x - x)) : image_xscale)
         }
-        else if (state == (83 << 0))
+        else if (state == states.shoulder)
         {
             shoulderturns = 3
             sprite_index = spr_pepperman_shoulderstart
             image_index = 0
             image_xscale = (targetplayer.x != x ? sign((targetplayer.x - x)) : image_xscale)
         }
-        else if (state == (92 << 0))
+        else if (state == states.jump)
         {
             jumping_pepper = 0
             superjumping_pepper = 0
@@ -100,7 +100,7 @@ function pepperman_decide_attack_phase1()
         targetstunned = 0
         attack_cooldown = attack_max[(phase - 1)]
         var chance_shoulder = (45 - ((5 * phase) - 1))
-        state = (irandom(100) > chance_shoulder ? (153 << 0) : (92 << 0))
+        state = (irandom(100) > chance_shoulder ? states.shoulderbash : states.jump)
         shoulderpound_fakeout = phase == 4
         superjumping_pepper = phase == 4
         if (phase == 6)
@@ -117,7 +117,7 @@ function pepperman_decide_attack_phase1()
             if shoulderbash_fakeout
                 shoulderpound_fakeout = 0
         }
-        if (state == (153 << 0))
+        if (state == states.shoulderbash)
         {
             if shoulderpound_fakeout
                 shoulderpound_buffer = shoulderpound_max
@@ -130,7 +130,7 @@ function pepperman_decide_attack_phase1()
             sprite_index = spr_pepperman_shoulderstart
             image_xscale = (targetplayer.x != x ? sign((targetplayer.x - x)) : image_xscale)
         }
-        else if (state == (92 << 0))
+        else if (state == states.jump)
         {
             image_index = 0
             sprite_index = spr_pepperman_jump
@@ -163,7 +163,7 @@ function pepperman_decide_attack_phase1()
 function boss_pepperman_normal()
 {
     image_speed = 0.35
-    if (targetplayer.state != (156 << 0))
+    if (targetplayer.state != states.thrown)
     {
         var is_middle = (x > (room_width / 5) && x < (room_width - (room_width / 5)))
         var is_middle_player = (targetplayer.x > (room_width / 5) && targetplayer.x < (room_width - (room_width / 5)))
@@ -191,7 +191,7 @@ function boss_pepperman_normal()
     if (phase > 1 && distance_to_pos(x, y, targetplayer.x, targetplayer.y, 160, 540))
         attack_cooldown = 0
     boss_decide_taunt(180)
-    if (state != (84 << 0))
+    if (state != states.backbreaker)
     {
         if (hsp != 0 && grounded)
         {
@@ -235,7 +235,7 @@ function boss_pepperman_jump()
     var col = collision_line(x, y, x, (y + 96), obj_solid, false, true)
     if ((!jumping_pepper) && (!groundpound_fakeout) && col == -4 && ((x > (target_x - 24) && x < (target_x + 24)) or (x > (targetplayer.x - 24) && x < (targetplayer.x + 24)) or vsp > 3))
     {
-        state = (122 << 0)
+        state = states.freefallprep
         vsp = 10
         hsp = 0
         image_index = 0
@@ -249,7 +249,7 @@ function boss_pepperman_jump()
             groundpound_readjust_buffer = groundpound_readjust_max
             readjusting = 1
             target_x = targetplayer.x
-            state = (122 << 0)
+            state = states.freefallprep
             vsp = 10
             hsp = 0
             image_index = 0
@@ -259,7 +259,7 @@ function boss_pepperman_jump()
     if grounded
     {
         hsp = 0
-        state = (111 << 0)
+        state = states.freefallland
         sprite_index = spr_pepperman_jump
     }
     exit;
@@ -274,7 +274,7 @@ function boss_pepperman_freefallprep()
     {
         if (image_index > (image_number - 1))
         {
-            state = (108 << 0)
+            state = states.freefall
             vsp = 20
             hsp = 0
             image_index = 0
@@ -296,7 +296,7 @@ function boss_pepperman_freefallprep()
             }
             else if (groundpound_readjust <= 0)
             {
-                state = (108 << 0)
+                state = states.freefall
                 vsp = 20
                 hsp = 0
                 image_index = 0
@@ -317,7 +317,7 @@ function boss_pepperman_freefall()
             shake_mag = 3
             shake_mag_acc = (3 / room_speed)
         }
-        state = (111 << 0)
+        state = states.freefallland
         sprite_index = spr_pepperman_jump
         if (phase >= 5)
             boss_pepperman_summonbricks()
@@ -329,11 +329,11 @@ function boss_pepperman_freefallland()
 {
     if (image_index > (image_number - 1))
     {
-        state = (0 << 0)
+        state = states.normal
         sprite_index = idlespr
         if (jumping_pepper && superjumping_pepper)
         {
-            state = (153 << 0)
+            state = states.shoulderbash
             if shoulderbash_fakeout
             {
                 with (instance_create(x, y, obj_crazyrunothereffect))
@@ -360,7 +360,7 @@ function boss_pepperman_shoulderbash()
             shake_mag = 3
             shake_mag_acc = (3 / room_speed)
         }
-        state = (138 << 0)
+        state = states.stun
         stunned = 100
         vsp = -4
         hsp = ((-image_xscale) * 8)
@@ -378,7 +378,7 @@ function boss_pepperman_shoulderbash()
         {
             with (instance_create(x, (y - 5), obj_crazyrunothereffect))
                 playerid = other.id
-            state = (92 << 0)
+            state = states.jump
             image_index = 0
             sprite_index = spr_pepperman_jump
             target_x = targetplayer.x
@@ -407,7 +407,7 @@ function boss_pepperman_charge()
     hsp = 0
     if (image_index > (image_number - 1))
     {
-        state = (157 << 0)
+        state = states.boss_supershoulderbash
         sprite_index = spr_pepperman_shoulderloop
         image_index = 0
         hsp = (image_xscale * (shoulder_spd * 2))
@@ -426,7 +426,7 @@ function boss_pepperman_supershoulderbash()
             shake_mag = 3
             shake_mag_acc = (3 / room_speed)
         }
-        state = (138 << 0)
+        state = states.stun
         stunned = 50
         vsp = -4
         hsp = ((-image_xscale) * 8)
@@ -451,7 +451,7 @@ function boss_pepperman_shoulder()
         if place_meeting((x + (sign(hsp) * 96)), y, obj_solid)
         {
             shoulderturns--
-            state = (161 << 0)
+            state = states.boss_shoulderturn
             sprite_index = spr_pepperman_shoulderstart
             image_index = 0
         }
@@ -465,7 +465,7 @@ function boss_pepperman_shoulder()
         }
         if (phase >= 5)
             boss_pepperman_summonbricks()
-        state = (138 << 0)
+        state = states.stun
         stunned = 50
         vsp = -4
         hsp = ((-image_xscale) * 8)
@@ -480,7 +480,7 @@ function boss_pepperman_shoulderturn()
     if (image_index > (image_number - 1))
     {
         image_xscale *= -1
-        state = (83 << 0)
+        state = states.shoulder
         sprite_index = spr_pepperman_shoulderstart
         image_index = 0
     }
@@ -504,7 +504,7 @@ function boss_pepperman_superattackstart()
     image_xscale = (x > (room_width / 2) ? 1 : -1)
     if (x == tx)
     {
-        state = (159 << 0)
+        state = states.boss_superattackcharge
         sprite_index = spr_pepperman_shoulderloop
         image_xscale = (x > (room_width / 2) ? -1 : 1)
     }
@@ -521,7 +521,7 @@ function boss_pepperman_superattackcharge()
         superattack_buffer--
     else
     {
-        state = (76 << 0)
+        state = states.superslam
         sprite_index = spr_pepperman_shoulderloop
         image_index = 0
     }
@@ -614,7 +614,7 @@ function boss_pepperman_fistmatch()
         with (lastplayerid)
         {
             sprite_index = spr_idle
-            state = (163 << 0)
+            state = states.boss_fistmatchend
             x = hitX
             y = hitY
             hithsp = (other.image_xscale * 8)
@@ -622,7 +622,7 @@ function boss_pepperman_fistmatch()
             hitLag = lag
         }
         sprite_index = idlespr
-        state = (163 << 0)
+        state = states.boss_fistmatchend
         x = hitX
         y = hitY
         hithsp = ((-image_xscale) * 8)
@@ -644,9 +644,9 @@ function boss_pepperman_fistmatchend()
     }
     if (c && hsp == 0)
     {
-        state = (0 << 0)
+        state = states.normal
         with (obj_player)
-            state = (0 << 0)
+            state = states.normal
     }
     exit;
 }

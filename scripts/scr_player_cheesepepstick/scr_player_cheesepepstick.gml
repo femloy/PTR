@@ -6,13 +6,13 @@ function scr_player_cheesepepstick()
         input_buffer_jump = 0
     if ((!grounded) && (!(place_meeting((x + 1), y, obj_solid))) && (!(place_meeting((x - 1), y, obj_solid))))
     {
-        state = (26 << 0)
+        state = states.cheesepepjump
         jumpAnim = 0
         sprite_index = spr_cheesepepfall
     }
     if grounded
     {
-        state = (24 << 0)
+        state = states.cheesepep
         sprite_index = spr_cheesepepland
         image_index = 0
         landAnim = 1
@@ -28,7 +28,7 @@ function scr_player_cheesepepstick()
         scr_soundeffect(sfx_jump)
         xscale *= -1
         dir = xscale
-        state = (26 << 0)
+        state = states.cheesepepjump
         sprite_index = spr_cheesepepjump
         image_index = 0
         movespeed = (xscale * 3)
@@ -74,14 +74,14 @@ function scr_player_cheesepepstickside()
         x += xscale
         vsp = -11
         image_index = 0
-        state = (24 << 0)
+        state = states.cheesepep
         hsp = (move * movespeed)
         cheesepep_buffer = 0
     }
     if ((!(place_meeting((x + 1), y, obj_solid))) && (!(place_meeting((x - 1), y, obj_solid))))
     {
         grav = 0.5
-        state = (24 << 0)
+        state = states.cheesepep
         sprite_index = spr_cheesepepidle
         hsp = (move * movespeed)
         cheesepep_buffer = 0
@@ -90,7 +90,7 @@ function scr_player_cheesepepstickside()
     {
         cheesepep_buffer = 0
         grav = 0.5
-        state = (24 << 0)
+        state = states.cheesepep
         sprite_index = spr_cheesepepidle
         hsp = (move * movespeed)
     }
@@ -127,14 +127,14 @@ function scr_player_cheesepepstickside()
             if (rvsp > 0)
             {
                 stickdir = -1
-                state = (30 << 0)
+                state = states.cheesepepstickup
                 sprite_index = spr_cheesepepstickceiling
                 vsp = 0
                 hsp = (xscale * movespeed)
             }
             else
             {
-                state = (24 << 0)
+                state = states.cheesepep
                 mask_index = spr_player_mask
                 sprite_index = spr_cheesepepidle
                 vsp = 0
@@ -182,7 +182,7 @@ function scr_player_cheesepepstickup()
     {
         sprite_index = spr_cheesepepstickside
         cheesepep_buffer = cheesepep_max
-        state = (29 << 0)
+        state = states.cheesepepstickside
         vsp = (move * movespeed)
     }
     if (input_buffer_jump < 8 && (!((place_meeting(x, (y + 1), obj_solid) && place_meeting(x, (y - 1), obj_solid)))))
@@ -194,14 +194,14 @@ function scr_player_cheesepepstickup()
                 y++
         }
         input_buffer_jump = 8
-        state = (24 << 0)
+        state = states.cheesepep
         cheesepep_buffer = 0
         vsp = 2
         hsp = (move * movespeed)
     }
     if ((!(place_meeting(x, (y - 1), obj_solid))) && (!(place_meeting(x, (y + 1), obj_solid))))
     {
-        state = (24 << 0)
+        state = states.cheesepep
         cheesepep_buffer = 0
         hsp = (move * movespeed)
     }
@@ -209,14 +209,14 @@ function scr_player_cheesepepstickup()
     {
         if (!(place_meeting(x, (y - (4 * stickdir)), obj_solid)))
         {
-            state = (24 << 0)
+            state = states.cheesepep
             cheesepep_buffer = 2
             hsp = (move * movespeed)
             sprite_index = spr_cheesepepidle
         }
         else
         {
-            state = (30 << 0)
+            state = states.cheesepepstickup
             stickdir *= -1
         }
     }
@@ -234,7 +234,7 @@ function scr_player_cheesepepstickup()
             y = old_y
             y += (16 * stickdir)
             cheesepep_buffer = cheesepep_max
-            state = (29 << 0)
+            state = states.cheesepepstickside
             sprite_index = spr_cheesepepstickside
             hsp = 0
             vsp = (move * movespeed)

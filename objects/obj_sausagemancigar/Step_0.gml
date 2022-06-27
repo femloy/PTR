@@ -16,7 +16,7 @@ if (ID.sprite_index == spr_sausageman_land)
     sprite_index = spr_cigar_land
 with (ID)
 {
-    if (state != (126 << 0) && state != (134 << 0) && state != (130 << 0) && state != (136 << 0))
+    if (state != states.idle && state != states.walk && state != states.turn && state != states.land)
     {
         cigarcreate = 0
         instance_destroy(other)

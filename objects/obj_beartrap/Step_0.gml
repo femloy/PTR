@@ -2,7 +2,7 @@ if (press >= 8 && drop == 0)
 {
     obj_player.image_index = 0
     obj_player.alarm[8] = 60
-    obj_player.state = (107 << 0)
+    obj_player.state = states.hurt
     drop = 1
     closed = 0
 }

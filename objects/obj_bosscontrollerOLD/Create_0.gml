@@ -1,22 +1,25 @@
 depth = (obj_drawcontroller.depth + 2)
 function get_player_hp()
 {
-    exit;
+	
 }
 
 player_hpmultiplier = 300
 player_hpbase = (player_hpmultiplier * 5)
 player_hpmax = player_hpbase
 player_hp = player_hpmax
+
 level_array[0] = "entrance"
 level_array[1] = "medieval"
 level_array[2] = "ruin"
 level_array[3] = "dungeon"
+
 toppin_count[0] = array_create(5, 0)
 toppin_count[1] = array_create(5, 0)
 toppin_count[2] = array_create(5, 0)
 toppin_count[3] = array_create(5, 0)
 toppin_count[4] = array_create(5, 0)
+
 maxminutes = 0
 maxseconds = 45
 round_count = 1
@@ -28,14 +31,17 @@ round_timer = round_timermax
 minutes = maxminutes
 seconds = maxseconds
 use_countdown = 1
+
 bossID = -4
-state = (144 << 0)
+state = states.arenaintro
 fade = 1
 fakedeath = 0
+
 extrarounds = 0
 extrarounds_count = 3
 startroundfunc = -4
 endroundfunc = -4
+
 supermax = 1000
 super = 0
 intro_buffer = 300
@@ -45,34 +51,40 @@ vsy = -400
 flamey = 0
 flash = 0
 flashed = 0
-vstitle = 1400
+
+vstitle = spr_vstitle
 playerspr = spr_vspeppino
-playersprshadow = 1404
+playersprshadow = spr_vspeppinoshadow
 bossspr = spr_vsnoise
-bosssprshadow = 1402
+bosssprshadow = spr_vsnoiseshadow
+
 round_ystart = 641
 round_y = round_ystart
 round_xstart = 480
 round_x = round_xstart
 bosstimer_x = 257
 bosstimer_y = 36
-bell_sprite = 2081
+
+bell_sprite = spr_bosstimer_bell
 bell_index = 0
 bell_buffer = 0
 bar_surface = -4
 barfill_x = 0
 bg_super_y = 0
+
 super_portrait_xstart = 201
 super_portrait_y = 300
 super_portrait_x_off = -190
 super_portrait_x = super_portrait_x_off
 super_portrait_state = 0
 super_portrait_index = 0
-portrait1_sprite = 1351
+
+portrait1_sprite = spr_pepinoHUD
 portrait1_index = 0
-portrait2_sprite = 1249
+portrait2_sprite = spr_noiseHUD_idle
 portrait2_index = 0
-portrait1_idle = 1351
-portrait1_hurt = 1332
-portrait2_idle = 1249
-portrait2_hurt = 1246
+
+portrait1_idle = spr_pepinoHUD
+portrait1_hurt = spr_pepinoHUDhurt
+portrait2_idle = spr_noiseHUD_idle
+portrait2_hurt = spr_noiseHUD_hurt

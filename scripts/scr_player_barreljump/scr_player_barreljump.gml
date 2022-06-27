@@ -25,7 +25,7 @@ function scr_player_barreljump()
         movespeed = Approach(movespeed, 0, 0.5)
     if grounded
     {
-        state = (113 << 0)
+        state = states.barrel
         sprite_index = spr_player_barrelland
         image_index = 0
         create_particle(x, y, particle.landcloud, 0)

@@ -1,13 +1,13 @@
-if (state != (138 << 0))
+if (state != states.stun)
 {
     if (!other.isgustavo)
     {
-        if (other.state != (121 << 0) or (!other.launched))
+        if (other.state != states.mach3 or (!other.launched))
         {
-            if (state != (206 << 0))
+            if (state != states.blockstance)
             {
                 sprite_index = spr_hamkuff_chain1
-                state = (206 << 0)
+                state = states.blockstance
                 playerid = other.id
             }
         }
@@ -17,15 +17,15 @@ if (state != (138 << 0))
             instance_destroy()
         }
     }
-    else if (other.brick && state != (206 << 0))
+    else if (other.brick && state != states.blockstance)
     {
         other.brick = 0
-        state = (206 << 0)
+        state = states.blockstance
         sprite_index = spr_hamkuff_chain1
-        state = (206 << 0)
+        state = states.blockstance
         with (other)
         {
-            state = (196 << 0)
+            state = states.ratmounthurt
             xscale = (-other.image_xscale)
             vsp = -10
         }
@@ -36,7 +36,7 @@ if (state != (138 << 0))
             other.playerid = id
         }
     }
-    else if (other.state == (259 << 0))
+    else if (other.state == states.ratmountpunch)
     {
         scr_soundeffect(sfx_punch)
         instance_destroy()
@@ -45,7 +45,7 @@ if (state != (138 << 0))
     {
         with (other)
         {
-            state = (196 << 0)
+            state = states.ratmounthurt
             xscale = other.image_xscale
             vsp = -10
         }

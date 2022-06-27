@@ -2,9 +2,9 @@ function scr_player_parry()
 {
     if (image_index > (image_number - 1))
     {
-        state = (0 << 0)
+        state = states.normal
         if tauntstoredisgustavo
-            state = (191 << 0)
+            state = states.ratmount
     }
     if (!audio_is_playing(sfx_parry))
         scr_soundeffect(sfx_parry)
@@ -21,7 +21,7 @@ function scr_player_parry()
         var parry_threshold = 64
         with (obj_baddie)
         {
-            if (distance_to_object(other) < parry_threshold && state != (137 << 0) && state != (4 << 0) && state != (138 << 0) && parryable && (!((state == (138 << 0) && thrown == true))))
+            if (distance_to_object(other) < parry_threshold && state != states.hit && state != states.grabbed && state != states.stun && parryable && (!((state == states.stun && thrown == true))))
             {
                 notification_push(notification_type.unknown_value1, [id, object_index, room])
                 obj_player1.xscale = (-image_xscale)
@@ -41,7 +41,7 @@ function scr_player_parry()
                 mach3destroy = 1
                 instance_create(x, y, obj_parryeffect)
                 alarm[3] = 1
-                state = (137 << 0)
+                state = states.hit
                 image_xscale = (-obj_player1.xscale)
                 instance_create(x, y, obj_slapstar)
                 instance_create(x, y, obj_slapstar)

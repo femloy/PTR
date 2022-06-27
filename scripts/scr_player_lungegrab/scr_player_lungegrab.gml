@@ -9,14 +9,14 @@ function scr_player_lungegrab()
         if _bump
         {
             jumpstop = 1
-            state = (92 << 0)
+            state = states.jump
             vsp = -4
             sprite_index = spr_suplexbump
             instance_create((x + (xscale * 10)), (y + 10), obj_bumpeffect)
         }
     }
     if (floor(image_index) == (image_number - 1))
-        state = (0 << 0)
+        state = states.normal
     exit;
 }
 

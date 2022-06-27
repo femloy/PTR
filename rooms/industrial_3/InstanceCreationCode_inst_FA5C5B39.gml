@@ -1,1 +1,1 @@
-chosenstate = (23 << 0)
+chosenstate = states.slap

@@ -1,7 +1,7 @@
 dir = 1
 collisioned = 0
 targetplayer = -4
-state = (0 << 0)
+state = states.normal
 offset = 200
 block_inst = -4
 targetDoor = "A"

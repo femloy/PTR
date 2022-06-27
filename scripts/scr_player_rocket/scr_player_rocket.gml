@@ -36,7 +36,7 @@ function scr_player_rocket()
     if key_jump
     {
         dir = xscale
-        state = (104 << 0)
+        state = states.mach2
         sprite_index = spr_mach2jump
         jumpstop = 0
         vsp = -11
@@ -62,7 +62,7 @@ function scr_player_rocket()
         move = (key_left + key_right)
         if (move != 0 && move != xscale && sprite_index != spr_rocketstart)
         {
-            state = (185 << 0)
+            state = states.rocketslide
             scr_soundeffect(sfx_machslideboost)
             sprite_index = spr_player_rocketslide
             image_index = 0
@@ -93,7 +93,7 @@ function scr_player_rocket()
             }
         }
         flash = 0
-        state = (106 << 0)
+        state = states.bump
         hsp = (-3.5 * xscale)
         vsp = -6
         mach2 = 0

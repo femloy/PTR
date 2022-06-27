@@ -14,10 +14,10 @@ function scr_player_tackle()
     if (sprite_index != spr_golfswing)
     {
         if (grounded && vsp > 0.5)
-            state = (0 << 0)
+            state = states.normal
     }
     else if (floor(image_index) == (image_number - 1))
-        state = (0 << 0)
+        state = states.normal
     if (floor(image_index) != (image_number - 1))
         image_speed = 0.35
     else

@@ -31,7 +31,7 @@ function scr_player_mach2()
     var mortjump = 0
     if (key_jump && global.mort == 1 && sprite_index != spr_mortdoublejump && (!grounded) && (!skateboarding))
     {
-        state = (92 << 0)
+        state = states.jump
         repeat (6)
             create_debris(x, y, spr_feather)
         scr_soundeffect(sfx_woosh)
@@ -88,7 +88,7 @@ function scr_player_mach2()
         if (abs(hsp) >= 12 && skateboarding == 0 && sprite_index != spr_suplexdash)
         {
             machhitAnim = 0
-            state = (121 << 0)
+            state = states.mach3
             flash = 1
             if (sprite_index != spr_rollgetup)
                 sprite_index = spr_mach4
@@ -103,12 +103,12 @@ function scr_player_mach2()
         wallspeed = movespeed
         if (vsp > 0)
             wallspeed -= vsp
-        state = (37 << 0)
+        state = states.climbwall
     }
     if ((!grounded) && place_meeting((x + sign(hsp)), y, obj_climbablewall) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_metalblock))))
     {
         wallspeed = movespeed
-        state = (37 << 0)
+        state = states.climbwall
     }
     if ((!instance_exists(dashcloudid)) && grounded)
     {
@@ -139,7 +139,7 @@ function scr_player_mach2()
         particle_set_scale(particle.jumpdust, xscale, 1)
         create_particle(x, y, particle.jumpdust, 0)
         flash = 0
-        state = (5 << 0)
+        state = states.tumble
         vsp = 10
         image_index = 0
         if (!grounded)
@@ -151,7 +151,7 @@ function scr_player_mach2()
     }
     if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))) && character == "S" && grounded)
     {
-        state = (42 << 0)
+        state = states.handstandjump
         movespeed = 0
     }
     if (scr_solid((x + xscale), y) && (!scr_slope()) && (scr_solid_slope((x + sign(hsp)), y) or place_meeting((x + sign(hsp)), y, obj_solid)) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && (!(place_meeting((x + sign(hsp)), y, obj_climbablewall))) && grounded)
@@ -163,7 +163,7 @@ function scr_player_mach2()
             var _bump = ledge_bump((vsp >= 0 ? 32 : 22))
             if _bump
             {
-                state = (106 << 0)
+                state = states.bump
                 image_index = 0
                 sprite_index = spr_player_wallsplat
             }
@@ -172,17 +172,17 @@ function scr_player_mach2()
     if (((!key_attack) && movespeed >= 8 && grounded && skateboarding == 0) or (character == "S" && move == 0 && grounded))
     {
         image_index = 0
-        state = (105 << 0)
+        state = states.machslide
         scr_soundeffect(sfx_break)
         sprite_index = spr_machslidestart
     }
     else if ((!key_attack) && movespeed < 8 && grounded && skateboarding == 0)
-        state = (0 << 0)
+        state = states.normal
     if (move == (-xscale) && movespeed >= 8 && grounded && skateboarding == 0)
     {
         scr_soundeffect(sfx_machslideboost)
         image_index = 0
-        state = (105 << 0)
+        state = states.machslide
         sprite_index = spr_machslideboost
     }
     else if (move == (-xscale) && movespeed < 8 && grounded && skateboarding == 0)
@@ -194,13 +194,13 @@ function scr_player_mach2()
         clowntimer--
     if (clowntimer <= 0 && skateboarding == 1)
     {
-        state = (0 << 0)
+        state = states.normal
         instance_create(x, y, obj_genericpoofeffect)
     }
     if (key_slap2 && character == "V")
     {
         vsp = -5
-        state = (1 << 0)
+        state = states.revolver
         image_index = 0
         sprite_index = spr_playerV_airrevolver
         image_index = 0
@@ -214,7 +214,7 @@ function scr_player_mach2()
     if (key_shoot2 && character == "V" && (!instance_exists(dynamite_inst)))
     {
         vsp = -5
-        state = (2 << 0)
+        state = states.dynamite
         image_index = 0
         sprite_index = spr_playerV_dynamitethrow
         with (instance_create(x, y, obj_dynamite))
@@ -241,7 +241,7 @@ function scr_player_mach2()
         suplexmove = 1
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, false)
         sfx_gain(suplexdashsnd)
-        state = (42 << 0)
+        state = states.handstandjump
         if (movespeed < 5)
             movespeed = 5
         image_index = 0
@@ -253,7 +253,7 @@ function scr_player_mach2()
     {
         randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch])
         image_index = 0
-        state = (43 << 0)
+        state = states.lungeattack
     }
     exit;
 }

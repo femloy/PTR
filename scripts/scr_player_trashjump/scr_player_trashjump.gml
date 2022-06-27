@@ -27,7 +27,7 @@ function scr_player_trashjump()
         dir = xscale
         movespeed += 3
         instance_create(x, y, obj_jumpdust)
-        state = (211 << 0)
+        state = states.trashroll
     }
     exit;
 }

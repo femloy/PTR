@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Tilesets",
-    "path": "folders/Sprites/Tilesets.yy",
+    "name": "Medieval",
+    "path": "folders/Sprites/Tilesets/Medieval.yy",
   },
   "resourceVersion": "1.0",
   "name": "tilespr_tile_medievalinterior",

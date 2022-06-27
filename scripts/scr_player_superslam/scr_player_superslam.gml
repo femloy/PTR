@@ -41,7 +41,7 @@ function scr_player_superslam()
     if (sprite_index == spr_piledriverland && floor(image_index) == (image_number - 1))
     {
         vsp = -6
-        state = (92 << 0)
+        state = states.jump
     }
     if (move != 0)
     {

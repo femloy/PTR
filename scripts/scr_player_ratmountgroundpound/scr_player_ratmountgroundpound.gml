@@ -11,7 +11,7 @@ function scr_player_ratmountgroundpound()
         input_buffer_jump = 0
     if (brick == 1)
     {
-        state = (192 << 0)
+        state = states.ratmountjump
         sprite_index = spr_player_ratmountfall
     }
     if (gustavokicktimer > 0)
@@ -72,7 +72,7 @@ function scr_player_ratmountgroundpound()
                 {
                     if (shakestun && grounded && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0 && (!invincible) && groundpound)
                     {
-                        state = (138 << 0)
+                        state = states.stun
                         if (stunned < 60)
                             stunned = 60
                         vsp = -11
@@ -95,7 +95,7 @@ function scr_player_ratmountgroundpound()
     if (sprite_index == spr_lonegustavo_groundpoundland && floor(image_index) == (image_number - 1))
     {
         sprite_index = spr_lonegustavo_idle
-        state = (191 << 0)
+        state = states.ratmount
     }
     if ((sprite_index == spr_lonegustavo_kick or sprite_index == spr_lonegustavo_jumpstart) && floor(image_index) == (image_number - 1))
     {
@@ -103,7 +103,7 @@ function scr_player_ratmountgroundpound()
             sprite_index = spr_player_ratmountgroundpoundfall
         else
             sprite_index = spr_lonegustavo_jump
-        state = (191 << 0)
+        state = states.ratmount
     }
     image_speed = 0.35
     if (punch_afterimage > 0)

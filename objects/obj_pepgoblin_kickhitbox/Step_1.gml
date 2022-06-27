@@ -1,2 +1,2 @@
-if ((!instance_exists(baddieID)) or baddieID.state != (129 << 0))
+if ((!instance_exists(baddieID)) or baddieID.state != states.pizzagoblinthrow)
     instance_destroy()

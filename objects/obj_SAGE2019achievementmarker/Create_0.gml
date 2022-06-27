@@ -9,7 +9,8 @@ knight = ini_read_string("SAGE2019", "knight", 0)
 toppin = ini_read_string("SAGE2019", "toppin", 0)
 treasure = ini_read_string("SAGE2019", "treasure", 0)
 ini_close()
+
 picy = 640
 up = 0
-sprite = 2071
+sprite = bg_SAGEcombo10
 depth = -9999

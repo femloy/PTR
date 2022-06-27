@@ -1,6 +1,6 @@
 func = function(argument0)
 {
-    if ((!active) && argument0.state == (84 << 0))
+    if ((!active) && argument0.state == states.backbreaker)
     {
         active = 1
         obj_secretmanager.totems++

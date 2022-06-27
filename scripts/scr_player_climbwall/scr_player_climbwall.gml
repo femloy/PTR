@@ -24,7 +24,7 @@ function scr_player_climbwall()
                 sprite_index = spr_player_clingwall
             if ((!key_attack) && (!skateboarding))
             {
-                state = (0 << 0)
+                state = states.normal
                 movespeed = 0
                 railmovespeed = 6
                 raildir = (-xscale)
@@ -37,12 +37,12 @@ function scr_player_climbwall()
                     sprite_index = spr_superjumpland
                     scr_soundeffect(sfx_groundpound)
                     image_index = 0
-                    state = (123 << 0)
+                    state = states.Sjumpland
                     machhitAnim = 0
                 }
                 else if (!key_jump)
                 {
-                    state = (106 << 0)
+                    state = states.bump
                     hsp = (-2.5 * xscale)
                     vsp = -3
                     mach2 = 0
@@ -59,12 +59,12 @@ function scr_player_climbwall()
                     wallspeed = 6
                 if ((wallspeed >= 6 && wallspeed < 12) or skateboarding)
                 {
-                    state = (104 << 0)
+                    state = states.mach2
                     movespeed = wallspeed
                 }
                 else if (wallspeed >= 12)
                 {
-                    state = (121 << 0)
+                    state = states.mach3
                     sprite_index = spr_mach4
                     movespeed = wallspeed
                 }
@@ -75,7 +75,7 @@ function scr_player_climbwall()
             {
                 key_jump = 0
                 movespeed = 10
-                state = (104 << 0)
+                state = states.mach2
                 image_index = 0
                 sprite_index = spr_walljumpstart
                 if skateboarding
@@ -101,7 +101,7 @@ function scr_player_climbwall()
             sprite_index = spr_machclimbwall
             if (!key_attack)
             {
-                state = (0 << 0)
+                state = states.normal
                 movespeed = 0
             }
             if (scr_solid(x, (y - 1)) && (!(place_meeting(x, (y - 1), obj_destructibles))) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or scr_solid_slope((x + sign(hsp)), y)) && (!(place_meeting((x - sign(hsp)), y, obj_slope))))
@@ -109,7 +109,7 @@ function scr_player_climbwall()
                 sprite_index = spr_superjumpland
                 scr_soundeffect(sfx_groundpound)
                 image_index = 0
-                state = (123 << 0)
+                state = states.Sjumpland
                 machhitAnim = 0
             }
             if ((!(scr_solid((x + xscale), y))) && (!(place_meeting(x, y, obj_verticalhallway))))
@@ -117,17 +117,17 @@ function scr_player_climbwall()
                 instance_create(x, y, obj_jumpdust)
                 vsp = 0
                 if (movespeed >= 6)
-                    state = (104 << 0)
+                    state = states.mach2
                 if (movespeed >= 12)
                 {
-                    state = (121 << 0)
+                    state = states.mach3
                     sprite_index = spr_mach4
                 }
             }
             if key_jump
             {
                 movespeed = 8
-                state = (104 << 0)
+                state = states.mach2
                 image_index = 0
                 sprite_index = spr_walljumpstart
                 vsp = -11
@@ -136,7 +136,7 @@ function scr_player_climbwall()
             }
             if ((grounded && wallspeed <= 0) or wallspeed <= 0)
             {
-                state = (92 << 0)
+                state = states.jump
                 sprite_index = spr_fall
             }
             image_speed = 0.6
@@ -155,14 +155,14 @@ function scr_player_climbwall()
             if (floor(image_index) == (image_number - 1) or (!key_jump2))
             {
                 vsp = -15
-                state = (92 << 0)
+                state = states.jump
                 sprite_index = spr_playerN_jump
                 image_index = 0
             }
             if key_jump
             {
                 vsp = -15
-                state = (92 << 0)
+                state = states.jump
                 sprite_index = spr_playerN_jump
                 image_index = 0
             }

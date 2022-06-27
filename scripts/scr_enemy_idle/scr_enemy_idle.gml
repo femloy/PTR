@@ -8,10 +8,10 @@ function scr_enemy_idle()
     }
     if ((vsp >= 0 or object_index == obj_miniufo or object_index == obj_kentukybomber) && sprite_index == scaredspr && scaredbuffer <= 0)
     {
-        state = (134 << 0)
+        state = states.walk
         sprite_index = walkspr
         if (object_index == obj_treasureguy)
-            state = (141 << 0)
+            state = states.chase
         if (object_index == obj_pickle && attacking)
         {
             attacking = 0
@@ -23,33 +23,33 @@ function scr_enemy_idle()
     if (sprite_index == spr_tank_spawnenemy && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr
-        state = (134 << 0)
+        state = states.walk
     }
     if (sprite_index == spr_forknight_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr
-        state = (134 << 0)
+        state = states.walk
     }
     if (sprite_index == spr_ghostknight_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr
-        state = (134 << 0)
+        state = states.walk
     }
     if (sprite_index == spr_pizzaslug_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr
         image_xscale *= -1
-        state = (134 << 0)
+        state = states.walk
     }
     if (sprite_index == spr_indiancheese_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr
-        state = (134 << 0)
+        state = states.walk
     }
     if (sprite_index == spr_tank_turn && floor(image_index) == (image_number - 1))
     {
         sprite_index = walkspr
-        state = (134 << 0)
+        state = states.walk
     }
     if place_meeting(x, (y + 1), obj_railparent)
     {

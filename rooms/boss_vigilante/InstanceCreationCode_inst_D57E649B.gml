@@ -1,1 +1,1 @@
-attack = (4 << 0)
+attack = states.grabbed

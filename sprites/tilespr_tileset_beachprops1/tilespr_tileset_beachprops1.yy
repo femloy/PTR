@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 504,
-  "height": 540,
+  "width": 736,
+  "height": 320,
   "textureGroupId": {
     "name": "beachgroup",
     "path": "texturegroups/beachgroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b5584fdb-f712-47ab-9f50-b99bb72abeb5","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b5584fdb-f712-47ab-9f50-b99bb72abeb5","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"LayerId":{"name":"9a6b03e9-f2a9-435c-9860-d2c61962ae72","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tileset_beachprops1","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"resourceVersion":"1.0","name":"b5584fdb-f712-47ab-9f50-b99bb72abeb5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"6e2a321d-9900-43a7-a30e-3bfdd5395952","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"6e2a321d-9900-43a7-a30e-3bfdd5395952","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"LayerId":{"name":"91e23140-d5d7-4e3c-9c17-c3853183e06b","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tileset_beachprops1","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"resourceVersion":"1.0","name":"6e2a321d-9900-43a7-a30e-3bfdd5395952","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tileset_beachprops1","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"d3287045-34db-4be3-a0fb-065b0030e644","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b5584fdb-f712-47ab-9f50-b99bb72abeb5","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"769834d7-2e36-462a-a864-0559cec20ce3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6e2a321d-9900-43a7-a30e-3bfdd5395952","path":"sprites/tilespr_tileset_beachprops1/tilespr_tileset_beachprops1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9a6b03e9-f2a9-435c-9860-d2c61962ae72","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"91e23140-d5d7-4e3c-9c17-c3853183e06b","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

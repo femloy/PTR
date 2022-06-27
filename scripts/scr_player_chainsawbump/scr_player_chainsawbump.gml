@@ -45,7 +45,7 @@ function scr_player_chainsawbump()
     {
         jumpstop = 0
         vsp = -11
-        state = (104 << 0)
+        state = states.mach2
         sprite_index = spr_mach2jump
     }
     if (!instance_exists(obj_chainsawpuff))
@@ -53,12 +53,12 @@ function scr_player_chainsawbump()
     if (floor(image_index) == (image_number - 1) && (sprite_index == spr_player_chainsawhit or sprite_index == spr_player_chainsawdash))
     {
         if key_attack
-            state = (104 << 0)
+            state = states.mach2
         else
-            state = (0 << 0)
+            state = states.normal
     }
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_chainsawhitwall)
-        state = (0 << 0)
+        state = states.normal
     if (sprite_index == spr_player_chainsawdash)
         image_speed = (0.4 + (movespeed * 0.01))
     else

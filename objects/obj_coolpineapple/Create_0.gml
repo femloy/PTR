@@ -2,7 +2,7 @@ scr_initenemy()
 taunt_count = 0
 taunt_max = 40
 taunt_storedgrav = 0.5
-taunt_storedstate = (134 << 0)
+taunt_storedstate = states.walk
 taunt_storedmovespeed = 1
 taunt_storedhsp = 0
 cooldown_max = 50
@@ -20,7 +20,7 @@ breakdanceinst = -4
 grav = 0.5
 hsp = 0
 vsp = 0
-state = (134 << 0)
+state = states.walk
 stunned = 0
 alarm[0] = 150
 roaming = 1

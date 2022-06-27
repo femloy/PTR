@@ -1,2 +1,2 @@
-if (state == (80 << 0))
+if (state == states.punch)
     scr_hurtplayer(other)

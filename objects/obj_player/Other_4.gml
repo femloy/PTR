@@ -20,7 +20,7 @@ if global.levelreset
     scr_playerreset()
     global.levelreset = 0
 }
-if (state == (95 << 0) && global.coop == true && (!(place_meeting(x, y, obj_exitgate))))
+if (state == states.comingoutdoor && global.coop == true && (!(place_meeting(x, y, obj_exitgate))))
 {
     if (object_index == obj_player1 && obj_player1.spotlight == 0)
         visible = false
@@ -35,13 +35,13 @@ if (global.coop == true)
     if (!instance_exists(obj_coopflag))
         instance_create(x, y, obj_coopflag)
 }
-if (state == (79 << 0))
-    state = (0 << 0)
+if (state == states.grab)
+    state = states.normal
 if (place_meeting(x, y, obj_boxofpizza) or place_meeting(x, (y - 1), obj_boxofpizza))
 {
     box = 1
     hallway = 0
-    state = (100 << 0)
+    state = states.crouch
 }
 if (object_index != obj_player2 or global.coop == true)
 {
@@ -126,9 +126,9 @@ if verticalhallway
             y = (_vinst.bbox_bottom + 32)
         else
             y = (_vinst.bbox_top - 78)
-        if (verticalstate == (37 << 0))
-            state = (37 << 0)
-        if (state == (37 << 0))
+        if (verticalstate == states.climbwall)
+            state = states.climbwall
+        if (state == states.climbwall)
         {
             x = round(x)
             var i = 0
@@ -148,7 +148,7 @@ if verticalhallway
     }
     y += (vhallwaydirection * 20)
     y = floor(y)
-    verticalstate = (0 << 0)
+    verticalstate = states.normal
 }
 if (character == "M" && place_meeting(x, y, obj_boxofpizza))
 {
@@ -158,7 +158,7 @@ if (character == "M" && place_meeting(x, y, obj_boxofpizza))
         y -= _inst.image_yscale
     }
 }
-if (state == (119 << 0))
+if (state == states.taxi)
 {
     x = obj_stopsign.x
     y = obj_stopsign.y

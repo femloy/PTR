@@ -10,7 +10,7 @@ function scr_player_ratmountskid()
     ratmount_movespeed = 8
     image_speed = 0.4
     if (movespeed <= 0)
-        state = (191 << 0)
+        state = states.ratmount
     if (key_jump && (!key_up))
         input_buffer_jump = 0
     if (input_buffer_jump < 8 && grounded && sprite_index != spr_player_ratmountswallow)
@@ -27,7 +27,7 @@ function scr_player_ratmountskid()
         image_index = 0
         movespeed = hsp
         jumpAnim = 1
-        state = (192 << 0)
+        state = states.ratmountjump
         vsp = -11
         jumpstop = 0
     }
@@ -36,7 +36,7 @@ function scr_player_ratmountskid()
     else if (key_slap2 && (!brick))
     {
         ratmountpunchtimer = 25
-        state = (259 << 0)
+        state = states.ratmountpunch
         image_index = 0
         if (move != 0)
             xscale = move

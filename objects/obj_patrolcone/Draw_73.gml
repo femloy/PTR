@@ -1,9 +1,9 @@
 with (baddieID)
 {
-    if (alarm[5] != -1 or state == (80 << 0))
+    if (alarm[5] != -1 or state == states.punch)
     {
         var p = (patroltimermax - patroltimer)
-        if (state == (80 << 0))
+        if (state == states.punch)
             p++
         var t = ((p * 3) + other.patrolalert_index)
         draw_sprite(spr_patrolalert_number, t, x, (y - 100))

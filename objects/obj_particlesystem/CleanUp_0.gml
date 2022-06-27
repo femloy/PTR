@@ -1,5 +1,5 @@
 part_emitter_destroy(global.particle_system, global.part_emitter)
-for (var i = (0 << 0); i < (16 << 0); i++)
+for (var i = particle.enum_start; i < particle.enum_length; i++)
 {
     var k = ds_map_find_value(global.part_map, i)
     if (!is_undefined(k))

@@ -2,15 +2,15 @@ if place_meeting(x, (y - 1), obj_player)
 {
     with (obj_player)
     {
-        if (state != (186 << 0) && state != (210 << 0) && state != (209 << 0) && state != (121 << 0) && state != (147 << 0) && sprite_index != spr_mach3boost)
+        if (state != states.gotoplayer && state != states.trashjump && state != states.trashjumpprep && state != states.mach3 && state != states.parry && sprite_index != spr_mach3boost)
         {
             if place_meeting(x, (y + 1), other)
             {
-                if (state != (211 << 0))
+                if (state != states.trashroll)
                 {
                     scr_losepoints()
                     image_index = 0
-                    state = (9 << 0)
+                    state = states.fireass
                     movespeed = hsp
                     vsp = -14
                     instance_create(x, (y + 20), obj_piranneapplewater)

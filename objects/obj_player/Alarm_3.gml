@@ -1,2 +1,2 @@
-state = (0 << 0)
+state = states.normal
 hurtbounce = 0

@@ -1,6 +1,6 @@
 with (other)
 {
-    if (state != (211 << 0) && state != (210 << 0) && state != (21 << 0))
+    if (state != states.trashroll && state != states.trashjump && state != states.cheeseball)
     {
         sprite_index = spr_slipbanan1
         other.drop = 1
@@ -10,7 +10,7 @@ with (other)
             movespeed = 14
         hsp = (movespeed * xscale)
         image_index = 0
-        state = (165 << 0)
+        state = states.slipbanan
     }
     instance_destroy(other)
 }

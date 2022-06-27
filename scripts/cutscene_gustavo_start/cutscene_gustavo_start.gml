@@ -6,13 +6,13 @@ function cutscene_gustavo_start()
         if (id < _id)
             instance_destroy()
     }
-    if ((!instance_exists(obj_fadeout)) && obj_player1.state != (119 << 0) && obj_player1.state != (95 << 0) && obj_player1.state != (107 << 0))
+    if ((!instance_exists(obj_fadeout)) && obj_player1.state != states.taxi && obj_player1.state != states.comingoutdoor && obj_player1.state != states.hurt)
     {
         with (obj_player1)
         {
             visible = true
             image_alpha = 1
-            state = (146 << 0)
+            state = states.actor
             sprite_index = spr_idle
             image_speed = 0.35
             xscale = 1
@@ -21,7 +21,7 @@ function cutscene_gustavo_start()
         }
         with (obj_gustavo)
         {
-            state = (146 << 0)
+            state = states.actor
             if (!global.failcutscene)
                 sprite_index = spr_gustavo_makepizza
             else

@@ -52,7 +52,7 @@ function scr_player_boots()
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerV_bootsland)
         sprite_index = spr_playerV_bootsidle
     if (!key_attack)
-        state = (0 << 0)
+        state = states.normal
     if grounded
     {
         if (move != 0)
@@ -87,11 +87,11 @@ function scr_player_boots()
         grav = 0.5
         sprite_index = spr_playerV_divekickstart
         machhitAnim = 0
-        state = (102 << 0)
+        state = states.crouchslide
     }
     if (key_shoot2 && character == "V")
     {
-        state = (2 << 0)
+        state = states.dynamite
         image_index = 0
         sprite_index = spr_playerV_dynamitethrow
         with (instance_create(x, y, obj_dynamite))
@@ -103,7 +103,7 @@ function scr_player_boots()
     }
     if (key_slap2 && character == "V")
     {
-        state = (1 << 0)
+        state = states.revolver
         image_index = 0
         sprite_index = spr_playerV_revolverstart
         vsp = -5

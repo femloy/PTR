@@ -36,7 +36,7 @@ function scr_player_boxxedpepjump()
         movespeed = Approach(movespeed, 0, 0.25)
     if grounded
     {
-        state = (33 << 0)
+        state = states.boxxedpep
         sprite_index = spr_boxxedpepidle
     }
     if (key_jump && boxxedpepjump > 4)
@@ -52,7 +52,7 @@ function scr_player_boxxedpepjump()
                 sprite_index = spr_cloudeffect
             }
         }
-        state = (35 << 0)
+        state = states.boxxedpepjump
         boxxedpepjump *= 0.9
         vsp = (-boxxedpepjump)
     }
@@ -60,7 +60,7 @@ function scr_player_boxxedpepjump()
         sprite_index = spr_boxxedpepair
     if key_slap2
     {
-        state = (34 << 0)
+        state = states.boxxedpepspin
         sprite_index = spr_boxxedpep_spin
         image_index = 0
     }

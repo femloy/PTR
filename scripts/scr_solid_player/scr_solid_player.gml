@@ -15,11 +15,11 @@ function scr_solid_player(argument0, argument1)
             switch b.object_index
             {
                 case obj_ghostwall:
-                    if (state != (16 << 0))
+                    if (state != states.ghost)
                         _collided = 1
                     break
                 case 18:
-                    if (state != (121 << 0) && (state != (105 << 0) or sprite_index != spr_mach3boost) && (state != (61 << 0) or tauntstoredstate != (121 << 0)))
+                    if (state != states.mach3 && (state != states.machslide or sprite_index != spr_mach3boost) && (state != states.chainsaw or tauntstoredstate != states.mach3))
                         _collided = 1
                     break
                 default:
@@ -42,7 +42,7 @@ function scr_solid_player(argument0, argument1)
             return true;
         }
     }
-    if (y > old_y && state != (93 << 0) && place_meeting(x, y, obj_platform))
+    if (y > old_y && state != states.ladder && place_meeting(x, y, obj_platform))
     {
         num = instance_place_list(x, y, 504, global.instancelist, 0)
         _collided = 0
@@ -62,7 +62,7 @@ function scr_solid_player(argument0, argument1)
     }
     if (y > old_y && (bbox_bottom % 16) == 0 && (!(place_meeting(x, old_y, obj_grindrail))) && place_meeting(x, y, obj_grindrail))
     {
-        if (state == (78 << 0))
+        if (state == states.grind)
         {
             x = old_x
             y = old_y
@@ -77,7 +77,7 @@ function scr_solid_player(argument0, argument1)
     }
     if check_slope_player(obj_grindrailslope)
     {
-        if (state == (78 << 0))
+        if (state == states.grind)
         {
             x = old_x
             y = old_y

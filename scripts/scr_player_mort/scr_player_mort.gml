@@ -50,13 +50,13 @@ function scr_player_mort()
     }
     if (!grounded)
     {
-        state = (12 << 0)
+        state = states.mortjump
         sprite_index = spr_player_mortjump
     }
     else if (input_buffer_jump < 8)
     {
         input_buffer_jump = 0
-        state = (12 << 0)
+        state = states.mortjump
         doublejump = 0
         vsp = -11
         sprite_index = spr_player_mortjumpstart
@@ -72,7 +72,7 @@ function mort_attack()
 {
     if key_slap2
     {
-        state = (13 << 0)
+        state = states.mortattack
         sprite_index = spr_player_mortattackfront
         image_index = 0
         if (move != 0)

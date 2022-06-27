@@ -3,7 +3,7 @@ function cutscene_superpinball_start()
     var _finish = 0
     with (obj_player1)
     {
-        if (state != (112 << 0) && state != (95 << 0))
+        if (state != states.door && state != states.comingoutdoor)
             _finish = 1
     }
     if _finish
@@ -12,7 +12,7 @@ function cutscene_superpinball_start()
         {
             if check_player_coop()
             {
-                state = (146 << 0)
+                state = states.actor
                 sprite_index = spr_idle
             }
         }
@@ -92,7 +92,7 @@ function cutscene_superpinball_end()
     with (obj_player)
     {
         if check_player_coop()
-            state = (0 << 0)
+            state = states.normal
     }
     global.pubcutscene = 1
     quick_ini_write_real(get_savefile_ini(), "cutscene", "pub", 1)

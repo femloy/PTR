@@ -17,9 +17,9 @@ function scr_player_shotgunshoot()
     if (floor(image_index) == (image_number - 1))
     {
         if grounded
-            state = (0 << 0)
+            state = states.normal
         else
-            state = (92 << 0)
+            state = states.jump
         if (move == (-xscale))
         {
             xscale = move

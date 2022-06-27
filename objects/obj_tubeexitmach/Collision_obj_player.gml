@@ -1,12 +1,12 @@
 if (playerid > -1)
     exit;
-if (state != (0 << 0))
+if (state != states.normal)
     exit;
-if (other.state == (107 << 0))
+if (other.state == states.hurt)
     exit;
-if (other.state == (186 << 0))
+if (other.state == states.gotoplayer)
     exit;
-if (object_index != obj_tubeenter && other.state != (150 << 0))
+if (object_index != obj_tubeenter && other.state != states.tube)
     exit;
 var _offset_x = (32 * image_xscale)
 var _offset_y = (14 * image_yscale)
@@ -21,7 +21,7 @@ with (other)
         other.stored_spd = max(abs(hsp), abs(vsp))
         trace(other.stored_spd)
     }
-    state = (150 << 0)
+    state = states.tube
     hsp = 0
     movespeed = 0
     vsp = 0
@@ -38,7 +38,7 @@ if (floor(other.x) == (xstart + _offset_x) && floor(other.y) == (ystart + _offse
     image_index = 0
     playerid = other.id
     image_speed = 0.5
-    other.state = (150 << 0)
+    other.state = states.tube
     other.tube_vsp = 0
-    state = (150 << 0)
+    state = states.tube
 }

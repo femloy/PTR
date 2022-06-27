@@ -24,7 +24,7 @@ function scr_player_lungeattack()
         suplexmove = 1
         suplexdashsnd = audio_play_sound(sfx_suplexdash, 1, false)
         sfx_gain(suplexdashsnd)
-        state = (42 << 0)
+        state = states.handstandjump
         movespeed = 5
         image_index = 0
         flash = 1
@@ -33,7 +33,7 @@ function scr_player_lungeattack()
     var cancelindex = 4
     if (floor(image_index) > (image_number - 2) && (!hit_connected))
     {
-        if (state != (80 << 0) && input_attack_buffer > 0)
+        if (state != states.punch && input_attack_buffer > 0)
         {
             ds_list_clear(hitlist)
             hit_connected = 0
@@ -44,7 +44,7 @@ function scr_player_lungeattack()
                 if finisher
                     finisher_buffer += 15
                 input_attack_buffer = 0
-                state = (43 << 0)
+                state = states.lungeattack
                 randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch])
                 image_index = 0
             }
@@ -52,7 +52,7 @@ function scr_player_lungeattack()
     }
     if (floor(image_index) == (image_number - 1))
     {
-        state = (0 << 0)
+        state = states.normal
         ds_list_clear(hitlist)
         hit_connected = 0
     }
@@ -63,7 +63,7 @@ function scr_player_lungeattack()
             if (input_finisher_buffer > 0)
                 DoFinisher()
         }
-        if (state != (80 << 0) && input_attack_buffer > 0)
+        if (state != states.punch && input_attack_buffer > 0)
         {
             ds_list_clear(hitlist)
             hit_connected = 0
@@ -74,7 +74,7 @@ function scr_player_lungeattack()
                 if finisher
                     finisher_buffer += 15
                 input_attack_buffer = 0
-                state = (43 << 0)
+                state = states.lungeattack
                 randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch])
                 image_index = 0
             }
@@ -111,7 +111,7 @@ function DoFinisher()
     hit_connected = 0
     if key_up
     {
-        state = (80 << 0)
+        state = states.punch
         movespeed = 6
         image_index = 0
         sprite_index = spr_player_breakdanceuppercut
@@ -122,7 +122,7 @@ function DoFinisher()
     }
     else if ((key_left + key_right) == xscale)
     {
-        state = (80 << 0)
+        state = states.punch
         sprite_index = spr_player_lungehit
         image_index = 0
         movespeed = 14
@@ -136,14 +136,14 @@ function DoFinisher()
         sprite_index = spr_player_breakdance
         image_index = 0
         machhitAnim = 0
-        state = (5 << 0)
+        state = states.tumble
         movespeed = 4
-        state = (5 << 0)
+        state = states.tumble
         vsp = 10
     }
     else
     {
-        state = (80 << 0)
+        state = states.punch
         sprite_index = spr_player_lungehit
         image_index = 0
         movespeed = 14

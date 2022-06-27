@@ -1,1 +1,1 @@
-attack = (1 << 0)
+attack = states.revolver

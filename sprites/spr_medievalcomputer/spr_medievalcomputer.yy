@@ -73,8 +73,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Medieval",
-    "path": "folders/Sprites/Backgrounds/Medieval.yy",
+    "name": "Demo events",
+    "path": "folders/Sprites/Demo events.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_medievalcomputer",

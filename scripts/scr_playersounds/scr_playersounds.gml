@@ -2,40 +2,40 @@ function scr_playersounds()
 {
     with (obj_player)
     {
-        if (state == (103 << 0) && (!audio_is_playing(sfx_mach1)) && grounded)
+        if (state == states.mach1 && (!audio_is_playing(sfx_mach1)) && grounded)
         {
             mach1snd = audio_play_sound(sfx_mach1, 1, false)
             sfx_gain(mach1snd)
         }
-        else if (state != (103 << 0) or (!grounded) or move == (-xscale))
+        else if (state != states.mach1 or (!grounded) or move == (-xscale))
             audio_stop_sound(mach1snd)
-        if ((sprite_index == spr_mach or state == (37 << 0)) && (!audio_is_playing(sfx_mach2)))
+        if ((sprite_index == spr_mach or state == states.climbwall) && (!audio_is_playing(sfx_mach2)))
         {
             mach2snd = audio_play_sound(sfx_mach2, 1, false)
             sfx_gain(mach2snd)
         }
-        else if (sprite_index != spr_mach && state != (37 << 0))
+        else if (sprite_index != spr_mach && state != states.climbwall)
             audio_stop_sound(mach2snd)
-        if (state == (184 << 0) && (!audio_is_playing(sfx_mach4)))
+        if (state == states.rocket && (!audio_is_playing(sfx_mach4)))
         {
             rocketsnd = audio_play_sound(sfx_mach4, 1, false)
             sfx_gain(rocketsnd)
         }
-        else if (state != (184 << 0))
+        else if (state != states.rocket)
             audio_stop_sound(rocketsnd)
-        if ((state == (121 << 0) or sprite_index == spr_mach3boost) && sprite_index != spr_crazyrun && (!audio_is_playing(sfx_mach3)))
+        if ((state == states.mach3 or sprite_index == spr_mach3boost) && sprite_index != spr_crazyrun && (!audio_is_playing(sfx_mach3)))
         {
             mach3snd = audio_play_sound(sfx_mach3, 1, false)
             sfx_gain(mach3snd)
         }
-        else if ((state != (121 << 0) && sprite_index != spr_mach3boost) or sprite_index == spr_crazyrun)
+        else if ((state != states.mach3 && sprite_index != spr_mach3boost) or sprite_index == spr_crazyrun)
             audio_stop_sound(mach3snd)
-        if (state == (38 << 0) && grounded && (!audio_is_playing(sfx_knightslide)))
+        if (state == states.knightpepslopes && grounded && (!audio_is_playing(sfx_knightslide)))
         {
             knightslide = audio_play_sound(sfx_knightslide, 1, false)
             sfx_gain(knightslide)
         }
-        else if ((state != (38 << 0) or (!grounded)) && audio_is_playing(sfx_knightslide))
+        else if ((state != states.knightpepslopes or (!grounded)) && audio_is_playing(sfx_knightslide))
             audio_stop_sound(knightslide)
         if ((sprite_index == spr_bombpeprun or sprite_index == spr_bombpeprunabouttoexplode) && (!audio_is_playing(sfx_bombpep1)))
         {
@@ -51,9 +51,9 @@ function scr_playersounds()
         }
         else if (sprite_index != spr_crazyrun)
             audio_stop_sound(mach4snd)
-        if (state != (99 << 0) && audio_is_playing(superjumpprepsnd))
+        if (state != states.Sjumpprep && audio_is_playing(superjumpprepsnd))
             audio_stop_sound(superjumpprepsnd)
-        if (state != (99 << 0) && audio_is_playing(superjumpholdsnd))
+        if (state != states.Sjumpprep && audio_is_playing(superjumpholdsnd))
             audio_stop_sound(superjumpholdsnd)
         if (sprite_index == spr_tumblestart && (!audio_is_playing(sfx_tumble1)) && floor(image_index) < 11)
             tumble1snd = audio_play_sound(sfx_tumble1, 1, false)
@@ -69,13 +69,13 @@ function scr_playersounds()
             tumble3snd = audio_play_sound(sfx_tumble3, 1, false)
             sfx_gain(tumble3snd)
         }
-        if (state != (5 << 0) && sprite_index != spr_machroll)
+        if (state != states.tumble && sprite_index != spr_machroll)
         {
             audio_stop_sound(tumble1snd)
             audio_stop_sound(tumble2snd)
             audio_stop_sound(tumble3snd)
         }
-        if (audio_is_playing(suplexdashsnd) && state != (42 << 0))
+        if (audio_is_playing(suplexdashsnd) && state != states.handstandjump)
             audio_stop_sound(suplexdashsnd)
     }
     exit;

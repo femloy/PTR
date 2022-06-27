@@ -2,7 +2,7 @@ targetplayer = instance_nearest(x, y, obj_player)
 image_speed = 0.35
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         hand_xscale = (drawhandx < x ? 1 : -1)
         idlebuffer = 0
         spr_hand = spr_mrpinch_hand1
@@ -36,31 +36,31 @@ switch state
             {
                 tauntstoredstate = state
                 tauntstoredsprite = sprite_index
-                state = (214 << 0)
+                state = states.stringfall
                 stringid = other.id
                 movespeed = hsp
             }
-            state = (15 << 0)
+            state = states.hook
         }
         break
-    case (15 << 0):
+    case states.hook:
         sprite_index = spr_mrpinch_face2
         spr_hand = spr_mrpinch_hand2
         handx = playerid.x
         handy = playerid.y
         drawhandx = handx
         drawhandy = handy
-        if (handy < (y - 200) or playerid.state == (150 << 0))
+        if (handy < (y - 200) or playerid.state == states.tube)
         {
-            state = (0 << 0)
+            state = states.normal
             with (playerid)
             {
-                if (state == (214 << 0))
+                if (state == states.stringfall)
                 {
-                    if (tauntstoredstate == (26 << 0))
-                        state = (26 << 0)
+                    if (tauntstoredstate == states.cheesepepjump)
+                        state = states.cheesepepjump
                     else
-                        state = (92 << 0)
+                        state = states.jump
                 }
             }
             break
@@ -70,18 +70,18 @@ switch state
             drawhandx = handx
             drawhandy = handy
             hand_xscale = playerid.xscale
-            if (playerid.state != (150 << 0))
+            if (playerid.state != states.tube)
             {
                 with (playerid)
                 {
                     sprite_index = spr_player_mrpinch
                     stringid = other.id
-                    state = (214 << 0)
+                    state = states.stringfall
                     if (y > other.y)
                     {
                         if (y > (other.y + (other.maxhandlen / 2)) && vsp > 0 && y > other.y)
                         {
-                            other.state = (19 << 0)
+                            other.state = states.hookshot
                             other.shootbuffer = 60
                             other.launch_dir = point_direction(0, 0, other.launch_hsp, other.launch_vsp)
                             stringid = other.id
@@ -93,18 +93,18 @@ switch state
                         other.idlebuffer = 0
                     if (other.idlebuffer > 60)
                     {
-                        other.state = (0 << 0)
+                        other.state = states.normal
                         other.shootbuffer = 20
                         other.idlebuffer = 0
-                        state = (0 << 0)
+                        state = states.normal
                     }
                 }
             }
             else
-                state = (0 << 0)
+                state = states.normal
             break
         }
-    case (19 << 0):
+    case states.hookshot:
         sprite_index = spr_mrpinch_face2
         hand_index = spr_mrpinch_hand2
         hand_xscale = playerid.xscale
@@ -133,16 +133,16 @@ switch state
                 momemtum = 1
                 jumpstop = 1
                 sprite_index = spr_machfreefall
-                state = (92 << 0)
+                state = states.jump
                 with (other)
                 {
-                    state = (8 << 0)
+                    state = states.transitioncutscene
                     shootbuffer = 80
                 }
             }
         }
         break
-    case (8 << 0):
+    case states.transitioncutscene:
         hand_xscale = 1
         spr_hand = spr_mrpinch_hand3
         sprite_index = spr_mrpinch_face3
@@ -154,7 +154,7 @@ switch state
             shootbuffer--
         else
         {
-            state = (0 << 0)
+            state = states.normal
             shootbuffer = 30
         }
         break

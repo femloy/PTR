@@ -4,38 +4,38 @@ if (drop && global.panic)
 {
     switch dropstate
     {
-        case (0 << 0):
+        case states.normal:
             if (distance_to_object(obj_player1) < 300)
             {
-                dropstate = (15 << 0)
+                dropstate = states.hook
                 handsprite = spr_grabbiehand_fall
                 hand_y = (camera_get_view_y(view_camera[0]) - 100)
             }
             break
-        case (15 << 0):
+        case states.hook:
             if (hand_y < (y - 128))
                 hand_y += 6
             else
             {
                 handsprite = spr_grabbiehand_catch
                 handindex = 0
-                dropstate = (4 << 0)
+                dropstate = states.grabbed
             }
             break
-        case (4 << 0):
+        case states.grabbed:
             depth = 80
             var _ty = (drop_y - 100)
             y = Approach(y, _ty, 3)
             hand_y = (y - 128)
             if (y == _ty && distance_to_object(obj_player1) < 200)
             {
-                dropstate = (135 << 0)
+                dropstate = states.fall
                 handindex = 0
                 handsprite = spr_grabbiehand_release
                 vsp = 0
             }
             break
-        case (135 << 0):
+        case states.fall:
             if (vsp < 20)
                 vsp += grav
             y += vsp
@@ -44,7 +44,7 @@ if (drop && global.panic)
                 depth = 50
                 scr_soundeffect(sfx_groundpound)
                 y = drop_y
-                dropstate = (126 << 0)
+                dropstate = states.idle
                 handsprite = spr_grabbiehand_idle
                 with (obj_camera)
                 {
@@ -53,7 +53,7 @@ if (drop && global.panic)
                 }
             }
             break
-        case (126 << 0):
+        case states.idle:
             hand_y -= 6
             break
     }

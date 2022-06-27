@@ -1,47 +1,47 @@
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         scr_enemy_idle()
         break
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         scr_enemy_walk()
         hsp = 0
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (141 << 0):
+    case states.chase:
         scr_enemy_chase()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
-    case (125 << 0):
+    case states.rage:
         scr_enemy_rage()
         break
 }
 
-if ((state == (134 << 0) or state == (126 << 0)) && sprite_index != spr_golfdemon_idle2)
+if ((state == states.walk or state == states.idle) && sprite_index != spr_golfdemon_idle2)
     sprite_index = spr_golfdemon_idle
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
@@ -49,13 +49,13 @@ if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
 }
 if (ragecooldown > 0)
     ragecooldown--
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (141 << 0))
+if (state != states.chase)
     momentum = 0
-if (state == (134 << 0) or state == (126 << 0))
+if (state == states.walk or state == states.idle)
 {
     var targetplayer = instance_nearest(x, y, obj_player)
     if (sprite_index != spr_golfdemon_idle2 && targetplayer.x > (x - 200) && targetplayer.x < (x + 200) && targetplayer.y > (y - 200) && targetplayer.y < (y + 200))
@@ -68,13 +68,13 @@ if (state == (134 << 0) or state == (126 << 0))
         movespeed = 6
         if (targetplayer.x != x)
             image_xscale = (-(sign((x - targetplayer.x))))
-        state = (141 << 0)
+        state = states.chase
         sprite_index = spr_golfdemon_walk
     }
 }
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {

@@ -9,7 +9,7 @@ function scr_player_antigrav()
     if key_jump
     {
         movespeed = abs(hsp)
-        state = (92 << 0)
+        state = states.jump
         sprite_index = spr_machfreefall
         scr_soundeffect(sfx_antigravend)
     }

@@ -6,7 +6,7 @@ if (patroltimer > 0)
 else
 {
     patrolfound = 0
-    state = (80 << 0)
+    state = states.punch
     sprite_index = spr_teeth_alert
     image_index = 0
     scr_monster_activate()

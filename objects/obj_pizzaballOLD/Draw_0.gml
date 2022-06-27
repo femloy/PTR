@@ -1,5 +1,5 @@
 draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, image_blend, image_alpha)
-if (state == (148 << 0))
+if (state == states.golf)
 {
     var _xx = lengthdir_x(128, m_angle)
     var _yy = lengthdir_y(128, m_angle)

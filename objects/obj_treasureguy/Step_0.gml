@@ -2,31 +2,31 @@ if (room == rm_editor)
     exit;
 switch state
 {
-    case (130 << 0):
+    case states.turn:
         scr_enemy_turn()
         break
-    case (134 << 0):
+    case states.walk:
         scr_enemy_walk()
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (125 << 0):
+    case states.rage:
         scr_enemy_rage()
         break
-    case (189 << 0):
+    case states.underground:
         var player = instance_nearest(x, y, obj_player)
         hsp = 0
         if underground
@@ -34,7 +34,7 @@ switch state
             if (vsp < 0)
                 vsp = 0
             sprite_index = spr_minijohn_underground
-            if (player.x > (x - 50) && player.x < (x + 50) && y <= (player.y + 60) && y >= (player.y - 60) && player.state == (111 << 0))
+            if (player.x > (x - 50) && player.x < (x + 50) && y <= (player.y + 60) && y >= (player.y - 60) && player.state == states.freefallland)
             {
                 sprite_index = spr_minijohn_undergroundout
                 image_index = 0
@@ -57,34 +57,34 @@ switch state
         }
         else if grounded
         {
-            state = (134 << 0)
+            state = states.walk
             sprite_index = idlespr
         }
         break
 }
 
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
 targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)
-if (state == (134 << 0))
+if (state == states.walk)
 {
     sprite_index = walkspr
     hsp = 0
 }
-if (state == (126 << 0))
+if (state == states.idle)
 {
     if (sprite_index == scaredspr)
     {
         if (image_index > (image_number - 1))
-            state = (141 << 0)
+            state = states.chase
     }
     else
     {
@@ -92,11 +92,11 @@ if (state == (126 << 0))
         image_speed = 0.35
     }
 }
-if (state != (126 << 0) && state != (189 << 0) && state != (4 << 0) && state != (137 << 0) && state != (138 << 0) && state != (141 << 0) && (!running))
+if (state != states.idle && state != states.underground && state != states.grabbed && state != states.hit && state != states.stun && state != states.chase && (!running))
 {
     if (x < (targetplayer.x + threshold_x) && x > (targetplayer.x - threshold_x) && y < (targetplayer.y + threshold_y) && y > (targetplayer.y - threshold_y))
     {
-        state = (126 << 0)
+        state = states.idle
         image_index = 0
         sprite_index = scaredspr
         scaredbuffer = scared_max
@@ -104,7 +104,7 @@ if (state != (126 << 0) && state != (189 << 0) && state != (4 << 0) && state != 
             image_xscale = sign((x - targetplayer.x))
     }
 }
-if (state == (141 << 0))
+if (state == states.chase)
 {
     image_speed = 0.5
     if (hsp != 0)
@@ -136,11 +136,11 @@ if (state == (141 << 0))
             jumped = 0
     }
     if (distance_to_object(targetplayer) > idle_threshold)
-        state = (134 << 0)
+        state = states.walk
 }
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (boundbox == 0)
 {
@@ -152,7 +152,7 @@ if (boundbox == 0)
         other.boundbox = 1
     }
 }
-if (state == (189 << 0))
+if (state == states.underground)
 {
     invincible = 1
     if (sprite_index != spr_minijohn_underground && sprite_index != spr_minijohn_undergroundout)

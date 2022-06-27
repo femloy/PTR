@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_medievallibrary",
-    "path": "sprites/tilespr_tile_medievallibrary/tilespr_tile_medievallibrary.yy",
+    "name": "spr_medievallibrary",
+    "path": "sprites/spr_medievallibrary/spr_medievallibrary.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "medievalgroup",

@@ -29,7 +29,7 @@ function scr_player_motorcycle()
     {
         jumpstop = 0
         vsp = -11
-        state = (5 << 0)
+        state = states.tumble
         sprite_index = spr_mach2jump
         var i = 0
         repeat (sprite_get_number(spr_pizzacar_debris) - 1)

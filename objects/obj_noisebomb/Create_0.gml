@@ -6,7 +6,7 @@ grav = 0.23
 movespeed = 3
 with (obj_player)
 {
-    state = (84 << 0)
+    state = states.backbreaker
     sprite_index = spr_bossintro
     image_index = 0
     scr_soundeffect(sfx_scream5)

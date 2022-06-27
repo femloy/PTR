@@ -1,91 +1,91 @@
 targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)
-if (hp <= 0 && state != (145 << 0))
+if (hp <= 0 && state != states.arenaround)
 {
     if ((!destroyed) && (!thrown) && (!destroyable))
         boss_destroy(lastplayerid)
 }
 switch state
 {
-    case (145 << 0):
+    case states.arenaround:
         grav = 0.5
         state_boss_arenaround()
         break
-    case (0 << 0):
+    case states.normal:
         grav = 0.5
         boss_mrstick_normal()
         break
-    case (174 << 0):
+    case states.boss_shield:
         grav = 0.5
         boss_mrstick_shield()
         break
-    case (175 << 0):
+    case states.boss_helicopterhat:
         grav = 0.5
         boss_mrstick_helicopterhat()
         break
-    case (176 << 0):
+    case states.boss_panicjump:
         grav = 0.5
         boss_mrstick_panicjump()
         break
-    case (92 << 0):
+    case states.jump:
         grav = 0.5
         boss_mrstick_jump()
         break
-    case (177 << 0):
+    case states.boss_smokebombstart:
         grav = 0.5
         boss_mrstick_smokebombstart()
         break
-    case (178 << 0):
+    case states.boss_smokebombcrawl:
         grav = 0.5
         boss_mrstick_smokebombcrawl()
         break
-    case (179 << 0):
+    case states.boss_springshoes:
         grav = 0.5
         boss_mrstick_springshoes()
         break
-    case (180 << 0):
+    case states.boss_cardboard:
         grav = 0.5
         boss_mrstick_cardboard()
         break
-    case (181 << 0):
+    case states.boss_cardboardend:
         grav = 0.5
         boss_mrstick_cardboardend()
         break
-    case (182 << 0):
+    case states.boss_mockery:
         grav = 0.5
         boss_mrstick_mockery()
         break
-    case (134 << 0):
+    case states.walk:
         grav = 0.5
         state_boss_walk(boss_mrstick_decide_attack)
         inv_timer = 2
         invincible = 1
         break
-    case (61 << 0):
+    case states.chainsaw:
         grav = 0.5
         state_boss_chainsaw()
         break
-    case (84 << 0):
+    case states.backbreaker:
         grav = 0.5
         state_boss_taunt()
         invincible = 1
         inv_timer = 2
         break
-    case (147 << 0):
+    case states.parry:
         grav = 0.5
         state_boss_parry()
         invincible = 1
         inv_timer = 2
         break
-    case (137 << 0):
+    case states.hit:
         grav = 0.5
         scr_enemy_hit()
         stunned = targetstunned
         break
-    case (138 << 0):
+    case states.stun:
         grav = 0.5
         state_boss_stun()
         break
 }
 
-colliding = (!((state == (92 << 0) or state == (180 << 0) or state == (181 << 0))))
-attacking = (state == (174 << 0) or state == (92 << 0) or state == (180 << 0) or state == (181 << 0) or state == (177 << 0))
+colliding = (!((state == states.jump or state == states.boss_cardboard or state == states.boss_cardboardend)))
+attacking = (state == states.boss_shield or state == states.jump or state == states.boss_cardboard or state == states.boss_cardboardend or state == states.boss_smokebombstart)

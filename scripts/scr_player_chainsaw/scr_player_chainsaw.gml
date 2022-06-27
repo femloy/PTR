@@ -22,42 +22,40 @@ function scr_player_chainsaw()
         vsp = tauntstoredvsp
         if (global.attackstyle == 0)
         {
-            if ((tauntstoredstate == (42 << 0) && (tauntstoredsprite == 771 or tauntstoredsprite == 768 or tauntstoredsprite == 2005 or tauntstoredsprite == 909)) or sprite_index == spr_piledriverland)
+            if ((tauntstoredstate == states.handstandjump && (tauntstoredsprite == spr_player_suplexgrabjumpstart or tauntstoredsprite == spr_player_suplexgrabjump or tauntstoredsprite == spr_player_airattack or tauntstoredsprite == spr_player_airattackstart)) or sprite_index == spr_piledriverland)
             {
                 jumpAnim = 1
-                state = (92 << 0)
+                state = states.jump
                 sprite_index = spr_suplexland
                 vsp = -11
                 jumpstop = 0
                 image_index = 0
             }
-            else if (tauntstoredstate == (42 << 0) or tauntstoredstate == (6 << 0))
-                state = (0 << 0)
+            else if (tauntstoredstate == states.handstandjump or tauntstoredstate == states.finishingblow)
+                state = states.normal
         }
         if (global.attackstyle == 1)
         {
-            if ((tauntstoredstate == (42 << 0) && (tauntstoredsprite == 771 or tauntstoredsprite == 768 or tauntstoredsprite == 2005 or tauntstoredsprite == 909)) or sprite_index == spr_piledriverland)
+            if ((tauntstoredstate == states.handstandjump && (tauntstoredsprite == spr_player_suplexgrabjumpstart or tauntstoredsprite == spr_player_suplexgrabjump or tauntstoredsprite == spr_player_airattack or tauntstoredsprite == spr_player_airattackstart)) or sprite_index == spr_piledriverland)
             {
                 movespeed = 4
-                state = (91 << 0)
+                state = states.tackle
                 sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_punch)
                 image_index = 0
                 vsp = -5
             }
-            else if (tauntstoredstate == (42 << 0) or tauntstoredstate == (6 << 0))
+            else if (tauntstoredstate == states.handstandjump or tauntstoredstate == states.finishingblow)
             {
                 movespeed = 4
-                state = (91 << 0)
+                state = states.tackle
                 sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_punch)
                 image_index = 0
             }
         }
         if (global.attackstyle == 2)
         {
-            if (tauntstoredstate == (43 << 0))
-                state = (43 << 0)
+            if (tauntstoredstate == states.lungeattack)
+                state = states.lungeattack
         }
     }
-    exit;
 }
-

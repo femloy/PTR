@@ -33,7 +33,7 @@ function totem_clear(argument0)
     {
         for (i = 0; i < array_length(cheeseID); i++)
         {
-            if (cheeseID[i] != noone && ((!instance_exists(cheeseID[i])) or cheeseID[i].state != (188 << 0)))
+            if (cheeseID[i] != noone && ((!instance_exists(cheeseID[i])) or cheeseID[i].state != states.totem))
             {
                 if instance_exists(cheeseID[i])
                     cheeseID[i].totemID = -4

@@ -55,7 +55,7 @@ function scr_player_handstandjump()
         jumpstop = 0
         image_index = 0
         vsp = -11
-        state = (104 << 0)
+        state = states.mach2
         sprite_index = spr_player_longjump
     }
     if (sprite_index == attackdash && (!grounded))
@@ -67,7 +67,7 @@ function scr_player_handstandjump()
     {
         if (global.attackstyle != 3)
         {
-            state = (0 << 0)
+            state = states.normal
             if (move != xscale)
                 movespeed = 2
         }
@@ -78,15 +78,15 @@ function scr_player_handstandjump()
         }
     }
     if (grounded && sprite_index == airattackdash && key_attack && character != "N" && global.attackstyle != 2)
-        state = (104 << 0)
+        state = states.mach2
     if (floor(image_index) == (image_number - 1) && sprite_index == attackdash)
-        state = (0 << 0)
+        state = states.normal
     if (floor(image_index) == (image_number - 1) && sprite_index == airattackdashstart)
         sprite_index = airattackdash
     if (floor(image_index) == (image_number - 1) && key_attack && sprite_index == attackdash)
     {
         image_speed = 0.35
-        state = (104 << 0)
+        state = states.mach2
         grav = 0.5
     }
     if (key_down && grounded && global.attackstyle != 2)
@@ -99,7 +99,7 @@ function scr_player_handstandjump()
         sprite_index = spr_player_Sjumpcancelland
         image_index = 0
         machhitAnim = 0
-        state = (5 << 0)
+        state = states.tumble
     }
     mask_index = spr_player_mask
     if (((!grounded) && (place_meeting((x + hsp), y, obj_solid) or scr_solid_slope((x + hsp), y)) && (!(place_meeting((x + hsp), y, obj_destructibles)))) or (grounded && (place_meeting((x + sign(hsp)), (y - 16), obj_solid) or scr_solid_slope((x + sign(hsp)), (y - 16))) && (!(place_meeting((x + hsp), y, obj_destructibles))) && (!(place_meeting((x + hsp), y, obj_metalblock))) && scr_slope()))
@@ -109,7 +109,7 @@ function scr_player_handstandjump()
             wallspeed = movespeed
             if (vsp > 0)
                 wallspeed -= vsp
-            state = (37 << 0)
+            state = states.climbwall
         }
     }
     if ((grounded or (!key_attack)) && scr_solid((x + xscale), y) && (!(place_meeting((x + sign(hsp)), y, obj_destructibles))) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or scr_solid_slope((x + sign(hsp)), y)))
@@ -118,7 +118,7 @@ function scr_player_handstandjump()
         if _bump
         {
             jumpstop = 1
-            state = (92 << 0)
+            state = states.jump
             vsp = -4
             sprite_index = spr_suplexbump
             instance_create((x + (xscale * 10)), (y + 10), obj_bumpeffect)
@@ -130,7 +130,7 @@ function scr_player_handstandjump()
             image_xscale = other.xscale
     }
     image_speed = 0.35
-    if (state != (106 << 0) && move != xscale && move != 0)
+    if (state != states.bump && move != xscale && move != 0)
     {
         image_index = 0
         if (!grounded)
@@ -138,11 +138,11 @@ function scr_player_handstandjump()
             sprite_index = spr_suplexcancel
             jumpAnim = 1
             grav = 0.5
-            state = (92 << 0)
+            state = states.jump
         }
         else
         {
-            state = (0 << 0)
+            state = states.normal
             movespeed = 2
             grav = 0.5
         }

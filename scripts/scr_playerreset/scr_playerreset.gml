@@ -36,8 +36,8 @@ function scr_playerreset()
             if (!global.levelreset)
             {
                 sprite_index = spr_tv_off
-                tvsprite = 2700
-                state = (0 << 0)
+                tvsprite = spr_tv_idle
+                state = states.normal
                 tv_set_idle()
             }
         }
@@ -118,7 +118,7 @@ function scr_playerreset()
         global.playerhealth = 100
         global.panic = false
         with (obj_stylebar)
-            sprite = 39
+            sprite = spr_mild
         with (obj_music)
             arena = 0
         if instance_exists(obj_endlevelfade)
@@ -162,7 +162,7 @@ function scr_playerreset()
             var destroy = 1
             with (obj_player)
             {
-                if (state == (89 << 0) or state == (64 << 0))
+                if (state == states.gameover or state == states.timesup)
                     destroy = 0
             }
             if destroy
@@ -177,8 +177,8 @@ function scr_playerreset()
         audio_stop_all()
         global.seconds = 59
         global.minutes = 1
-        obj_player1.state = (95 << 0)
-        obj_player2.state = (95 << 0)
+        obj_player1.state = states.comingoutdoor
+        obj_player2.state = states.comingoutdoor
         obj_player1.visible = true
         obj_player2.visible = true
         ds_list_clear(global.saveroom)

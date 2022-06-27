@@ -26,25 +26,25 @@ function scr_player_revolver()
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerV_revolvershoot)
     {
         image_index = 0
-        state = (0 << 0)
+        state = states.normal
         sprite_index = spr_playerV_revolverend
         movespeed = 2
     }
     if ((sprite_index == spr_playerV_airrevolverend or sprite_index == spr_playerV_airrevolver or sprite_index == spr_playerV_airrevolverstart) && grounded)
     {
         if (key_attack && movespeed >= 6)
-            state = (104 << 0)
+            state = states.mach2
         else
-            state = (0 << 0)
+            state = states.normal
     }
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_playerV_airrevolver)
     {
         if (key_attack && movespeed >= 6)
-            state = (104 << 0)
+            state = states.mach2
         else
         {
             image_index = 0
-            state = (0 << 0)
+            state = states.normal
         }
     }
     image_speed = 0.4

@@ -12,25 +12,25 @@ function scr_player_tubeenter()
             switch object_index
             {
                 case obj_tubeenter:
-                    if (state != (0 << 0))
+                    if (state != states.normal)
                     {
                         if (floor(image_index) == (image_number - 1))
                         {
-                            other.state = (150 << 0)
+                            other.state = states.tube
                             other.hsp = (hsp * other.stored_hsp)
                             other.vsp = (vsp * other.stored_vsp)
                             other.tube_vsp = (vsp * other.stored_vsp)
-                            state = (0 << 0)
+                            state = states.normal
                         }
                     }
                     else
                     {
-                        state = (150 << 0)
+                        state = states.tube
                         image_index = 0
                     }
                     break
                 default:
-                    other.state = (150 << 0)
+                    other.state = states.tube
                     other.hsp = (hsp * other.stored_hsp)
                     other.vsp = (vsp * other.stored_vsp)
                     other.tube_vsp = (vsp * other.stored_vsp)

@@ -1,7 +1,7 @@
 if (followid != noone && (!instance_exists(obj_player1)))
     exit;
 playerid = obj_player1.id
-if (playerid.state != (93 << 0) && playerid.state != (112 << 0) && playerid.state != (95 << 0))
+if (playerid.state != states.ladder && playerid.state != states.door && playerid.state != states.comingoutdoor)
 {
     if (space < maxspace && dir == -1)
         space += spaceaccel

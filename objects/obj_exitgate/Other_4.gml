@@ -3,6 +3,6 @@ if (ds_list_find_index(global.saveroom, id) != -1 && global.panic == false)
 if (ds_list_find_index(global.baddieroom, id) != -1 && drop)
 {
     y = drop_y
-    dropstate = (126 << 0)
+    dropstate = states.idle
     hand_y = -100
 }

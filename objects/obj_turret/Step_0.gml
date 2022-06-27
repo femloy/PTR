@@ -1,10 +1,10 @@
 targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         state_turret_normal()
         break
-    case (128 << 0):
+    case states.charge:
         state_turret_charge()
         break
 }

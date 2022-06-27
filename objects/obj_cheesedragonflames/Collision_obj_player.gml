@@ -8,7 +8,7 @@ with (other)
     }
     if (b == 1)
     {
-        state = (9 << 0)
+        state = states.fireass
         image_index = 0
         vsp = -25
         sprite_index = spr_fireass

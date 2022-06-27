@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_medievalinterior",
-    "path": "sprites/tilespr_tile_medievalinterior/tilespr_tile_medievalinterior.yy",
+    "name": "spr_medievalinterior",
+    "path": "sprites/spr_medievalinterior/spr_medievalinterior.yy",
   },
   "tileWidth": 32,
   "tileHeight": 32,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "medievalgroup",

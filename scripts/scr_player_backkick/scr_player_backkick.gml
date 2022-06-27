@@ -100,7 +100,7 @@ function scr_player_backkick()
     crouchslideAnim = 1
     crouchAnim = 1
     if (floor(image_index) == (image_number - 1))
-        state = (0 << 0)
+        state = states.normal
     sprite_index = spr_backkick
     image_speed = 0.35
     exit;

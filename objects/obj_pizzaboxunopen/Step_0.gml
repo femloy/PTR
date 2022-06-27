@@ -9,7 +9,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
     {
         with (obj_player)
         {
-            state = (84 << 0)
+            state = states.backbreaker
             sprite_index = spr_player_bossintro
             image_index = 0
         }
@@ -177,7 +177,7 @@ if (place_meeting(x, y, obj_player) && sprite_index == spr_pizzaboxunopen)
         with (instance_create(x, (y - 25), content))
         {
             image_xscale = other.image_xscale
-            state = (138 << 0)
+            state = states.stun
             stunned = 20
             vsp = -5
         }

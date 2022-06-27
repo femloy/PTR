@@ -73,12 +73,12 @@ if (shoving == 1 && image_index >= 3 && bang == 0)
     {
         if ((obj_player1.spotlight == 0 && obj_player1.character == "P") or (obj_player1.spotlight == 1 && obj_player2.character == "P"))
         {
-            sprite = 1331
+            sprite = spr_pepinoHUDscream
             hsp = random_range(-1, -5)
         }
         else
         {
-            sprite = 1264
+            sprite = spr_noiseHUD_panic
             hsp = random_range(1, 5)
         }
     }
@@ -132,19 +132,19 @@ if (shake_mag > 0)
 detachedby = -1
 detach = 0
 follow_golf = 0
-if (instance_exists(player) && player.state != (64 << 0) && player.state != (89 << 0) && (!follow_golf) && (!detach))
+if (instance_exists(player) && player.state != states.timesup && player.state != states.gameover && (!follow_golf) && (!detach))
 {
     if (room != custom_lvl_room)
     {
         var target = player
         var coopdistance = (distance_to_object(obj_player2) / 2)
-        if (player.state == (104 << 0) or player.state == (121 << 0))
+        if (player.state == states.mach2 or player.state == states.mach3)
         {
             var _targetcharge = (player.xscale * ((player.movespeed / 4) * 50))
             var _tspeed = 0.3
             chargecamera = Approach(chargecamera, _targetcharge, _tspeed)
         }
-        else if ((abs(player.hsp) >= 16 or (player.state == (61 << 0) && player.tauntstoredmovespeed >= 16)) && player.state != (37 << 0) && player.state != (97 << 0))
+        else if ((abs(player.hsp) >= 16 or (player.state == states.chainsaw && player.tauntstoredmovespeed >= 16)) && player.state != states.climbwall && player.state != states.Sjump)
         {
             _targetcharge = (player.xscale * ((abs(player.movespeed) / 4) * 50))
             _tspeed = 2
@@ -152,7 +152,7 @@ if (instance_exists(player) && player.state != (64 << 0) && player.state != (89 
                 _tspeed = 8
             chargecamera = Approach(chargecamera, _targetcharge, _tspeed)
         }
-        else if (player.state == (105 << 0))
+        else if (player.state == states.machslide)
             chargecamera = Approach(chargecamera, 0, 10)
         else
             chargecamera = Approach(chargecamera, 0, 6)
@@ -170,7 +170,7 @@ if (instance_exists(player) && player.state != (64 << 0) && player.state != (89 
                 cam_y = clamp(cam_y, 0, (room_height - cam_height))
                 camera_zoom(1, 0.035)
             }
-            else if (obj_player2.state != (18 << 0))
+            else if (obj_player2.state != states.titlescreen)
             {
                 cam_x = (((obj_player1.x + obj_player2.x) / 2) - (cam_width / 2))
                 cam_y = (((obj_player1.y + obj_player2.y) / 2) - (cam_height / 2))
@@ -209,7 +209,7 @@ if (instance_exists(player) && player.state != (64 << 0) && player.state != (89 
     {
         target = player
         coopdistance = (distance_to_object(obj_player2) / 2)
-        if (player.state == (121 << 0) or player.state == (31 << 0) or player.state == (65 << 0))
+        if (player.state == states.mach3 or player.state == states.rideweenie or player.state == states.machroll)
         {
             if (chargecamera > (player.xscale * 100))
                 chargecamera -= 2

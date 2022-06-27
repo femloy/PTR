@@ -1,4 +1,4 @@
-if (obj_player1.state != (16 << 0))
+if (obj_player1.state != states.ghost)
 {
     targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)
     var _g = distance_to_point(targetplayer.x, targetplayer.y)

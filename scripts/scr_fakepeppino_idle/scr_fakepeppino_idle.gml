@@ -13,7 +13,7 @@ function scr_fakepeppino_idle()
         movespeed = 8
         image_index = 0
         sprite_index = spr_fakepeppino_walk
-        state = (134 << 0)
+        state = states.walk
     }
     exit;
 }

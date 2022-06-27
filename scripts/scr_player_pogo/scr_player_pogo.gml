@@ -65,7 +65,7 @@ function scr_player_pogo()
     if (movespeed > 12)
         pogocharge = 100
     if (!key_attack)
-        state = (0 << 0)
+        state = states.normal
     image_speed = 0.35
     if (key_taunt2 && sprite_index != spr_playerN_pogobounce && sprite_index != spr_playerN_pogobouncemach)
     {
@@ -74,7 +74,7 @@ function scr_player_pogo()
         tauntstoredmovespeed = movespeed
         tauntstoredsprite = sprite_index
         tauntstoredstate = state
-        state = (84 << 0)
+        state = states.backbreaker
         if (supercharged == 1)
         {
             image_index = 0

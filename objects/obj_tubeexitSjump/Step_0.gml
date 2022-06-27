@@ -1,4 +1,4 @@
-if (state == (150 << 0))
+if (state == states.tube)
 {
     if (floor(image_index) >= 6)
     {
@@ -6,7 +6,7 @@ if (state == (150 << 0))
         {
             visible = true
             sprite_index = spr_superspringplayer
-            state = (97 << 0)
+            state = states.Sjump
             vsp = -10
             if place_meeting(x, y, obj_solid)
             {
@@ -24,7 +24,7 @@ if (state == (150 << 0))
             with (other)
             {
                 playerid = -1
-                state = (0 << 0)
+                state = states.normal
             }
         }
     }

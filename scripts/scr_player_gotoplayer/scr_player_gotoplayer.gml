@@ -11,7 +11,7 @@ function scr_player_gotoplayer()
         vsp = lengthdir_y(16, _dir)
         var t = 16
         repeat (8)
-            create_particle((x + irandom_range((-t), t)), (y + irandom_range((-t), t)), (1 << 0), 0)
+            create_particle((x + irandom_range((-t), t)), (y + irandom_range((-t), t)), particle.cloudeffect, 0)
         if (distance_to_object(playerid) < 16)
         {
             create_particle(x, y, particle.genericpoofeffect, 0)
@@ -25,7 +25,7 @@ function scr_player_gotoplayer()
         if key_jump2
         {
             xscale = playerid.xscale
-            state = (0 << 0)
+            state = states.normal
             input_buffer_jump = 0
             hurted = 1
             alarm[5] = 2
@@ -35,6 +35,4 @@ function scr_player_gotoplayer()
             instance_destroy(obj_coopplayerfollow)
         }
     }
-    exit;
 }
-

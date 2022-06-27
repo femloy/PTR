@@ -1,12 +1,12 @@
-if (state == (138 << 0) && hp == 0 && stunned > 40 && slapped == 0)
+if (state == states.stun && hp == 0 && stunned > 40 && slapped == 0)
 {
     slapped = 1
     instance_create((x + (obj_player.xscale * 40)), y, obj_punchdust)
-    state = (4 << 0)
-    obj_player.state = (79 << 0)
+    state = states.grabbed
+    obj_player.state = states.grab
     instance_destroy(other)
 }
-if (hp == 0 && (!((state == (138 << 0) && stunned > 40))) && state != (4 << 0) && slapped == 0)
+if (hp == 0 && (!((state == states.stun && stunned > 40))) && state != states.grabbed && slapped == 0)
 {
     instance_create(x, y, obj_spikehurteffect)
     other.image_xscale = image_xscale
@@ -18,9 +18,9 @@ if (hp == 0 && (!((state == (138 << 0) && stunned > 40))) && state != (4 << 0) &
         image_xscale = (-(sign((x - other.x))))
     vsp = -5
     hsp = ((-image_xscale) * 3)
-    state = (138 << 0)
+    state = states.stun
 }
-else if (state != (4 << 0) && slapped == 0)
+else if (state != states.grabbed && slapped == 0)
 {
     if (hp > 0)
         hp -= 1
@@ -29,7 +29,7 @@ else if (state != (4 << 0) && slapped == 0)
     with (instance_create(x, y, obj_spikehurteffect))
         other.image_xscale = image_xscale
     slapped = 1
-    state = (138 << 0)
+    state = states.stun
     stunned = 40
     if (other.x != x)
         image_xscale = (-(sign((x - other.x))))

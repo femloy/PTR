@@ -1,11 +1,11 @@
-if (state == (150 << 0))
+if (state == states.tube)
 {
     if (floor(image_index) >= 6)
     {
         with (playerid)
         {
             visible = true
-            state = (108 << 0)
+            state = states.freefall
             vsp = 10
             sprite_index = spr_player_rockethitwall
             if place_meeting(x, y, obj_solid)
@@ -24,7 +24,7 @@ if (state == (150 << 0))
             with (other)
             {
                 playerid = -1
-                state = (0 << 0)
+                state = states.normal
             }
         }
     }

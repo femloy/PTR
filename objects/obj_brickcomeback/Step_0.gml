@@ -5,7 +5,7 @@ if (obj_player.isgustavo == 0)
 }
 if (!trapped)
 {
-    if (obj_player1.sprite_index == spr_lonegustavo_hurt or obj_player1.state == (259 << 0) or obj_player1.state == (197 << 0) or obj_player1.state == (202 << 0) or obj_player1.state == (261 << 0) or obj_player1.state == (260 << 0))
+    if (obj_player1.sprite_index == spr_lonegustavo_hurt or obj_player1.state == states.ratmountpunch or obj_player1.state == states.ratmountgroundpound or obj_player1.state == states.ratmountgrind or obj_player1.state == states.ratmountladder or obj_player1.state == states.ratmountcrouch)
     {
         wait = 1
         sprite_index = spr_lonebrick_wait

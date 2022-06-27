@@ -2,7 +2,7 @@ if (room == rm_editor)
     exit;
 switch state
 {
-    case (134 << 0):
+    case states.walk:
         var targetplayer = obj_player1.id
         if (hamspotted == 1)
             targetplayer = obj_ham
@@ -44,7 +44,7 @@ switch state
         scr_collide()
         break
 	
-    case (8 << 0):
+    case states.transitioncutscene:
         flash = 0
         sprite_index = spr_piraneapplewater
         if place_meeting(x, y, obj_solid)
@@ -56,7 +56,7 @@ switch state
         {
             if grounded
             {
-                state = (134 << 0)
+                state = states.walk
                 sprite_index = spr_piraneappleattack
             }
             scr_collide()

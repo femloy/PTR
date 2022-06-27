@@ -1,7 +1,7 @@
 event_inherited()
 image_speed = 0.35
 mask_index = spr_haystack
-state = (0 << 0)
+state = states.normal
 x_to = x
 movespeed = 6
 dir = 1

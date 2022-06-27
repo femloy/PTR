@@ -1,1 +1,1 @@
-chosenstate = (103 << 0)
+chosenstate = states.mach1

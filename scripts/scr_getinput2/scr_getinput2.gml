@@ -26,7 +26,7 @@ function scr_getinput2()
     key_escape = (keyboard_check_pressed(vk_escape) or gamepad_button_check(_dvc, gp_select))
     key_chainsaw = (keyboard_check(global.key_chainsawN) or gamepad_button_check(_dvc, global.key_chainsawCN) or gamepad_button_check(_dvc, gp_shoulderlb))
     key_chainsaw2 = (keyboard_check_pressed(global.key_chainsawN) or gamepad_button_check_pressed(_dvc, global.key_chainsawCN) or gamepad_button_check_pressed(_dvc, gp_shoulderlb))
-    if (object_index == obj_player2 && state == (99 << 0))
+    if (object_index == obj_player2 && state == states.Sjumpprep)
     {
         var haxis = gamepad_axis_value(_dvc, gp_axislh)
         var vaxis = gamepad_axis_value(_dvc, gp_axislv)

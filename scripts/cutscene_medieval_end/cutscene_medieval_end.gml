@@ -5,7 +5,7 @@ function cutscene_medieval_end()
     {
         if (object_index != obj_player2 or global.coop)
         {
-            state = (0 << 0)
+            state = states.normal
             x = backtohubstartx
             y = backtohubstarty
         }

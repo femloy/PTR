@@ -1,4 +1,4 @@
-if ((!other.baddieID.invincible) && other.baddieID.destroyable && playerid.state != (61 << 0) && other.baddieID.state != (137 << 0) && (!other.baddieID.thrown))
+if ((!other.baddieID.invincible) && other.baddieID.destroyable && playerid.state != states.chainsaw && other.baddieID.state != states.hit && (!other.baddieID.thrown))
 {
     with (other)
     {
@@ -17,7 +17,7 @@ if ((!other.baddieID.invincible) && other.baddieID.destroyable && playerid.state
             baddieID.hp -= 1
             instance_create(baddieID.x, baddieID.y, obj_parryeffect)
             baddieID.alarm[3] = 3
-            baddieID.state = (137 << 0)
+            baddieID.state = states.hit
             baddieID.image_xscale = (-other.image_xscale)
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_slapstar)

@@ -1,6 +1,6 @@
 switch state
 {
-    case (18 << 0):
+    case states.titlescreen:
         if (!instance_exists(obj_fadeout))
         {
             if playerid.key_up2
@@ -20,9 +20,9 @@ switch state
                             targetDoor = "F"
                         if check_player_coop()
                         {
-                            state = (0 << 0)
+                            state = states.normal
                             if other.isgustavo
-                                state = (191 << 0)
+                                state = states.ratmount
                             movespeed = 0
                         }
                     }
@@ -30,9 +30,9 @@ switch state
                 }
                 else
                 {
-                    state = (0 << 0)
+                    state = states.normal
                     with (obj_player)
-                        state = (0 << 0)
+                        state = states.normal
                 }
             }
         }

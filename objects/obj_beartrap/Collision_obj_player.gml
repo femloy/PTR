@@ -1,4 +1,4 @@
-if (obj_player.state != (88 << 0))
+if (obj_player.state != states.bossintro)
 {
     with (instance_create(x, (y - 75), obj_press))
         ID = other.id
@@ -8,7 +8,7 @@ with (obj_player)
     hsp = 0
     if (other.drop == 0)
     {
-        if (state != (88 << 0))
+        if (state != states.bossintro)
         {
             sprite_index = spr_player_hurt
             instance_create(x, y, obj_spikehurteffect)
@@ -21,7 +21,7 @@ with (obj_player)
                 other.press += 2
             }
         }
-        state = (88 << 0)
+        state = states.bossintro
     }
 }
 if (floor(image_index) == 0)

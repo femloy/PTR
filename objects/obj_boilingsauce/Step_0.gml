@@ -5,13 +5,13 @@ with (playerid)
 {
     if (character == "V")
         scr_hurtplayer(id)
-    else if (state != (3 << 0) && state != (89 << 0) && state != (31 << 0) && state != (186 << 0))
+    else if (state != states.boots && state != states.gameover && state != states.rideweenie && state != states.gotoplayer)
     {
         var _pindex = (object_index == obj_player1 ? 0 : 1)
         GamepadSetVibration(_pindex, 1, 1, 0.85)
-        if (state != (9 << 0))
+        if (state != states.fireass)
             tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt.transfo, spr_tv_fireass, 3), "fireass")
-        state = (9 << 0)
+        state = states.fireass
         vsp = -20
         sprite_index = spr_fireass
         image_index = 0

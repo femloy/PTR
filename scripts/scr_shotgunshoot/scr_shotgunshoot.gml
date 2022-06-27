@@ -4,7 +4,7 @@ function scr_shotgunshoot()
     with (instance_create(x, y, obj_pistoleffect))
         image_xscale = other.xscale
     sprite_index = spr_shotgunshoot
-    state = (69 << 0)
+    state = states.shotgunshoot
     movespeed = -4
     jumpAnim = 1
     image_index = 0

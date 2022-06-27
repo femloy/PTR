@@ -1,4 +1,4 @@
-if (state != (145 << 0))
+if (state != states.arenaround)
 {
     wave_seconds--
     if (wave_seconds < 0)
@@ -13,15 +13,15 @@ if (state != (145 << 0))
             wave_seconds = 0
             with (obj_player1)
             {
-                if (state != (7 << 0))
+                if (state != states.ejected)
                 {
                     vsp = -11
-                    state = (7 << 0)
+                    state = states.ejected
                     targetRoom = lastroom
                 }
             }
         }
     }
 }
-if (state == (143 << 0) or state == (142 << 0))
+if (state == states.arena or state == states.spawnenemy)
     alarm[0] = 60

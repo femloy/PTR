@@ -21,7 +21,7 @@ function scr_player_shotguncrouchjump()
     }
     if grounded
     {
-        state = (67 << 0)
+        state = states.shotguncrouch
         sprite_index = spr_shotgungoduck
         image_index = 0
         scr_soundeffect(sfx_step)

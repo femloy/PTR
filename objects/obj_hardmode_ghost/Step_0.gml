@@ -13,7 +13,7 @@ else
         with (instance_create(x, y, content[n]))
         {
             important = 1
-            state = (138 << 0)
+            state = states.stun
             stunned = 50
         }
         random_buffer = ((random_max - (50 * global.heatmeter_threshold)) + irandom_range((-((60 * global.heatmeter_threshold))), (random_random - (30 * global.heatmeter_threshold))))

@@ -1,6 +1,7 @@
 enum particle
 {
-	none,
+	enum_start, // don't use this
+	
 	cloudeffect,
 	crazyrunothereffect,
 	highjumpcloud1,
@@ -15,7 +16,9 @@ enum particle
 	landcloud,
 	ratmountballooncloud,
 	groundpoundeffect,
-	antigrav_bubblepop
+	antigrav_bubblepop,
+	
+	enum_length // don't use this
 }
 enum debris
 {

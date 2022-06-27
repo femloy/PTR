@@ -34,10 +34,10 @@ function scr_player_barrelslide()
         if (!(place_meeting(x, y, obj_solid)))
         {
             if grounded
-                state = (113 << 0)
+                state = states.barrel
             else
             {
-                state = (114 << 0)
+                state = states.barreljump
                 sprite_index = spr_player_barrelfall
             }
         }
@@ -54,7 +54,7 @@ function scr_player_barrelslide()
         if scr_slope()
         {
             vsp = -12
-            state = (115 << 0)
+            state = states.barrelclimbwall
             movespeed = 0
         }
         else

@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state != (97 << 0) && state != (186 << 0) && state != (146 << 0))
+    if (state != states.Sjump && state != states.gotoplayer && state != states.actor)
     {
-        if (state == (47 << 0) or state == (48 << 0) or state == (38 << 0))
+        if (state == states.knightpep or state == states.knightpepattack or state == states.knightpepslopes)
         {
             with (instance_create(x, y, obj_knightdebris))
                 image_index = 0
@@ -17,19 +17,19 @@ with (other)
             with (instance_create(x, y, obj_knightdebris))
                 image_index = 5
         }
-        if (state == (51 << 0))
+        if (state == states.bombpep)
             instance_create(x, y, obj_bombexplosion)
         x = other.x
         instance_create(x, (y - 20), obj_bangeffect)
         if (other.image_yscale == 1)
         {
             sprite_index = spr_superspringplayer
-            state = (97 << 0)
+            state = states.Sjump
             vsp = -10
         }
         else
         {
-            state = (108 << 0)
+            state = states.freefall
             vsp = 10
             sprite_index = spr_player_rockethitwall
         }

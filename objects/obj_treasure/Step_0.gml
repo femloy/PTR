@@ -1,11 +1,11 @@
 if (player == 1)
 {
-    if (got && obj_player1.state != (46 << 0))
+    if (got && obj_player1.state != states.gottreasure)
         instance_destroy()
 }
 if (player == 2)
 {
-    if (got && obj_player2.state != (46 << 0))
+    if (got && obj_player2.state != states.gottreasure)
         instance_destroy()
 }
 if (player == 0 && place_meeting(x, y, obj_player))
@@ -16,7 +16,7 @@ if (player == 0 && place_meeting(x, y, obj_player))
 		var _player = ds_list_find_value(global.instancelist, i)
         with (_player)
         {
-            if (state != (186 << 0))
+            if (state != states.gotoplayer)
             {
                 treasure_x = x
                 treasure_y = y
@@ -31,7 +31,7 @@ if (player == 0 && place_meeting(x, y, obj_player))
                     if (!other.got)
                     {
                         other.alarm[0] = 150
-                        state = (46 << 0)
+                        state = states.gottreasure
                         scr_soundeffect(sfx_secretfound)
                     }
                     other.got = 1

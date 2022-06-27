@@ -1,2 +1,2 @@
-if (state == (135 << 0))
+if (state == states.fall)
     scr_hurtplayer(other)

@@ -35,7 +35,7 @@ function scr_player_shotgunjump()
     if (input_buffer_jump < 8 && grounded)
     {
         input_buffer_jump = 8
-        state = (57 << 0)
+        state = states.shotgunjump
         vsp = -11
         jumpstop = 0
         sprite_index = spr_shotgunjump
@@ -46,11 +46,11 @@ function scr_player_shotgunjump()
         sprite_index = spr_shotgunland
         image_index = 0
         landAnim = 1
-        state = (66 << 0)
+        state = states.shotgun
     }
     if key_attack2
     {
-        state = (70 << 0)
+        state = states.shotgundash
         sprite_index = spr_shotgunsuplexdash
         image_index = 0
         movespeed = 10
@@ -62,7 +62,7 @@ function scr_player_shotgunjump()
         {
             sprite_index = spr_shotgunshoot
             image_index = 0
-            state = (69 << 0)
+            state = states.shotgunshoot
             with (instance_create(x, y, obj_pistoleffect))
                 image_xscale = other.xscale
             with (instance_create((x + (xscale * 20)), (y + 20), obj_shotgunbullet))
@@ -85,7 +85,7 @@ function scr_player_shotgunjump()
         }
         else
         {
-            state = (71 << 0)
+            state = states.shotgunfreefall
             sprite_index = spr_shotgunjump1
             image_index = 0
             vsp = -11

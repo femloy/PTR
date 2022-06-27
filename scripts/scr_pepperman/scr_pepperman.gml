@@ -17,7 +17,7 @@ function scr_pepperman_walk()
             b = targetblock
         if (distance_to_object(b) < 400 && b.y > (y - 64) && b.y < (y + 8))
         {
-            state = (153 << 0)
+            state = states.shoulderbash
             sprite_index = spr_pepperman_shoulderstart
             image_index = 0
             if (b.x != x)
@@ -45,7 +45,7 @@ function pepperman_nearestspot()
     }
     else
         targetspot = instance_nearest(obj_player1.x, obj_player1.y, obj_pepper_groundpoundspot)
-    state = (92 << 0)
+    state = states.jump
     jump_speed = floor((distance_to_object(targetspot) * 0.04))
     if (jump_speed < 20)
         jump_speed = 20
@@ -65,7 +65,7 @@ function scr_pepperman_jump()
         image_xscale = sign(hsp)
     if (x >= (targetspot.x - 32) && x <= (targetspot.x + 32) && y < (targetspot.y - 48) && (!(place_meeting(x, y, obj_solid))))
     {
-        state = (108 << 0)
+        state = states.freefall
         sprite_index = spr_pepperman_groundpound
         vsp = 11
         hsp = 0
@@ -83,7 +83,7 @@ function scr_pepperman_freefall()
     {
         scr_soundeffect(sfx_groundpound)
         oldtargetspot = targetspot
-        state = (134 << 0)
+        state = states.walk
         if point_in_camera(x, y, 329)
         {
             with (obj_camera)
@@ -174,7 +174,7 @@ function scr_pepperman_shoulderbash()
             else
                 other.idle_timer = 10
         }
-        state = (138 << 0)
+        state = states.stun
         hsp = ((-image_xscale) * 5)
         vsp = -8
         stunned = 30

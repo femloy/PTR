@@ -1,2 +1,2 @@
 event_inherited()
-substate = (0 << 0)
+substate = states.normal

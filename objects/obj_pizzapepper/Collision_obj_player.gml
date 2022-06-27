@@ -9,7 +9,7 @@ if (visible == true)
     with (other)
     {
         vsp = -14
-        state = (254 << 0)
+        state = states.jetpackjump
         sprite_index = spr_player_jetpackstart
         doublejump = 0
         with (instance_create(x, y, obj_highjumpcloud2))

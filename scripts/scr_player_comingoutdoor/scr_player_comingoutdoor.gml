@@ -17,9 +17,9 @@ function scr_player_comingoutdoor()
     {
         movespeed = 0
         if isgustavo
-            state = (191 << 0)
+            state = states.ratmount
         else
-            state = (0 << 0)
+            state = states.normal
         image_alpha = 1
         c = 0
         image_blend = make_colour_hsv(0, 0, 255)

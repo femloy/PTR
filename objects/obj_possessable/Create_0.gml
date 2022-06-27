@@ -1,4 +1,4 @@
-state = (0 << 0)
+state = states.normal
 hsp = 0
 vsp = 0
 grav = 0.5

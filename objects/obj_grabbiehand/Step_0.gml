@@ -1,15 +1,15 @@
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         break
-    case (8 << 0):
+    case states.transitioncutscene:
         if (floor(image_index) == (image_number - 1))
         {
-            state = (135 << 0)
+            state = states.fall
             sprite_index = spr_grabbiehand_fall
         }
         break
-    case (135 << 0):
+    case states.fall:
         var spd = 12
         shootdir = angle_rotate(shootdir, point_direction(x, y, targetplayer.x, targetplayer.y), turnspeed)
         hsp = lengthdir_x(spd, shootdir)
@@ -18,7 +18,7 @@ switch state
             image_xscale = sign(hsp)
         if grounded
         {
-            state = (138 << 0)
+            state = states.stun
             stunned = 50
             hsp = 0
             vsp = 0
@@ -26,12 +26,12 @@ switch state
         }
         scr_collide()
         break
-    case (138 << 0):
+    case states.stun:
         if (stunned > 0)
             stunned--
         else if grounded
         {
-            state = (7 << 0)
+            state = states.ejected
             sprite_index = spr_grabbiehand_idle
             grounded = false
         }
@@ -39,18 +39,18 @@ switch state
             hsp = 0
         scr_collide()
         break
-    case (7 << 0):
+    case states.ejected:
         var _dir = point_direction(x, y, xstart, ystart)
         x = Approach(x, xstart, abs(lengthdir_x(8, _dir)))
         y = Approach(y, ystart, abs(lengthdir_y(8, _dir)))
         if (x > (xstart - 8) && x < (xstart + 8) && y > (ystart - 8) && y < (ystart + 8))
         {
-            state = (0 << 0)
+            state = states.normal
             x = xstart
             y = ystart
         }
         break
-    case (55 << 0):
+    case states.grabbing:
         sprite_index = spr_grabbiehand_catch
         if (!reverse)
             vsp = -14
@@ -66,7 +66,7 @@ switch state
             xscale = other.image_xscale
             if (object_index != obj_pizzagoblinbomb)
             {
-                state = (106 << 0)
+                state = states.bump
                 if (boxxed == 0)
                     sprite_index = spr_player_catched
                 else
@@ -86,7 +86,7 @@ switch state
                 }
             }
             sprite_index = spr_grabbiehand_idle
-            state = (7 << 0)
+            state = states.ejected
             if fake
                 instance_destroy()
         }

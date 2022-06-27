@@ -6,14 +6,14 @@ boss_array[3] = [191, 1]
 boss_array[4] = [52, 6]
 boss_array[5] = [832, 6]
 boss_array[6] = [191, 6]
-state = (145 << 0)
-attack_pool = [(174 << 0), (175 << 0), (176 << 0), (92 << 0), (177 << 0), (179 << 0), (180 << 0)]
-ds_map_set(player_hurtstates, (42 << 0), 30)
-ds_map_set(player_hurtstates, (41 << 0), 50)
-ds_map_set(player_hurtstates, (104 << 0), 20)
-ds_map_set(player_hurtstates, (121 << 0), 30)
-ds_map_set(boss_hurtstates, (80 << 0), 30)
-ds_map_set(boss_hurtstates, (174 << 0), 30)
+state = states.arenaround
+attack_pool = [states.boss_shield, states.boss_helicopterhat, states.boss_panicjump, states.jump, states.boss_smokebombstart, states.boss_springshoes, states.boss_cardboard]
+ds_map_set(player_hurtstates, states.handstandjump, 30)
+ds_map_set(player_hurtstates, states.chainsawbump, 50)
+ds_map_set(player_hurtstates, states.mach2, 20)
+ds_map_set(player_hurtstates, states.mach3, 30)
+ds_map_set(boss_hurtstates, states.punch, 30)
+ds_map_set(boss_hurtstates, states.boss_shield, 30)
 phase = 1
 max_phase = 7
 max_hp = (500 * max_phase)
@@ -101,7 +101,7 @@ function boss_hurt_noplayer(argument0)
 
 function player_hurt(argument0, argument1)
 {
-    if ((!argument1.inv_frames) && (argument1.state != (84 << 0) or argument1.parry_inst == -4))
+    if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
     {
         hitstate = state
         hithsp = hsp

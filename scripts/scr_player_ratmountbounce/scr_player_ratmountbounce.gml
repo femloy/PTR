@@ -17,7 +17,7 @@ function scr_player_ratmountbounce()
         {
             if (hsp != 0)
                 xscale = sign(hsp)
-            state = (191 << 0)
+            state = states.ratmount
         }
     }
     else
@@ -30,7 +30,7 @@ function scr_player_ratmountbounce()
             movespeed = Approach(movespeed, 0, 0.5)
         if (key_jump && brick)
         {
-            state = (197 << 0)
+            state = states.ratmountgroundpound
             sprite_index = spr_lonegustavo_jumpstart
             image_index = 0
             image_speed = 0.35
@@ -50,7 +50,7 @@ function scr_player_ratmountbounce()
             input_buffer_jump = 0
         if (brick && scr_solid((x + sign(hsp)), y) && ((!(place_meeting((x + sign(hsp)), y, obj_slope))) or scr_solid_slope((x + sign(hsp)), y)))
         {
-            state = (195 << 0)
+            state = states.ratmountclimbwall
             sticktime = 15
             xscale = sign(hsp)
             landAnim = 0

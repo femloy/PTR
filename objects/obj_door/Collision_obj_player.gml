@@ -3,7 +3,7 @@ if locked
 var _actor = 0
 with (obj_player)
 {
-    if (state == (146 << 0))
+    if (state == states.actor)
         _actor = 1
 }
 if _actor
@@ -16,7 +16,7 @@ if (!(place_meeting(x, y, obj_doorblocked)))
 {
     with (other)
     {
-        if (key_up && (!instance_exists(obj_jumpscare)) && grounded && ((state == (191 << 0) && brick) or state == (0 << 0) or state == (103 << 0) or state == (104 << 0) or state == (58 << 0) or state == (121 << 0) or state == (99 << 0)) && y == (other.y + 50) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != (112 << 0) && state != (95 << 0))
+        if (key_up && (!instance_exists(obj_jumpscare)) && grounded && ((state == states.ratmount && brick) or state == states.normal or state == states.mach1 or state == states.mach2 or state == states.pogo or state == states.mach3 or state == states.Sjumpprep) && y == (other.y + 50) && (!instance_exists(obj_noisesatellite)) && (!instance_exists(obj_fadeout)) && state != states.door && state != states.comingoutdoor)
         {
             obj_player1.lastroom = room
             obj_player2.lastroom = room
@@ -39,8 +39,8 @@ if (!(place_meeting(x, y, obj_doorblocked)))
             with (obj_player)
             {
                 image_index = 0
-                if (state != (186 << 0))
-                    state = (112 << 0)
+                if (state != states.gotoplayer)
+                    state = states.door
                 mach2 = 0
             }
             if (instance_exists(obj_player2) && global.coop == true)
@@ -59,7 +59,7 @@ if (!(place_meeting(x, y, obj_doorblocked)))
             with (obj_player2)
             {
                 if instance_exists(obj_coopplayerfollow)
-                    state = (186 << 0)
+                    state = states.gotoplayer
             }
             other.visited = 1
             instance_create(x, y, obj_fadeout)

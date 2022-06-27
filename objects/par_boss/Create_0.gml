@@ -9,7 +9,7 @@ vsp = 0
 grav = 0.5
 grounded = false
 movespeed = 0
-state = (0 << 0)
+state = states.normal
 team = 1
 important = 1
 mach3destroy = 0
@@ -30,7 +30,7 @@ hitX = x
 hitY = y
 hithsp = 0
 hitvsp = 0
-hitstate = (0 << 0)
+hitstate = states.normal
 stunfallspr = sprite_index
 walkspr = sprite_index
 spr_dead = sprite_index
@@ -57,8 +57,8 @@ function SUPER_player_destroy(argument0)
         other.hitY = (room_height / 2)
         other.x = other.hitX
         other.y = other.hitY
-        other.state = (61 << 0)
-        other.hitstate = (145 << 0)
+        other.state = states.chainsaw
+        other.hitstate = states.arenaround
         other.hitvsp = -4
         other.hithsp = ((-other.image_xscale) * 8)
         hitLag = lag
@@ -72,7 +72,7 @@ function SUPER_player_destroy(argument0)
         hithsp = 15
         hitstunned = 10000
         hitvsp = -8
-        state = (137 << 0)
+        state = states.hit
         instance_create(other.x, other.y, obj_parryeffect)
         with (obj_camera)
         {
@@ -92,13 +92,13 @@ function SUPER_boss_destroy(argument0)
     with (argument0)
     {
         camera_zoom(1, 0.1)
-        if (state == (162 << 0) or state == (160 << 0) or state == (147 << 0) or state == (84 << 0))
+        if (state == states.boss_fistmatch or state == states.boss_superattack or state == states.parry or state == states.backbreaker)
         {
             sprite_index = spr_player_attackdash
             image_index = 6
-            state = (42 << 0)
+            state = states.handstandjump
         }
-        if (state != (61 << 0))
+        if (state != states.chainsaw)
         {
             scr_soundeffect(sfx_killingblow)
             tauntstoredmovespeed = movespeed
@@ -114,7 +114,7 @@ function SUPER_boss_destroy(argument0)
         other.y = other.hitY
         other.hitvsp = -8
         other.hithsp = ((-other.image_xscale) * 15)
-        other.state = (137 << 0)
+        other.state = states.hit
         other.thrown = true
         other.destroyable = 1
         other.colliding = 1
@@ -124,7 +124,7 @@ function SUPER_boss_destroy(argument0)
         hitY = (room_height / 2)
         x = hitX
         y = hitY
-        state = (61 << 0)
+        state = states.chainsaw
         instance_create(other.x, other.y, obj_parryeffect)
         instance_create(x, y, obj_slapstar)
         instance_create(x, y, obj_slapstar)
@@ -145,7 +145,7 @@ function SUPER_boss_hurt(argument0, argument1)
 {
     if important
         hp -= argument0
-    if (argument1.state != (252 << 0))
+    if (argument1.state != states.playersuperattack)
     {
         with (obj_bosscontroller)
             super += 30
@@ -153,30 +153,30 @@ function SUPER_boss_hurt(argument0, argument1)
     with (argument1)
     {
         var atstate = state
-        if (state == (42 << 0))
+        if (state == states.handstandjump)
         {
-            state = (6 << 0)
+            state = states.finishingblow
             sprite_index = choose(spr_finishingblow1, spr_finishingblow2, spr_finishingblow3, spr_finishingblow4, spr_finishingblow5)
             image_index = 6
         }
-        if (state != (61 << 0))
+        if (state != states.chainsaw)
         {
             scr_soundeffect(sfx_killingblow)
             tauntstoredmovespeed = movespeed
             tauntstoredsprite = sprite_index
             tauntstoredstate = state
         }
-        state = (61 << 0)
+        state = states.chainsaw
         lag = 8
         hitLag = lag
         hitX = x
         hitY = y
-        if (state == (61 << 0) or state == (137 << 0))
+        if (state == states.chainsaw or state == states.hit)
         {
             x = hitX
             y = hitY
         }
-        if (other.state == (137 << 0) or other.state == (61 << 0))
+        if (other.state == states.hit or other.state == states.chainsaw)
         {
             other.x = other.hitX
             other.y = other.hitY
@@ -188,13 +188,13 @@ function SUPER_boss_hurt(argument0, argument1)
         other.jugglecount++
         other.hitvsp = -9
         other.movespeed = (7 + (other.jugglecount * 2))
-        if (atstate == (147 << 0))
+        if (atstate == states.parry)
         {
             other.hitvsp = -14
             other.movespeed = 0
         }
         other.hithsp = ((-other.image_xscale) * other.movespeed)
-        other.state = (137 << 0)
+        other.state = states.hit
         instance_create(other.x, other.y, obj_parryeffect)
         instance_create(x, y, obj_slapstar)
         instance_create(x, y, obj_slapstar)
@@ -215,13 +215,13 @@ function SUPER_boss_hurt_noplayer(argument0)
 {
     if important
         hp -= argument0
-    if (obj_player.state != (252 << 0))
+    if (obj_player.state != states.playersuperattack)
     {
         with (obj_bosscontroller)
             super += 30
     }
     lag = 8
-    if (state == (137 << 0) or state == (61 << 0))
+    if (state == states.hit or state == states.chainsaw)
     {
         x = hitX
         y = hitY
@@ -232,7 +232,7 @@ function SUPER_boss_hurt_noplayer(argument0)
     hitY = y
     hitvsp = -8
     hithsp = (other.image_xscale * 15)
-    state = (137 << 0)
+    state = states.hit
     instance_create(x, y, obj_parryeffect)
     instance_create(x, y, obj_slapstar)
     instance_create(x, y, obj_slapstar)
@@ -258,12 +258,12 @@ function SUPER_player_hurt(argument0, argument1)
     {
         scr_soundeffect(sfx_killingblow)
         lag = 8
-        if (state == (137 << 0) or state == (61 << 0))
+        if (state == states.hit or state == states.chainsaw)
         {
             x = hitX
             y = hitY
         }
-        if (other.state == (61 << 0) or other.state == (137 << 0))
+        if (other.state == states.chainsaw or other.state == states.hit)
         {
             other.x = other.hitX
             other.y = other.hitY
@@ -271,7 +271,7 @@ function SUPER_player_hurt(argument0, argument1)
         other.hitLag = lag
         other.hitX = other.x
         other.hitY = other.y
-        other.state = (61 << 0)
+        other.state = states.chainsaw
         hitLag = lag
         hitX = x
         hitY = y
@@ -288,7 +288,7 @@ function SUPER_player_hurt(argument0, argument1)
         else
             hitstunned = 100
         hitvsp = -8
-        state = (137 << 0)
+        state = states.hit
         instance_create(other.x, other.y, obj_parryeffect)
         instance_create(x, y, obj_slapstar)
         instance_create(x, y, obj_slapstar)

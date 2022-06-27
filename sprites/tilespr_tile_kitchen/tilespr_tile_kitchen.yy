@@ -14,8 +14,8 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 972,
-  "height": 1008,
+  "width": 480,
+  "height": 1632,
   "textureGroupId": {
     "name": "kidspartygroup",
     "path": "texturegroups/kidspartygroup",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c5e4897a-8be5-475c-a625-9ec9a7e3d969","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c5e4897a-8be5-475c-a625-9ec9a7e3d969","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"LayerId":{"name":"433f518c-c318-48ea-b57c-418a902018fa","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"tilespr_tile_kitchen","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"resourceVersion":"1.0","name":"c5e4897a-8be5-475c-a625-9ec9a7e3d969","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"d95fe666-cd4a-4178-92d8-adc368ba3a4c","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"d95fe666-cd4a-4178-92d8-adc368ba3a4c","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"LayerId":{"name":"f7e97875-04eb-4a61-9cf9-68237798232f","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"tilespr_tile_kitchen","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"resourceVersion":"1.0","name":"d95fe666-cd4a-4178-92d8-adc368ba3a4c","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"tilespr_tile_kitchen","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"1b64737e-990f-45b4-9c1e-9744bca08706","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c5e4897a-8be5-475c-a625-9ec9a7e3d969","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b2a657ae-c6e0-46e3-ae20-e64bf0ae353f","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d95fe666-cd4a-4178-92d8-adc368ba3a4c","path":"sprites/tilespr_tile_kitchen/tilespr_tile_kitchen.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"433f518c-c318-48ea-b57c-418a902018fa","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f7e97875-04eb-4a61-9cf9-68237798232f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

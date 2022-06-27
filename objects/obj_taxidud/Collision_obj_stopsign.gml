@@ -4,9 +4,9 @@ if (playerid.visible == false)
     {
         scr_soundeffect(sfx_taxi1)
         if isgustavo
-            state = (191 << 0)
+            state = states.ratmount
         else
-            state = (0 << 0)
+            state = states.normal
         instance_create(x, y, obj_genericpoofeffect)
         cutscene = 0
     }
@@ -14,7 +14,7 @@ if (playerid.visible == false)
     {
         with (obj_player2)
         {
-            state = (0 << 0)
+            state = states.normal
             cutscene = 0
         }
     }

@@ -1,13 +1,13 @@
-if (other.state != (4 << 0) && playerid.state != (79 << 0))
+if (other.state != states.grabbed && playerid.state != states.grab)
 {
-    other.state = (4 << 0)
+    other.state = states.grabbed
     if (playerid.object_index == obj_player1)
         other.grabbedby = 1
     else
         other.grabbedby = 2
     with (playerid)
     {
-        state = (79 << 0)
+        state = states.grab
         baddiegrabbedID = other.id
         grabbingenemy = 1
         movespeed = 0

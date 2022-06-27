@@ -31,7 +31,7 @@ function scr_player_cheesepep()
         create_debris(x, (y + 43), spr_slimedebris)
     if (!grounded)
     {
-        state = (26 << 0)
+        state = states.cheesepepjump
         sprite_index = spr_cheesepepfall
         jumpstop = 1
         movespeed = (xscale * movespeed)
@@ -56,7 +56,7 @@ function scr_player_cheesepep()
         vsp = -11
         image_index = 0
         sprite_index = spr_cheesepepjump
-        state = (26 << 0)
+        state = states.cheesepepjump
     }
     exit;
 }

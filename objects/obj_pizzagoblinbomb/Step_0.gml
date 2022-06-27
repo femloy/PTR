@@ -11,7 +11,7 @@ if (kickbuffer > 0)
 }
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         hsp = (movespeed * image_xscale)
         if (place_meeting((x + hsp), y, obj_solid) && (!(place_meeting((x + hsp), y, obj_ratblock))))
             image_xscale *= -1
@@ -33,21 +33,21 @@ switch state
             vsp += grav
         scr_collide()
         break
-    case (4 << 0):
+    case states.grabbed:
         grounded = false
         x = playerid.x
         y = (playerid.y - 40)
         image_xscale = playerid.xscale
-        if (playerid.state != (52 << 0) && playerid.state != (76 << 0))
-            state = (0 << 0)
-        if (playerid.state == (76 << 0))
+        if (playerid.state != states.bombgrab && playerid.state != states.superslam)
+            state = states.normal
+        if (playerid.state == states.superslam)
         {
             if playerid.grounded
                 instance_destroy()
         }
         break
     default:
-        state = (0 << 0)
+        state = states.normal
         break
 }
 

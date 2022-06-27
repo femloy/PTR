@@ -1,15 +1,15 @@
 if (phase == 0 && attacking)
 {
-    if (state == (230 << 0))
+    if (state == states.pizzaface_ram)
     {
-        if (other.state == (84 << 0) && other.parry_inst != -4)
+        if (other.state == states.backbreaker && other.parry_inst != -4)
         {
-            state = (0 << 0)
+            state = states.normal
             boss_hurt(10, other.id)
             stunned = 50
             with (other)
             {
-                state = (147 << 0)
+                state = states.parry
                 sprite_index = choose(spr_parry1, spr_parry2, spr_parry3)
                 image_index = 0
                 image_speed = 0.35
@@ -42,13 +42,13 @@ if (phase == 0 && attacking)
                         hsp = choose(-5, 5)
                         switch choseattack
                         {
-                            case (227 << 0):
+                            case states.pizzaface_mouth:
                                 sprite_index = spr_pizzafaceword
                                 break
-                            case (228 << 0):
+                            case states.pizzaface_eyes:
                                 sprite_index = spr_sausageman_idle
                                 break
-                            case (229 << 0):
+                            case states.pizzaface_nose:
                                 sprite_index = spr_shroomcollect
                                 break
                         }
@@ -59,13 +59,13 @@ if (phase == 0 && attacking)
         }
         else
         {
-            state = (0 << 0)
+            state = states.normal
             player_hurt(20, other.id)
         }
     }
     else
     {
-        state = (0 << 0)
+        state = states.normal
         player_hurt(20, other.id)
     }
 }

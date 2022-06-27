@@ -11,7 +11,7 @@ function scr_dotaunt()
             tauntstoredvsp = vsp
             tauntstoredsprite = sprite_index
             tauntstoredstate = state
-            state = (84 << 0)
+            state = states.backbreaker
             if (supercharged && key_up)
             {
                 image_index = 0

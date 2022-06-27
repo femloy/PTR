@@ -17,7 +17,7 @@ if (turn == 1)
         {
             if (fake && touched)
                 instance_destroy()
-            state = (141 << 0)
+            state = states.chase
             throw_inst = -4
         }
         touched_player = 0

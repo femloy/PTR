@@ -3,7 +3,7 @@ if (room == rm_editor)
 image_speed = 0.35
 switch state
 {
-    case (126 << 0):
+    case states.idle:
         sprite_index = idlespr
         playerid = instance_nearest(x, y, obj_player)
         var x1 = 370
@@ -15,16 +15,16 @@ switch state
             cooldown--
         else if t
         {
-            state = (8 << 0)
+            state = states.transitioncutscene
             sprite_index = spr_ghoul_attackstart
             image_index = 0
             attack_y = y
         }
         break
-    case (128 << 0):
+    case states.charge:
         scr_enemy_charge()
         break
-    case (134 << 0):
+    case states.walk:
         sprite_index = idlespr
         var d = point_direction(x, y, xstart, ystart)
         x += lengthdir_x(8, d)
@@ -33,7 +33,7 @@ switch state
         vsp = 0
         if (x > (xstart - 10) && x < (xstart + 10) && y > (ystart - 10) && y < (ystart + 10))
         {
-            state = (126 << 0)
+            state = states.idle
             image_xscale = start_xscale
             cooldown = 100
             x = xstart
@@ -42,18 +42,18 @@ switch state
         else
             image_xscale = sign((x - xstart))
         break
-    case (8 << 0):
+    case states.transitioncutscene:
         hsp = 0
         vsp = 0
         if (floor(image_index) == (image_number - 1))
         {
-            state = (80 << 0)
+            state = states.punch
             vsp = 11
             attack_y = y
             sprite_index = spr_ghoul_attack
         }
         break
-    case (80 << 0):
+    case states.punch:
         vsp = Approach(vsp, -11, 0.5)
         hsp = (image_xscale * 10)
         x += hsp
@@ -62,54 +62,54 @@ switch state
         {
             y = attack_y
             vsp = 0
-            state = (126 << 0)
+            state = states.idle
             cooldown = 100
             image_xscale *= -1
         }
         break
-    case (130 << 0):
+    case states.turn:
         break
-    case (136 << 0):
+    case states.land:
         scr_enemy_land()
         break
-    case (137 << 0):
+    case states.hit:
         scr_enemy_hit()
         break
-    case (138 << 0):
+    case states.stun:
         scr_enemy_stun()
         hit = 1
         break
-    case (129 << 0):
+    case states.pizzagoblinthrow:
         scr_pizzagoblin_throw()
         break
-    case (4 << 0):
+    case states.grabbed:
         scr_enemy_grabbed()
         break
-    case (154 << 0):
+    case states.pummel:
         scr_enemy_pummel()
         break
-    case (155 << 0):
+    case states.staggered:
         scr_enemy_staggered()
         break
 }
 
-if (state == (138 << 0) && stunned > 100 && birdcreated == 0)
+if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
     birdcreated = 1
     with (instance_create(x, y, obj_enemybird))
         ID = other.id
 }
-if (state != (138 << 0))
+if (state != states.stun)
     birdcreated = 0
 if (flash == 1 && alarm[2] <= 0)
     alarm[2] = (0.15 * room_speed)
-if (state != (4 << 0))
+if (state != states.grabbed)
     depth = 0
-if (state != (138 << 0))
+if (state != states.stun)
     thrown = false
 if (bombreset > 0)
     bombreset--
-if (grounded && state == (129 << 0) && floor(image_index) == 3)
+if (grounded && state == states.pizzagoblinthrow && floor(image_index) == 3)
     vsp = -5
 if (boundbox == 0)
 {

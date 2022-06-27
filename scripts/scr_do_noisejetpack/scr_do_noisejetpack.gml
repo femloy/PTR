@@ -4,7 +4,7 @@ function scr_do_noisejetpack()
     {
         input_buffer_jump = 8
         trace("noisejetpack")
-        state = (215 << 0)
+        state = states.noisejetpack
         sprite_index = spr_playerN_doublejump
         image_index = 0
         vsp = -11

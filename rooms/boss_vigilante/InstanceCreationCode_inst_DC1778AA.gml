@@ -1,1 +1,1 @@
-attack = (3 << 0)
+attack = states.boots

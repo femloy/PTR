@@ -1,13 +1,13 @@
 switch state
 {
-    case (0 << 0):
+    case states.normal:
         if place_meeting(x, y, obj_player)
         {
             var num = instance_place_list(x, y, 322, global.instancelist, 0)
             for (var i = 0; i < num; i++)
             {
                 var b = ds_list_find_value(global.instancelist, i)
-                if (b.state == (121 << 0))
+                if (b.state == states.mach3)
                 {
                     player_inst = b
                     hsp = sign(player_inst.hsp)
@@ -24,9 +24,9 @@ switch state
                         tauntstoredsprite = sprite_index
                         tauntstoredstate = state
                         tauntstoredvsp = vsp
-                        state = (61 << 0)
+                        state = states.chainsaw
                     }
-                    state = (137 << 0)
+                    state = states.hit
                     hitX = x
                     hitY = y
                     hitLag = 10
@@ -39,7 +39,7 @@ switch state
             }
         }
         break
-    case (137 << 0):
+    case states.hit:
         x = (hitX + irandom_range(-1, 1))
         y = (hitY + irandom_range(-1, 1))
         if (hitLag > 0)

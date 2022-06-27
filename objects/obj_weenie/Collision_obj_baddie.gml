@@ -1,2 +1,2 @@
-if (state != (5 << 0))
+if (state != states.tumble)
     event_inherited()

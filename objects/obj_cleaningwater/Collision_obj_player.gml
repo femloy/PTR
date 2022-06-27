@@ -1,8 +1,8 @@
 with (other)
 {
-    if (state == (24 << 0) or skateboarding == 1 or state == (33 << 0) or state == (25 << 0) or state == (29 << 0) or state == (30 << 0))
+    if (state == states.cheesepep or skateboarding == 1 or state == states.boxxedpep or state == states.cheesepepstick or state == states.cheesepepstickside or state == states.cheesepepstickup)
     {
-        state = (0 << 0)
+        state = states.normal
         boxxed = 0
         skateboarding = 0
     }

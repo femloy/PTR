@@ -45,7 +45,7 @@ function scr_player_tacklecharge()
                     other.flash = 1
                     x = other.x
                     y = other.y
-                    state = (107 << 0)
+                    state = states.hurt
                     hsp = ((-image_xscale) * 10)
                     vsp = -10
                     alarm[8] = 60
@@ -55,7 +55,7 @@ function scr_player_tacklecharge()
             }
         }
         movespeed = 0
-        state = (106 << 0)
+        state = states.bump
         hsp = -2.5
         vsp = -3
         mach2 = 0
@@ -69,22 +69,22 @@ function scr_player_tacklecharge()
         sprite_index = spr_crouchslip
         if (character == "P")
             machhitAnim = 0
-        state = (102 << 0)
+        state = states.crouchslide
     }
     if ((!key_attack) && move != xscale && grounded)
     {
         image_index = 0
-        state = (105 << 0)
+        state = states.machslide
         sprite_index = spr_machslidestart
     }
     if (move == (-xscale) && grounded)
     {
         image_index = 0
-        state = (105 << 0)
+        state = states.machslide
         sprite_index = spr_machslideboost
     }
     if (move == xscale && (!key_attack) && grounded)
-        state = (0 << 0)
+        state = states.normal
     if ((!instance_exists(dashcloudid)) && grounded)
     {
         with (instance_create(x, y, obj_dashcloud))

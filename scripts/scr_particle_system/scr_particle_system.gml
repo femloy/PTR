@@ -75,15 +75,13 @@ function create_collect(_x, _y, sprite)
     return q;
 }
 
-function create_particle(argument0, argument1, argument2, argument3 = 0)
+function create_particle(x, y, part, random_offset = 0)
 {
-    if argument3 == undefined
-        argument3 = 0
-	
-    var _depth = ds_map_find_value(global.part_depth, argument2)
+    var _depth = ds_map_find_value(global.part_depth, part)
     if is_undefined(_depth)
         _depth = object_get_depth(object_index)
+	
     part_system_depth(global.particle_system, _depth)
-    part_emitter_region(global.particle_system, global.part_emitter, (argument0 - argument3), (argument0 + argument3), (argument1 - argument3), (argument1 + argument3), 0, 0)
-    part_emitter_burst(global.particle_system, global.part_emitter, ds_map_find_value(global.part_map, argument2), 1)
+    part_emitter_region(global.particle_system, global.part_emitter, (x - random_offset), (x + random_offset), (y - random_offset), (y + random_offset), 0, 0)
+    part_emitter_burst(global.particle_system, global.part_emitter, ds_map_find_value(global.part_map, part), 1)
 }

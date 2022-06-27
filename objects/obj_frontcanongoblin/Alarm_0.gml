@@ -1,6 +1,6 @@
 if (!destroyed)
 {
-    state = (8 << 0)
-    captain_sprite = 2601
+    state = states.transitioncutscene
+    captain_sprite = spr_captainbombshoot
     captain_index = 0
 }

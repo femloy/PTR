@@ -17,7 +17,7 @@ function scr_player_keyget()
     if (floor(image_index) == (image_number - 1))
     {
         global.keyget = 0
-        state = (0 << 0)
+        state = states.normal
         image_index = 0
     }
     exit;

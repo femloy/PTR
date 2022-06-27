@@ -1,4 +1,4 @@
-state = (0 << 0)
+state = states.normal
 dir = 1
 playerxoffset = 0
 if (global.beachcutscene == -4)

@@ -1,16 +1,16 @@
 var _actor = 0
 with (obj_player)
 {
-    if (state == (146 << 0))
+    if (state == states.actor)
         _actor = 1
 }
 if _actor
     exit;
 with (other)
 {
-    if (key_up && grounded && (!instance_exists(obj_option)) && (state == (0 << 0) or state == (103 << 0) or state == (104 << 0) or state == (58 << 0) or state == (121 << 0) or state == (99 << 0)))
+    if (key_up && grounded && (!instance_exists(obj_option)) && (state == states.normal or state == states.mach1 or state == states.mach2 or state == states.pogo or state == states.mach3 or state == states.Sjumpprep))
     {
         instance_create(x, y, obj_option)
-        state = (146 << 0)
+        state = states.actor
     }
 }

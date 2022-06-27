@@ -1,4 +1,4 @@
-if (currentscore < maxscore && global.pigtotal >= maxscore && other.state == (0 << 0) && other.grounded && other.key_up2)
+if (currentscore < maxscore && global.pigtotal >= maxscore && other.state == states.normal && other.grounded && other.key_up2)
 {
     ini_open(concat("saveData", global.currentsavefile, ".ini"))
     currentscore = maxscore

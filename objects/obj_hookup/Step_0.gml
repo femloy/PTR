@@ -10,7 +10,7 @@ if hooked
     y -= movespeed
     with (obj_player)
     {
-        if (state == (93 << 0) && place_meeting(x, y, other))
+        if (state == states.ladder && place_meeting(x, y, other))
             y -= 5
     }
     if (y < -50)

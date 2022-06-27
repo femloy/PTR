@@ -12,7 +12,7 @@ if (picked == 0)
     x = playerid.x
     with (playerid)
     {
-        state = (46 << 0)
+        state = states.gottreasure
         scr_soundeffect(sfx_secretfound)
         global.giantkey = 1
     }

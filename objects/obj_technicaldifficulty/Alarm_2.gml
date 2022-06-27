@@ -2,9 +2,9 @@ instance_destroy()
 with (playerid)
 {
     if (!isgustavo)
-        state = (0 << 0)
+        state = states.normal
     else
-        state = (191 << 0)
+        state = states.ratmount
     visible = true
 }
 with (obj_ghostfollow)

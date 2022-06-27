@@ -1,4 +1,4 @@
-if (obj_player1.state == (208 << 0))
+if (obj_player1.state == states.debugstate)
     exit;
 with (other)
 {
@@ -34,11 +34,11 @@ with (other)
     var bbox_size = abs((bbox_right - bbox_left))
     x = clamp(x, (other.x + bbox_size), (other.bbox_right - bbox_size))
     y = other.y
-    if (state == (37 << 0))
+    if (state == states.climbwall)
     {
         trace("climbwall verticalhallway")
         verticalbuffer = 10
-        verticalstate = (37 << 0)
+        verticalstate = states.climbwall
         var i = 0
         x = floor(x)
         while (!(scr_solid((x + xscale), y)))

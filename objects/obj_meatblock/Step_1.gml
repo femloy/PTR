@@ -3,7 +3,7 @@ if place_meeting(x, (y + 1), obj_railparent)
     var _inst = instance_place(x, (y + 1), obj_railparent)
     hsp = (_inst.dir * _inst.movespeed)
 }
-else if (object_index != obj_haystack or state == (0 << 0))
+else if (object_index != obj_haystack or state == states.normal)
     hsp = Approach(hsp, 0, 0.5)
 if (hsp != 0)
 {

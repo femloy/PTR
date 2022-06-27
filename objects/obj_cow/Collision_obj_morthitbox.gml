@@ -1,3 +1,3 @@
 image_xscale = other.playerid.xscale
-state = (134 << 0)
+state = states.walk
 movespeed = 6

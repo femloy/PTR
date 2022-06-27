@@ -1,4 +1,4 @@
-if (state == (18 << 0))
+if (state == states.titlescreen)
 {
     var w = 0
     var h = 0

@@ -2,18 +2,18 @@ if place_meeting(x, (y - 1), obj_player)
 {
     with (obj_player)
     {
-        if (state != (148 << 0) && state != (91 << 0) && state != (186 << 0) && state != (210 << 0) && state != (211 << 0))
+        if (state != states.golf && state != states.tackle && state != states.gotoplayer && state != states.trashjump && state != states.trashroll)
         {
             if place_meeting(x, (y + 1), other)
             {
-                if (state != (113 << 0) && state != (114 << 0) && state != (116 << 0) && state != (115 << 0))
+                if (state != states.barrel && state != states.barreljump && state != states.barrelslide && state != states.barrelclimbwall)
                 {
-                    state = (94 << 0)
+                    state = states.slipnslide
                     sprite_index = spr_currentplayer
                 }
                 else
                 {
-                    state = (116 << 0)
+                    state = states.barrelslide
                     if (sprite_index != spr_player_barrelslipnslide)
                         sprite_index = spr_player_barrelroll
                 }

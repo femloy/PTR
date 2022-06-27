@@ -5,7 +5,7 @@ parried = 0
 team = 1
 function SUPER_player_hurt(argument0, argument1)
 {
-    if ((!collisioned) && argument1.state != (145 << 0))
+    if ((!collisioned) && argument1.state != states.arenaround)
     {
         if instance_exists(obj_bosscontroller)
             obj_bosscontroller.player_hp -= argument0
@@ -14,7 +14,7 @@ function SUPER_player_hurt(argument0, argument1)
         {
             scr_soundeffect(sfx_killingblow)
             var lag = 8
-            if (state == (61 << 0) or state == (137 << 0))
+            if (state == states.chainsaw or state == states.hit)
             {
                 x = hitX
                 y = hitY
@@ -28,7 +28,7 @@ function SUPER_player_hurt(argument0, argument1)
             hithsp = 15
             hitstunned = 100
             hitvsp = -8
-            state = (137 << 0)
+            state = states.hit
             instance_create(other.x, other.y, obj_parryeffect)
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_slapstar)

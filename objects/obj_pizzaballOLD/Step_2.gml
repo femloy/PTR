@@ -1,2 +1,2 @@
-if (state != (148 << 0))
+if (state != states.golf)
     scr_collide()

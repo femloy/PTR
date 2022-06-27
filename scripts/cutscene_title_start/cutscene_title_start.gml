@@ -1,7 +1,7 @@
 function cutscene_title_start()
 {
     with (obj_player1)
-        state = (146 << 0)
+        state = states.actor
     cutscene_end_action()
     exit;
 }
@@ -27,7 +27,7 @@ function cutscene_title_end()
     if obj_inputAssigner.device_selected[0]
     {
         with (obj_player1)
-            state = (0 << 0)
+            state = states.normal
         cutscene_end_action()
     }
     else

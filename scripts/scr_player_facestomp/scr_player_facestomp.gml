@@ -14,7 +14,7 @@ function scr_player_facestomp()
     if (xscale == -1 && move == 1)
         movespeed = 0
     if (!key_down)
-        state = (92 << 0)
+        state = states.jump
     landAnim = 1
     if (vsp > 0)
         superslam++
@@ -22,12 +22,12 @@ function scr_player_facestomp()
         superslam = 0
     if (vsp > 15)
     {
-        state = (108 << 0)
+        state = states.freefall
         superslam = 0
     }
     if (grounded && ((!(place_meeting(x, (y + 1), obj_destructibles))) or place_meeting(x, (y + 1), obj_metalblock)) && vsp > 0)
     {
-        state = (111 << 0)
+        state = states.freefallland
         jumpAnim = 1
         jumpstop = 0
         image_index = 0
@@ -50,7 +50,7 @@ function scr_player_facestomp()
         sprite_index = spr_player_hanstandjump
         stompAnim = 0
         hsp = 0
-        state = (42 << 0)
+        state = states.handstandjump
         jumpAnim = 1
         jumpstop = 0
         image_index = 0

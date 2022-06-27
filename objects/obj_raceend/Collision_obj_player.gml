@@ -5,7 +5,7 @@ if ((!horseyfinish) && start)
         spd = 0
         hsp = 0
         vsp = 0
-        state = (89 << 0)
+        state = states.gameover
         with (obj_objecticontracker)
         {
             if (objectID == other.id)

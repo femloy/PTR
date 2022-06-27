@@ -1,4 +1,4 @@
-if (other.state != (186 << 0))
+if (other.state != states.gotoplayer)
 {
     if (obj_player1.character == "V")
         global.playerhealth = clamp((global.playerhealth + 100), 0, 100)
