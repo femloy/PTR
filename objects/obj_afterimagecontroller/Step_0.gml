@@ -10,7 +10,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
         }
         switch identifier
         {
-            case (1 << 0):
+            case afterimage.mach3effect:
                 if ((!((playerid.state == (92 << 0) && playerid.sprite_index == spr_playerN_noisebombspinjump))) && playerid.pizzapepper == 0 && playerid.state != (191 << 0) && playerid.sprite_index != spr_player_barrelroll && playerid.state != (55 << 0) && playerid.state != (147 << 0) && playerid.state != (41 << 0) && playerid.state != (80 << 0) && playerid.state != (41 << 0) && playerid.state != (31 << 0) && playerid.state != (102 << 0) && playerid.state != (4 << 0) && playerid.pogochargeactive == 0 && playerid.state != (20 << 0) && playerid.state != (121 << 0) && playerid.state != (37 << 0) && playerid.state != (19 << 0) && playerid.state != (128 << 0) && playerid.state != (104 << 0) && playerid.state != (42 << 0) && playerid.state != (105 << 0) && playerid.state != (75 << 0) && playerid.state != (63 << 0) && playerid.state != (73 << 0) && playerid.state != (76 << 0) && playerid.state != (65 << 0) && playerid.state != (61 << 0) && playerid.state != (97 << 0) && playerid.state != (33 << 0))
                     alarm[0] = 0
                 if (playerid.state == (104 << 0) or playerid.state == (103 << 0) or playerid.state == (121 << 0))
@@ -28,17 +28,20 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
                         other.visible = false
                 }
                 break
-            case (2 << 0):
+			
+            case afterimage.heatattack:
                 x += hsp
                 y += vsp
                 break
-            case (3 << 0):
-            case (4 << 0):
+			
+            case afterimage.firemouth:
+            case afterimage.blue:
                 alpha -= 0.05
                 if (alpha <= 0 && alarm[0] != 0)
                     alarm[0] = 0
                 break
-            case (5 << 0):
+			
+            case afterimage.blur:
                 alpha -= 0.15
                 if (alpha <= 0 && alarm[0] != 0)
                     alarm[0] = 0
@@ -55,7 +58,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
         if (alarm[2] == 0)
         {
             other.alpha[identifier] = 1
-            if (identifier == (1 << 0))
+            if (identifier == afterimage.mach3effect)
                 other.alpha[identifier] = alpha
             alarm[2] = 3
         }

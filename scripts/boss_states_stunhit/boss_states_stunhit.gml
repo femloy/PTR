@@ -18,7 +18,7 @@ function state_boss_stun()
         hsp = 5
     if (place_meeting((x - image_xscale), y, obj_solid) && (!(place_meeting((x - image_xscale), y, obj_destructibles))))
     {
-        particle_set_scale((8 << 0), (-image_xscale), 1)
+        particle_set_scale(particle.impact, (-image_xscale), 1)
         create_particle(x, y, particle.impact, 0)
         if (thrown == true && hp <= 0 && destroyable)
             instance_destroy()

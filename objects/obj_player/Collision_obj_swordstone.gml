@@ -12,5 +12,5 @@ if (grounded && other.sprite_index == spr_swordstone && (state == (42 << 0) or s
     state = (47 << 0)
     hsp = 0
     vsp = 0
-    tv_push_prompt_once(tv_create_prompt("This is the knight transformation text", (2 << 0), 596, 3), "knight")
+    tv_push_prompt_once(tv_create_prompt("This is the knight transformation text", tvprompt.transfo, spr_tv_knight, 3), "knight")
 }

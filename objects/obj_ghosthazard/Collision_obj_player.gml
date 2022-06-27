@@ -5,7 +5,7 @@ with (other)
     else if ((!isgustavo) && state != (16 << 0) && state != (17 << 0) && state != (146 << 0) && state != (147 << 0) && state != (186 << 0))
     {
         scr_losepoints()
-        tv_push_prompt_once(tv_create_prompt("This is the ghost transformation text", (2 << 0), 2147, 3), "ghost")
+        tv_push_prompt_once(tv_create_prompt("This is the ghost transformation text", tvprompt.transfo, spr_tv_ghost, 3), "ghost")
         grav /= 2
         state = (16 << 0)
         sprite_index = spr_ghostidle

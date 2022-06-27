@@ -17,7 +17,7 @@ if (state != (34 << 0))
                 state = (4 << 0)
                 playerid = other.id
             }
-            tv_push_prompt_once(tv_create_prompt("This is the bomb transformation text", (2 << 0), 2590, 3), "bombpep")
+            tv_push_prompt_once(tv_create_prompt("This is the bomb transformation text", tvprompt.transfo, spr_tv_bombpep, 3), "bombpep")
         }
     }
 }

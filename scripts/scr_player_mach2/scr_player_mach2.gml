@@ -92,7 +92,7 @@ function scr_player_mach2()
             flash = 1
             if (sprite_index != spr_rollgetup)
                 sprite_index = spr_mach4
-            particle_set_scale((5 << 0), xscale, 1)
+            particle_set_scale(particle.jumpdust, xscale, 1)
             create_particle(x, y, particle.jumpdust, 0)
         }
     }
@@ -136,7 +136,7 @@ function scr_player_mach2()
         sprite_index = spr_clownfall
     if (key_down && (!(place_meeting(x, y, obj_dashpad))))
     {
-        particle_set_scale((5 << 0), xscale, 1)
+        particle_set_scale(particle.jumpdust, xscale, 1)
         create_particle(x, y, particle.jumpdust, 0)
         flash = 0
         state = (5 << 0)

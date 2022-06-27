@@ -34,8 +34,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Generic",
-    "path": "folders/Objects/Room structure/Generic.yy",
+    "name": "Blocks",
+    "path": "folders/Objects/Room structure/Generic/Blocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_spike",

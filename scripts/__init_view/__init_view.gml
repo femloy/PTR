@@ -1,5 +1,23 @@
 function __init_view()
 {
-    exit;
+	enum e__VW
+	{
+		XView,
+		YView,
+		WView,
+		HView,
+		Angle,
+		HBorder,
+		VBorder,
+		HSpeed,
+		VSpeed,
+		Object,
+		Visible,
+		XPort,
+		YPort,
+		WPort,
+		HPort,
+		Camera,
+		SurfaceID,
+	};
 }
-

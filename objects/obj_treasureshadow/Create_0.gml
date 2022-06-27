@@ -1,2 +1,2 @@
 depth = -2
-playerid = 324
+playerid = obj_player1

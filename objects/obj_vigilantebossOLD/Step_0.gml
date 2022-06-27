@@ -1,4 +1,4 @@
-targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : 324)
+targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)
 if (hp <= 0 && state != (145 << 0) && state != (162 << 0))
 {
     if ((!thrown) && (!destroyable))

@@ -1,4 +1,4 @@
-playerid = 324
+playerid = obj_player1
 picked = 0
 depth = -8
 hsp = 0

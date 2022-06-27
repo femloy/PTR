@@ -1,3 +1,9 @@
+enum notification_type
+{
+	unknown_value0,
+	unknown_value1
+}
+
 if (instance_number(object_index) > 1)
 {
     instance_destroy()

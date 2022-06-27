@@ -3,7 +3,7 @@ if ((!global.pizzadelivery) && global.pizzasdelivered < 5 && global.panic == fal
     if (!global.failcutscene)
     {
         if (global.pizzasdelivered <= 0)
-            scene_info = [[cutscene_set_sprite, obj_gustavo, 2255, 0.35, -1], [cutscene_gustavo_start], [cutscene_wait, 30], [cutscene_set_sprite, obj_gustavo, 2246, 0.35, -1], [cutscene_wait, 10], [cutscene_move_player, 324, (obj_gustavo.x - 48), 6, 16], [cutscene_set_sprite, obj_player1, 2235, 0.35, 1], [cutscene_set_sprite, obj_gustavo, 2247, 0.35, -1], [cutscene_gustavo_end]]
+            scene_info = [[cutscene_set_sprite, obj_gustavo, 2255, 0.35, -1], [cutscene_gustavo_start], [cutscene_wait, 30], [cutscene_set_sprite, obj_gustavo, 2246, 0.35, -1], [cutscene_wait, 10], [cutscene_move_player, obj_player1, (obj_gustavo.x - 48), 6, 16], [cutscene_set_sprite, obj_player1, 2235, 0.35, 1], [cutscene_set_sprite, obj_gustavo, 2247, 0.35, -1], [cutscene_gustavo_end]]
         else
             scene_info = [[cutscene_set_sprite, obj_gustavo, 2246, 0.35, -1]]
     }

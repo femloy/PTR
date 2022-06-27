@@ -80,7 +80,7 @@ function state_player_jump()
                 jumpstop = 0
                 vsp = -9
                 doublejump = 1
-                particle_set_scale((4 << 0), xscale, 1)
+                particle_set_scale(particle.highjumpcloud2, xscale, 1)
                 create_particle(x, y, particle.highjumpcloud2, 0)
             }
         }
@@ -130,7 +130,7 @@ function state_player_jump()
                     sprite_index = spr_shotgunjump
                 image_index = 0
             }
-            particle_set_scale((4 << 0), xscale, 1)
+            particle_set_scale(particle.highjumpcloud2, xscale, 1)
             create_particle(x, y, particle.highjumpcloud2, 0)
         }
         if (vsp > 0 && ((!key_attack) or sprite_index == spr_suplexbump))

@@ -6,7 +6,7 @@ with (other)
     {
         if (state != (10 << 0) && state != (147 << 0) && hurted == 0)
         {
-            tv_push_prompt_once(tv_create_prompt("This is the firemouth transformation text", (2 << 0), 1139, 3), "firemouth")
+            tv_push_prompt_once(tv_create_prompt("This is the firemouth transformation text", tvprompt.transfo, spr_tv_firemouth, 3), "firemouth")
             is_firing = 0
             hsp = 0
             movespeed = 0

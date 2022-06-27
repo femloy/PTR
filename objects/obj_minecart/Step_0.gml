@@ -11,6 +11,7 @@ switch state
         }
         substate = (0 << 0)
         break
+	
     case (17 << 0):
         key_left = playerid.key_left
         key_right = playerid.key_right
@@ -62,7 +63,6 @@ switch state
                     substate = (0 << 0)
                 break
         }
-
         break
 }
 

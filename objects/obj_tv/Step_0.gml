@@ -49,9 +49,11 @@ switch state
             if global.panic
                 idlespr = spr_tv_escapeG
         }
+		
         var _state = obj_player1.state
         if (_state == (84 << 0) or _state == (61 << 0))
             _state = obj_player1.tauntstoredstate
+		
         var _transfo = 1
         switch _state
         {

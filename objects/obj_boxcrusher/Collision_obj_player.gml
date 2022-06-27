@@ -10,7 +10,7 @@ if (sprite_index == spr_boxcrusher_fall)
 else if (sprite_index == spr_boxcrusher_land)
 {
     if (other.state != (33 << 0))
-        tv_push_prompt_once(tv_create_prompt("This is the boxxed transformation text", (2 << 0), 2832, 3), "boxxedpep")
+        tv_push_prompt_once(tv_create_prompt("This is the boxxed transformation text", tvprompt.transfo, spr_tv_boxxedpep, 3), "boxxedpep")
     other.boxxed = 1
     other.movespeed = 0
     other.state = (33 << 0)

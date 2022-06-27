@@ -110,7 +110,7 @@ function scr_player_ratmount()
         steppy = 0
     if (input_buffer_jump < 8 && grounded && sprite_index != spr_player_ratmountswallow)
     {
-        particle_set_scale((4 << 0), xscale, 1)
+        particle_set_scale(particle.highjumpcloud2, xscale, 1)
         create_particle(x, y, particle.highjumpcloud2, 0)
         scr_soundeffect(sfx_jump)
         if brick

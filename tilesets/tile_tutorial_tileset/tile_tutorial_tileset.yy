@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "tilespr_tile_tutorial_tileset",
-    "path": "sprites/tilespr_tile_tutorial_tileset/tilespr_tile_tutorial_tileset.yy",
+    "name": "tile_tutorial",
+    "path": "sprites/tile_tutorial/tile_tutorial.yy",
   },
   "tileWidth": 16,
   "tileHeight": 16,
-  "tilexoff": 2,
-  "tileyoff": 2,
-  "tilehsep": 4,
-  "tilevsep": 4,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",

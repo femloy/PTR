@@ -65,7 +65,7 @@ function scr_player_tumble()
         sprite_index = spr_player_Sjumpcancelslide
     if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_breakdance)
     {
-        particle_set_scale((5 << 0), xscale, 1)
+        particle_set_scale(particle.jumpdust, xscale, 1)
         create_particle(x, y, particle.jumpdust, 0)
         movespeed = 12
         sprite_index = spr_breakdancesuper

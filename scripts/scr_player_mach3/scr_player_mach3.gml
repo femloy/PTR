@@ -131,7 +131,7 @@ function scr_player_mach3()
 	}
 	if (key_down && fightball == 0)
 	{
-	    particle_set_scale((5 << 0), xscale, 1)
+	    particle_set_scale(particle.jumpdust, xscale, 1)
 	    create_particle(x, y, particle.jumpdust, 0)
 	    flash = 0
 	    state = (5 << 0)

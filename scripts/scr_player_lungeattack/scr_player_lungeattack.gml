@@ -117,7 +117,7 @@ function DoFinisher()
         sprite_index = spr_player_breakdanceuppercut
         vsp = -16
         hsp = (xscale * movespeed)
-        particle_set_scale((4 << 0), xscale, 1)
+        particle_set_scale(particle.highjumpcloud2, xscale, 1)
         create_particle(x, y, particle.highjumpcloud2, 0)
     }
     else if ((key_left + key_right) == xscale)
@@ -128,7 +128,7 @@ function DoFinisher()
         movespeed = 14
         with (instance_create(x, y, obj_superdashcloud))
             image_xscale = other.xscale
-        particle_set_scale((2 << 0), xscale, 1)
+        particle_set_scale(particle.crazyrunothereffect, xscale, 1)
         create_particle(x, y, particle.crazyrunothereffect, 0)
     }
     else if key_down
@@ -149,7 +149,7 @@ function DoFinisher()
         movespeed = 14
         with (instance_create(x, y, obj_superdashcloud))
             image_xscale = other.xscale
-        particle_set_scale((2 << 0), xscale, 1)
+        particle_set_scale(particle.crazyrunothereffect, xscale, 1)
         create_particle(x, y, particle.crazyrunothereffect, 0)
     }
     exit;

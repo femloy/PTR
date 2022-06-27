@@ -1,6 +1,3 @@
-function draw_background_tiled(argument0, argument1, argument2)
-{
-    draw_sprite_tiled(argument0, 0, argument1, argument2)
-    exit;
+function draw_background_tiled(background, x, y) {
+    draw_sprite_tiled(background, 0, x, y)
 }
-

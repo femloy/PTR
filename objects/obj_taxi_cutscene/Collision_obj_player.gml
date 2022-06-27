@@ -6,7 +6,7 @@ obj_player1.hsp = 0
 obj_player1.vsp = 0
 obj_player1.state = (119 << 0)
 scr_soundeffect(sfx_taxi2)
-playerid = 324
+playerid = obj_player1
 sprite_index = spr_taximove
 hsp = 10
 obj_player1.cutscene = 1

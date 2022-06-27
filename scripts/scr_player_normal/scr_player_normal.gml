@@ -245,7 +245,7 @@ function state_player_normal()
                     sprite_index = spr_shotgunjump
                 image_index = 0
             }
-            particle_set_scale((4 << 0), xscale, 1)
+            particle_set_scale(particle.highjumpcloud2, xscale, 1)
             create_particle(x, y, particle.highjumpcloud2, 0)
             vsp = -11
             state = (92 << 0)
@@ -318,7 +318,7 @@ function state_player_normal()
         sprite_index = spr_player_breakdanceuppercut
         vsp = -14
         movespeed = hsp
-        particle_set_scale((4 << 0), xscale, 1)
+        particle_set_scale(particle.highjumpcloud2, xscale, 1)
         create_particle(x, y, particle.highjumpcloud2, 0)
     }
     switch character

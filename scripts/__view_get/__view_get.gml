@@ -1,75 +1,28 @@
-function __view_get(argument0, argument1)
+function __view_get(__prop, __index)
 {
-    var __prop = argument0
-    var __index = argument1
-    var __res = -1
-    switch __prop
-    {
-        case (0 << 0):
-            var __cam = view_get_camera(__index)
-            __res = camera_get_view_x(__cam)
-            break
-        case (1 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_y(__cam)
-            break
-        case (2 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_width(__cam)
-            break
-        case (3 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_height(__cam)
-            break
-        case (4 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_angle(__cam)
-            break
-        case (5 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_border_x(__cam)
-            break
-        case (6 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_border_y(__cam)
-            break
-        case (7 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_speed_x(__cam)
-            break
-        case (8 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_speed_y(__cam)
-            break
-        case (9 << 0):
-            __cam = view_get_camera(__index)
-            __res = camera_get_view_target(__cam)
-            break
-        case (10 << 0):
-            __res = view_get_visible(__index)
-            break
-        case (11 << 0):
-            __res = view_get_xport(__index)
-            break
-        case (12 << 0):
-            __res = view_get_yport(__index)
-            break
-        case (13 << 0):
-            __res = view_get_wport(__index)
-            break
-        case (14 << 0):
-            __res = view_get_hport(__index)
-            break
-        case (15 << 0):
-            __res = view_get_camera(__index)
-            break
-        case (16 << 0):
-            __res = view_get_surface_id(__index)
-            break
-        default:
-            break
-    }
+	var __res = -1;
 
-    return __res;
+	switch(__prop)
+	{
+	case e__VW.XView: var __cam = view_get_camera(__index); __res = camera_get_view_x(__cam); break;
+	case e__VW.YView: var __cam = view_get_camera(__index); __res = camera_get_view_y(__cam); break;
+	case e__VW.WView: var __cam = view_get_camera(__index); __res = camera_get_view_width(__cam); break;
+	case e__VW.HView: var __cam = view_get_camera(__index); __res = camera_get_view_height(__cam); break;
+	case e__VW.Angle: var __cam = view_get_camera(__index); __res = camera_get_view_angle(__cam); break;
+	case e__VW.HBorder: var __cam = view_get_camera(__index); __res = camera_get_view_border_x(__cam); break;
+	case e__VW.VBorder: var __cam = view_get_camera(__index); __res = camera_get_view_border_y(__cam); break;
+	case e__VW.HSpeed: var __cam = view_get_camera(__index); __res = camera_get_view_speed_x(__cam); break;
+	case e__VW.VSpeed: var __cam = view_get_camera(__index); __res = camera_get_view_speed_y(__cam); break;
+	case e__VW.Object: var __cam = view_get_camera(__index); __res = camera_get_view_target(__cam); break;
+	case e__VW.Visible: __res = view_get_visible(__index); break;
+	case e__VW.XPort: __res = view_get_xport(__index); break;
+	case e__VW.YPort: __res = view_get_yport(__index); break;
+	case e__VW.WPort: __res = view_get_wport(__index); break;
+	case e__VW.HPort: __res = view_get_hport(__index); break;
+	case e__VW.Camera: __res = view_get_camera(__index); break;
+	case e__VW.SurfaceID: __res = view_get_surface_id(__index); break;
+	default: break;
+	};
+
+	return __res;
 }
-

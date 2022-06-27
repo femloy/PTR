@@ -10,7 +10,7 @@ function scr_enemy_hit()
         y = hitY
         var _player = -4
         if (grabbedby == 1)
-            _player = 324
+            _player = obj_player1
         else
             _player = 323
         if (obj_player.tauntstoredstate == (104 << 0) or obj_player.tauntstoredstate == (5 << 0) or obj_player.state == (104 << 0) or obj_player.state == (5 << 0))

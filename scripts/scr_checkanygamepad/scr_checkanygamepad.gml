@@ -1,45 +1,43 @@
 function scr_checkanygamepad()
 {
     if gamepad_button_check_pressed(0, gp_face1)
-        return 32769;
+        return gp_face1;
     else if gamepad_button_check_pressed(0, gp_face2)
-        return 32770;
+        return gp_face2;
     else if gamepad_button_check_pressed(0, gp_face3)
-        return 32771;
+        return gp_face3;
     else if gamepad_button_check_pressed(0, gp_face4)
-        return 32772;
+        return gp_face4;
     else if gamepad_button_check_pressed(0, gp_shoulderl)
-        return 32773;
+        return gp_shoulderl;
     else if gamepad_button_check_pressed(0, gp_shoulderlb)
-        return 32775;
+        return gp_shoulderlb;
     else if gamepad_button_check_pressed(0, gp_shoulderr)
-        return 32774;
+        return gp_shoulderr;
     else if gamepad_button_check_pressed(0, gp_shoulderrb)
-        return 32776;
+        return gp_shoulderrb;
     else if gamepad_button_check_pressed(0, gp_select)
-        return 32777;
+        return gp_select;
     else if gamepad_button_check_pressed(0, gp_start)
-        return 32778;
+        return gp_start;
     else if gamepad_button_check_pressed(0, gp_stickl)
-        return 32779;
+        return gp_stickl;
     else if gamepad_button_check_pressed(0, gp_stickr)
-        return 32780;
+        return gp_stickr;
     else if gamepad_button_check_pressed(0, gp_padu)
-        return 32781;
+        return gp_padu;
     else if gamepad_button_check_pressed(0, gp_padd)
-        return 32782;
+        return gp_padd;
     else if gamepad_button_check_pressed(0, gp_padl)
-        return 32783;
+        return gp_padl;
     else if gamepad_button_check_pressed(0, gp_padr)
-        return 32784;
+        return gp_padr;
     else if gamepad_button_check_pressed(0, gp_axislh)
-        return 32785;
+        return gp_axislh;
     else if gamepad_button_check_pressed(0, gp_axislv)
-        return 32786;
+        return gp_axislv;
     else if gamepad_button_check_pressed(0, gp_axisrh)
-        return 32787;
+        return gp_axisrh;
     else if gamepad_button_check_pressed(0, gp_axisrv)
-        return 32788;
-    exit;
+        return gp_axisrv;
 }
-

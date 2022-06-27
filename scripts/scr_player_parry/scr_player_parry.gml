@@ -23,7 +23,7 @@ function scr_player_parry()
         {
             if (distance_to_object(other) < parry_threshold && state != (137 << 0) && state != (4 << 0) && state != (138 << 0) && parryable && (!((state == (138 << 0) && thrown == true))))
             {
-                notification_push((1 << 0), [id, object_index, room])
+                notification_push(notification_type.unknown_value1, [id, object_index, room])
                 obj_player1.xscale = (-image_xscale)
                 grabbedby = _grabbedby
                 var lag = 5
@@ -65,6 +65,4 @@ function scr_player_parry()
             }
         }
     }
-    exit;
 }
-

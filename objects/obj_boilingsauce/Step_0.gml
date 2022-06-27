@@ -10,7 +10,7 @@ with (playerid)
         var _pindex = (object_index == obj_player1 ? 0 : 1)
         GamepadSetVibration(_pindex, 1, 1, 0.85)
         if (state != (9 << 0))
-            tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", (2 << 0), 550, 3), "fireass")
+            tv_push_prompt_once(tv_create_prompt("This is the fireass transformation text", tvprompt.transfo, spr_tv_fireass, 3), "fireass")
         state = (9 << 0)
         vsp = -20
         sprite_index = spr_fireass

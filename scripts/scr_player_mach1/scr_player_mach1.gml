@@ -35,7 +35,7 @@ function scr_player_mach1()
         if (movespeed >= 8)
         {
             state = (104 << 0)
-            particle_set_scale((5 << 0), xscale, 1)
+            particle_set_scale(particle.jumpdust, xscale, 1)
             create_particle(x, y, particle.jumpdust, 0)
         }
         if (vsp > 0)

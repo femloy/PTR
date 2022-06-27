@@ -1,4 +1,4 @@
-targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : 324)
+targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)
 if (obj_bosscontroller.state == (144 << 0))
     exit;
 if (hp <= 0 && state != (145 << 0) && state != (162 << 0))

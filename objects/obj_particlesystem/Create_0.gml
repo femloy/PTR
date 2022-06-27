@@ -17,6 +17,11 @@ enum particle
 	groundpoundeffect,
 	antigrav_bubblepop
 }
+enum debris
+{
+	normal,
+	fade
+}
 
 if (instance_number(obj_particlesystem) > 1)
 {

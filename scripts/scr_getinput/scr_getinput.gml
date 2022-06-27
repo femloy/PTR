@@ -2,7 +2,9 @@ function scr_getinput()
 {
     if (instance_exists(obj_debugcontroller) && obj_debugcontroller.active)
         exit;
+	
     var _dvc = obj_inputAssigner.player_input_device[0]
+	
     gamepad_set_axis_deadzone(_dvc, 0.4)
     key_up = (keyboard_check(global.key_up) or gamepad_button_check(_dvc, global.key_upC) or gamepad_axis_value(_dvc, gp_axislv) < 0)
     key_up2 = (keyboard_check_pressed(global.key_up) or gamepad_button_check_pressed(_dvc, global.key_upC) or (gamepad_axis_value(_dvc, gp_axislv) < -0.5 && stickpressed == 0))
@@ -26,10 +28,12 @@ function scr_getinput()
     key_escape = (keyboard_check_pressed(vk_escape) or gamepad_button_check(_dvc, gp_select))
     key_chainsaw = (keyboard_check(global.key_chainsaw) or gamepad_button_check(_dvc, global.key_chainsawC) or gamepad_button_check(_dvc, gp_shoulderlb))
     key_chainsaw2 = (keyboard_check_pressed(global.key_chainsaw) or gamepad_button_check_pressed(_dvc, global.key_chainsawC) or gamepad_button_check_pressed(_dvc, gp_shoulderlb))
-    if (gamepad_axis_value(_dvc, gp_axislh) > 0.5 or gamepad_axis_value(_dvc, gp_axislh) < -0.5 or gamepad_axis_value(_dvc, gp_axislv) > 0.5 or gamepad_axis_value(_dvc, gp_axislv) < -0.5)
-        stickpressed = 1
+    
+	if (gamepad_axis_value(_dvc, gp_axislh) > 0.5 or gamepad_axis_value(_dvc, gp_axislh) < -0.5 or gamepad_axis_value(_dvc, gp_axislv) > 0.5 or gamepad_axis_value(_dvc, gp_axislv) < -0.5)
+        stickpressed = true
     else
-        stickpressed = 0
+        stickpressed = false
+	
     if (object_index == obj_player1 && state == (99 << 0))
     {
         var haxis = gamepad_axis_value(_dvc, gp_axislh)
@@ -40,9 +44,7 @@ function scr_getinput()
             trace(_dir)
             var _deadzone = 5
             if (_dir >= _deadzone && _dir <= (180 - _deadzone))
-                key_up = 1
+                key_up = true
         }
     }
-    exit;
 }
-

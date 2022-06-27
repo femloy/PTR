@@ -13,12 +13,12 @@ if (obj_player.state == (119 << 0))
     if (!global.pizzadelivery)
     {
         with (instance_create((obj_stopsign.x - 480), obj_stopsign.y, obj_taxidud))
-            playerid = 324
+            playerid = obj_player1
     }
     else
     {
         with (instance_create((obj_checkpoint.x - 480), (obj_checkpoint.y - 50), obj_taxidud))
-            playerid = 324
+            playerid = obj_player1
         with (obj_player)
         {
             x = obj_checkpoint.x

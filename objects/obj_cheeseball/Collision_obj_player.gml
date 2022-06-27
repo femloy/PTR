@@ -14,7 +14,7 @@ if (other.state != (186 << 0) && other.state != (61 << 0))
     }
     else
     {
-        tv_push_prompt_once(tv_create_prompt("This is the cheeseball transformation text", (2 << 0), 2240, 3), "cheeseball")
+        tv_push_prompt_once(tv_create_prompt("This is the cheeseball transformation text", tvprompt.transfo, spr_tv_cheeseball, 3), "cheeseball")
         other.xscale = image_xscale
         other.hsp = hsp
         other.vsp = vsp

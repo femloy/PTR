@@ -9,14 +9,15 @@ if (!ds_list_empty(global.debris_list))
             {
                 if (vsp < 20)
                     vsp += grav
-                if (type == (1 << 0))
+                if (type == debris.fade)
                 {
                     vsp = 0
                     alpha -= 0.05
                 }
                 x += hsp
                 y += vsp
-                var _destroy = 0
+				
+                var _destroy = false
                 if animated
                 {
                     image_index += image_speed
@@ -27,10 +28,12 @@ if (!ds_list_empty(global.debris_list))
                             _destroy = 1
                     }
                 }
+				
                 var outofx = (x > (room_width + sprw) or x < (-sprw))
                 var outofy = (y > (room_height + sprh) or y < (-sprh))
-                if (outofx or outofy or (type == (1 << 0) && alpha <= 0))
-                    _destroy = 1
+                if (outofx or outofy or (type == debris.fade && alpha <= 0))
+                    _destroy = true
+				
                 if _destroy
                 {
                     ds_list_delete(global.debris_list, i)

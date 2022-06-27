@@ -1,3 +1,10 @@
+enum tvprompt
+{
+	normal,
+	trigger,
+	transfo
+}
+
 image_speed = 0.1
 chose = 0
 message = ""

@@ -9,7 +9,7 @@ function create_afterimage(argument0, argument1, argument2, argument3)
         alarm: [15, 3, -1],
         image_blend: choose(global.afterimage_color1, global.afterimage_color2),
         image_xscale: 1,
-        identifier: (0 << 0),
+        identifier: afterimage.afterimage,
         visible: true,
         alpha: 1
     }
@@ -30,8 +30,8 @@ function create_mach3effect(argument0, argument1, argument2, argument3)
         image_blend: choose(global.mach_color1, global.mach_color2),
         image_xscale: 1,
         visible: true,
-        identifier: (1 << 0),
-        playerid: 324,
+        identifier: afterimage.mach3effect,
+        playerid: obj_player1,
         alpha: 1
     }
 
@@ -42,9 +42,9 @@ function create_mach3effect(argument0, argument1, argument2, argument3)
 function create_heatattack_afterimage(argument0, argument1, argument2, argument3, argument4)
 {
     var _velocity = 6
-    with (create_afterimage(argument0, argument1, argument2, argument3))
+    with create_afterimage(argument0, argument1, argument2, argument3)
     {
-        identifier = (2 << 0)
+        identifier = afterimage.heatattack
         alarm[1] = -1
         alarm[2] = -1
         alarm[0] = 8
@@ -52,19 +52,19 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
         hsp = _velocity
         vsp = 0
     }
-    with (create_afterimage(argument0, argument1, argument2, argument3))
+    with create_afterimage(argument0, argument1, argument2, argument3)
     {
-        identifier = (2 << 0)
+        identifier = afterimage.heatattack
         alarm[1] = -1
         alarm[2] = -1
         alarm[0] = 8
         image_xscale = argument4
-        hsp = (-_velocity)
+        hsp = -_velocity
         vsp = 0
     }
-    with (create_afterimage(argument0, argument1, argument2, argument3))
+    with create_afterimage(argument0, argument1, argument2, argument3)
     {
-        identifier = (2 << 0)
+        identifier = afterimage.heatattack
         alarm[1] = -1
         alarm[2] = -1
         alarm[0] = 8
@@ -72,23 +72,23 @@ function create_heatattack_afterimage(argument0, argument1, argument2, argument3
         hsp = 0
         vsp = _velocity
     }
-    with (create_afterimage(argument0, argument1, argument2, argument3))
+    with create_afterimage(argument0, argument1, argument2, argument3)
     {
-        identifier = (2 << 0)
+        identifier = afterimage.heatattack
         alarm[1] = -1
         alarm[2] = -1
         alarm[0] = 8
         image_xscale = argument4
         hsp = 0
-        vsp = (-_velocity)
+        vsp = -_velocity
     }
 }
 
 function create_firemouth_afterimage(argument0, argument1, argument2, argument3, argument4)
 {
-    with (create_afterimage(argument0, argument1, argument2, argument3))
+    with create_afterimage(argument0, argument1, argument2, argument3)
     {
-        identifier = (3 << 0)
+        identifier = afterimage.firemouth
         alarm[0] = -1
         alarm[1] = -1
         alarm[2] = -1
@@ -100,9 +100,9 @@ function create_firemouth_afterimage(argument0, argument1, argument2, argument3,
 
 function create_blue_afterimage(argument0, argument1, argument2, argument3, argument4)
 {
-    with (create_afterimage(argument0, argument1, argument2, argument3))
+    with create_afterimage(argument0, argument1, argument2, argument3)
     {
-        identifier = (4 << 0)
+        identifier = afterimage.blue
         alarm[0] = -1
         alarm[1] = -1
         alarm[2] = -1
@@ -115,17 +115,16 @@ function create_blue_afterimage(argument0, argument1, argument2, argument3, argu
 function create_blur_afterimage(argument0, argument1, argument2, argument3, argument4)
 {
     var b = create_afterimage(argument0, argument1, argument2, argument3)
-    with (b)
+    with b
     {
-        identifier = (5 << 0)
+        identifier = afterimage.blur
         alarm[0] = -1
         alarm[1] = -1
         alarm[2] = -1
         image_blend = c_white
         image_xscale = argument4
         alpha = 0.8
-        playerid = -4
+        playerid = noone
     }
     return b;
 }
-
