@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_superpinballmachine",
-    "path": "sprites/spr_superpinballmachine/spr_superpinballmachine.yy"
+    "path": "sprites/spr_superpinballmachine/spr_superpinballmachine.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Cutscenes",
+    "path": "folders/Objects/Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_superpinballmachine",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

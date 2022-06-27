@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite10332571",
-    "path": "sprites/sprite10332571/sprite10332571.yy"
+    "path": "sprites/sprite10332571/sprite10332571.yy",
   },
   "solid": false,
   "visible": false,
@@ -22,35 +22,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 4",
+    "path": "folders/Objects/Room structure/World 4.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_conveyordespawner",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

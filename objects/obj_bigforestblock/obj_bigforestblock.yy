@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Blocks",
-    "path": "folders/Objects/Room structure/Blocks.yy",
+    "name": "World 3",
+    "path": "folders/Objects/Room structure/World 3.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bigforestblock",

@@ -52,7 +52,7 @@ if (state != (4 << 0))
             image_index = 0
             state = (91 << 0)
         }
-        if (state == (104 << 0) && other.grounded == 1)
+        if (state == (104 << 0) && other.grounded == true)
         {
             other.hp = 0
             instance_create(x, y, obj_bumpeffect)

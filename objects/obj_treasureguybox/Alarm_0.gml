@@ -11,7 +11,7 @@ with (obj_camera)
     healthshaketime = 30
 var val = heat_calculate(10)
 global.collect += val
-create_collect(x, y, choose(1559, 1561, 1562, 1563, 1560))
+create_collect(x, y, choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect))
 with (instance_create((x + 16), y, obj_smallnumber))
     number = string(val)
 current_arr++

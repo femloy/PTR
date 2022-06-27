@@ -106,7 +106,7 @@ if (flash == 1 && alarm[2] <= 0)
 if (state != (4 << 0))
     depth = 0
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false
 if (bombreset > 0)
     bombreset--
 if (grounded && state == (129 << 0) && floor(image_index) == 3)

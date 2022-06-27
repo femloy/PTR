@@ -35,8 +35,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "World 3",
+    "path": "folders/Objects/Room structure/World 3.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_teleporter",

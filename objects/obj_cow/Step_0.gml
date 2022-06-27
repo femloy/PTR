@@ -9,6 +9,7 @@ switch state
             blockinst.visible = false
         }
         break
+	
     case (134 << 0):
         if (blockinst != noone && instance_exists(blockinst))
         {
@@ -28,5 +29,4 @@ switch state
             instance_destroy()
         break
 }
-
 scr_collide()

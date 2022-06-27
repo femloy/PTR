@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Collectibles",
+    "path": "folders/Objects/Room structure/Generic/Collectibles.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pizzaboxunopen",

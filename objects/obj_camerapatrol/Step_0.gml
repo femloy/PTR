@@ -112,7 +112,7 @@ if (state != (4 << 0))
 if (state == (138 << 0) or state == (134 << 0))
     movespeed = 0
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false
 if (boundbox == 0)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))

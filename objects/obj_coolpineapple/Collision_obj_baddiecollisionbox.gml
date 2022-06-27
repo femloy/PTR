@@ -5,7 +5,7 @@ var other_baddie = other.id
 var can_parry = 0
 with (other_baddie)
 {
-    if (instance_exists(baddieID) && baddieID.thrown == 1 && baddieID != other.id)
+    if (instance_exists(baddieID) && baddieID.thrown == true && baddieID != other.id)
         can_parry = 1
 }
 if (can_parry && state != (147 << 0) && other.baddieID != id)

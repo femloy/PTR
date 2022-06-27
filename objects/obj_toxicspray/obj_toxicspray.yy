@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_toxicspray",
-    "path": "sprites/spr_toxicspray/spr_toxicspray.yy"
+    "path": "sprites/spr_toxicspray/spr_toxicspray.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,25 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Boss",
+    "path": "folders/Objects/Baddie/Boss.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_toxicspray",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

@@ -34,7 +34,7 @@ switch state
         scr_collide()
         break
     case (4 << 0):
-        grounded = 0
+        grounded = false
         x = playerid.x
         y = (playerid.y - 40)
         image_xscale = playerid.xscale

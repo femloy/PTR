@@ -259,7 +259,7 @@ if (instance_exists(player) && player.state != (64 << 0) && player.state != (89 
 }
 else if follow_golf
 {
-    if (instance_exists(targetgolf) && targetgolf.thrown == 1)
+    if (instance_exists(targetgolf) && targetgolf.thrown == true)
     {
         var _xx = targetgolf.x
         var _yy = targetgolf.y

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_hurtbox",
-    "path": "sprites/spr_hurtbox/spr_hurtbox.yy"
+    "path": "sprites/spr_hurtbox/spr_hurtbox.yy",
   },
   "solid": false,
   "visible": false,
@@ -22,28 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 4,
-      "collisionObjectId": {
-        "name": "obj_player",
-        "path": "objects/obj_player/obj_player.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Level",
+    "path": "folders/Objects/Level.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_hurtbox",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

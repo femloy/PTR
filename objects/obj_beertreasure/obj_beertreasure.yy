@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Treasures",
-    "path": "folders/Objects/Room structure/Collectibles/Treasures.yy",
+    "name": "Treasure",
+    "path": "folders/Objects/Cutscenes/Treasure.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_beertreasure",

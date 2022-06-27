@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Visuals",
-    "path": "folders/Objects/Visuals.yy",
+    "name": "Hitboxes",
+    "path": "folders/Objects/Baddie/Hitboxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bombexplosion",

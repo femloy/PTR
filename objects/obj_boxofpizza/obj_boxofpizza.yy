@@ -32,7 +32,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Warps",
-    "path": "folders/Objects/Room structure/Warps.yy",
+    "path": "folders/Objects/Room structure/Generic/Warps.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_boxofpizza",

@@ -56,7 +56,7 @@ if (flash == 1 && alarm[2] <= 0)
 if (state != (4 << 0))
     depth = 0
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false
 if (bombreset > 0)
     bombreset--
 var targetplayer = (global.coop ? instance_nearest(x, y, obj_player) : obj_player1)

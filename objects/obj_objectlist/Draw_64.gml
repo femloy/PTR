@@ -36,6 +36,7 @@ if (object_list != -4)
         draw_set_color(c_white)
         for (var ty2 = ((y + scroll_y) + ty1); ty2 > ((y + sprite_height) - 12); ty2 -= 4)
         {
+			
         }
         draw_text((x + tx1), ty2, text)
     }

@@ -50,7 +50,6 @@ switch state
                 }
                 break
         }
-
         break
 }
 

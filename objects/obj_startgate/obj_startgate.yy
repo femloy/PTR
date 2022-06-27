@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Hub",
+    "path": "folders/Objects/Room structure/Hub.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_startgate",

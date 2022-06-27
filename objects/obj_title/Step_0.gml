@@ -18,7 +18,7 @@ if collide
                 shake_mag = 3
                 shake_mag_acc = (3 / room_speed)
             }
-            grounded = 1
+            grounded = true
         }
     }
 }

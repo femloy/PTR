@@ -1,7 +1,7 @@
 var _temp_local_var_3;
 function scr_collide_player()
 {
-    grounded = 0
+    grounded = false
     grinding = 0
     var vsp_final = (vsp + vsp_carry)
     vsp_carry = 0
@@ -56,7 +56,7 @@ function scr_collide_player()
         }
         else
         {
-            grounded = 1
+            grounded = true
             vsp = grav
             if (platformid.vsp > 0)
                 vsp_carry = platformid.vsp
@@ -103,7 +103,7 @@ function scr_collide_player()
     grinding = ((!(place_meeting(x, y, obj_grindrail))) && place_meeting(x, (y + 1), obj_grindrail))
     grounded |= grinding
     if (platformid != -4 or (place_meeting(x, (y + 1), obj_movingplatform) && (!(place_meeting(x, (y - 3), obj_movingplatform)))) or place_meeting(x, (y + 8), (101 && (!(place_meeting(x, (y + 6), obj_movingplatform))))))
-        grounded = 1
+        grounded = true
     if (grounded && platformid == -4)
         y = floor(y)
     exit;

@@ -31,8 +31,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Visuals",
-    "path": "folders/Objects/Visuals.yy",
+    "name": "Level",
+    "path": "folders/Objects/Visuals/Level.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_cheesedragonshadow",

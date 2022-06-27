@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Menu",
+    "path": "folders/Objects/Game settings/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_levelselect",

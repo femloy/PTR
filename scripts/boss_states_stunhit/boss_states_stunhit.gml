@@ -7,7 +7,7 @@ function state_boss_stun()
     image_speed = 0.35
     if ((grounded or (grounded && (!(place_meeting(x, y, obj_platform))))) && vsp > 0)
     {
-        if (thrown == 1 && hp <= 0 && destroyable)
+        if (thrown == true && hp <= 0 && destroyable)
             instance_destroy()
         grav = 0.5
         hsp = 0
@@ -20,7 +20,7 @@ function state_boss_stun()
     {
         particle_set_scale((8 << 0), (-image_xscale), 1)
         create_particle(x, y, particle.impact, 0)
-        if (thrown == 1 && hp <= 0 && destroyable)
+        if (thrown == true && hp <= 0 && destroyable)
             instance_destroy()
         grav = 0.5
         image_xscale *= -1

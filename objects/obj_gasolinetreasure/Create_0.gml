@@ -6,7 +6,6 @@ got_func = function()
         global.gasolinecutscene = 1
         quick_ini_write_real(get_savefile_ini(), "cutscene", "gasoline", 1)
     }
-    exit;
 }
 
 if (global.gasolinecutscene == -4)

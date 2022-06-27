@@ -62,7 +62,7 @@ with (obj_player)
             global.combo = 0
             obj_camera.alarm[4] = -1
             for (var i = 0; i < global.comboscore; i += 10)
-                create_collect((obj_player1.x + irandom_range(-60, 60)), ((obj_player1.y - 100) + irandom_range(-60, 60)), choose(1559, 1561, 1562, 1563, 1560))
+                create_collect((obj_player1.x + irandom_range(-60, 60)), ((obj_player1.y - 100) + irandom_range(-60, 60)), choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect))
             global.comboscore = 0
         }
         if (!instance_exists(obj_endlevelfade))

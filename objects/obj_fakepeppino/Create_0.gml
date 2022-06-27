@@ -1,7 +1,7 @@
 hsp = 0
 vsp = 1
 grav = 0.5
-grounded = 0
+grounded = false
 movespeed = 8
 state = (0 << 0)
 image_speed = 0.35

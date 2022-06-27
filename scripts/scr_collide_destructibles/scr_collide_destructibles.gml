@@ -72,7 +72,7 @@ function scr_collide_destructibles()
                     }
                 }
             }
-            if (state == (107 << 0) && thrown == 1)
+            if (state == (107 << 0) && thrown == true)
             {
                 if place_meeting((x - hsp), y, obj_destructibles)
                 {

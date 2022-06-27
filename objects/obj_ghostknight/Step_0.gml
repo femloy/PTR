@@ -63,4 +63,4 @@ if (hitboxcreate == 0 && state == (134 << 0))
 if (state != (4 << 0))
     depth = 0
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false

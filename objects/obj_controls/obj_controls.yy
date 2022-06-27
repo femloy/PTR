@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_controls",
-    "path": "sprites/spr_controls/spr_controls.yy"
+    "path": "sprites/spr_controls/spr_controls.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Visuals",
+    "path": "folders/Objects/Visuals.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_controls",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

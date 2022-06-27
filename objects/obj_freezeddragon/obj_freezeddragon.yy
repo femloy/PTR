@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_cheesedragon_idle",
-    "path": "sprites/spr_cheesedragon_idle/spr_cheesedragon_idle.yy"
+    "path": "sprites/spr_cheesedragon_idle/spr_cheesedragon_idle.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_actor",
-    "path": "objects/obj_actor/obj_actor.yy"
+    "path": "objects/obj_actor/obj_actor.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Cutscenes",
+    "path": "folders/Objects/Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_freezeddragon",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

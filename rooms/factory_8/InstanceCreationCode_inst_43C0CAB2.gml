@@ -1,2 +1,2 @@
-objectlist = [660]
+objectlist = [obj_movingspike]
 delaymax = 100

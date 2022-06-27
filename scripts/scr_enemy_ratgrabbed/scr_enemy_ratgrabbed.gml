@@ -18,22 +18,22 @@ function scr_enemy_ratgrabbed()
             vsp = -2
             image_xscale = (-ratplayerid.xscale)
             y = (ratplayerid.y - 5)
-            thrown = 1
+            thrown = true
             visible = true
             if (!p)
             {
-                grounded = 0
+                grounded = false
                 hp = -1
                 alarm[1] = 5
                 state = (138 << 0)
                 stunned = 200
                 hithsp = hsp
                 hitvsp = vsp
-                linethrown = 1
+                linethrown = true
             }
             else
             {
-                grounded = 0
+                grounded = false
                 ratgrabbed = 0
             }
         }

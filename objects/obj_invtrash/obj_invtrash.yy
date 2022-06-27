@@ -1,14 +1,14 @@
 {
   "spriteId": {
     "name": "spr_invtrash_idle",
-    "path": "sprites/spr_invtrash_idle/spr_invtrash_idle.yy"
+    "path": "sprites/spr_invtrash_idle/spr_invtrash_idle.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": {
     "name": "spr_player_mask",
-    "path": "sprites/spr_player_mask/spr_player_mask.yy"
+    "path": "sprites/spr_player_mask/spr_player_mask.yy",
   },
   "persistent": false,
   "parentObjectId": null,
@@ -25,35 +25,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Enemies",
+    "path": "folders/Objects/Baddie/Enemies.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_invtrash",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

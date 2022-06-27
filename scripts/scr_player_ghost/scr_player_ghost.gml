@@ -53,7 +53,6 @@ function scr_player_ghost()
         image_alpha = 0.5
     else
         image_alpha = 1
-    exit;
 }
 
 function scr_player_ghostpossess()
@@ -66,6 +65,5 @@ function scr_player_ghostpossess()
         state = (16 << 0)
         sprite_index = spr_ghostidle
     }
-    exit;
 }
 

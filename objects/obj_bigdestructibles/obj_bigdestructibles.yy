@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Technical",
-    "path": "folders/Objects/Game settings/Technical.yy",
+    "name": "Blocks",
+    "path": "folders/Objects/Level/Blocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bigdestructibles",

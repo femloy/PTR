@@ -4,4 +4,4 @@ movespeed = maxmovespeed
 dir = 1
 spr_left = -4
 spr_right = -4
-objectlist = [596, 660, 840, 456]
+objectlist = [obj_dashpad, obj_movingspike, obj_fakesuperspring, obj_pinballlauncher]

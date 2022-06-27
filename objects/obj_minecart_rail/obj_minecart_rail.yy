@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_ghost_cartrail",
-    "path": "sprites/spr_ghost_cartrail/spr_ghost_cartrail.yy"
+    "path": "sprites/spr_ghost_cartrail/spr_ghost_cartrail.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Cutscenes",
+    "path": "folders/Objects/Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_minecart_rail",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

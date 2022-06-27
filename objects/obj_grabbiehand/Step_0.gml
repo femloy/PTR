@@ -33,7 +33,7 @@ switch state
         {
             state = (7 << 0)
             sprite_index = spr_grabbiehand_idle
-            grounded = 0
+            grounded = false
         }
         if grounded
             hsp = 0

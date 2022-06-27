@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite1023",
-    "path": "sprites/sprite1023/sprite1023.yy"
+    "path": "sprites/sprite1023/sprite1023.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Warps",
+    "path": "folders/Objects/Room structure/Generic/Warps.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_doorC",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

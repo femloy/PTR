@@ -135,4 +135,4 @@ if (boundbox == 0)
     }
 }
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false

@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite1029",
-    "path": "sprites/sprite1029/sprite1029.yy"
+    "path": "sprites/sprite1029/sprite1029.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_puppetsafezone",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

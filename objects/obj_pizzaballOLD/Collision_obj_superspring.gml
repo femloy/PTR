@@ -6,7 +6,7 @@ hsp = 0
 movespeed = 0
 slopespeed = 0
 vsp = -22
-thrown = 1
+thrown = true
 with (obj_camera)
 {
     follow_golf = 1

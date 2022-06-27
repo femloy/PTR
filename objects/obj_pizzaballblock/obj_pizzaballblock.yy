@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_pizzaballblock",
-    "path": "sprites/spr_pizzaballblock/spr_pizzaballblock.yy"
+    "path": "sprites/spr_pizzaballblock/spr_pizzaballblock.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_bombblock",
-    "path": "objects/obj_bombblock/obj_bombblock.yy"
+    "path": "objects/obj_bombblock/obj_bombblock.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,25 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 3",
+    "path": "folders/Objects/Room structure/World 3.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pizzaballblock",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

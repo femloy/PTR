@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_monsterslope",
-    "path": "sprites/spr_monsterslope/spr_monsterslope.yy"
+    "path": "sprites/spr_monsterslope/spr_monsterslope.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 5",
+    "path": "folders/Objects/Room structure/World 5.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_monsterslope",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

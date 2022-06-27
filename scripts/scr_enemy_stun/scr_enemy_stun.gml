@@ -22,7 +22,7 @@ function scr_enemy_stun()
     var t = thrown
     if (sprite_index != spr_tank_hitwall)
     {
-        if (thrown == 0)
+        if (thrown == false)
             sprite_index = stunfallspr
         else
             sprite_index = spr_dead
@@ -52,30 +52,30 @@ function scr_enemy_stun()
     }
     if ((grounded or (grounded && (!(place_meeting(x, y, obj_platform))))) && vsp > 0 && (!(place_meeting((x + hsp), y, obj_destructibles))))
     {
-        if (thrown == 1)
+        if (thrown == true)
         {
             vsp = -5
             if (((!elite) or elitehit <= 0) && destroyable)
                 instance_destroy()
-            thrown = 0
+            thrown = false
         }
     }
     if (hitvsp < 0 && place_meeting(x, (y - 1), obj_solid) && (!(place_meeting(x, (y - 1), obj_destructibles))))
     {
-        if (thrown == 1)
+        if (thrown == true)
         {
             if (((!elite) or elitehit <= 0) && destroyable)
                 instance_destroy()
-            thrown = 0
+            thrown = false
         }
     }
     if (hithsp != 0 && place_meeting((x + hithsp), y, obj_solid) && (!(place_meeting((x + hithsp), y, obj_destructibles))))
     {
-        if (thrown == 1)
+        if (thrown == true)
         {
             if (((!elite) or elitehit <= 0) && destroyable)
                 instance_destroy()
-            thrown = 0
+            thrown = false
         }
     }
     if (blur_effect > 0)

@@ -39,7 +39,7 @@ function scr_player_tacklecharge()
             {
                 with (baddiegrabbedID)
                 {
-                    other.thrown = 1
+                    other.thrown = true
                     instance_create(x, y, obj_slapstar)
                     instance_create(x, y, obj_baddiegibs)
                     other.flash = 1

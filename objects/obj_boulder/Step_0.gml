@@ -80,24 +80,24 @@ switch state
         image_speed = 0.35
         if ((grounded or (grounded && (!(place_meeting(x, y, obj_platform))))) && vsp > 0 && (!(place_meeting((x + hsp), y, obj_destructibles))))
         {
-            if (thrown == 1 && destroyable)
+            if (thrown == true && destroyable)
                 instance_destroy()
             hsp = 0
-            thrown = 0
+            thrown = false
         }
         if (hitvsp < 0 && place_meeting(x, (y - 1), obj_solid) && (!(place_meeting(x, (y - 1), obj_destructibles))))
         {
-            if (thrown == 1 && destroyable)
+            if (thrown == true && destroyable)
                 instance_destroy()
-            thrown = 0
+            thrown = false
         }
         if (hithsp != 0 && place_meeting((x - image_xscale), y, obj_solid) && (!(place_meeting((x - image_xscale), y, obj_destructibles))))
         {
             particle_set_scale((8 << 0), (-image_xscale), 1)
             create_particle(x, y, particle.impact, 0)
-            if (thrown == 1 && destroyable)
+            if (thrown == true && destroyable)
                 instance_destroy()
-            thrown = 0
+            thrown = false
         }
         if (stunned <= 0 && grounded)
         {
@@ -161,7 +161,7 @@ flash = 0
 if (state != (4 << 0))
     depth = 0
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false
 if (boundbox == 0)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))

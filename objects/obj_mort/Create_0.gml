@@ -1,5 +1,5 @@
 image_speed = 0.35
-grounded = 0
+grounded = false
 grav = 0.5
 hsp = 0
 vsp = -15

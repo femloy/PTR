@@ -35,6 +35,6 @@ if _transfo
             number = string(val)
         scr_soundeffect(sfx_collecttopping)
         for (var i = 0; i < val; i += round((val / 16)))
-            create_collect((other.x + irandom_range(-60, 60)), (other.y + irandom_range(-60, 60)), choose(1559, 1561, 1562, 1563, 1560))
+            create_collect((other.x + irandom_range(-60, 60)), (other.y + irandom_range(-60, 60)), choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect))
     }
 }

@@ -26,7 +26,7 @@ var _kungfu = global.kungfu
 with (obj_baddie)
 {
     var _stun = 0
-    if (state == (138 << 0) && thrown == 0)
+    if (state == (138 << 0) && thrown == false)
         _stun = 25
     if (visible && object_index != obj_pizzaball && bbox_in_camera(view_camera[0], 32))
     {

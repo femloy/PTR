@@ -13,6 +13,7 @@ switch state
         }
         y = Approach(y, playerid.y, 8)
         break
+	
     case (128 << 0):
         if (playerid.x != x)
             image_xscale = sign((playerid.x - x))
@@ -26,6 +27,7 @@ switch state
             create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale)
         }
         break
+	
     case (80 << 0):
         if (!hitboxcreate)
         {
@@ -38,4 +40,3 @@ switch state
         x += (image_xscale * 14)
         break
 }
-

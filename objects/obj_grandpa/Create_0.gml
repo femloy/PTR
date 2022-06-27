@@ -7,4 +7,4 @@ important = 0
 spr_dead = spr_grandpa_dead
 spr_palette = palette_cheeseslime
 paletteselect = 0
-grounded = 1
+grounded = true

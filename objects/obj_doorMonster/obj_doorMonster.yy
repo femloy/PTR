@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite12242012",
-    "path": "sprites/sprite12242012/sprite12242012.yy"
+    "path": "sprites/sprite12242012/sprite12242012.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_doorMonster",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

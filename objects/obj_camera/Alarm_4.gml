@@ -1,7 +1,7 @@
 with (obj_comboend)
 {
     for (var i = 0; i < comboscore; i += comboscore)
-        create_collect((obj_player1.x + irandom_range(-60, 60)), ((obj_player1.y - 100) + irandom_range(-60, 60)), choose(1559, 1561, 1562, 1563, 1560))
+        create_collect((obj_player1.x + irandom_range(-60, 60)), ((obj_player1.y - 100) + irandom_range(-60, 60)), choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect))
     comboscore = 0
     instance_destroy()
 }

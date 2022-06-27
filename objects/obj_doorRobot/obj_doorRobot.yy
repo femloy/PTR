@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite12242013",
-    "path": "sprites/sprite12242013/sprite12242013.yy"
+    "path": "sprites/sprite12242013/sprite12242013.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_doorRobot",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

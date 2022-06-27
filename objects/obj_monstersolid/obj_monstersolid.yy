@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_monstersolid",
-    "path": "sprites/spr_monstersolid/spr_monstersolid.yy"
+    "path": "sprites/spr_monstersolid/spr_monstersolid.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 5",
+    "path": "folders/Objects/Room structure/World 5.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_monstersolid",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

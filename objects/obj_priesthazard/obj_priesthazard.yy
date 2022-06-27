@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_angelpriest",
-    "path": "sprites/spr_angelpriest/spr_angelpriest.yy"
+    "path": "sprites/spr_angelpriest/spr_angelpriest.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_priest",
-    "path": "objects/obj_priest/obj_priest.yy"
+    "path": "objects/obj_priest/obj_priest.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,35 +25,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Generic",
+    "path": "folders/Objects/Room structure/Generic.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_priesthazard",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

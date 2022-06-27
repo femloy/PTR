@@ -5,6 +5,6 @@ vsp_carry = 0
 content = -4
 platformid = -4
 grav = 0.5
-grounded = 0
+grounded = false
 spawn = 1
 baddieID = -4

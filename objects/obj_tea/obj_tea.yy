@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_mach4block",
-    "path": "sprites/spr_mach4block/spr_mach4block.yy"
+    "path": "sprites/spr_mach4block/spr_mach4block.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_tombstone",
-    "path": "objects/obj_tombstone/obj_tombstone.yy"
+    "path": "objects/obj_tombstone/obj_tombstone.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_tea",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

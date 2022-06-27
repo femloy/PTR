@@ -9,4 +9,4 @@ hsp_carry = 0
 vsp_carry = 0
 bouncedestroy = 4
 bouncevsp = -5
-grounded = 0
+grounded = false

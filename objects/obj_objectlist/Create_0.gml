@@ -4,6 +4,7 @@ surface = -4
 scroll_y = 0
 scroll_ymax = 0
 hovered_object = -1
+
 OnSelect = function()
 {
     if (hovered_object >= 0 && object_list != -4)
@@ -14,6 +15,4 @@ OnSelect = function()
             parent.OnDeselect()
         selected = 0
     }
-    exit;
 }
-

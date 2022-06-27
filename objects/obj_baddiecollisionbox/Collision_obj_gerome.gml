@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && other.thrown == 1)
+if (instance_exists(baddieID) && other.thrown == true)
 {
     if baddieID.destroyable
     {

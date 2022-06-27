@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_baddie",
-    "path": "sprites/spr_baddie/spr_baddie.yy"
+    "path": "sprites/spr_baddie/spr_baddie.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Collision",
+    "path": "folders/Objects/Collision.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_platform",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

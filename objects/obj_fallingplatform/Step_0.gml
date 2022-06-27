@@ -7,6 +7,7 @@ switch fall
                 other.fall = 1
         }
         break
+	
     case 1:
         if (fallbuffer > 0)
             fallbuffer--
@@ -17,6 +18,7 @@ switch fall
             vsp = 5
         }
         break
+	
     case 2:
         if (vsp < 10)
             vsp += grav
@@ -24,6 +26,7 @@ switch fall
         if (y > (room_height + 100))
             fall = 3
         break
+	
     case 3:
         if (fallbuffer > 0)
             fallbuffer--
@@ -37,4 +40,3 @@ switch fall
         }
         break
 }
-

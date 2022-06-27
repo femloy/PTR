@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Unused",
-    "path": "folders/Objects/Room structure/Unused.yy",
+    "name": "Menu",
+    "path": "folders/Objects/Game settings/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_bombdelete",

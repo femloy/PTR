@@ -133,7 +133,7 @@ with (instance_place(x, y, obj_player))
         }
     }
 }
-if (place_meeting(x, y, obj_baddie) && obj_baddie.thrown == 1 && sprite_index != spr_present)
+if (place_meeting(x, y, obj_baddie) && obj_baddie.thrown == true && sprite_index != spr_present)
 {
     if (character == 0)
     {

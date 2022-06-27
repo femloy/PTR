@@ -1,19 +1,19 @@
 {
   "spriteId": {
     "name": "spr_toppincheese",
-    "path": "sprites/spr_toppincheese/spr_toppincheese.yy"
+    "path": "sprites/spr_toppincheese/spr_toppincheese.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": {
     "name": "spr_pizzakinmask",
-    "path": "sprites/spr_pizzakinmask/spr_pizzakinmask.yy"
+    "path": "sprites/spr_pizzakinmask/spr_pizzakinmask.yy",
   },
   "persistent": true,
   "parentObjectId": {
     "name": "obj_pizzakinparent",
-    "path": "objects/obj_pizzakinparent/obj_pizzakinparent.yy"
+    "path": "objects/obj_pizzakinparent/obj_pizzakinparent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,38 +28,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 4,
-      "collisionObjectId": {
-        "name": "obj_player",
-        "path": "objects/obj_player/obj_player.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Followers",
+    "path": "folders/Objects/Level/Followers.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pizzakincheese",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

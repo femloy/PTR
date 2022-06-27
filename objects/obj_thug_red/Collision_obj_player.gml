@@ -6,7 +6,7 @@ else
 {
     with (other)
     {
-        if (instakillmove == 1 && baddie.state != (4 << 0) && baddie.thrown == 0 && (!baddie.invincible))
+        if (instakillmove == 1 && baddie.state != (4 << 0) && baddie.thrown == false && (!baddie.invincible))
         {
             if (state == (121 << 0) && sprite_index != spr_mach3hit && (character == "P" or character == "V"))
             {

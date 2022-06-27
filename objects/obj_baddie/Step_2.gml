@@ -6,9 +6,9 @@ else if (state == (266 << 0))
     scr_enemy_secret()
 scr_squash()
 if (state != (138 << 0) && state != (137 << 0))
-    linethrown = 0
+    linethrown = false
 if (state == (138 << 0) && (!thrown))
-    linethrown = 0
+    linethrown = false
 if (object_index != obj_pizzaball && (place_meeting((x + 1), y, obj_spike) or place_meeting((x - 1), y, obj_spike) or place_meeting(x, (y + 1), obj_spike) or place_meeting(x, (y - 1), obj_spike)))
     instance_destroy()
 if (state != (4 << 0) && state != (154 << 0) && object_index != obj_pepbat && object_index != obj_ghoul && object_index != obj_fakesanta && use_collision)

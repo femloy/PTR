@@ -15,7 +15,7 @@ else
     y += vsp
     if (vsp < 20)
         vsp += grav
-    thrown = 0
+    thrown = false
     noisethrow = 0
     if (y > (room_height + 100))
     {

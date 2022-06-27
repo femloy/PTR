@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_ufolive_teleporter",
-    "path": "sprites/spr_ufolive_teleporter/spr_ufolive_teleporter.yy"
+    "path": "sprites/spr_ufolive_teleporter/spr_ufolive_teleporter.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_warppoint",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

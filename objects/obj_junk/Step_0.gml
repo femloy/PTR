@@ -1,5 +1,5 @@
 if (grounded && grabbed == 0 && (!ratgrabbed))
-    thrown = 0
+    thrown = false
 if (!ratgrabbed)
     state = (0 << 0)
 if (ratgrabbed && ratplayerid.ratgrabbedID != id)
@@ -12,7 +12,7 @@ if (grabbed == 1 && (!ratgrabbed))
     if (playerid.state == (6 << 0) or playerid.state == (55 << 0) or playerid.state == (79 << 0) or playerid.state == (74 << 0) or playerid.state == (75 << 0) or playerid.state == (20 << 0))
     {
         grav = 0
-        grounded = 0
+        grounded = false
         x = playerid.x
         if (playerid.sprite_index != spr_player_haulingstart && playerid.state != (6 << 0))
             y = (playerid.y - 60)
@@ -99,7 +99,7 @@ if (grabbed == 1 && (!ratgrabbed))
         grav = 0.5
         instance_create(x, (y + 20), obj_bumpeffect)
         grabbed = 0
-        thrown = 1
+        thrown = true
         x = playerid.x
         y = playerid.y
         if (playerid.sprite_index == spr_player_shoulder)
@@ -126,7 +126,7 @@ if (grabbed == 1 && (!ratgrabbed))
     {
         grav = 0.5
         grabbed = 0
-        thrown = 1
+        thrown = true
         x = playerid.x
         y = playerid.y
         hsp = ((-image_xscale) * 10)
@@ -136,7 +136,7 @@ if (grabbed == 1 && (!ratgrabbed))
     {
         instance_create((x + ((-playerid.xscale) * 15)), (y - 50), obj_bumpeffect)
         grav = 0.5
-        thrown = 1
+        thrown = true
         hsp = ((-image_xscale) * 2)
         grabbed = 0
         vsp = -20
@@ -218,7 +218,7 @@ if (grabbed == 1 && (!ratgrabbed))
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_baddiegibs)
             grabbed = 0
-            thrown = 1
+            thrown = true
             x = playerid.x
             y = playerid.y
             grav = 0.5
@@ -231,10 +231,10 @@ if (vsp > 0 && grounded && (!(place_meeting(x, y, obj_spike))))
     hsp = 0
 if (grabbed == 0 && ratgrabbed == 0 && use_collision)
     scr_collide()
-if (place_meeting(x, y, obj_swordhitbox) && thrown == 0)
+if (place_meeting(x, y, obj_swordhitbox) && thrown == false)
 {
     grabbed = 0
-    thrown = 1
+    thrown = true
     instance_create(x, y, obj_slapstar)
     instance_create(x, y, obj_slapstar)
     instance_create(x, y, obj_slapstar)

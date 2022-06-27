@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_noisearrow",
-    "path": "sprites/spr_noisearrow/spr_noisearrow.yy"
+    "path": "sprites/spr_noisearrow/spr_noisearrow.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_factoryswitch",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

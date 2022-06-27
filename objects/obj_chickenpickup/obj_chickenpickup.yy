@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Pick up followers",
-    "path": "folders/Objects/Room structure/Pick up followers.yy",
+    "name": "Follower pick ups",
+    "path": "folders/Objects/Room structure/Follower pick ups.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_chickenpickup",

@@ -1,7 +1,7 @@
 var _temp_local_var_3;
 function scr_collide()
 {
-    grounded = 0
+    grounded = false
     with (instance_place(x, (y + 2), obj_movingplatform))
     {
         with (other)
@@ -67,7 +67,7 @@ function scr_collide()
         }
         else
         {
-            grounded = 1
+            grounded = true
             vsp = grav
             if (platformid.vsp > 0)
                 vsp = abs(platformid.v_velocity)
@@ -122,7 +122,7 @@ function scr_collide()
     grounded |= scr_solid(x, (y + 1))
     grounded |= ((!(place_meeting(x, y, obj_platform))) && place_meeting(x, (y + 1), obj_platform))
     if (platformid != -4 or (place_meeting(x, (y + 1), obj_movingplatform) && (!(place_meeting(x, (y - 2), obj_movingplatform)))))
-        grounded = 1
+        grounded = true
     exit;
 }
 

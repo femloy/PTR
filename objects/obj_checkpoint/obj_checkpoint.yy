@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Room structure",
-    "path": "folders/Objects/Room structure.yy",
+    "name": "Generic",
+    "path": "folders/Objects/Room structure/Generic.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_checkpoint",

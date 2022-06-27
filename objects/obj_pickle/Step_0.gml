@@ -52,7 +52,7 @@ if (flash == 1 && alarm[2] <= 0)
 if (state != (4 << 0))
     depth = 0
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false
 if (state != (141 << 0) && image_alpha >= 1)
     scr_scareenemy()
 if (bombreset > 0)

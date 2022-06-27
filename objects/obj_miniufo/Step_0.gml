@@ -63,7 +63,7 @@ if (state != (4 << 0))
     depth = 0
 scr_scareenemy()
 if (state != (138 << 0))
-    thrown = 0
+    thrown = false
 if (boundbox == 0)
 {
     with (instance_create(x, y, obj_baddiecollisionbox))

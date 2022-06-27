@@ -33,7 +33,7 @@ else if (pineapple_effect != 0)
     }
     with (obj_pizzakinpineapple)
     {
-        sprite_index = choose(259, 2645, 2304)
+        sprite_index = choose(spr_monsterpineapple_pose1, spr_monsterpineapple_pose2, spr_monsterpineapple_pose3)
         image_index = 0
     }
 }

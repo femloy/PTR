@@ -42,7 +42,7 @@ function scr_enemy_grabbed()
                 global.golfhit += 1
             instance_create((x + (_obj_player.xscale * 30)), y, obj_bumpeffect)
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _obj_player.x
             vsp = 0
             y = _obj_player.y
@@ -84,7 +84,7 @@ function scr_enemy_grabbed()
             hp -= 1
             instance_create((x + ((-_obj_player.xscale) * 50)), y, obj_bumpeffect)
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _obj_player.x
             y = _obj_player.y
             state = (138 << 0)
@@ -112,7 +112,7 @@ function scr_enemy_grabbed()
             hp -= 1
             instance_create(x, (y + 20), obj_bumpeffect)
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _obj_player.x
             y = _obj_player.y
             state = (138 << 0)
@@ -142,7 +142,7 @@ function scr_enemy_grabbed()
         }
         if (_obj_player.state == (6 << 0) && (floor(_obj_player.image_index) >= 4 or (floor(_obj_player.image_index) < 1 && _obj_player.sprite_index == _obj_player.spr_swingdingend)))
         {
-            thrown = 1
+            thrown = true
             var lag = 5
             hitLag = lag
             hitX = x
@@ -179,13 +179,13 @@ function scr_enemy_grabbed()
                 {
                     other.hithsp = 0
                     other.hitvsp = -25
-                    other.linethrown = 1
+                    other.linethrown = true
                 }
                 else
                 {
                     other.hithsp = ((-other.image_xscale) * 25)
                     other.hitvsp = -8
-                    other.linethrown = 1
+                    other.linethrown = true
                 }
                 vsp = -6
             }
@@ -193,7 +193,7 @@ function scr_enemy_grabbed()
             check_grabbed_solid(_obj_player)
             hsp = hithsp
             vsp = hitvsp
-            linethrown = 1
+            linethrown = true
         }
         if (_obj_player.state == (74 << 0))
         {
@@ -201,7 +201,7 @@ function scr_enemy_grabbed()
             if (other.object_index == obj_pizzaball)
                 global.golfhit += 1
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _obj_player.x
             y = _obj_player.y
             state = (138 << 0)
@@ -219,7 +219,7 @@ function scr_enemy_grabbed()
             hp -= 1
             instance_create((x + ((-_obj_player.xscale) * 15)), (y - 50), obj_bumpeffect)
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _obj_player.x
             y = _obj_player.y
             hsp = ((-image_xscale) * 2)
@@ -427,7 +427,7 @@ function scr_enemy_grabbed()
         if (_player.key_attack && (!_player.key_up))
         {
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _player.x
             y = (_player.y - 10)
             state = (138 << 0)
@@ -440,7 +440,7 @@ function scr_enemy_grabbed()
         if (_player.key_attack && _player.key_up)
         {
             alarm[1] = 5
-            thrown = 1
+            thrown = true
             x = _player.x
             y = (_player.y - 10)
             check_grabbed_solid(_player)

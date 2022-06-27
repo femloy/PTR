@@ -22,7 +22,7 @@ function scr_initenemy()
     bombreset = 0
     hp = 1
     maxhp = 1
-    grounded = 1
+    grounded = true
     hit_connected = 0
     flash = 0
     birdcreated = 0
@@ -104,10 +104,10 @@ function scr_initenemy()
     shot = 0
     reset = 0
     flash = 0
-    thrown = 0
+    thrown = false
     hp = 1
     slapped = 0
-    grounded = 1
+    grounded = true
     birdcreated = 0
     boundbox = 0
     spr_dead = spr_slimedead
@@ -126,7 +126,7 @@ function scr_initenemy()
     elitehit = 0
     elitegrab = 0
     ventilator_vsp = -5
-    linethrown = 0
+    linethrown = false
     dashcloudid = obj_null
     exit;
 }

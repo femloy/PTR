@@ -6,6 +6,7 @@ switch state
         image_speed = 0.35
         sprite_index = spr_horsey
         break
+	
     case (89 << 0):
         image_speed = 0.35
         sprite_index = spr_horsey_lose
@@ -15,6 +16,7 @@ switch state
                 instance_destroy()
         }
         break
+	
     case (6 << 0):
         image_speed = 0.1
         sprite_index = spr_horsey_win
@@ -25,4 +27,3 @@ switch state
         }
         break
 }
-

@@ -24,7 +24,7 @@ if (state != (141 << 0))
                     sprite_index = spr_stompprep
             }
         }
-        if (y >= other.y && other.thrown == 0 && other.stuntouchbuffer == 0 && other.vsp > 0 && state != (106 << 0) && other.state != (141 << 0))
+        if (y >= other.y && other.thrown == false && other.stuntouchbuffer == 0 && other.vsp > 0 && state != (106 << 0) && other.state != (141 << 0))
         {
             scr_soundeffect(sfx_bumpwall)
             if (state != (51 << 0) && state != (103 << 0) && state != (102 << 0))

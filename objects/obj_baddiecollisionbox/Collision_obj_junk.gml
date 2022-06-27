@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && baddieID.state != (137 << 0) && baddieID.invtime == 0 && other.thrown == 1 && (!baddieID.invincible) && (baddieID.object_index != obj_noiseboss or other.object_index != obj_pepjunk or (!other.noisethrow)) && baddieID.destroyable)
+if (instance_exists(baddieID) && baddieID.state != (137 << 0) && baddieID.invtime == 0 && other.thrown == true && (!baddieID.invincible) && (baddieID.object_index != obj_noiseboss or other.object_index != obj_pepjunk or (!other.noisethrow)) && baddieID.destroyable)
 {
     if (baddieID.destroyable && ((!baddieID.elite) or baddieID.elitehit <= 0))
     {

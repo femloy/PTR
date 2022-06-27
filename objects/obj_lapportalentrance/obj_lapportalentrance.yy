@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Warps",
+    "path": "folders/Objects/Room structure/Generic/Warps.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_lapportalentrance",

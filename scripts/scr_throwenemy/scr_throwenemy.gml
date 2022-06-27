@@ -24,7 +24,7 @@ function scr_throwenemy()
             global.heattime = 60
             alarm[1] = 5
             stunned = 1000
-            thrown = 1
+            thrown = true
             state = (138 << 0)
         }
     }

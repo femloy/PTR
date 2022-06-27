@@ -22,11 +22,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 2",
+    "path": "folders/Objects/Level/World 2.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_ghosttransparency",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

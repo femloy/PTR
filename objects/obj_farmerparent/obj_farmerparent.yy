@@ -26,8 +26,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Followers",
+    "path": "folders/Objects/Level/Followers.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_farmerparent",

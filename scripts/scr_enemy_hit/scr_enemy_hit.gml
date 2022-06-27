@@ -14,9 +14,9 @@ function scr_enemy_hit()
         else
             _player = 323
         if (obj_player.tauntstoredstate == (104 << 0) or obj_player.tauntstoredstate == (5 << 0) or obj_player.state == (104 << 0) or obj_player.state == (5 << 0))
-            thrown = 0
+            thrown = false
         else
-            thrown = 1
+            thrown = true
         vsp = hitvsp
         hsp = hithsp
         global.hit += 1

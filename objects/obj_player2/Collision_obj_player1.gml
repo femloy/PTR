@@ -53,7 +53,7 @@ if (other.cutscene == 0 && other.state != (146 << 0) && state != (146 << 0) && o
             xscale = (-other.xscale)
             obj_player1.depth = -6
             obj_player2.depth = -7
-            thrown = 1
+            thrown = true
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_slapstar)

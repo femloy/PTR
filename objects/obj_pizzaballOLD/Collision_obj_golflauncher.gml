@@ -9,7 +9,7 @@ other.image_index = 0
 other.sprite_index = spr_goblinbot_kick
 var _max = 45
 y = (other.y - _max)
-thrown = 1
+thrown = true
 with (obj_camera)
 {
     follow_golf = 1

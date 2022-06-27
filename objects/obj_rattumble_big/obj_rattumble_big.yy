@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_rattumbleblock_big",
-    "path": "sprites/spr_rattumbleblock_big/spr_rattumbleblock_big.yy"
+    "path": "sprites/spr_rattumbleblock_big/spr_rattumbleblock_big.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_rattumble",
-    "path": "objects/obj_rattumble/obj_rattumble.yy"
+    "path": "objects/obj_rattumble/obj_rattumble.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,25 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Blocks",
+    "path": "folders/Objects/Room structure/Generic/Blocks.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_rattumble_big",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

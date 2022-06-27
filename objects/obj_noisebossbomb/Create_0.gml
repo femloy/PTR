@@ -1,7 +1,7 @@
 hsp = 0
 vsp = 0
 grav = 0.5
-grounded = 0
+grounded = false
 movespeed = 0
 image_speed = 0.35
 countdownmax = 120

@@ -208,7 +208,7 @@ function scr_player_grabbed()
             vsp = -8
             sprite_index = spr_machfreefall
         }
-        thrown = 1
+        thrown = true
         instance_create(x, y, obj_slapstar)
         instance_create(x, y, obj_baddiegibs)
         flash = 1

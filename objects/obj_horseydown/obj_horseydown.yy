@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_tubedown",
-    "path": "sprites/spr_tubedown/spr_tubedown.yy"
+    "path": "sprites/spr_tubedown/spr_tubedown.yy",
   },
   "solid": false,
   "visible": false,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_horseyright",
-    "path": "objects/obj_horseyright/obj_horseyright.yy"
+    "path": "objects/obj_horseyright/obj_horseyright.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,25 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 2",
+    "path": "folders/Objects/Room structure/World 2.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_horseydown",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

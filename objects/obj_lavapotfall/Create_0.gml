@@ -4,4 +4,4 @@ hsp_carry = 0
 vsp_carry = 0
 platformid = -4
 grav = 0.25
-grounded = 0
+grounded = false

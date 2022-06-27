@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_solid",
-    "path": "sprites/spr_solid/spr_solid.yy"
+    "path": "sprites/spr_solid/spr_solid.yy",
   },
   "solid": false,
   "visible": false,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_solid",
-    "path": "objects/obj_solid/obj_solid.yy"
+    "path": "objects/obj_solid/obj_solid.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Level/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_mach3solid",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

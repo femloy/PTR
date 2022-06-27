@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_archergoblin_arrow",
-    "path": "sprites/spr_archergoblin_arrow/spr_archergoblin_arrow.yy"
+    "path": "sprites/spr_archergoblin_arrow/spr_archergoblin_arrow.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,38 +22,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 4,
-      "collisionObjectId": {
-        "name": "obj_20",
-        "path": "objects/obj_20/obj_20.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_20","path":"objects/obj_20/obj_20.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 5",
+    "path": "folders/Objects/Level/World 5.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_pizzaarrow",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

@@ -16,7 +16,7 @@ function scr_player_hit()
         if (!(place_meeting(x, (y - 1), obj_solid)))
         {
             y--
-            grounded = 0
+            grounded = false
         }
         if scr_solid(x, y)
             y -= 5

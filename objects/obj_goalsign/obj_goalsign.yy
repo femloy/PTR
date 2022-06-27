@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_goalsign",
-    "path": "sprites/spr_goalsign/spr_goalsign.yy"
+    "path": "sprites/spr_goalsign/spr_goalsign.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,25 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Level",
+    "path": "folders/Objects/Visuals/Level.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_goalsign",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

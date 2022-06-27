@@ -51,7 +51,7 @@ if (state != (4 << 0))
             image_index = 0
             state = (91 << 0)
         }
-        if ((state == (104 << 0) or state == (79 << 0)) && other.grounded == 1)
+        if ((state == (104 << 0) or state == (79 << 0)) && other.grounded == true)
         {
             instance_create(x, y, obj_bumpeffect)
             other.vsp = -10

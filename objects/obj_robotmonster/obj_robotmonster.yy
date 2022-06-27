@@ -1,19 +1,19 @@
 {
   "spriteId": {
     "name": "spr_monstershroom_walk",
-    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": {
     "name": "spr_monstershroom_idle",
-    "path": "sprites/spr_monstershroom_idle/spr_monstershroom_idle.yy"
+    "path": "sprites/spr_monstershroom_idle/spr_monstershroom_idle.yy",
   },
   "persistent": false,
   "parentObjectId": {
     "name": "obj_monster",
-    "path": "objects/obj_monster/obj_monster.yy"
+    "path": "objects/obj_monster/obj_monster.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,35 +28,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 0,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    },
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 5",
+    "path": "folders/Objects/Room structure/World 5.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_robotmonster",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

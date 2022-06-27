@@ -21,7 +21,7 @@ function scr_player_parry()
         var parry_threshold = 64
         with (obj_baddie)
         {
-            if (distance_to_object(other) < parry_threshold && state != (137 << 0) && state != (4 << 0) && state != (138 << 0) && parryable && (!((state == (138 << 0) && thrown == 1))))
+            if (distance_to_object(other) < parry_threshold && state != (137 << 0) && state != (4 << 0) && state != (138 << 0) && parryable && (!((state == (138 << 0) && thrown == true))))
             {
                 notification_push((1 << 0), [id, object_index, room])
                 obj_player1.xscale = (-image_xscale)

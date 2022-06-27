@@ -30,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Treasure",
+    "path": "folders/Objects/Cutscenes/Treasure.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_hattreasure",

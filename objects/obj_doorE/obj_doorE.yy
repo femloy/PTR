@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite1224",
-    "path": "sprites/sprite1224/sprite1224.yy"
+    "path": "sprites/sprite1224/sprite1224.yy",
   },
   "solid": false,
   "visible": false,
@@ -25,11 +25,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Warps",
+    "path": "folders/Objects/Room structure/Generic/Warps.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_doorE",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

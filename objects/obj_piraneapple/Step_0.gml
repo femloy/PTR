@@ -43,6 +43,7 @@ switch state
         }
         scr_collide()
         break
+	
     case (8 << 0):
         flash = 0
         sprite_index = spr_piraneapplewater
@@ -62,4 +63,3 @@ switch state
         }
         break
 }
-

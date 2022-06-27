@@ -221,7 +221,7 @@ for (var i = 0; i < 2; i++)
                     other.baddieID.grabbedby = _playerindex
                     pepp_grab = 1
                 }
-                if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && (state == (5 << 0) or state == (104 << 0)) && other.baddieID.state != (80 << 0) && other.baddieID.state != (137 << 0) && (!pepp_grab) && other.baddieID.thrown == 0 && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != (4 << 0) && other.baddieID.state != (41 << 0) && other.baddieID.state != (61 << 0) && (!other.baddieID.invincible))
+                if (instance_exists(other.baddieID) && other.baddieID.object_index != obj_bigcheese && (state == (5 << 0) or state == (104 << 0)) && other.baddieID.state != (80 << 0) && other.baddieID.state != (137 << 0) && (!pepp_grab) && other.baddieID.thrown == false && other.baddieID.stuntouchbuffer <= 0 && other.baddieID.state != (4 << 0) && other.baddieID.state != (41 << 0) && other.baddieID.state != (61 << 0) && (!other.baddieID.invincible))
                 {
                     var lag = 0
                     other.baddieID.stuntouchbuffer = 15
@@ -285,7 +285,7 @@ for (var i = 0; i < 2; i++)
                                 sprite_index = spr_stompprep
                         }
                     }
-                    if (other.baddieID.thrown == 0 && (character == "P" or character == "N"))
+                    if (other.baddieID.thrown == false && (character == "P" or character == "N"))
                     {
                         movespeed = 0
                         image_index = 0

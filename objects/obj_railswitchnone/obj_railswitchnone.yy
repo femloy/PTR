@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite10291",
-    "path": "sprites/sprite10291/sprite10291.yy"
+    "path": "sprites/sprite10291/sprite10291.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_railswitchslow",
-    "path": "objects/obj_railswitchslow/obj_railswitchslow.yy"
+    "path": "objects/obj_railswitchslow/obj_railswitchslow.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,28 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 4,
-      "collisionObjectId": {
-        "name": "obj_player",
-        "path": "objects/obj_player/obj_player.yy"
-      },
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Unused",
+    "path": "folders/Objects/Room structure/Unused.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_railswitchnone",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

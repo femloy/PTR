@@ -54,7 +54,7 @@ if (other.cutscene == 0 && other.state != (146 << 0) && state != (146 << 0) && o
                 scr_pummel()
             obj_player1.depth = -7
             obj_player2.depth = -6
-            thrown = 1
+            thrown = true
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_slapstar)
             instance_create(x, y, obj_slapstar)

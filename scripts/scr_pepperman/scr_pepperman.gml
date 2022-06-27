@@ -69,7 +69,7 @@ function scr_pepperman_jump()
         sprite_index = spr_pepperman_groundpound
         vsp = 11
         hsp = 0
-        grounded = 0
+        grounded = false
     }
     if (sprite_index == spr_pepperman_jump && floor(image_index) == (image_number - 1))
         sprite_index = spr_pepperman_fall

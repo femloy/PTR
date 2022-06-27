@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_destroyable2",
-    "path": "sprites/spr_destroyable2/spr_destroyable2.yy"
+    "path": "sprites/spr_destroyable2/spr_destroyable2.yy",
   },
   "solid": false,
   "visible": false,
@@ -22,25 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 4",
+    "path": "folders/Objects/Room structure/World 4.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_snowparticle",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

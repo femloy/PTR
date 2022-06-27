@@ -7,6 +7,4 @@ function scr_player_portal()
         grav = 0.5
     }
     mach2 = 0
-    exit;
 }
-

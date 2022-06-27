@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_shotgunback",
-    "path": "sprites/spr_shotgunback/spr_shotgunback.yy"
+    "path": "sprites/spr_shotgunback/spr_shotgunback.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,25 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 0,
-      "eventType": 3,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Particles",
+    "path": "folders/Objects/Visuals/Particles.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_shotgunback",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

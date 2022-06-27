@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "sprite1790",
-    "path": "sprites/sprite1790/sprite1790.yy"
+    "path": "sprites/sprite1790/sprite1790.yy",
   },
   "solid": false,
   "visible": false,
@@ -22,25 +22,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {
-      "isDnD": false,
-      "eventNum": 4,
-      "eventType": 7,
-      "collisionObjectId": null,
-      "resourceVersion": "1.0",
-      "name": "",
-      "tags": [],
-      "resourceType": "GMEvent"
-    }
+    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "Generic",
+    "path": "folders/Objects/Room structure/Generic.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_vigidelete",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

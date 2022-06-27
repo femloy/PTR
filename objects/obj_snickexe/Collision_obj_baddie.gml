@@ -1,4 +1,4 @@
-if (other.thrown == 1)
+if (other.thrown == true)
 {
     repeat (6)
     {

@@ -226,7 +226,7 @@ function scr_hurtplayer(argument0)
                         repeat (10)
                         {
                             with (instance_create(x, y, obj_pizzaloss))
-                                sprite_index = choose(1559, 1561, 1562, 1563, 1560)
+                                sprite_index = choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect)
                         }
                     }
                     else

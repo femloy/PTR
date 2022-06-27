@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "spr_deadjohn2",
-    "path": "sprites/spr_deadjohn2/spr_deadjohn2.yy"
+    "path": "sprites/spr_deadjohn2/spr_deadjohn2.yy",
   },
   "solid": false,
   "visible": true,
@@ -10,7 +10,7 @@
   "persistent": false,
   "parentObjectId": {
     "name": "obj_deadjohnparent",
-    "path": "objects/obj_deadjohnparent/obj_deadjohnparent.yy"
+    "path": "objects/obj_deadjohnparent/obj_deadjohnparent.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -28,11 +28,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy"
+    "name": "World 1",
+    "path": "folders/Objects/Room structure/World 1.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_deadjohn2",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

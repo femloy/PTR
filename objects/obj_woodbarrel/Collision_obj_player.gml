@@ -1,4 +1,4 @@
-if ((other.state == (42 << 0) or other.state == (80 << 0)) && other.grounded == 1)
+if ((other.state == (42 << 0) or other.state == (80 << 0)) && other.grounded == true)
 {
     instance_create((x + (obj_player1.xscale * 40)), y, obj_punchdust)
     with (other)

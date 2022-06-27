@@ -1,7 +1,7 @@
 hsp = 0
 vsp = 0
 grav = 0.5
-grounded = 0
+grounded = false
 playerid = ((!(place_meeting(x, y, obj_player))) ? instance_nearest(x, y, obj_player) : instance_place(x, y, obj_player))
 movespeed = 6
 image_speed = 0.35

@@ -27,8 +27,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Technical",
-    "path": "folders/Objects/Game settings/Technical.yy",
+    "name": "Game settings",
+    "path": "folders/Objects/Game settings.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_button",

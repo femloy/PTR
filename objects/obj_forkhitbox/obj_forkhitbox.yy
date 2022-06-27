@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Hitboxes",
+    "path": "folders/Objects/Baddie/Hitboxes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_forkhitbox",

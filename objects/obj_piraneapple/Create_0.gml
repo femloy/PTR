@@ -2,7 +2,7 @@ scr_initenemy()
 grav = 0.5
 hsp = 0
 vsp = 0
-grounded = 0
+grounded = false
 movespeed = 2
 hitboxcreate = 0
 state = (134 << 0)
