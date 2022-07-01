@@ -1,2 +1,2 @@
 if use_collision
-    scr_collide()
+	scr_collide()

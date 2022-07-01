@@ -1,2 +1,2 @@
 if (grounded && (!thrown) && (!grabbed))
-    hsp = (other.image_xscale * 2)
+	hsp = (other.image_xscale * 2)

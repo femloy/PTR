@@ -1,11 +1,11 @@
 if (room == rm_editor)
-    exit;
+	exit;
 with (other)
 {
-    image_speed = 0.35
-    global.collected = 0
-    global.collectsound = 0
+	image_speed = 0.35
+	global.collected = 0
+	global.collectsound = 0
 }
 if (obj_player.character == "S")
-    sprite_index = spr_snickcollectible1
+	sprite_index = spr_snickcollectible1
 depth = 11

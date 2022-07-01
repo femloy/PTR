@@ -1,5 +1,5 @@
 if global.levelcomplete
 {
-    x = 480
-    dir = 1
+	x = 480
+	dir = 1
 }

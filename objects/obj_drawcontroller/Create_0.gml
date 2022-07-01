@@ -1,7 +1,7 @@
 if (instance_number(object_index) > 1)
 {
-    instance_destroy()
-    exit;
+	instance_destroy()
+	exit;
 }
 depth = -7
 finisher_alpha = 0
@@ -23,4 +23,4 @@ circle_size_out = 178
 circle_size_in = 128
 use_dark = 0
 dark_arr = ["Tiles_1", "Tiles_2", "Tiles_3", "Tiles_4"]
-objdark_arr = [4, 386, 332, 534, 545, 546, 64]
+objdark_arr = [obj_followcharacter, obj_metalblock, obj_player, obj_collect, obj_bigcollect, obj_giantcollect, obj_secretportal]

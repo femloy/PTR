@@ -8,6 +8,6 @@ depth = (obj_particlesystem.depth - 1)
 alarm[0] = 1
 with (obj_player)
 {
-    if (!(place_meeting(x, y, obj_exitgate)))
-        global.combodropped = 1
+	if (!(place_meeting(x, y, obj_exitgate)))
+		global.combodropped = 1
 }

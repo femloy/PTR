@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 0.65,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_ranka",
-  "duration": 15.575,
+  "duration": 15.575601,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

@@ -1,11 +1,12 @@
 event_inherited()
-boss_array[0] = -4
-boss_array[1] = [52, 1]
-boss_array[2] = [832, 1]
-boss_array[3] = [191, 1]
-boss_array[4] = [52, 6]
-boss_array[5] = [832, 6]
-boss_array[6] = [191, 6]
+boss_array[0] = noone
+boss_array[1] = [obj_pepperman, 1]
+boss_array[2] = [obj_vigilanteboss, 1]
+boss_array[3] = [obj_noiseboss, 1]
+boss_array[4] = [obj_pepperman, 6]
+boss_array[5] = [obj_vigilanteboss, 6]
+boss_array[6] = [obj_noiseboss, 6]
+
 state = states.arenaround
 attack_pool = [states.boss_shield, states.boss_helicopterhat, states.boss_panicjump, states.jump, states.boss_smokebombstart, states.boss_springshoes, states.boss_cardboard]
 ds_map_set(player_hurtstates, states.handstandjump, 30)
@@ -14,6 +15,7 @@ ds_map_set(player_hurtstates, states.mach2, 20)
 ds_map_set(player_hurtstates, states.mach3, 30)
 ds_map_set(boss_hurtstates, states.punch, 30)
 ds_map_set(boss_hurtstates, states.boss_shield, 30)
+
 phase = 1
 max_phase = 7
 max_hp = (500 * max_phase)
@@ -60,59 +62,59 @@ targetstunnedminus[5] = 30
 targetstunnedminus[6] = 30
 function boss_destroy(argument0)
 {
-    SUPER_boss_destroy(argument0)
-    targetstunned = 1000
-    stunned = 1000
-    global.mrstickcutscene3 = 1
-    quick_ini_write_real(get_savefile_ini(), "cutscene", "mrstick3", 1)
-    exit;
+	SUPER_boss_destroy(argument0)
+	targetstunned = 1000
+	stunned = 1000
+	global.mrstickcutscene3 = 1
+	quick_ini_write_real(get_savefile_ini(), "cutscene", "mrstick3", 1)
+	exit;
 }
 
 function boss_hurt(argument0, argument1)
 {
-    if (targetstunned > 0)
-    {
-        targetstunned -= targetstunnedminus[(phase - 1)]
-        attack_cooldown = 0
-        if (targetstunned < 0)
-            targetstunned = 1
-    }
-    else
-        targetstunned = 150
-    SUPER_boss_hurt(argument0, argument1)
-    targetxscale = (-argument1.xscale)
-    exit;
+	if (targetstunned > 0)
+	{
+		targetstunned -= targetstunnedminus[(phase - 1)]
+		attack_cooldown = 0
+		if (targetstunned < 0)
+			targetstunned = 1
+	}
+	else
+		targetstunned = 150
+	SUPER_boss_hurt(argument0, argument1)
+	targetxscale = (-argument1.xscale)
+	exit;
 }
 
 function boss_hurt_noplayer(argument0)
 {
-    if (targetstunned > 0)
-    {
-        targetstunned -= targetstunnedminus[(phase - 1)]
-        attack_cooldown = 0
-        if (targetstunned < 0)
-            targetstunned = 1
-    }
-    else
-        targetstunned = 150
-    SUPER_boss_hurt_noplayer(argument0)
-    exit;
+	if (targetstunned > 0)
+	{
+		targetstunned -= targetstunnedminus[(phase - 1)]
+		attack_cooldown = 0
+		if (targetstunned < 0)
+			targetstunned = 1
+	}
+	else
+		targetstunned = 150
+	SUPER_boss_hurt_noplayer(argument0)
+	exit;
 }
 
 function player_hurt(argument0, argument1)
 {
-    if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
-    {
-        hitstate = state
-        hithsp = hsp
-        hitvsp = vsp
-        SUPER_player_hurt(argument0, argument1)
-        with (argument1)
-        {
-            inv_frames = 1
-            alarm[1] = 15
-        }
-    }
-    exit;
+	if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
+	{
+		hitstate = state
+		hithsp = hsp
+		hitvsp = vsp
+		SUPER_player_hurt(argument0, argument1)
+		with (argument1)
+		{
+			inv_frames = 1
+			alarm[1] = 15
+		}
+	}
+	exit;
 }
 

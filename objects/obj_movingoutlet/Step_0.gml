@@ -1,4 +1,4 @@
 if (side == 1)
-    x += spd
+	x += spd
 else
-    y += spd
+	y += spd

@@ -1,9 +1,9 @@
 if (room == rm_editor)
-    exit;
+	exit;
 if (global.key_inv == 1)
 {
-    vsp = -15
-    hsp = random_range(-4, 4)
+	vsp = -15
+	hsp = random_range(-4, 4)
 }
 hsp = 0
 vsp = 0

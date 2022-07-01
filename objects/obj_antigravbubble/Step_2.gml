@@ -5,8 +5,8 @@ xs = Approach(xs, 1, 0.12)
 image_xscale = xs
 image_yscale = xs
 if (place_meeting(x, y, obj_secretportal) or place_meeting(x, y, obj_secretportalstart))
-    visible = false
+	visible = false
 else
-    visible = playerid.visible
+	visible = playerid.visible
 if (playerid.state != states.antigrav && playerid.state != states.chainsaw && (playerid.state != states.backbreaker or playerid.tauntstoredstate != states.antigrav))
-    instance_destroy()
+	instance_destroy()

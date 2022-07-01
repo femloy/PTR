@@ -1,5 +1,5 @@
 if (instance_number(obj_gnome_checklist) > 1)
-    instance_destroy()
+	instance_destroy()
 start = 1
 finish = 0
 xx = 736

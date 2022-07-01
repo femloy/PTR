@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
-  "compression": 0,
-  "volume": 0.65,
+  "compression": 1,
+  "volume": 0.3,
   "preload": true,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_ranks",
-  "duration": 14.652,
+  "duration": 14.652154,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

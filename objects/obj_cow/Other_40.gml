@@ -1,2 +1,2 @@
 if offscreen
-    instance_destroy()
+	instance_destroy()

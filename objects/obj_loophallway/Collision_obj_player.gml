@@ -1,2 +1,2 @@
 with (other)
-    scr_loophallway(other)
+	scr_loophallway(other)

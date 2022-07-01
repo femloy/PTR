@@ -1,2 +1,2 @@
 if (!cloudID.active)
-    instance_destroy()
+	instance_destroy()

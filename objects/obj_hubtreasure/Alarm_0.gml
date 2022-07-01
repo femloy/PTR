@@ -1,2 +1,2 @@
 with (playerid)
-    state = states.normal
+	state = states.normal

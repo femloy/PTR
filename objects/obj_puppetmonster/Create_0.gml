@@ -20,17 +20,17 @@ var a = layer_get_all()
 var lowestdepth = 10000
 for (var i = 0; i < array_length(a); i++)
 {
-    var b = a[i]
-    if (layer_get_element_type(b) == 1)
-    {
-        trace("layer background")
-        if (layer_get_depth(b) < lowestdepth)
-        {
-            backgroundID = layer_background_get_id(b)
-            lowestdepth = layer_get_depth(b)
-            trace(lowestdepth)
-        }
-    }
+	var b = a[i]
+	if (layer_get_element_type(b) == 1)
+	{
+		trace("layer background")
+		if (layer_get_depth(b) < lowestdepth)
+		{
+			backgroundID = layer_background_get_id(b)
+			lowestdepth = layer_get_depth(b)
+			trace(lowestdepth)
+		}
+	}
 }
 trace(backgroundID)
 trace(a)

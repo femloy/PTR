@@ -57,3 +57,8 @@ healthshake = 0
 healthold = 8
 healthshaketime = 0
 playerhealthup = 0
+
+chargecamera_prev = 0
+chargecamera_smooth = 0
+verticalcamera = 0
+verticalcamera_timer = 0

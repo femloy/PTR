@@ -1,5 +1,5 @@
 if grounded
 {
-    scr_hurtplayer(other)
-    instance_destroy()
+	scr_hurtplayer(other)
+	instance_destroy()
 }

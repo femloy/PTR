@@ -1,8 +1,8 @@
 if (respawn > 0)
-    respawn--
+	respawn--
 if (respawn == 0 && visible == false)
 {
-    visible = true
-    x = xstart
-    y = ystart
+	visible = true
+	x = xstart
+	y = ystart
 }

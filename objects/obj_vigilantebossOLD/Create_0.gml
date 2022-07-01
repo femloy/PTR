@@ -89,67 +89,67 @@ targetstunnedminus[4] = 30
 targetstunnedminus[5] = 30
 function boss_destroy(argument0)
 {
-    SUPER_boss_destroy(argument0)
-    targetstunned = 1000
-    stunned = 1000
-    global.vigilantecutscene2 = 1
-    quick_ini_write_real(get_savefile_ini(), "cutscene", "vigilante2", 1)
-    exit;
+	SUPER_boss_destroy(argument0)
+	targetstunned = 1000
+	stunned = 1000
+	global.vigilantecutscene2 = 1
+	quick_ini_write_real(get_savefile_ini(), "cutscene", "vigilante2", 1)
+	exit;
 }
 
 function boss_hurt(argument0, argument1)
 {
-    if (targetstunned > 0)
-    {
-        targetstunned -= targetstunnedminus[(phase - 1)]
-        attack_cooldown = 0
-        if (targetstunned < 0)
-            targetstunned = 1
-    }
-    else
-        targetstunned = 150
-    SUPER_boss_hurt(argument0, argument1)
-    targetxscale = (-argument1.xscale)
-    exit;
+	if (targetstunned > 0)
+	{
+		targetstunned -= targetstunnedminus[(phase - 1)]
+		attack_cooldown = 0
+		if (targetstunned < 0)
+			targetstunned = 1
+	}
+	else
+		targetstunned = 150
+	SUPER_boss_hurt(argument0, argument1)
+	targetxscale = (-argument1.xscale)
+	exit;
 }
 
 function boss_hurt_noplayer(argument0)
 {
-    if (targetstunned > 0)
-    {
-        targetstunned -= targetstunnedminus[(phase - 1)]
-        attack_cooldown = 0
-        if (targetstunned < 0)
-            targetstunned = 1
-    }
-    else
-        targetstunned = 150
-    SUPER_boss_hurt_noplayer(argument0)
-    exit;
+	if (targetstunned > 0)
+	{
+		targetstunned -= targetstunnedminus[(phase - 1)]
+		attack_cooldown = 0
+		if (targetstunned < 0)
+			targetstunned = 1
+	}
+	else
+		targetstunned = 150
+	SUPER_boss_hurt_noplayer(argument0)
+	exit;
 }
 
 function player_hurt(argument0, argument1)
 {
-    if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
-    {
-        hitstate = state
-        hithsp = hsp
-        hitvsp = vsp
-        if (state != states.uppunch or vsp < 0)
-        {
-            SUPER_player_hurt(argument0, argument1)
-            with (argument1)
-            {
-                inv_frames = 1
-                alarm[1] = 15
-            }
-            if (hitstate == states.boss_superattack)
-            {
-                hithsp = 0
-                hitvsp = 0
-            }
-        }
-    }
-    exit;
+	if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
+	{
+		hitstate = state
+		hithsp = hsp
+		hitvsp = vsp
+		if (state != states.uppunch or vsp < 0)
+		{
+			SUPER_player_hurt(argument0, argument1)
+			with (argument1)
+			{
+				inv_frames = 1
+				alarm[1] = 15
+			}
+			if (hitstate == states.boss_superattack)
+			{
+				hithsp = 0
+				hitvsp = 0
+			}
+		}
+	}
+	exit;
 }
 

@@ -8,7 +8,7 @@ uniform float strength;
 
 void main()
 { 
-    vec4 colour = texture2D(gm_BaseTexture, v_texcoord);
-    gl_FragColor.rgb = vec3(0.97,0.43,0.09);
-    gl_FragColor.a = v_vColour.a * colour.a;
+	vec4 colour = texture2D(gm_BaseTexture, v_texcoord);
+	gl_FragColor.rgb = vec3(0.97,0.43,0.09);
+	gl_FragColor.a = v_vColour.a * colour.a;
 }

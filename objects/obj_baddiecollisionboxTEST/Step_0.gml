@@ -1,7 +1,7 @@
 if (!instance_exists(baddieID))
 {
-    instance_destroy()
-    exit;
+	instance_destroy()
+	exit;
 }
 x = baddieID.x
 y = baddieID.y

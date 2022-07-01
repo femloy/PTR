@@ -6,10 +6,10 @@ grav = 0.23
 movespeed = 3
 with (obj_player)
 {
-    state = states.backbreaker
-    sprite_index = spr_bossintro
-    image_index = 0
-    scr_soundeffect(sfx_scream5)
+	state = states.backbreaker
+	sprite_index = spr_bossintro
+	image_index = 0
+	scr_soundeffect(sfx_scream5)
 }
 sprite_index = spr_noisebomb_intro
 instance_create(x, y, obj_taunteffect)

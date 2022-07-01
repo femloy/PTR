@@ -1,4 +1,4 @@
 if (vsp < 40)
-    vsp += grav
+	vsp += grav
 x += hsp
 y += vsp

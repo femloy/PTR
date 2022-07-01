@@ -1,7 +1,8 @@
-draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, 0)
+//draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, 0)
 draw_set_font(global.bigfont)
 draw_set_halign(fa_center)
 draw_set_color(c_white)
+
 var _os = optionselected
 var _os_fs = optionsaved_fullscreen
 draw_text_colour(480, 50, "FULLSCREEN", c_white, c_white, c_white, c_white, (_os == 0 ? 1 : 0.5))

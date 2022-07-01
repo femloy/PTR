@@ -26,10 +26,10 @@ enum debris
 	fade
 }
 
-if (instance_number(obj_particlesystem) > 1)
+if instance_number(obj_particlesystem) > 1
 {
-    instance_destroy()
-    exit;
+	instance_destroy()
+	exit;
 }
 depth = -99
 global.particle_system = part_system_create()

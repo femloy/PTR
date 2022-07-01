@@ -10,10 +10,10 @@ selected = 0
 
 switch room
 {
-    case hub_room1:
-        selected = 0
-        break
-    case hub_room2:
-        selected = 1
-        break
+	case hub_room1:
+		selected = 0
+		break
+	case hub_room2:
+		selected = 1
+		break
 }

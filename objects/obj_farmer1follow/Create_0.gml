@@ -8,12 +8,12 @@ spritequeue = ds_queue_create()
 farmerpos = 0
 switch object_index
 {
-    case obj_farmer2follow:
-        farmerpos = 1
-        break
-    case obj_farmer3follow:
-        farmerpos = 2
-        break
+	case obj_farmer2follow:
+		farmerpos = 1
+		break
+	case obj_farmer3follow:
+		farmerpos = 2
+		break
 }
 
 following_add_to_front()

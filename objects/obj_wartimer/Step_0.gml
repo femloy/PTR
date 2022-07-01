@@ -1,7 +1,7 @@
 if (room == rank_room)
 {
-    visible = false
-    instance_destroy()
+	visible = false
+	instance_destroy()
 }
 else
-    visible = true
+	visible = true

@@ -1,2 +1,2 @@
 if (global.panic == true)
-    image_speed = 0.2
+	image_speed = 0.2

@@ -1,8 +1,8 @@
 scr_initenemy()
 with (obj_player1)
 {
-    state = states.ratmount
-    brick = 1
+	state = states.ratmount
+	brick = 1
 }
 elite = true
 hit = 0

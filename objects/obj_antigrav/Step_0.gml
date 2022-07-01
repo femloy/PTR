@@ -1,4 +1,4 @@
 if use_collision
-    scr_collide()
+	scr_collide()
 if (sprite_index == spr_antigrav_activate && floor(image_index) == (image_number - 1))
-    sprite_index = spr_antigrav
+	sprite_index = spr_antigrav

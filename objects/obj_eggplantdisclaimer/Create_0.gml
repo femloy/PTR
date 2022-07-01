@@ -1,3 +1,3 @@
 fade = 1
-changeroom = 0
+changeroom = false
 fadeout = 0

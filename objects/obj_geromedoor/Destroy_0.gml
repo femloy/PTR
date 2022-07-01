@@ -1,5 +1,5 @@
 with (instance_create(x, y, obj_door))
 {
-    sprite_index = spr_doorvisited
-    visited = 1
+	sprite_index = spr_doorvisited
+	visited = 1
 }

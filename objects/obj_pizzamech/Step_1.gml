@@ -1,3 +1,3 @@
 event_inherited()
 if (!poweredon)
-    active = 0
+	active = 0

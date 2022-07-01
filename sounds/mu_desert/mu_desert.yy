@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_desert",
-  "duration": 146.886,
+  "duration": 146.88654,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

@@ -1,5 +1,5 @@
 function scr_player_bossdefeat()
 {
-    exit;
+	exit;
 }
 

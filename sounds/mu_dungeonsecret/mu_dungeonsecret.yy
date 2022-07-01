@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_dungeonsecret",
-  "duration": 71.489,
+  "duration": 71.48988,
   "parent": {
-    "name": "Music",
-    "path": "folders/Sounds/Music.yy",
+    "name": "Secrets",
+    "path": "folders/Sounds/Music/Secrets.yy",
   },
   "resourceVersion": "1.0",
   "name": "mu_dungeonsecret",

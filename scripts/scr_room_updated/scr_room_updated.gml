@@ -1,16 +1,14 @@
-function scr_room_updated(argument0)
+function scr_room_updated(r)
 {
-    if (argument0 == room or (room == live_blank_room && live_live_room == argument0))
-    {
-        with (obj_player)
-        {
-            hallway = savedhallway
-            hallwaydirection = savedhallwaydirection
-            vhallwaydirection = savedvhallwaydirection
-            verticalhallway = savedverticalhallway
-        }
-        room_goto_live(argument0)
-    }
-    exit;
+	if (r == room or (room == live_blank_room && live_live_room == r))
+	{
+		with (obj_player)
+		{
+			hallway = savedhallway
+			hallwaydirection = savedhallwaydirection
+			vhallwaydirection = savedvhallwaydirection
+			verticalhallway = savedverticalhallway
+		}
+		room_goto_live(r)
+	}
 }
-

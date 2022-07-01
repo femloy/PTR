@@ -1,7 +1,7 @@
 if (instance_number(object_index) > 1)
 {
-    instance_destroy()
-    exit;
+	instance_destroy()
+	exit;
 }
 global.throwarc = 1
 global.hidetiles = 0
@@ -350,123 +350,108 @@ knightmiddairstop = 0
 knightmove = -1
 if (!variable_global_exists("saveroom"))
 {
-    global.combodropped = 0
-    global.saveroom = ds_list_create()
-    global.escaperoom = ds_list_create()
-    global.lap = 0
-    global.laps = 0
-    global.playerhealth = 100
-    global.instancelist = ds_list_create()
-    global.followerlist = ds_list_create()
-    global.maxrailspeed = 2
-    global.railspeed = global.maxrailspeed
-    global.levelreset = 0
-    global.temperature = 0
-    global.temperature_spd = 0.01
-    global.temp_thresholdnumber = 5
-    global.use_temperature = 0
-    global.timedgatetimer = 0
-    global.timedgatetime = 0
-    global.key_inv = 0
-    global.shroomfollow = 0
-    global.cheesefollow = 0
-    global.tomatofollow = 0
-    global.sausagefollow = 0
-    global.pineapplefollow = 0
-    global.pepanimatronic = 0
-    global.keyget = 0
-    global.collect = 0
-    global.collectN = 0
-    global.treasure = 0
-    global.combo = 0
-    global.previouscombo = 0
-    global.combotime = 0
-    global.comboscore = 0
-    global.savedcomboscore = 0
-    global.savedcombo = 0
-    global.heattime = 0
-    global.pizzacoin = 0
-    global.toppintotal = 1
-    global.hit = 0
-    global.baddieroom = ds_list_create()
-    global.hp = 2
-    global.gotshotgun = 0
-    global.showgnomelist = 1
-    global.panic = false
-    global.snickchallenge = 0
-    global.golfhit = 0
-    ini_open("saveData.ini")
-    global.option_fullscreen = ini_read_real("Option", "fullscreen", 1)
-    global.option_resolution = ini_read_real("Option", "resolution", 1)
-    global.option_master_volume = ini_read_real("Option", "master_volume", 1)
-    global.option_music_volume = ini_read_real("Option", "music_volume", 1)
-    global.option_sfx_volume = ini_read_real("Option", "sfx_volume", 1)
-    global.option_vibration = ini_read_real("Option", "vibration", 1)
-    ini_close()
-    if (global.option_fullscreen == 0)
-        window_set_fullscreen(false)
-    if (global.option_fullscreen == 1)
-        window_set_fullscreen(true)
-    var _os_r = global.option_resolution
-    if (_os_r == 0)
-    {
-        var resolutionX = 480
-        var resolutionY = 270
-    }
-    else if (_os_r == 1)
-    {
-        resolutionX = 960
-        resolutionY = 540
-    }
-    else
-    {
-        resolutionX = 1920
-        resolutionY = 1080
-    }
-    window_set_size(resolutionX, resolutionY)
-    set_master_gain(global.option_master_volume)
-    global.style = -1
-    global.secretfound = 0
-    global.shotgunammo = 0
-    global.monsterspeed = 0
-    global.monsterlives = 3
-    global.giantkey = 0
-    global.coop = false
-    global.baddiespeed = 1
-    global.baddiepowerup = 0
-    global.baddierage = 0
-    global.style = 0
-    global.stylethreshold = 0
-    global.pizzadelivery = 0
-    global.failcutscene = 0
-    global.pizzasdelivered = 0
-    global.spaceblockswitch = 1
-    global.gerome = 0
-    global.bullet = 0
-    global.fuel = 3
-    global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.1234567890:", 1, 0)
-    global.collectfont = font_add_sprite_ext(spr_font_collect, "0123456789", 1, 0)
-    global.combofont = font_add_sprite_ext(spr_font_combo, "0123456789/:", 1, 0)
-    global.combofont2 = font_add_sprite_ext(spr_tv_combobubbletext, "0123456789", 1, 0)
-    global.smallfont = font_add_sprite_ext(spr_smallerfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.:?1234567890", 1, 0)
-    global.wartimerfont1 = font_add_sprite_ext(spr_wartimer_font1, "1234567890", 1, 0)
-    global.wartimerfont2 = font_add_sprite_ext(spr_wartimer_font2, "1234567890", 1, 0)
-    global.ammorefill = 0
-    global.ammoalt = 1
-    global.mort = 0
-    global.stylelock = 0
-    global.attackstyle = 0
-    global.pummeltest = 1
-    global.horse = 0
-    global.checkpoint_room = -4
-    global.checkpoint_door = "A"
-    global.kungfu = 0
-    global.graffiticount = 0
-    global.graffitimax = 20
-    global.noisejetpack = 0
-    global.hasfarmer = array_create(3, 0)
-    global.savedattackstyle = -4
+	global.combodropped = 0
+	global.saveroom = ds_list_create()
+	global.escaperoom = ds_list_create()
+	global.lap = 0
+	global.laps = 0
+	global.playerhealth = 100
+	global.instancelist = ds_list_create()
+	global.followerlist = ds_list_create()
+	global.maxrailspeed = 2
+	global.railspeed = global.maxrailspeed
+	global.levelreset = 0
+	global.temperature = 0
+	global.temperature_spd = 0.01
+	global.temp_thresholdnumber = 5
+	global.use_temperature = 0
+	global.timedgatetimer = 0
+	global.timedgatetime = 0
+	global.key_inv = 0
+	global.shroomfollow = 0
+	global.cheesefollow = 0
+	global.tomatofollow = 0
+	global.sausagefollow = 0
+	global.pineapplefollow = 0
+	global.pepanimatronic = 0
+	global.keyget = 0
+	global.collect = 0
+	global.collectN = 0
+	global.treasure = 0
+	global.combo = 0
+	global.previouscombo = 0
+	global.combotime = 0
+	global.comboscore = 0
+	global.savedcomboscore = 0
+	global.savedcombo = 0
+	global.heattime = 0
+	global.pizzacoin = 0
+	global.toppintotal = 1
+	global.hit = 0
+	global.baddieroom = ds_list_create()
+	global.hp = 2
+	global.gotshotgun = 0
+	global.showgnomelist = 1
+	global.panic = false
+	global.snickchallenge = 0
+	global.golfhit = 0
+	
+	window_set_fullscreen(global.option_fullscreen)
+	
+	var _os_r = global.option_resolution
+	if _os_r == 0
+	{
+		var resolutionX = 480
+		var resolutionY = 270
+	}
+	else if _os_r == 1
+	{
+		resolutionX = 960
+		resolutionY = 540
+	}
+	else
+	{
+		resolutionX = 1920
+		resolutionY = 1080
+	}
+	window_set_size(resolutionX, resolutionY)
+	
+	global.style = -1
+	global.secretfound = 0
+	global.shotgunammo = 0
+	global.monsterspeed = 0
+	global.monsterlives = 3
+	global.giantkey = 0
+	global.coop = false
+	global.baddiespeed = 1
+	global.baddiepowerup = 0
+	global.baddierage = 0
+	global.style = 0
+	global.stylethreshold = 0
+	global.pizzadelivery = 0
+	global.failcutscene = 0
+	global.pizzasdelivered = 0
+	global.spaceblockswitch = 1
+	global.gerome = 0
+	global.bullet = 0
+	global.fuel = 3
+	global.ammorefill = 0
+	global.ammoalt = 1
+	global.mort = 0
+	global.stylelock = 0
+	global.attackstyle = 0
+	global.pummeltest = 1
+	global.horse = 0
+	global.checkpoint_room = -4
+	global.checkpoint_door = "A"
+	global.kungfu = 0
+	global.graffiticount = 0
+	global.graffitimax = 20
+	global.noisejetpack = 0
+	global.hasfarmer = array_create(3, 0)
+	global.savedattackstyle = -4
 }
+
 angle = 0
 mach4mode = 0
 railmomentum = 0

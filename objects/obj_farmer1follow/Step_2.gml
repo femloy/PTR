@@ -1,5 +1,5 @@
 event_inherited()
 if (x != xprevious)
-    sprite_index = walkspr
+	sprite_index = walkspr
 else
-    sprite_index = idlespr
+	sprite_index = idlespr

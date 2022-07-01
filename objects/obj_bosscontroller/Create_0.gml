@@ -1,7 +1,7 @@
 if (instance_number(object_index) > 1)
 {
-    instance_destroy()
-    exit;
+	instance_destroy()
+	exit;
 }
 bossID = -4
 bossdead = 0

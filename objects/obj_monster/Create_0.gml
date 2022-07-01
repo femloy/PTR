@@ -16,4 +16,4 @@ oktoberfest = 0
 spr_introidle = spr_monstershroom_introidle
 spr_intro = spr_monstershroom_intro
 if (room == exit_7)
-    fake = 1
+	fake = 1

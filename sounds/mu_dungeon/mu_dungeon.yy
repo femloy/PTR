@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_dungeon",
-  "duration": 212.089,
+  "duration": 212.08961,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

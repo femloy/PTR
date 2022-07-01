@@ -1,5 +1,4 @@
-draw_set_halign(fa_center)
-draw_set_valign(fa_middle)
+draw_set_align(fa_center, fa_middle)
 draw_set_color(c_white)
 draw_set_font(global.bigfont)
 
@@ -14,31 +13,31 @@ draw_text(480, yy - 38, ini_read_real("Highscore", _levelinfo[2], 0))
 
 for (var i = 0; i < array_length(toppin_info); i++)
 {
-    var b = toppin_info[i]
-    var ix = b[0]
-    if !ini_read_real("Toppin", concat(_levelinfo[2], i + 1), 0)
-    {
-        c = c_black
-        ix = 0
-    }
-    else
-        c = c_white
-    draw_sprite_ext(b[1], ix, xx + (i * 47), yy, 1, 1, 0, c, 1)
+	var b = toppin_info[i]
+	var ix = b[0]
+	if !ini_read_real("Toppin", concat(_levelinfo[2], i + 1), 0)
+	{
+		c = c_black
+		ix = 0
+	}
+	else
+		c = c_white
+	draw_sprite_ext(b[1], ix, xx + (i * 47), yy, 1, 1, 0, c, 1)
 }
 
 if _levelinfo[1] != war_1
 {
-    if !ini_read_real("Treasure", _levelinfo[2], 0)
-        c = c_black
-    else
-        c = c_white
-    draw_sprite_ext(spr_treasure_eggplant, 0, 587, (yy + 26), 1, 1, 0, c, 1)
+	if !ini_read_real("Treasure", _levelinfo[2], 0)
+		c = c_black
+	else
+		c = c_white
+	draw_sprite_ext(spr_treasure1, 0, 587, yy + 26, 1, 1, 0, c, 1)
 }
 
 draw_set_font(global.smallfont)
 var sf = ini_read_real("Secret", _levelinfo[2], 0)
 if _levelinfo[1] != war_1
-    draw_text_color(480, (yy + 88), concat(sf, " OUT OF 3 SECRETS"), c_white, c_white, c_white, c_white, 1)
+	draw_text_color(480, yy + 88, concat(sf, " OUT OF 3 SECRETS"), c_white, c_white, c_white, c_white, 1)
+
 ini_close()
-draw_set_halign(fa_left)
-draw_set_valign(fa_top)
+draw_set_align();

@@ -1,5 +1,5 @@
 if (!changing_hdir)
 {
-    hdir *= -1
-    changing_hdir = 1
+	hdir *= -1
+	changing_hdir = 1
 }

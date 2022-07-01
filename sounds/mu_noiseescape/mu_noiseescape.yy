@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_noiseescape",
-  "duration": 159.737,
+  "duration": 159.73732,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

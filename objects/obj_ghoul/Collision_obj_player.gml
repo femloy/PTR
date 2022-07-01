@@ -1,2 +1,2 @@
 if (state == states.punch)
-    scr_hurtplayer(other)
+	scr_hurtplayer(other)

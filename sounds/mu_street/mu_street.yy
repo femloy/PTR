@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_street.mp3",
-  "duration": 160.51,
+  "duration": 160.51036,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

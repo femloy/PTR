@@ -1,2 +1,2 @@
 if (room != timesuproom)
-    instance_destroy()
+	instance_destroy()

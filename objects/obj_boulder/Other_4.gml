@@ -1,2 +1,2 @@
 if (escape == true && global.panic == false)
-    instance_destroy()
+	instance_destroy()

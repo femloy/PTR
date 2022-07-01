@@ -1,4 +1,4 @@
 with (other)
-    instance_destroy()
+	instance_destroy()
 if (!collisioned)
-    event_user(0)
+	event_user(0)

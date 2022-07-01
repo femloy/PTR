@@ -1,9 +1,10 @@
 pausedmusic = 0
 fadeoff = 0
-global.music = 0
+global.music = -1
+global.jukebox = -1
 roomname = obj_null
 arena = 0
-global.mu = -4
+global.mu = noone
 music = -4
 secretmusic = -4
 musicID = -4

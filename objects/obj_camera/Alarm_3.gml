@@ -1,6 +1,6 @@
 if (room == rank_room)
-    exit;
+	exit;
 if (!global.panic)
-    exit;
+	exit;
 if instance_exists(obj_treasure)
-    exit;
+	exit;

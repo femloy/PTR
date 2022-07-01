@@ -1,2 +1,2 @@
 with (obj_bosscontroller)
-    bossID = other.id
+	bossID = other.id

@@ -1,2 +1,2 @@
 if (room == Realtitlescreen)
-    ini_str = ""
+	ini_str = ""

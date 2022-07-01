@@ -1,2 +1,2 @@
 if (state == states.punch)
-    instance_destroy()
+	instance_destroy()

@@ -1,9 +1,9 @@
 if instance_exists(obj_weaponmachine)
-    visible = true
+	visible = true
 else if (show == 0)
-    visible = false
+	visible = false
 if (show > 0)
 {
-    show -= 1
-    visible = true
+	show -= 1
+	visible = true
 }

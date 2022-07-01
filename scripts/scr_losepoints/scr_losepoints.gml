@@ -1,5 +1,5 @@
 function scr_losepoints()
 {
-    exit;
+	exit;
 }
 

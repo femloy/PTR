@@ -7,4 +7,4 @@ turn = 0
 elite = false
 alarm[1] = 250
 if (global.stylethreshold >= 3)
-    turn = 1
+	turn = 1

@@ -1,2 +1,2 @@
 if (state != states.transitioncutscene)
-    event_inherited()
+	event_inherited()

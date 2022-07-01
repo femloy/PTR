@@ -108,92 +108,92 @@ targetstunnedminus[7] = 30
 targetstunnedminus[8] = 30
 function boss_destroy(argument0)
 {
-    SUPER_boss_destroy(argument0)
-    targetstunned = 1000
-    stunned = 1000
-    if fakedeath
-    {
-        angry = 1
-        fakedeath = 0
-        destroyable = 0
-        with (obj_bosscontroller)
-        {
-            alarm[1] = (room_speed * 4)
-            fakedeath = 1
-            state = states.transitioncutscene
-            depth = (other.depth + 1)
-        }
-    }
-    else
-    {
-        global.noisecutscene2 = 1
-        quick_ini_write_real(get_savefile_ini(), "cutscene", "noise2", 1)
-    }
-    exit;
+	SUPER_boss_destroy(argument0)
+	targetstunned = 1000
+	stunned = 1000
+	if fakedeath
+	{
+		angry = 1
+		fakedeath = 0
+		destroyable = 0
+		with (obj_bosscontroller)
+		{
+			alarm[1] = (room_speed * 4)
+			fakedeath = 1
+			state = states.transitioncutscene
+			depth = (other.depth + 1)
+		}
+	}
+	else
+	{
+		global.noisecutscene2 = 1
+		quick_ini_write_real(get_savefile_ini(), "cutscene", "noise2", 1)
+	}
+	exit;
 }
 
 function boss_hurt(argument0, argument1)
 {
-    if (targetstunned > 0)
-    {
-        targetstunned -= targetstunnedminus[(phase - 1)]
-        attack_cooldown = 0
-        boss_noise_decide_attack()
-        if (targetstunned < 0)
-            targetstunned = 1
-    }
-    else
-        targetstunned = 150
-    var ps = state
-    SUPER_boss_hurt(argument0, argument1)
-    if (ps == states.pogo)
-        movespeed = 0
-    targetxscale = (-argument1.xscale)
-    exit;
+	if (targetstunned > 0)
+	{
+		targetstunned -= targetstunnedminus[(phase - 1)]
+		attack_cooldown = 0
+		boss_noise_decide_attack()
+		if (targetstunned < 0)
+			targetstunned = 1
+	}
+	else
+		targetstunned = 150
+	var ps = state
+	SUPER_boss_hurt(argument0, argument1)
+	if (ps == states.pogo)
+		movespeed = 0
+	targetxscale = (-argument1.xscale)
+	exit;
 }
 
 function boss_hurt_noplayer(argument0)
 {
-    if (targetstunned > 0)
-    {
-        targetstunned -= targetstunnedminus[(phase - 1)]
-        attack_cooldown = 0
-        if (targetstunned < 0)
-            targetstunned = 1
-    }
-    else
-        targetstunned = 150
-    SUPER_boss_hurt_noplayer(argument0)
-    exit;
+	if (targetstunned > 0)
+	{
+		targetstunned -= targetstunnedminus[(phase - 1)]
+		attack_cooldown = 0
+		if (targetstunned < 0)
+			targetstunned = 1
+	}
+	else
+		targetstunned = 150
+	SUPER_boss_hurt_noplayer(argument0)
+	exit;
 }
 
 function player_hurt(argument0, argument1)
 {
-    if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
-    {
-        hitstate = state
-        hithsp = hsp
-        hitvsp = vsp
-        SUPER_player_hurt(argument0, argument1)
-        with (argument1)
-        {
-            inv_frames = 1
-            alarm[1] = 15
-        }
-        if (hitstate == states.skateboard or hitstate == states.boss_jetpack)
-        {
-            stunned = (hitstate == states.skateboard ? 30 : 70)
-            with (obj_camera)
-            {
-                shake_mag = 3
-                shake_mag_acc = (3 / room_speed)
-            }
-            hitstate = states.stun
-            movespeed = 0
-            hitvsp = -4
-            hithsp = ((-image_xscale) * 8)
-        }
-    }
-    exit;
+	if ((!argument1.inv_frames) && (argument1.state != states.backbreaker or argument1.parry_inst == -4))
+	{
+		hitstate = state
+		hithsp = hsp
+		hitvsp = vsp
+		SUPER_player_hurt(argument0, argument1)
+		with (argument1)
+		{
+			inv_frames = 1
+			alarm[1] = 15
+		}
+		if (hitstate == states.skateboard or hitstate == states.boss_jetpack)
+		{
+			stunned = (hitstate == states.skateboard ? 30 : 70)
+			with (obj_camera)
+			{
+				shake_mag = 3
+				shake_mag_acc = (3 / room_speed)
+			}
+			hitstate = states.stun
+			movespeed = 0
+			hitvsp = -4
+			hithsp = ((-image_xscale) * 8)
+		}
+	}
+	exit;
 }
 

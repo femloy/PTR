@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_dragonlair",
-  "duration": 131.271,
+  "duration": 131.27112,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

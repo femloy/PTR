@@ -1,5 +1,6 @@
-if (!variable_global_exists("editorfont"))
-    global.editorfont = font_add_sprite_ext(spr_smallerfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.:?1234567890", 1, -2)
+if !variable_global_exists("editorfont")
+	global.editorfont = font_add_sprite_ext(spr_smallerfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.:?1234567890", true, -2)
+
 depth = -100
 object_list[0] = ds_list_create()
 object_list[1] = ds_list_create()

@@ -1,5 +1,5 @@
 with (obj_player)
 {
-    if (state == states.actor)
-        state = states.normal
+	if (state == states.actor)
+		state = states.normal
 }

@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 0.75,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_pinball",
-  "duration": 210.259,
+  "duration": 210.2596,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

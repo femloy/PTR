@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_treasure_eggplant",
-    "path": "sprites/spr_treasure_eggplant/spr_treasure_eggplant.yy",
+    "name": "spr_treasure1",
+    "path": "sprites/spr_treasure1/spr_treasure1.yy",
   },
   "solid": false,
   "visible": true,

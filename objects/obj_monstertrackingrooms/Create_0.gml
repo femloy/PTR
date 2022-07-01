@@ -1,7 +1,7 @@
 if (instance_number(obj_monstertrackingrooms) > 1)
 {
-    instance_destroy()
-    exit;
+	instance_destroy()
+	exit;
 }
 global.monsterlives_max = 3
 global.monsterlives = global.monsterlives_max
@@ -57,8 +57,8 @@ monster_active[4] = 0
 monster_room[4] = -4
 for (var i = 0; i < array_length(monster_pos); i++)
 {
-    var bpos = monster_pos[i]
-    monster_startpos[i] = new Vector2(bpos.x, bpos.y)
+	var bpos = monster_pos[i]
+	monster_startpos[i] = new Vector2(bpos.x, bpos.y)
 }
 pineapple_effect = 0
 pineapple_effect_max = 5
@@ -68,197 +68,197 @@ player_posX = ds_grid_value_x(room_grid, 0, 0, (map_width - 1), (map_height - 1)
 player_posY = ds_grid_value_y(room_grid, 0, 0, (map_width - 1), (map_height - 1), room_get_name(room))
 function robot_create(argument0, argument1)
 {
-    if (!instance_exists(obj_robotmonster))
-    {
-        var _inst = instance_create(x, y, obj_robotmonster)
-        var _dir = monster_dir[0]
-        with (_inst)
-        {
-            fake = argument1
-            if argument0
-            {
-                var _hinst = noone
-                with (obj_hallwaymonster)
-                {
-                    if ((_dir.x < 0 && x > (room_width / 2)) or (_dir.x > 0 && x < (room_width / 2)))
-                        _hinst = id
-                }
-                image_xscale = sign(_dir.x)
-                if instance_exists(_hinst)
-                {
-                    x = (_hinst.x + 32)
-                    y = (_hinst.bbox_bottom - 51)
-                }
-                else
-                    instance_destroy()
-            }
-            else
-            {
-                var _doorInst = noone
-                with (obj_doorMonster)
-                {
-                    if (!(place_meeting(x, (y - 32), obj_solid)))
-                        _doorInst = id
-                }
-                if (!instance_exists(_doorInst))
-                    _doorInst = asset_get_index(("obj_door" + obj_player1.targetDoor))
-                if (_dir.x != 0)
-                    image_xscale = _dir.x
-                if instance_exists(_doorInst)
-                {
-                    x = (_doorInst.x + 32)
-                    y = (_doorInst.y - 14)
-                }
-                else
-                    instance_destroy()
-            }
-        }
-    }
-    exit;
+	if (!instance_exists(obj_robotmonster))
+	{
+		var _inst = instance_create(x, y, obj_robotmonster)
+		var _dir = monster_dir[0]
+		with (_inst)
+		{
+			fake = argument1
+			if argument0
+			{
+				var _hinst = noone
+				with (obj_hallwaymonster)
+				{
+					if ((_dir.x < 0 && x > (room_width / 2)) or (_dir.x > 0 && x < (room_width / 2)))
+						_hinst = id
+				}
+				image_xscale = sign(_dir.x)
+				if instance_exists(_hinst)
+				{
+					x = (_hinst.x + 32)
+					y = (_hinst.bbox_bottom - 51)
+				}
+				else
+					instance_destroy()
+			}
+			else
+			{
+				var _doorInst = noone
+				with (obj_doorMonster)
+				{
+					if (!(place_meeting(x, (y - 32), obj_solid)))
+						_doorInst = id
+				}
+				if (!instance_exists(_doorInst))
+					_doorInst = asset_get_index(("obj_door" + obj_player1.targetDoor))
+				if (_dir.x != 0)
+					image_xscale = _dir.x
+				if instance_exists(_doorInst)
+				{
+					x = (_doorInst.x + 32)
+					y = (_doorInst.y - 14)
+				}
+				else
+					instance_destroy()
+			}
+		}
+	}
+	exit;
 }
 
 function blob_create(argument0, argument1)
 {
-    if (!instance_exists(obj_blobmonster))
-    {
-        _inst = instance_create(x, y, obj_blobmonster)
-        _dir = monster_dir[1]
-        with (_inst)
-        {
-            fake = argument1
-            if argument0
-            {
-                _hinst = noone
-                with (obj_hallwaymonster)
-                {
-                    if ((_dir.x < 0 && x > (room_width / 2)) or (_dir.x > 0 && x < (room_width / 2)))
-                        _hinst = id
-                }
-                image_xscale = sign(_dir.x)
-                if instance_exists(_hinst)
-                {
-                    x = (_hinst.x + 32)
-                    y = (_hinst.y + 60)
-                }
-                else
-                    instance_destroy()
-            }
-            else
-            {
-                _doorInst = noone
-                with (obj_doorMonster)
-                    _doorInst = id
-                if (!instance_exists(_doorInst))
-                    _doorInst = asset_get_index(("obj_door" + obj_player1.targetDoor))
-                if (_dir.x != 0)
-                    image_xscale = _dir.x
-                if instance_exists(_doorInst)
-                {
-                    x = (_doorInst.x + 32)
-                    y = (_doorInst.y - 14)
-                    if place_meeting(x, y, obj_monstersolid)
-                    {
-                        i = 0
-                        while place_meeting(x, y, obj_monstersolid)
-                        {
-                            y++
-                            i++
-                            if (i > room_height)
-                                break
-                            else
-                                continue
-                        }
-                    }
-                }
-                else
-                    instance_destroy()
-            }
-        }
-    }
-    exit;
+	if (!instance_exists(obj_blobmonster))
+	{
+		_inst = instance_create(x, y, obj_blobmonster)
+		_dir = monster_dir[1]
+		with (_inst)
+		{
+			fake = argument1
+			if argument0
+			{
+				_hinst = noone
+				with (obj_hallwaymonster)
+				{
+					if ((_dir.x < 0 && x > (room_width / 2)) or (_dir.x > 0 && x < (room_width / 2)))
+						_hinst = id
+				}
+				image_xscale = sign(_dir.x)
+				if instance_exists(_hinst)
+				{
+					x = (_hinst.x + 32)
+					y = (_hinst.y + 60)
+				}
+				else
+					instance_destroy()
+			}
+			else
+			{
+				_doorInst = noone
+				with (obj_doorMonster)
+					_doorInst = id
+				if (!instance_exists(_doorInst))
+					_doorInst = asset_get_index(("obj_door" + obj_player1.targetDoor))
+				if (_dir.x != 0)
+					image_xscale = _dir.x
+				if instance_exists(_doorInst)
+				{
+					x = (_doorInst.x + 32)
+					y = (_doorInst.y - 14)
+					if place_meeting(x, y, obj_monstersolid)
+					{
+						i = 0
+						while place_meeting(x, y, obj_monstersolid)
+						{
+							y++
+							i++
+							if (i > room_height)
+								break
+							else
+								continue
+						}
+					}
+				}
+				else
+					instance_destroy()
+			}
+		}
+	}
+	exit;
 }
 
 function puppet_create(argument0, argument1)
 {
-    instance_create_unique(0, 0, obj_puppetmonster)
-    exit;
+	instance_create_unique(0, 0, obj_puppetmonster)
+	exit;
 }
 
 function hillbilly_create(argument0, argument1)
 {
-    if (!instance_exists(obj_hillbillymonster))
-    {
-        _inst = instance_create(x, y, obj_hillbillymonster)
-        _dir = monster_dir[3]
-        with (_inst)
-        {
-            fake = argument1
-            if argument0
-            {
-                _hinst = noone
-                with (obj_hallwaymonster)
-                {
-                    if ((_dir.x < 0 && x > (room_width / 2)) or (_dir.x > 0 && x < (room_width / 2)))
-                        _hinst = id
-                }
-                image_xscale = sign(_dir.x)
-                if instance_exists(_hinst)
-                {
-                    x = (_hinst.x + 32)
-                    y = (_hinst.bbox_bottom - 51)
-                }
-                else
-                    trace("destroy1")
-            }
-            else
-            {
-                _doorInst = noone
-                with (obj_doorMonster)
-                {
-                    if (!(place_meeting(x, (y - 32), obj_solid)))
-                        _doorInst = id
-                }
-                if (!instance_exists(_doorInst))
-                    _doorInst = asset_get_index(("obj_door" + obj_player1.targetDoor))
-                if (_dir.x != 0)
-                    image_xscale = _dir.x
-                if instance_exists(_doorInst)
-                {
-                    x = (_doorInst.x + 32)
-                    y = (_doorInst.y - 14)
-                }
-                else
-                    trace("destroy2")
-            }
-        }
-    }
-    exit;
+	if (!instance_exists(obj_hillbillymonster))
+	{
+		_inst = instance_create(x, y, obj_hillbillymonster)
+		_dir = monster_dir[3]
+		with (_inst)
+		{
+			fake = argument1
+			if argument0
+			{
+				_hinst = noone
+				with (obj_hallwaymonster)
+				{
+					if ((_dir.x < 0 && x > (room_width / 2)) or (_dir.x > 0 && x < (room_width / 2)))
+						_hinst = id
+				}
+				image_xscale = sign(_dir.x)
+				if instance_exists(_hinst)
+				{
+					x = (_hinst.x + 32)
+					y = (_hinst.bbox_bottom - 51)
+				}
+				else
+					trace("destroy1")
+			}
+			else
+			{
+				_doorInst = noone
+				with (obj_doorMonster)
+				{
+					if (!(place_meeting(x, (y - 32), obj_solid)))
+						_doorInst = id
+				}
+				if (!instance_exists(_doorInst))
+					_doorInst = asset_get_index(("obj_door" + obj_player1.targetDoor))
+				if (_dir.x != 0)
+					image_xscale = _dir.x
+				if instance_exists(_doorInst)
+				{
+					x = (_doorInst.x + 32)
+					y = (_doorInst.y - 14)
+				}
+				else
+					trace("destroy2")
+			}
+		}
+	}
+	exit;
 }
 
 function grid_meeting(argument0, argument1)
 {
-    if (argument0 < 0 or argument0 > (map_width - 1) or argument1 < 0 or argument1 > (map_height - 1))
-        return false;
-    if (ds_grid_get(room_grid, argument0, argument1) != -4)
-        return true;
-    return false;
+	if (argument0 < 0 or argument0 > (map_width - 1) or argument1 < 0 or argument1 > (map_height - 1))
+		return false;
+	if (ds_grid_get(room_grid, argument0, argument1) != -4)
+		return true;
+	return false;
 }
 
 function grid_length_x(argument0, argument1, argument2)
 {
-    var count = 0
-    while grid_meeting((argument0 + argument2), argument1)
-    {
-        count++
-        argument0 += argument2
-    }
-    return count;
+	var count = 0
+	while grid_meeting((argument0 + argument2), argument1)
+	{
+		count++
+		argument0 += argument2
+	}
+	return count;
 }
 
 function room_place(argument0, argument1)
 {
-    if (argument0 < 0 or argument0 > (map_width - 1) or argument1 < 0 or argument1 > (map_height - 1))
-        return -4;
-    return ds_grid_get(room_grid, argument0, argument1);
+	if (argument0 < 0 or argument0 > (map_width - 1) or argument1 < 0 or argument1 > (map_height - 1))
+		return -4;
+	return ds_grid_get(room_grid, argument0, argument1);
 }
 

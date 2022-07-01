@@ -1,2 +1,2 @@
 if (!active)
-    instance_destroy()
+	instance_destroy()

@@ -1,1 +1,1 @@
-changeroom = 1
+changeroom = true

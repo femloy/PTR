@@ -1,18 +1,18 @@
 if (state == states.policetaxi)
-    exit;
+	exit;
 if (ds_queue_size(followqueue) < LAG_STEPS)
-    exit;
+	exit;
 with (obj_player)
 {
-    targetRoom = other.targetRoom
-    lastroom = room
-    targetDoor = other.targetDoor
-    visible = false
-    if (state != states.gotoplayer)
-        state = states.policetaxi
-    cutscene = 1
-    hsp = 0
-    vsp = 0
+	targetRoom = other.targetRoom
+	lastroom = room
+	targetDoor = other.targetDoor
+	visible = false
+	if (state != states.gotoplayer)
+		state = states.policetaxi
+	cutscene = 1
+	hsp = 0
+	vsp = 0
 }
 grav = 0
 state = states.policetaxi

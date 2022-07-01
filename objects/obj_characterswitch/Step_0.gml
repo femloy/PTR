@@ -1,4 +1,4 @@
 if (respawn > 0)
-    respawn--
+	respawn--
 if (respawn == 0 && visible == false)
-    visible = true
+	visible = true

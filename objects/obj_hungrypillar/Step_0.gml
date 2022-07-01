@@ -1,2 +1,2 @@
 if (room == rm_editor)
-    exit;
+	exit;

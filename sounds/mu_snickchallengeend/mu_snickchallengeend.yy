@@ -1,6 +1,6 @@
 {
   "conversionMode": 0,
-  "compression": 0,
+  "compression": 1,
   "volume": 1.0,
   "preload": true,
   "bitRate": 128,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_snickchallengeend",
-  "duration": 139.248,
+  "duration": 139.24861,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

@@ -1,2 +1,9 @@
 depth = -500
-instance_destroy()
+
+if !debug
+	instance_destroy()
+else
+{
+	active = false;
+	showhud = true;
+}

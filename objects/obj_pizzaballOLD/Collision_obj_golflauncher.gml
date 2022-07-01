@@ -1,5 +1,5 @@
 if (state == states.golf)
-    exit;
+	exit;
 hsp = (14 * other.image_xscale)
 image_xscale = other.image_xscale
 movespeed = 14
@@ -12,6 +12,6 @@ y = (other.y - _max)
 thrown = true
 with (obj_camera)
 {
-    follow_golf = 1
-    targetgolf = other.id
+	follow_golf = 1
+	targetgolf = other.id
 }
