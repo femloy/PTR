@@ -945,12 +945,12 @@ if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_vertical
 	x = roomstartx
 	y = roomstarty
 	visible = true
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3
 		shake_mag_acc = (3 / room_speed)
 	}
-	if (state == states.ghostpossess)
+	if state == states.ghostpossess
 	{
 		state = states.ghost
 		sprite_index = spr_ghostidle
@@ -960,29 +960,29 @@ if ((y > (room_height + 300) or y < -800) && (!(place_meeting(x, y, obj_vertical
 	hsp = 0
 	vsp = 0
 	scr_soundeffect(sfx_groundpound)
-	with (instance_create(x, (y + 540), obj_technicaldifficulty))
+	with instance_create(x, y + 540, obj_technicaldifficulty)
 	{
 		playerid = other.id
-		if (!other.isgustavo)
+		if !other.isgustavo
 			sprite = choose(spr_technicaldifficulty1, spr_technicaldifficulty2, spr_technicaldifficulty3)
 		else
 			sprite = spr_technicaldifficulty4
 	}
-	with (obj_ghostfollow)
+	with obj_ghostfollow
 	{
 		x = xstart
 		y = ystart
 	}
 	vsp = 10
 }
-if (character == "S")
+if character == "S"
 {
-	if (state == states.crouchjump or state == states.crouch)
+	if state == states.crouchjump or state == states.crouch
 		state = states.normal
 }
-if (character != "M")
+if character != "M"
 {
-	if (!(scr_solid_player(x, y)))
+	if !scr_solid_player(x, y)
 	{
 		if (state != states.ratmountcrouch && state != states.boxxedpepjump && state != states.boxxedpepspin && (!((state == states.bump && sprite_index == spr_tumbleend))) && state != states.barrelslide && state != states.barrelclimbwall && sprite_index != spr_player_breakdancesuper && sprite_index != spr_player_barrelslipnslide && sprite_index != spr_player_barrelroll && sprite_index != spr_bombpepintro && sprite_index != spr_knightpepthunder && state != states.stunned && state != states.crouch && state != states.shotguncrouch && state != states.shotguncrouchjump && state != states.boxxedpep && state != states.pistol && sprite_index != spr_player_crouchshoot && state != states.Sjumpprep && state != states.crouchslide && state != states.chainsaw && state != states.machroll && state != states.hurt && state != states.crouchjump && state != states.cheesepepstickup && state != states.cheesepepstickside && state != states.tumble)
 			mask_index = spr_player_mask

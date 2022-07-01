@@ -1,4 +1,30 @@
-//draw_rectangle_color(0, 0, 960, 540, c_black, c_black, c_black, c_black, 0)
+if !instance_exists(obj_pause)
+{
+	// background
+	var pad = 72;
+	pausebg_pos = (pausebg_pos + 0.5) % pad;
+	
+	if !surface_exists(pausebg_surf2)
+		pausebg_surf2 = surface_create(960, 540);
+	if !surface_exists(pausebg_surf)
+		pausebg_surf = surface_create(pad * 2, pad * 2);
+	
+	surface_set_target(pausebg_surf);
+	draw_clear(c_black);
+	draw_set_colour(pausebg_col);
+	draw_roundrect_ext(0, 0, pad - 1, pad - 1, 16, 16, false);
+	draw_roundrect_ext(pad, pad, pad + pad - 1, pad + pad - 1, 16, 16, false);
+	surface_reset_target();
+	
+	surface_set_target(pausebg_surf2);
+	draw_surface_tiled(pausebg_surf, pausebg_pos, pausebg_pos);
+	surface_reset_target();
+	
+	draw_surface(pausebg_surf2, 0, 0);
+}
+if instance_exists(obj_keyconfig) or instance_exists(obj_audioconfig)
+	exit;
+
 draw_set_font(global.bigfont)
 draw_set_halign(fa_center)
 draw_set_color(c_white)

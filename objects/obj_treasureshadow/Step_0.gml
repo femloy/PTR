@@ -1,3 +1,6 @@
+if !instance_exists(playerid)
+	exit;
+
 x = playerid.x
 y = playerid.y
 if playerid.grounded
@@ -5,5 +8,5 @@ if playerid.grounded
 else
 	visible = false
 image_xscale = playerid.xscale
-if (!playerid.visible)
+if !playerid.visible
 	visible = false

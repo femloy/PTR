@@ -52,7 +52,6 @@ if (optionselected == 2)
 		if (key_jump or keyboard_check_pressed(vk_return) or keyboard_check_pressed(vk_return))
 		{
 			scr_soundeffect(sfx_step)
-			visible = false
 			with (instance_create(x, y, obj_keyconfig))
 				depth = (other.depth - 1)
 		}
@@ -67,7 +66,6 @@ if (optionselected == 3)
 		if (key_jump or keyboard_check_pressed(vk_return))
 		{
 			scr_soundeffect(sfx_step)
-			visible = false
 			with (instance_create(x, y, obj_audioconfig))
 				depth = (other.depth - 1)
 		}

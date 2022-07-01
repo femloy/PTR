@@ -30,6 +30,12 @@ with obj_player1
 	other.spr_palette = spr_palette
 	other.character = character
 }
+with obj_player2
+{
+	other.paletteselect2 = paletteselect
+	other.spr_palette2 = spr_palette
+	other.character2 = character
+}
 
 if pause && !instance_exists(obj_option)
 {
@@ -96,19 +102,15 @@ if pause && !instance_exists(obj_option)
 				{
 					pause = false
 					instance_activate_all()
-					room = Realtitlescreen
 					with obj_player1
 					{
 						character = "P"
 						scr_characterspr()
+						targetDoor = "A"
 					}
 					scr_playerreset()
-					with obj_player
-					{
-						state = states.titlescreen;
-						targetDoor = "A";
-					}
 					global.coop = false
+					room = Realtitlescreen
 				}
 				else
 				{
@@ -119,7 +121,7 @@ if pause && !instance_exists(obj_option)
 					global.levelreset = true
 					
 					with obj_player
-						targetDoor = "D"
+						targetDoor = "A"
 					
 					room = rm_levelselect
 					alarm[0] = 1

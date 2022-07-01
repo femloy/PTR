@@ -59,7 +59,13 @@ important = 0
 heavy = 0
 depth = 0
 paletteselect = 0
-spr_palette = palette_cheeseslime
+spr_palette = spr_noisepalette
+
+with obj_player
+{
+	if character == "N" or (character == "P" && !ispeppino) && paletteselect == 0
+		other.paletteselect = 1;
+}
 grabbedby = 0
 stuntouchbuffer = 0
 scaredbuffer = 0

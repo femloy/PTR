@@ -5,7 +5,6 @@ if fadealpha > 1 && !fadein
 		instance_activate_all()
 		scr_deactivate_escape()
 		alarm[0] = 1
-		audio_resume_all()
 	}
 	else if !obj_pause.pause
 	{

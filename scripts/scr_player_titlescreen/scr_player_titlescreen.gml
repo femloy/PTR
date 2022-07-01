@@ -6,6 +6,4 @@ function scr_player_titlescreen()
 		instance_create((x - 100), y, obj_superdashcloud)
 	sprite_index = spr_player_idle
 	image_speed = 0.35
-	exit;
 }
-

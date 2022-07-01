@@ -100,9 +100,9 @@ if deactivated > 0
 	// something was pressed here, move on with life
 	if deactivated <= 0
 	{
-		if !onpause
-			scr_resumemusic();
 		while array_length(instlist) > 0
 			instance_activate_object(array_pop(instlist));
+		if !onpause
+			alarm[1] = 1;
 	}
 }

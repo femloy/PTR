@@ -18,11 +18,12 @@ if deactivated <= 0
 }
 else
 {
-	draw_set_alpha(0.5);
+	draw_set_alpha(1);
 	if sprite_exists(pausebg)
+	{
 		draw_sprite_stretched(pausebg, 0, 0, 0, display_get_gui_width(), display_get_gui_height());
-	else
-		draw_set_alpha(1);
+		draw_set_alpha(0.5);
+	}
 	
 	draw_set_colour(c_black);
 	draw_rectangle(0, 0, 960, 540, false);

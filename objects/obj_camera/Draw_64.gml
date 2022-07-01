@@ -141,7 +141,7 @@ if obj_player.state != states.gameover
 		
 		var c = color_array[i]
 		pal_swap_set(spr_font_palette, c, 0)
-		draw_text(xx, hud_yy - 56 + text_y + yy, string_char_at(str, i + 1))
+		draw_text(xx - 5, hud_yy - 56 + text_y + yy - 7, string_char_at(str, i + 1))
 		xx += w / num
 	}
 	draw_set_alpha(1)

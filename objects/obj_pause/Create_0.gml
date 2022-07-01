@@ -15,9 +15,13 @@ peppino_sprite = spr_player_idle
 peppino_sprite_number = sprite_get_number(peppino_sprite)
 peppino_index = 0
 
-paletteselect = 0
+paletteselect = 1
 spr_palette = spr_peppalette
 character = "P"
+
+paletteselect2 = 0
+spr_palette2 = spr_noisepalette
+character2 = "N"
 
 toppin_sprite = [spr_toppincheese, spr_toppinpineapple, spr_toppinsausage, spr_toppinshroom, spr_toppintomato];
 for (i = 0; i < array_length(toppin_sprite); i++)

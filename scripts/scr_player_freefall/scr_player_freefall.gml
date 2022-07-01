@@ -1,10 +1,14 @@
 function scr_player_freefall()
 {
 	landAnim = 1
-	if (vsp >= 2)
+	if vsp >= 2
 		vsp += 0.5
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_bodyslamstart)
+	
+	if floor(image_index) == image_number - 1 && sprite_index == spr_bodyslamstart
 		sprite_index = spr_bodyslamfall
+	if floor(image_index) == image_number - 1 && sprite_index == spr_shotgunjump1
+		sprite_index = spr_shotgunjump3
+	
 	move = (key_left + key_right)
 	if (!grounded)
 	{
@@ -75,12 +79,13 @@ function scr_player_freefall()
 		else
 		{
 			scr_soundeffect(sfx_groundpound)
-			if (sprite_index == spr_player_poundcancel1)
+			if sprite_index == spr_player_poundcancel1
 				sprite_index = spr_player_poundcancel2
-			else if (shotgunAnim == 0)
+			else if shotgunAnim == 0
 				sprite_index = spr_bodyslamland
 			else
 				sprite_index = spr_shotgunjump2
+			
 			image_index = 0
 			state = states.freefallland
 			jumpAnim = 1
@@ -129,6 +134,5 @@ function scr_player_freefall()
 			image_index = 0
 		}
 	}
-	exit;
 }
 

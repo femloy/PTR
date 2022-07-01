@@ -1,6 +1,6 @@
 global.levelcomplete = 1
 scr_playerreset()
-with (obj_player)
+with obj_player
 {
 	targetDoor = "A"
 	targetRoom = rm_levelselect
@@ -9,4 +9,5 @@ with (obj_player)
 	y = -100
 	state = states.titlescreen
 	image_blend = c_white
+	visible = true;
 }

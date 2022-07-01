@@ -1,5 +1,6 @@
 function scr_resumemusic()
 {
+	audio_resume_all()
 	with obj_music
 	{
 		if obj_music.secret

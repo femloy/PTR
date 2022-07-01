@@ -33,7 +33,7 @@ function scr_initenemy()
 	depth = 0
 	grabbedby = 0
 	paletteselect = 0
-	spr_palette = palette_forknight
+	spr_palette = -1
 	stuntouchbuffer = 0
 	scaredbuffer = 0
 	movespeed = 1
@@ -114,8 +114,6 @@ function scr_initenemy()
 	important = 0
 	heavy = 0
 	depth = 0
-	paletteselect = 0
-	spr_palette = palette_cheeseslime
 	grabbedby = 0
 	stuntouchbuffer = 0
 	scaredbuffer = 0
@@ -128,6 +126,5 @@ function scr_initenemy()
 	ventilator_vsp = -5
 	linethrown = false
 	dashcloudid = obj_null
-	exit;
 }
 

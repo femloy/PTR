@@ -1,4 +1,2 @@
-sprite_index = spr_medievaldoor1
-targetRoom = rm_levelselect
+targetRoom = hub_loadingscreen
 targetDoor = "A"
-depth = -300

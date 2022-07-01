@@ -36,8 +36,13 @@ spr_dead = spr_pepclone_death
 important = 0
 heavy = 0
 depth = 0
-paletteselect = 0
-spr_palette = palette_cheeseslime
+paletteselect = 1
+spr_palette = spr_peppalette
+with obj_player
+{
+	if character == "P" && ispeppino
+		other.paletteselect = paletteselect;
+}
 grabbedby = 0
 stuntouchbuffer = 0
 scaredbuffer = 0

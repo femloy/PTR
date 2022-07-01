@@ -67,8 +67,10 @@ if (global.collectN > global.collect)
 			sprite_index = spr_rankP
 	}
 }
-if global.rank == "eggplant" <= 0
+if global.rank == "eggplant"
 	sprite_index = spr_rankEGGPLANT;
 
 if instance_exists(obj_treasureviewer)
-	visible = false
+	visible = false;
+with obj_player
+	visible = false;
