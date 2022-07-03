@@ -46,6 +46,7 @@ function scr_wc_create()
 	showhud = true;
 	
 	// shortcuts
+	WC_bindsenabled = true;
 	WC_binds = ds_map_create();
 	function WCscr_addbind(key, command_or_method) {
 		ds_map_add(WC_binds, string(key), command_or_method);
@@ -253,7 +254,7 @@ function scr_wc_step()
 			var val = ds_map_find_value(WC_binds, i);
 			if is_method(val)
 				val();
-			else if !isOpen
+			else if !isOpen && WC_bindsenabled
 			{
 				var args = _input_string_split(val);
 				

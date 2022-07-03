@@ -51,16 +51,17 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 		with (obj_player1)
 			supercharge += 1
 	}
-	if ((!elite) or elitehit <= 0)
-		global.combo += 1
 	if instance_exists(obj_hardmode)
 		global.heatmeter_count++
-	if ((!elite) or elitehit <= 0)
+	
+	if (!elite or elitehit <= 0) && !check_race()
 	{
+		global.combo += 1
 		var combototal = (10 + round((10 * (global.combo * 0.5))))
 		global.collect += combototal
 		global.comboscore += combototal
 	}
+	
 	scr_soundeffect(sfx_killenemy)
 	repeat (3)
 	{

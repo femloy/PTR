@@ -30,8 +30,8 @@ event_inherited()
 var traveldis = x - xprevious;
 for(var i = 0; i < abs(traveldis); i++)
 {
-	if place_meeting(xprevious + i * sign(traveldis), y, obj_lapblock)
-		lapindex = instance_place(xprevious + i * sign(traveldis), y, obj_lapblock);
+	if place_meeting(xprevious + i * sign(traveldis), y, obj_lapblockparent)
+		lapindex = instance_place(xprevious + i * sign(traveldis), y, obj_lapblockparent);
 }
 if instance_exists(lapindex)
 {

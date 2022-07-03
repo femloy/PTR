@@ -1,8 +1,8 @@
 if flash
 {
-	shader_set(shd_hit)
+	draw_set_flash(true)
 	draw_self()
-	shader_reset()
+	draw_set_flash(false)
 }
 else
 	draw_self()

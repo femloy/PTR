@@ -1,6 +1,6 @@
 depth = 50
 event_inherited()
-tv_do_expression(731)
+tv_do_expression(spr_tv_exprcollect)
 image_speed = 0.35
 yoffset = 0
 hsp = 0

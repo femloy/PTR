@@ -72,8 +72,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Debug",
-    "path": "folders/Sprites/Debug.yy",
+    "name": "Mod extra",
+    "path": "folders/Sprites/Mod extra.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_lapblockescape",

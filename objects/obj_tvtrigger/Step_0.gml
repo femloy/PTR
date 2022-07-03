@@ -1,3 +1,6 @@
+if check_race()
+	exit;
+
 if (prompt_array != -4 && prompt_condition != -4 && prompt_condition())
 {
 	if (ds_list_find_index(global.saveroom, id) == -1)

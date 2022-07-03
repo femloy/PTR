@@ -98,9 +98,9 @@ function state_player_normal()
 		movespeed = 0
 		if ((!machslideAnim) && (!landAnim) && (!shotgunAnim))
 		{
-			if (idle < 400 && (!key_up))
+			if idle < 400 && !key_up
 				idle++
-			if (idle >= 150 && (!key_up))
+			if idle >= 150 && !key_up
 			{
 				if (sprite_index != spr_idle && floor(image_index) == (image_number - 1))
 				{
@@ -136,7 +136,10 @@ function state_player_normal()
 					else if mort
 						sprite_index = spr_player_mortidle
 					else if key_up
+					{
 						sprite_index = spr_player_breakdance
+						idle = 0
+					}
 					else if (global.minutes == 0 && global.seconds == 0)
 						sprite_index = spr_hurtidle
 					else if global.panic
@@ -160,9 +163,13 @@ function state_player_normal()
 			else
 			{
 				windingAnim = 0
-				sprite_index = spr_facehurt
+				if sprite_index != spr_player_3hpidle
+					sprite_index = spr_facehurt
 				if key_up
+				{
 					sprite_index = spr_player_breakdance
+					facehurt = false
+				}
 			}
 		}
 	}
@@ -314,6 +321,7 @@ function state_player_normal()
 	}
 	else if ((key_slap2 or input_buffer_slap < 8) && key_up)
 	{
+		scr_soundeffect(sfx_suplexdash)
 		state = states.punch
 		image_index = 0
 		sprite_index = spr_player_breakdanceuppercut

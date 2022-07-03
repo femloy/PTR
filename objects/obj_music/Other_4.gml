@@ -3,7 +3,7 @@ if !global.panic
 	for(var i = 0; i < array_length(room_arr); i++)
 	{
 		var b = room_arr[i]
-		if room == b[0]
+		if room == b[0] && !(global.gameplay != gameplay.remix && array_length(b) > 4 && b[4] == true)
 		{
 			var prevmusic = music
 			music = b[1]

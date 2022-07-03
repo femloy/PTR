@@ -62,6 +62,13 @@ if obj_player.state != states.gameover
 	else if _score >= global.crank
 		rank_ix = 1
 	
+	if check_race()
+	{
+		rank_ix = floor(global.racerank);
+		if instance_exists(obj_racebarrier)
+			rank_ix = 5
+	}
+	
 	if previousrank != rank_ix
 	{
 		previousrank = rank_ix
@@ -82,7 +89,10 @@ if obj_player.state != states.gameover
 		case 1: perc = (_score - global.crank) / (global.brank - global.crank); break;
 		case 0: perc = _score / global.crank; break;
 	}
-
+	
+	if check_race()
+		perc = frac(global.racerank);
+	
 	var t = spr_h * perc
 	var top = spr_h - t
 	

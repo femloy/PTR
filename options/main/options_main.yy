@@ -10,7 +10,6 @@
   "option_author": "",
   "option_collision_compatibility": true,
   "option_copy_on_write_enabled": false,
-  "option_lastchanged": "",
   "option_spine_licence": false,
   "option_template_image": "${base_options_dir}/main/template_image.png",
   "option_template_icon": "${base_options_dir}/main/template_icon.png",
@@ -18,5 +17,5 @@
   "resourceVersion": "1.4",
   "name": "Main",
   "tags": [],
-  "resourceType": "GMMainOptions"
+  "resourceType": "GMMainOptions",
 }

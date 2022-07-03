@@ -1,5 +1,8 @@
 function scr_deactivate_escape()
 {
+	with obj_lapblockparent
+		event_perform(ev_other, ev_room_start)
+	
 	with (obj_baddie)
 	{
 		hitboxcreate = 0

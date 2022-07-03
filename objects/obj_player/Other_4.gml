@@ -13,13 +13,15 @@ with (obj_secretportal)
 		}
 	}
 }
-if (!is_bossroom())
+if !is_bossroom()
 	hitstunned = 0
+
 if global.levelreset
 {
 	scr_playerreset()
-	global.levelreset = 0
+	global.levelreset = false
 }
+
 if (state == states.comingoutdoor && global.coop == true && (!(place_meeting(x, y, obj_exitgate))))
 {
 	if (object_index == obj_player1 && obj_player1.spotlight == 0)
@@ -35,8 +37,6 @@ if (global.coop == true)
 	if (!instance_exists(obj_coopflag))
 		instance_create(x, y, obj_coopflag)
 }
-if (state == states.grab)
-	state = states.normal
 if (place_meeting(x, y, obj_boxofpizza) or place_meeting(x, (y - 1), obj_boxofpizza))
 {
 	box = 1
@@ -180,3 +180,16 @@ if (room == rank_room)
 }
 roomstartx = x
 roomstarty = y
+
+// bringing baddies through rooms (rest of the code is in obj_fadeout)
+if baddiegrabbedID != 0 && baddiegrabbedID != obj_null && instance_exists(baddiegrabbedID)
+&& global.gameplay == gameplay.remix
+{
+	with baddiegrabbedID
+		persistent = false;
+	with obj_baddiecollisionbox
+		if baddieID == other.baddiegrabbedID
+			persistent = false;
+}
+else if state == states.grab
+	state = states.normal

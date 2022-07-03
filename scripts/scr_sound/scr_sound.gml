@@ -15,6 +15,6 @@ function scr_music(snd)
 function set_master_gain(gain)
 {
 	if game_is_compiled()
-		gain /= 2;
+		gain /= 5;
 	audio_master_gain(gain);
 }

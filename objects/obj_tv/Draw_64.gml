@@ -46,7 +46,10 @@ for (var i = num; i > 0; i--)
 if (room != strongcold_endscreen)
 {
 	draw_sprite_ext(spr_tv_bg, 0, (tv_x + collect_x), ((tv_y + collect_y) + hud_posY), 1, 1, 0, c_white, alpha)
+	
+	pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
 	draw_sprite_ext(sprite_index, image_index, (tv_x + collect_x), ((tv_y + collect_y) + hud_posY), 1, 1, 0, c_white, alpha)
+	pal_swap_reset();
 }
 if (bubblespr != -4)
 	draw_sprite_ext(bubblespr, bubbleindex, 512, 53, 1, 1, 1, c_white, alpha)

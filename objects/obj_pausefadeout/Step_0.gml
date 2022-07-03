@@ -12,6 +12,7 @@ if fadealpha > 1 && !fadein
 		instance_deactivate_all(true)
 		instance_activate_object(obj_pause)
 		instance_activate_object(obj_inputAssigner)
+		instance_activate_object(obj_onlineclient)
 		
 		if live_enabled
 			instance_activate_object(obj_gmlive)

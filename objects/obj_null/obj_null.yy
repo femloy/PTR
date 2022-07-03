@@ -23,10 +23,10 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Objects",
-    "path": "folders/Objects.yy"
+    "path": "folders/Objects.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_null",
   "tags": [],
-  "resourceType": "GMObject"
+  "resourceType": "GMObject",
 }

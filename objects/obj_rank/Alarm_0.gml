@@ -1,13 +1,16 @@
-global.levelcomplete = 1
-scr_playerreset()
-with obj_player
+if !check_race()
 {
-	targetDoor = "A"
-	targetRoom = rm_levelselect
-	room = rm_levelselect
-	x = -100
-	y = -100
-	state = states.titlescreen
-	image_blend = c_white
-	visible = true;
+	global.levelcomplete = 1
+	scr_playerreset()
+	with obj_player
+	{
+		targetDoor = "A"
+		targetRoom = rm_levelselect
+		room = rm_levelselect
+		x = -100
+		y = -100
+		state = states.titlescreen
+		image_blend = c_white
+		visible = true;
+	}
 }

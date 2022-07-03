@@ -1,2 +1,2 @@
-targetRoom = hub_loadingscreen
+targetRoom = rm_onlinerace
 targetDoor = "A"

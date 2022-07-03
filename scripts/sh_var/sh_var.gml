@@ -2,7 +2,7 @@ function sh_var(args)
 {
 	if !WC_debug
 		return "You do not have permission to use this command";
-	if array_length(args) < 3
+	if array_length(args) < 4
 		return "Not enough arguments. Usage: var <instance(:index) or global> <variable> <value>";
 	
 	// get arguments

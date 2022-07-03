@@ -60,7 +60,26 @@ with obj_player
 		
 		var roomname = room_get_name(room)
 		var namestring = string_letters(roomname)
-		scr_savescore(global.leveltosave)
+		
+		if !check_race()
+		{
+			scr_savescore(global.leveltosave)
+			gamesave_async_save()
+		}
+		else
+		{
+			audio_stop_sound(obj_music.music)
+			audio_stop_sound(sfx_escaperumble)
+			switch global.racerank
+			{
+				default: global.rank = "d"; scr_soundeffect(mu_rankd); break;
+				case 1: global.rank = "c"; scr_soundeffect(mu_rankc); break;
+				case 2: global.rank = "b"; scr_soundeffect(mu_rankb); break;
+				case 3: global.rank = "a"; scr_soundeffect(mu_ranka); break;
+				case 4: global.rank = "s"; scr_soundeffect(mu_ranks); break;
+			}
+		}
+		
 		if global.combo > 0
 		{
 			global.combotime = 0
@@ -89,6 +108,5 @@ with obj_player
 		image_index = 0
 		global.panic = false
 		global.snickchallenge = false
-		gamesave_async_save()
 	}
 }

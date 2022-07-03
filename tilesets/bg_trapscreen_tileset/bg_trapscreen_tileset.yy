@@ -1,7 +1,7 @@
 {
   "spriteId": {
     "name": "tilespr_bg_trapscreen_tileset",
-    "path": "sprites/tilespr_bg_trapscreen_tileset/tilespr_bg_trapscreen_tileset.yy"
+    "path": "sprites/tilespr_bg_trapscreen_tileset/tilespr_bg_trapscreen_tileset.yy",
   },
   "tileWidth": 960,
   "tileHeight": 540,
@@ -12,7 +12,7 @@
   "spriteNoExport": false,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default"
+    "path": "texturegroups/Default",
   },
   "out_tilehborder": 2,
   "out_tilevborder": 2,
@@ -23,21 +23,21 @@
   "tileAnimationSpeed": 15.0,
   "tileAnimation": {
     "FrameData": [
-      0
+      0,
     ],
-    "SerialiseFrameCount": 1
+    "SerialiseFrameCount": 1,
   },
   "macroPageTiles": {
     "SerialiseWidth": 0,
     "SerialiseHeight": 0,
-    "TileSerialiseData": []
+    "TileSerialiseData": [],
   },
   "parent": {
     "name": "Tile Sets",
-    "path": "folders/Tile Sets.yy"
+    "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
   "name": "bg_trapscreen_tileset",
   "tags": [],
-  "resourceType": "GMTileSet"
+  "resourceType": "GMTileSet",
 }

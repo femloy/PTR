@@ -42,6 +42,7 @@ switch sprite_index
 			}
 		}
 		break
+	
 	case spr_secretportal_spawnidle:
 		if (!drop)
 		{

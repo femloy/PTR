@@ -56,5 +56,8 @@ room_arr = [
 	[ufo_1, mu_ufo, mu_pinballsecret, false], 
 	[plage_entrance, mu_beach, mu_beachsecret, false], 
 	[war_1, mu_war, mu_medievalsecret, false], 
-	[tower_finalhallway, mu_finalescape, mu_dungeonsecret, false]
+	[tower_finalhallway, mu_finalescape, mu_medievalsecret, false],
+	
+	[rm_onlinerace, mu_racehub, mu_medievalsecret, false],
+	[industrial_3, mu_industrial2, mu_factorysecret, true, true], // remix only
 ]

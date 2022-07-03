@@ -11,13 +11,13 @@ if prevpillar_on_camera != pillar_on_camera
 {
 	if pillar_on_camera
 	{
-		audio_sound_gain(pillarmusicID, 0.6 * global.option_music_volume, 2000)
+		audio_sound_gain(pillarmusicID, global.option_music_volume, 2000)
 		audio_sound_gain(musicID, 0, 2000)
 	}
 	else
 	{
 		audio_sound_gain(pillarmusicID, 0, 2000)
-		audio_sound_gain(musicID, 0.6 * global.option_music_volume, 2000)
+		audio_sound_gain(musicID, global.option_music_volume, 2000)
 	}
 }
 

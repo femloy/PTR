@@ -1,3 +1,9 @@
+if check_race()
+{
+	instance_destroy();
+	exit;
+}
+
 with (obj_player)
 {
 	if (object_index != obj_player2 or global.coop)

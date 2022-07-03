@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mu_finalescape.mp3",
-  "duration": 0.316508,
+  "duration": 170.91919,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",

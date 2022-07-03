@@ -302,8 +302,11 @@ function number_in_range(num, a, b)
 	return false;
 }
 
-function game_is_compiled() {
-	return 1 - sign(string_pos("Runner.exe", parameter_string(0)));
+function game_is_compiled()
+{
+	if string_pos("Runner.exe", parameter_string(0)) > 0
+		return true;
+	return false;
 }
 
 function safe_get(inst, variable)
@@ -330,4 +333,26 @@ function get_instid(instance)
 {
 	if instance_exists(instance)
 		return real(string_digits(string(instance.id)));
+}
+
+function draw_text_auto(x, y, str, sep = undefined, w = undefined, alpha = draw_get_alpha())
+{
+	str = string(str);
+	
+	if draw_get_font() == global.bigfont or draw_get_font() == global.smallfont
+		str = string_upper(str);
+	
+	var aprev = draw_get_alpha();
+	draw_set_alpha(alpha);
+	
+	if is_undefined(sep) && is_undefined(w)
+		draw_text(x, y, str);
+	else
+		draw_text_ext(x, y, str, sep, w);
+	
+	draw_set_alpha(aprev);
+}
+
+function check_shaders() {
+	return shaders_are_supported();
 }

@@ -1,7 +1,34 @@
-function scr_getinput()
+function scr_getinput(skip_menu_check = false)
 {
-	if safe_get(obj_shell, "isOpen")
+	if !skip_menu_check
+	&& (safe_get(obj_shell, "isOpen")
+	or instance_exists(obj_choicebase))
+	{
+		key_up = false;
+		key_up2 = false;
+		key_right = false;
+		key_right2 = false;
+		key_left = false;
+		key_left2 = false;
+		key_down = false;
+		key_down2 = false;
+		key_jump = false;
+		key_jump2 = false;
+		key_slap = false;
+		key_slap2 = false;
+		key_taunt = false;
+		key_taunt2 = false;
+		key_attack = false;
+		key_attack2 = false;
+		key_shoot = false;
+		key_shoot2 = false;
+		key_start = false;
+		key_escape = false;
+		key_chainsaw = false;
+		key_chainsaw2 = false;
+		stickpressed = false;
 		exit;
+	}
 	
 	var _dvc = obj_inputAssigner.player_input_device[0]
 	

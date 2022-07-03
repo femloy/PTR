@@ -1,4 +1,4 @@
-if !instance_exists(obj_pause)
+if safe_get(obj_pause, "pause") == false
 {
 	// background
 	var pad = 72;

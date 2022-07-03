@@ -104,7 +104,7 @@ with (obj_player2)
 }
 with (obj_player1)
 {
-	if (visible && bbox_in_camera(view_camera[0], 32))
+	if (visible && !instance_exists(obj_rank) && bbox_in_camera(view_camera[0], 32))
 	{
 		pal_swap_set(spr_palette, paletteselect, 0)
 		b = get_dark(image_blend, other.use_dark)
@@ -113,7 +113,7 @@ with (obj_player1)
 	}
 }
 
-shader_set(shd_hit)
+draw_set_flash(true)
 with (obj_baddie)
 {
 	_stun = 0
@@ -137,4 +137,5 @@ with (obj_smallnumber)
 	if (visible && flash)
 		draw_text(x, y, number)
 }
-shader_reset()
+draw_set_flash(false)
+pal_swap_reset()

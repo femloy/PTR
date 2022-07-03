@@ -10,20 +10,27 @@ function scr_player_freefallland()
 	crouchAnim = 0
 	machhitAnim = 0
 	movespeed = 0
-	facehurt = 1
 	start_running = 1
 	alarm[4] = 14
 	vsp = 0
 	hsp = 0
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		facehurt = 1
-		sprite_index = spr_facehurtup
+		if sprite_index != spr_player_poundcancel2 or global.gameplay != gameplay.remix
+		{
+			facehurt = true
+			sprite_index = spr_facehurtup
+		}
+		else
+		{
+			facehurt = true
+			sprite_index = spr_player_3hpidle
+		}
+		
 		image_index = 0
 		state = states.normal
 		jumpstop = 1
 	}
 	image_speed = 0.35
-	exit;
 }
 

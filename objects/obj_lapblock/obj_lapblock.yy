@@ -4,7 +4,7 @@
     "path": "sprites/spr_lapblock/spr_lapblock.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

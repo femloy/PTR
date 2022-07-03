@@ -1,8 +1,4 @@
 {
-  "name": "font1",
-  "includeTTF": false,
-  "size": 14.0,
-  "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -10,12 +6,15 @@
   "applyKerning": 0,
   "fontName": "Arial",
   "styleName": "Bold",
+  "size": 14.0,
   "bold": false,
   "italic": false,
   "charset": 0,
   "AntiAlias": 1,
   "first": 32,
   "last": 9647,
+  "sampleText": "abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
+  "includeTTF": false,
   "TTFName": "",
   "textureGroupId": {
     "name": "backgroundgroup",
@@ -131,6 +130,7 @@
     "path": "folders/Fonts.yy",
   },
   "resourceVersion": "1.0",
+  "name": "font1",
   "tags": [],
   "resourceType": "GMFont",
 }

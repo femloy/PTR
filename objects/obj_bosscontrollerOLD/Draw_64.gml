@@ -19,11 +19,11 @@ switch state
 		draw_sprite(vstitle, -1, xx, (vsy + yy))
 		if flash
 		{
-			shader_set(shd_hit)
+			draw_set_flash(true)
 			draw_sprite(sprplayer, -1, playerx, (room_height - sprite_get_height(sprplayer)))
 			draw_sprite(sprboss, -1, bossx, (room_height - sprite_get_height(sprboss)))
 			draw_sprite(vstitle, -1, xx, (vsy + yy))
-			shader_reset()
+			draw_set_flash(false)
 		}
 		exit;
 }

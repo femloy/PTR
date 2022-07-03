@@ -815,12 +815,15 @@ if (object_index == obj_player1)
 	if (global.combo != global.previouscombo)
 	{
 		global.previouscombo = global.combo
-		if ((global.combo % 5) == 0 && global.combo != 0)
+		if global.combo % 5 == 0 && global.combo != 0
 		{
-			with (instance_create(x, (y - 80), obj_combotitle))
+			with instance_create(x, y - 80, obj_combotitle)
 			{
-				title = floor((global.combo / 5))
-				title = clamp(title, 0, floor((sprite_get_number(spr_comboend_title1) / 5)))
+				title = floor(global.combo / 5)
+				if global.gameplay == gameplay.remix
+					title = clamp(title, 0, floor(sprite_get_number(spr_comboend_title1) / 2))
+				else
+					title = clamp(title, 0, floor(sprite_get_number(spr_comboend_title1) / 5))
 			}
 		}
 	}
