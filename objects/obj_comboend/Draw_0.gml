@@ -4,7 +4,7 @@ draw_sprite(spr_comboend, 0, xx, yy)
 
 var title = floor(combo / 5)
 if global.gameplay == gameplay.remix
-	title = clamp(title, 0, floor(sprite_get_number(spr_comboend_title1) / 2))
+	title = clamp(title, 0, floor(sprite_get_number(spr_comboend_title1) / 2) - 1)
 else
 	title = clamp(title, 0, floor(sprite_get_number(spr_comboend_title1) / 5))
 

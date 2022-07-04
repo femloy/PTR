@@ -228,6 +228,4 @@ function scr_player_grab()
 		landAnim = 0
 		image_index = 0
 	}
-	exit;
 }
-

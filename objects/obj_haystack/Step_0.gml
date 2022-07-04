@@ -44,7 +44,7 @@ else if (sprite_index == spr_haystackburning)
 		if (state != states.grabbed)
 			instance_destroy()
 	}
-	if (ds_list_find_index(global.saveroom, id) == -1)
+	if (!in_saveroom(id))
 		ds_list_add(global.saveroom, id)
 	if (firetimer > 0 && sprite_index == spr_haystackburning && firetimeinf == 0)
 		firetimer--

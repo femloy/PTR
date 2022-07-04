@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	scr_rockblock_tag()
 	instance_create(x, y, obj_playerexplosion)

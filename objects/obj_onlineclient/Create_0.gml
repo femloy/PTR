@@ -29,5 +29,6 @@ enum network
 	change_player_room,
 	close_server,
 	error_disconnect,
-	race_start
+	race_start,
+	kill_object
 }

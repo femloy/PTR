@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	for (var i = 0; i < ds_list_size(deactivatedlist); i++)
 	{

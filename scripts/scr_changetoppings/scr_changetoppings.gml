@@ -2,7 +2,7 @@ function scr_changetoppings()
 {
 	with (obj_collect)
 	{
-		if (ds_list_find_index(global.saveroom, id) == -1)
+		if (!in_saveroom(id))
 		{
 			if ((obj_player1.character == "P" && obj_player1.spotlight == 1) or (obj_player2.character == "P" && obj_player1.spotlight == 0))
 				sprite_index = choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect)
@@ -15,7 +15,7 @@ function scr_changetoppings()
 	}
 	with (obj_bigcollect)
 	{
-		if (ds_list_find_index(global.saveroom, id) == -1)
+		if (!in_saveroom(id))
 		{
 			if ((obj_player1.character == "P" && obj_player1.spotlight == 1) or (obj_player2.character == "P" && obj_player1.spotlight == 0))
 				sprite_index = choose(spr_pizzacollect1, spr_pizzacollect2, spr_pizzacollect3)
@@ -28,7 +28,7 @@ function scr_changetoppings()
 	}
 	with (obj_giantcollect)
 	{
-		if (ds_list_find_index(global.saveroom, id) == -1)
+		if (!in_saveroom(id))
 		{
 			if ((obj_player1.character == "P" && obj_player1.spotlight == 1) or (obj_player2.character == "P" && obj_player1.spotlight == 0))
 				sprite_index = spr_giantpizza
@@ -41,7 +41,7 @@ function scr_changetoppings()
 	}
 	with (obj_destroyable2)
 	{
-		if (ds_list_find_index(global.saveroom, id) == -1)
+		if (!in_saveroom(id))
 		{
 			if ((obj_player1.character == "P" && obj_player1.spotlight == 1) or (obj_player2.character == "P" && obj_player1.spotlight == 0))
 				sprite_index = spr_destroyable2
@@ -54,7 +54,7 @@ function scr_changetoppings()
 	}
 	with (obj_destroyable2_big)
 	{
-		if (ds_list_find_index(global.saveroom, id) == -1)
+		if (!in_saveroom(id))
 		{
 			if ((obj_player1.character == "P" && obj_player1.spotlight == 1) or (obj_player2.character == "P" && obj_player1.spotlight == 0))
 				sprite_index = spr_bigbreakable

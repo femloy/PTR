@@ -1,8 +1,12 @@
-if (place_meeting(x, y, obj_player) && (!(ds_list_find_index(global.saveroom, id))))
+if place_meeting(x, y, obj_player) && !in_saveroom(id)
+{
 	ds_list_add(global.saveroom, id)
-if ds_list_find_index(global.saveroom, id)
-	visited = 1
-if (visited == 1 && sprite_index != spr_pepperdoor)
+	visited = true
+}
+else if in_saveroom(id)
+	visited = true
+
+if visited && sprite_index != spr_pepperdoor
 	sprite_index = spr_doorvisited
-if (john && global.panic)
+if john && global.panic
 	sprite_index = spr_doorblocked

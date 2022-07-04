@@ -23,6 +23,6 @@ if eaten
 	x = -100
 	y = -100
 	sprite_index = spr_corneaten
-	if (ds_list_find_index(global.saveroom, id) == -1)
+	if (!in_saveroom(id))
 		ds_list_add(global.saveroom, id)
 }

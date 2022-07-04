@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	instance_create((x + 16), y, obj_debris)
 	instance_create((x + 16), y, obj_debris)

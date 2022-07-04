@@ -6,7 +6,7 @@ with (obj_collect)
 		image_alpha = 1
 	}
 }
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	repeat (6)
 		create_debris((x + 32), (y + 32), spr_icedebris)

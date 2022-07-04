@@ -32,7 +32,7 @@ with (obj_player)
 		}
 	}
 }
-if (ds_list_find_index(global.saveroom, id) != -1)
+if (in_saveroom(id))
 {
 	active = 0
 	sprite_index = spr_secretportal_close

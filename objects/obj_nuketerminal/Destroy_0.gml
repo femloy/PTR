@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	instance_create_unique(0, 0, obj_wartimer)
 	with (obj_wartimer)

@@ -1,2 +1,2 @@
-if (destroy && ds_list_find_index(global.saveroom, id) == -1)
+if (destroy && !in_saveroom(id))
 	ds_list_add(global.saveroom, id)

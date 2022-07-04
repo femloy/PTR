@@ -15,6 +15,9 @@ with obj_player1
 	packet_write(buffer_string, sprite_get_name(sprite_index));
 	packet_write(buffer_s8, xscale);
 	packet_write(buffer_s16, racepos);
+	packet_write(buffer_string, string(baddiegrabbedID));
+	packet_write(buffer_string, sprite_get_name(spr_palette));
+	packet_write(buffer_u8, paletteselect);
 	packet_send();
 }
 if safe_get(obj_pause, "pause")

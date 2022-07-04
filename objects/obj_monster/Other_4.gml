@@ -7,5 +7,5 @@ if escape
 xs = image_xscale
 targetRoom = obj_player1.lastroom
 targetDoor = obj_player1.targetDoor
-if (ds_list_find_index(global.saveroom, room_get_name(room)) != -1)
+if (in_saveroom(room_get_name(room)))
 	oktoberfest = 1

@@ -60,6 +60,9 @@ function received_packet_server(buffer, socket)
 			br[6] = [buffer_string, buffer_read(buffer, buffer_string)]
 			br[7] = [buffer_s8, buffer_read(buffer, buffer_s8)]
 			br[8] = [buffer_s16, buffer_read(buffer, buffer_s16)]
+			br[9] = [buffer_string, buffer_read(buffer, buffer_string)]
+			br[10] = [buffer_string, buffer_read(buffer, buffer_string)]
+			br[11] = [buffer_u8, buffer_read(buffer, buffer_u8)]
 			
 			for(var i = 0; i < ds_list_size(socket_list); i++)
 			{
@@ -91,6 +94,20 @@ function received_packet_server(buffer, socket)
 					packet_write_server(buffer_u8, value_type);
 					packet_write_server(buffer_string, varname);
 					packet_write_server(value_type, value);
+					packet_send_server(socket_list[|i]);
+				}
+			}
+			break;
+		
+		case network.kill_object:
+			var instid = buffer_read(buffer, buffer_string);
+			for(var i = 0; i < ds_list_size(socket_list); i++)
+			{
+				// send to everyone else
+				if socket_list[|i] != socket
+				{
+					packet_write_server(buffer_u8, network.kill_object);
+					packet_write_server(buffer_string, instid);
 					packet_send_server(socket_list[|i]);
 				}
 			}

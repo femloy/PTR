@@ -1,3 +1,11 @@
+if instance_exists(obj_racebarrier)
+{
+	x = xprevious;
+	y = yprevious;
+	image_speed = 0;
+	exit;
+}
+
 if (state == states.grabbed)
 	scr_enemy_grabbed()
 else if (state == states.lungeattack)
@@ -5,6 +13,7 @@ else if (state == states.lungeattack)
 else if (state == states.secret)
 	scr_enemy_secret()
 scr_squash()
+
 if (state != states.stun && state != states.hit)
 	linethrown = false
 if (state == states.stun && (!thrown))

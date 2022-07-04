@@ -25,7 +25,7 @@ if _transfo
 	}
 	if (sprite_index != spr_angelpriest)
 		sprite_index = spr_priest_pray
-	if (collect && ds_list_find_index(global.saveroom, id) == -1)
+	if (collect && !in_saveroom(id))
 	{
 		ds_list_add(global.saveroom, id)
 		var val = 500

@@ -1,34 +1,32 @@
 switch state
 {
 	case 0:
-		if (!global.panic)
+		instance_deactivate_object(baddieID)
+		with obj_baddiecollisionbox
 		{
+			if baddieID == other.baddieID
+				instance_destroy()
+		}
+		
+		visible = false;
+		if global.panic
+		{
+			var p = instance_nearest(x, y, obj_player)
 			visible = false
-			instance_deactivate_object(baddieID)
-			with (obj_baddiecollisionbox)
+			image_index = 0
+			if distance_to_pos(x, y, p.x, p.y, 500, 100)
 			{
-				if (baddieID == other.baddieID)
-					instance_destroy()
+				state = 2
+				visible = true
 			}
 		}
-		else
-			state = 1
 		break
-	case 1:
-		var p = instance_nearest(x, y, obj_player)
-		visible = false
-		image_index = 0
-		if distance_to_pos(x, y, p.x, p.y, 500, 100)
-		{
-			state = 2
-			visible = true
-		}
-		break
+	
 	case 2:
-		if (floor(image_index) > 5)
+		if floor(image_index) > 5
 		{
 			instance_activate_object(baddieID)
-			with (baddieID)
+			with baddieID
 			{
 				x = other.x
 				y = other.y
@@ -41,8 +39,9 @@ switch state
 			state = 3
 		}
 		break
+	
 	case 3:
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			visible = false
 		break
 }

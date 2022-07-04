@@ -52,7 +52,7 @@ with obj_player2
 
 if pause && !instance_exists(obj_option)
 {
-	scr_getinput()
+	scr_getinput(true)
 	application_surface_draw_enable(true)
 	
 	if check_race()

@@ -6,5 +6,5 @@ with (obj_collect)
 		image_alpha = 0.5
 	}
 }
-if (ds_list_find_index(global.saveroom, id) != -1)
+if (in_saveroom(id))
 	instance_destroy()

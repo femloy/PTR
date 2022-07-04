@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
+if (!in_saveroom(id) && global.snickchallenge == 0)
 {
 	global.secretfound += 1
 	with (obj_tv)

@@ -1,5 +1,6 @@
 if locked
 	exit;
+
 var _actor = 0
 with (obj_player)
 {
@@ -12,6 +13,7 @@ if global.horse
 	exit;
 if (john && global.panic)
 	exit;
+
 if (!(place_meeting(x, y, obj_doorblocked)))
 {
 	with (other)

@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	scr_rockblock_tag()
 	if place_meeting((x + 1), y, obj_rockblock)

@@ -82,7 +82,7 @@ function secret_open_portal(argument0)
 {
 	with (obj_secretportal)
 	{
-		if (trigger == argument0 && ds_list_find_index(global.saveroom, id) == -1 && (!(place_meeting(x, y, obj_marbleblock))) && (!(place_meeting(x, y, obj_secretblock))) && (!(place_meeting(x, y, obj_secretbigblock))) && (!(place_meeting(x, y, obj_secretmetalblock))) && (!(place_meeting(x, y, obj_secretdestroyable))))
+		if (trigger == argument0 && !in_saveroom(id) && (!(place_meeting(x, y, obj_marbleblock))) && (!(place_meeting(x, y, obj_secretblock))) && (!(place_meeting(x, y, obj_secretbigblock))) && (!(place_meeting(x, y, obj_secretmetalblock))) && (!(place_meeting(x, y, obj_secretdestroyable))))
 			active = 1
 	}
 	exit;

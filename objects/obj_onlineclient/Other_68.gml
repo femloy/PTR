@@ -7,8 +7,8 @@ function received_packet(buffer)
 	{
 		case network.player_hello:
 			socket = buffer_read(buffer, buffer_u8);
-			with obj_player
-				paletteselect = socket % pal_swap_get_pal_count(spr_palette);
+			with obj_player1
+				paletteselect = other.socket % pal_swap_get_pal_count(spr_palette);
 			
 			packet_write(buffer_u8, network.player_join);
 			packet_write(buffer_string, username);
@@ -66,7 +66,8 @@ function received_packet(buffer)
 			
 			with obj_player1
 			{
-				state = states.door;
+				image_index = 0;
+				state = states.comingoutdoor;
 				targetRoom = r;
 				targetDoor = d;
 			}
@@ -132,6 +133,9 @@ function received_packet(buffer)
 			br[6] = buffer_read(buffer, buffer_string)
 			br[7] = buffer_read(buffer, buffer_s8)
 			br[8] = buffer_read(buffer, buffer_s16)
+			br[9] = buffer_read(buffer, buffer_string)
+			br[10] = buffer_read(buffer, buffer_string)
+			br[11] = buffer_read(buffer, buffer_u8)
 			
 			with obj_otherplayer
 			{
@@ -146,6 +150,9 @@ function received_packet(buffer)
 					sprite_index = asset_get_index(br[6]);
 					image_xscale = br[7];
 					racepos = br[8];
+					baddiegrabbedID = br[9];
+					sprite_index = asset_get_index(br[10]);
+					paletteselect = asset_get_index(br[11]);
 					
 					done = player_room == rank_room;
 					sock = -9999;
@@ -164,6 +171,16 @@ function received_packet(buffer)
 				if socket == sock
 					variable_instance_set(id, varname, value);
 			}
+			break;
+		
+		case network.kill_object:
+			var instid = buffer_read(buffer, buffer_string);
+			with all
+			{
+				if string(id) == instid
+					instance_destroy();
+			}
+			ds_list_add(global.saveroom, instid);
 			break;
 	}
 	buffer_delete(buffer);

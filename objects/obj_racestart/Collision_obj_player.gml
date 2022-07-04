@@ -1,4 +1,4 @@
-if ((!start) && ds_list_find_index(global.saveroom, id) == -1)
+if ((!start) && !in_saveroom(id))
 {
 	start = 1
 	with (obj_horsey)

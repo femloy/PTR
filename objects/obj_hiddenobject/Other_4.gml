@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	var objectlist = ds_list_create()
 	ds_list_add(objectlist, obj_baddie, obj_collect, obj_bigcollect)

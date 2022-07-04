@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) != -1)
+if (in_saveroom(id))
 {
 	var lay_id = layer_get_id("Tiles_1")
 	var map_id = layer_tilemap_get_id(lay_id)

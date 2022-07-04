@@ -269,7 +269,7 @@ if (place_meeting(x, y, obj_swordhitbox) && thrown == false)
 }
 if thrown
 {
-	var num = instance_place_list((x + hsp), y, obj_player, global.instancelist, 0)
+	var num = instance_place_list((x + hsp), y, obj_destructibles, global.instancelist, 0)
 	for (var i = 0; i < num; i++)
 		instance_destroy(ds_list_find_value(global.instancelist, i))
 	ds_list_clear(global.instancelist)

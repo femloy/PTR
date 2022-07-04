@@ -1,5 +1,6 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
+	online_kill(id);
 	repeat (8)
 	{
 		with (create_debris((x + random_range(0, 64)), (y + random_range(0, 64)), particlespr))

@@ -1,2 +1,2 @@
-if (global.hasfarmer[pos] or ds_list_find_index(global.saveroom, id) != -1)
+if (global.hasfarmer[pos] or in_saveroom(id))
 	instance_destroy()

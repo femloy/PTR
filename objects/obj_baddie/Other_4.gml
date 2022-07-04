@@ -1,21 +1,21 @@
-var _destroyed = 0
-if (ds_list_find_index(global.baddieroom, id) != -1)
+if ds_list_find_index(global.baddieroom, id) != -1
 {
-	_destroyed = 1
-	instance_destroy()
+	instance_destroy(id, false);
+	exit;
 }
-if (escape == true && (!_destroyed))
+
+if escape == true
 {
-	var b = 0
-	with (obj_escapespawn)
+	var b = false;
+	with obj_escapespawn
 	{
-		if (baddieID == other.id && state != 0)
-			b = 1
+		if baddieID == other.id && state != 0
+			b = true;
 	}
-	if (!b)
+	if !b
 	{
 		instance_deactivate_object(id)
-		with (instance_create(x, y, obj_escapespawn))
+		with instance_create(x, y, obj_escapespawn)
 			baddieID = other.id
 	}
 }
@@ -23,4 +23,17 @@ if elite
 {
 	hp += 1
 	elitehp = hp
+}
+
+// snap to ground
+if room != custom_lvl_room
+{
+	for(i = y; i < y + 64; i++)
+	{
+		if scr_solid(x, i + 1)
+		{
+			y = i;
+			break;
+		}
+	}
 }

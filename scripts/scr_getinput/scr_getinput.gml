@@ -2,6 +2,7 @@ function scr_getinput(skip_menu_check = false)
 {
 	if !skip_menu_check
 	&& (safe_get(obj_shell, "isOpen")
+	or safe_get(obj_pause, "pause")
 	or instance_exists(obj_choicebase))
 	{
 		key_up = false;

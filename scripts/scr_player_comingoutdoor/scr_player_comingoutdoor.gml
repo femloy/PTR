@@ -32,6 +32,4 @@ function scr_player_comingoutdoor()
 			sprite_index = spr_walkfront
 	}
 	image_speed = 0.35
-	exit;
 }
-

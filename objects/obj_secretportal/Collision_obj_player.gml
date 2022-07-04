@@ -1,4 +1,4 @@
-if (active && sprite_index != spr_secretportal_open && (!instance_exists(obj_jumpscare)) && ds_list_find_index(global.saveroom, id) == -1)
+if (active && sprite_index != spr_secretportal_open && (!instance_exists(obj_jumpscare)) && !in_saveroom(id))
 {
 	if (sprite_index != spr_secretportal_close)
 	{

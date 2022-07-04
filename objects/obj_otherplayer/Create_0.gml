@@ -8,3 +8,5 @@ paletteselect = 1;
 depth = -6;
 racepos = 0;
 done = false;
+baddiegrabbedID = noone;
+image_speed = 0;

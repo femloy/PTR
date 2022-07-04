@@ -1,2 +1,2 @@
-if !check_race() or ds_list_find_index(global.saveroom, id) != -1
+if !check_race() or in_saveroom(id)
 	instance_destroy(id, false);

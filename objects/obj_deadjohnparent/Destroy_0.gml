@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) == -1)
+if (!in_saveroom(id))
 {
 	repeat 8
 	{
@@ -10,7 +10,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	}
 	repeat 5
 	{
-		with instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom) / 1.5, obj_parryeffect)
+		with instance_create(random_range(bbox_left, bbox_right), random_range(bbox_top, bbox_bottom), obj_parryeffect)
 		{
 			sprite_index = spr_deadjohnsmoke
 			image_speed = 0.35

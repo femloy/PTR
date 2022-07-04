@@ -1,4 +1,4 @@
-if (ds_list_find_index(global.saveroom, id) != -1 && global.panic == false)
+if (in_saveroom(id) && global.panic == false)
 	image_index = 0
 if (ds_list_find_index(global.baddieroom, id) != -1 && drop)
 {

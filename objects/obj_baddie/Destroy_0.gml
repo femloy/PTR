@@ -1,8 +1,10 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 
-if (ds_list_find_index(global.baddieroom, id) == -1 && ((!elite) or elitehit <= 0))
+if ds_list_find_index(global.baddieroom, id) == -1 && (!elite or elitehit <= 0)
 {
+	online_kill(id);
+	
 	if (object_index != obj_peppinoclone && object_index != obj_ghoul)
 	{
 		with (instance_create(x, y, obj_sausageman_dead))
