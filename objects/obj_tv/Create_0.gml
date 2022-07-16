@@ -71,3 +71,4 @@ hand_index = 0
 bar_surface = -4
 barfill_x = 0
 showtime_buffer = 0
+animset = -1

@@ -156,7 +156,7 @@ if (grabbed == 1 && (!ratgrabbed))
 	}
 	if (playerid.state == states.superslam)
 	{
-		if (playerid.character == "P")
+		if (playerid.character != "N")
 		{
 			if (floor(playerid.image_index) == 0)
 			{

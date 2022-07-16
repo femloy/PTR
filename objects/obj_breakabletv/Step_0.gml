@@ -136,7 +136,7 @@ if (grabbed == 1)
 	}
 	if (obj_player.state == states.superslam)
 	{
-		if (obj_player.character == "P")
+		if (obj_player.character != "N")
 		{
 			if (floor(obj_player.image_index) == 0)
 			{

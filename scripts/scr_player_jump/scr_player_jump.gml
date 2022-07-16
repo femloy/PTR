@@ -58,7 +58,7 @@ function state_player_jump()
 			jumpstop = 1
 		}
 	}
-	if (character == "N")
+	if (character == "N" && noisetype == 0)
 	{
 		if (key_jump && wallclingcooldown == 10)
 		{
@@ -363,16 +363,41 @@ function state_player_jump()
 	}
 	switch character
 	{
-		case "P":
-			if (key_attack && grounded && fallinganimation < 40)
+		default:
+			if character != "N" or noisetype == 1
 			{
-				sprite_index = spr_mach1
-				image_index = 0
-				state = states.mach2
-				if (movespeed < 6)
-					movespeed = 6
+				if (key_attack && grounded && fallinganimation < 40)
+				{
+					sprite_index = spr_mach1
+					image_index = 0
+					state = states.mach2
+					if (movespeed < 6)
+						movespeed = 6
+				}
+			}
+			else
+			{
+				if (key_attack2 && (pogochargeactive or pizzapepper > 0))
+				{
+					scr_soundeffect(sfx_noisewoah)
+					if (!key_up)
+						sprite_index = spr_playerN_jetpackstart
+					else
+						sprite_index = spr_superjumpprep
+					image_index = 0
+					hsp = 0
+					vsp = 0
+					state = states.Sjumpprep
+				}
+				if (key_attack && (!pogochargeactive) && (!key_slap2) && pizzapepper == 0)
+				{
+					sprite_index = spr_playerN_pogostart
+					image_index = 0
+					state = states.pogo
+				}
 			}
 			break
+		
 		case "V":
 			if (key_attack && grounded && fallinganimation < 40)
 			{
@@ -421,26 +446,6 @@ function state_player_jump()
 					image_xscale = other.xscale
 				}
 				scr_soundeffect(sfx_killingblow)
-			}
-			break
-		case "N":
-			if (key_attack2 && (pogochargeactive or pizzapepper > 0))
-			{
-				scr_soundeffect(sfx_noisewoah)
-				if (!key_up)
-					sprite_index = spr_playerN_jetpackstart
-				else
-					sprite_index = spr_superjumpprep
-				image_index = 0
-				hsp = 0
-				vsp = 0
-				state = states.Sjumpprep
-			}
-			if (key_attack && (!pogochargeactive) && (!key_slap2) && pizzapepper == 0)
-			{
-				sprite_index = spr_playerN_pogostart
-				image_index = 0
-				state = states.pogo
 			}
 			break
 	}

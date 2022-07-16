@@ -3,7 +3,7 @@
   "isCompatibility": false,
   "parent": {
     "name": "Online",
-    "path": "folders/Scripts/Online.yy",
+    "path": "folders/Scripts/Mod extra/Online.yy",
   },
   "resourceVersion": "1.0",
   "name": "packeter",

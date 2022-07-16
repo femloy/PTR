@@ -212,32 +212,17 @@ function scr_hurtplayer(argument0)
 			global.combotime -= 25
 			global.style -= 25
 			global.hurtcounter += 1
-			var loseamount = (50 * (global.stylethreshold + 1))
-			if (!global.pizzadelivery)
+			var loseamount = 50 * (global.stylethreshold + 1)
+			
+			if !global.pizzadelivery
 			{
-				if (global.collect > loseamount)
-					global.collect -= loseamount
-				else
-					global.collect = 0
-				if (global.collect != 0)
+				if global.collect != 0
 				{
-					if (character == "P" or character == "V")
-					{
-						repeat (10)
-						{
-							with (instance_create(x, y, obj_pizzaloss))
-								sprite_index = choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect)
-						}
-					}
-					else
-					{
-						repeat (10)
-							instance_create(x, y, obj_pizzaloss)
-					}
+					repeat global.gameplay == gameplay.remix ? floor(loseamount / 5) : 10
+						instance_create(x, y, obj_pizzaloss)
 				}
+				global.collect = max(global.collect - loseamount, 0)
 			}
 		}
 	}
-	exit;
 }
-

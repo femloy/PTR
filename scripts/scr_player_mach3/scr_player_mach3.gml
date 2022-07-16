@@ -71,10 +71,10 @@ function scr_player_mach3()
 			image_index = 0
 			sprite_index = spr_mach3jump
 		}
-		if (character == "P")
-			vsp = -11
-		else
+		if (character == "N")
 			vsp = -13
+		else
+			vsp = -11
 	}
 	if (fightball == 0)
 	{
@@ -114,7 +114,7 @@ function scr_player_mach3()
 		image_speed = 0.4
 	if key_jump
 		input_buffer_jump = 0
-	if (((!key_attack) && fightball == 0 && (!launched) && sprite_index != spr_dashpadmach && grounded && (character == "P" || character == "N")) || (character == "S" && (move == 0 || move != xscale) && grounded && fightball == 0))
+	if (!key_attack && fightball == 0 && !launched && sprite_index != spr_dashpadmach && grounded) or (character == "S" && move != xscale && grounded && fightball == 0)
 	{
 		sprite_index = spr_machslidestart
 		scr_soundeffect(sfx_break)
@@ -122,7 +122,7 @@ function scr_player_mach3()
 		image_index = 0
 		launched = 0
 	}
-	if (move == (-xscale) && grounded && (!launched) && (character == "P" || character == "N") && fightball == 0 && sprite_index != spr_dashpadmach)
+	if (move == -xscale && grounded && !launched && character != "S" && fightball == 0 && sprite_index != spr_dashpadmach)
 	{
 		scr_soundeffect(sfx_machslideboost)
 		sprite_index = spr_mach3boost
@@ -263,7 +263,7 @@ function scr_player_mach3()
 		image_speed = 0.4
 	else
 		image_speed = 0.4
-	if (key_up && fightball == 0 && character == "P" && grounded && sprite_index != spr_dashpadmach && (!(place_meeting(x, y, obj_dashpad))))
+	if (key_up && fightball == 0 && !(character == "N" && noisetype == 0) && grounded && sprite_index != spr_dashpadmach && (!(place_meeting(x, y, obj_dashpad))))
 	{
 		sprite_index = spr_superjumpprep
 		state = states.Sjumpprep
@@ -272,9 +272,8 @@ function scr_player_mach3()
 	}
 	if (global.attackstyle == 2 && key_slap2)
 	{
-		randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, 557, 556, 555, spr_punch])
+		randomize_animations([spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7, spr_punch])
 		image_index = 0
 		state = states.lungeattack
 	}
-	exit;
 }

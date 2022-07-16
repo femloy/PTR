@@ -101,15 +101,23 @@ if pause && !instance_exists(obj_option)
 			{
 				case 0:
 					peppino_sprite = spr_player_idle
+					if character == "N"
+						peppino_sprite = spr_playerN_idle
 					break
 				case 1:
 					peppino_sprite = spr_file1
+					if character == "N"
+						peppino_sprite = spr_playerN_rageidle
 					break
 				case 2:
 					peppino_sprite = spr_player_panic
+					if character == "N"
+						peppino_sprite = spr_playerN_panicidle
 					break
 				case 3:
 					peppino_sprite = spr_player_winding
+					if character == "N"
+						peppino_sprite = spr_playerN_winding
 					break
 			}
 

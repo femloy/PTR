@@ -22,33 +22,34 @@ if sel[1] == "N" && key_taunt2
 }
 
 // change character
-var lastchar = "S";
+var lastchar = "N";
 if key_down2 && sel[1] != lastchar
 {
-	scr_soundeffect(sfx_denied);
-	
-	/*
-	surface_free(palsurf);
-	scr_soundeffect(sfx_step);
-	
-	yoffset = 100;
-	switch sel[1]
+	if debug
 	{
-		case "P":
-			sel[1] = "N";
-			break;
-		case "N":
-			sel[1] = "V";
-			break;
-		case "V":
-			sel[1] = "S";
-			break;
-		case "S":
-			sel[1] = "PP"; // to pissino
-			break;
+		surface_free(palsurf);
+		scr_soundeffect(sfx_step);
+	
+		yoffset = 100;
+		switch sel[1]
+		{
+			case "P":
+				sel[1] = "N";
+				break;
+			case "N":
+				sel[1] = "V";
+				break;
+			case "V":
+				sel[1] = "S";
+				break;
+			case "S":
+				sel[1] = "PP"; // to pissino
+				break;
+		}
+		event_user(0);
 	}
-	event_user(0);
-	*/
+	else
+		scr_soundeffect(sfx_denied);
 }
 else if key_up2 && sel[1] != "P"
 {

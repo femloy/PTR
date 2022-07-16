@@ -36,7 +36,7 @@ switch sprite_index
 						sprite_index = spr_bodyslamstart
 						image_index = 0
 						state = states.freefallprep
-						vsp = (character == "P" ? -5 : -7)
+						vsp = (character == "N" ? -7 : -5)
 					}
 				}
 			}

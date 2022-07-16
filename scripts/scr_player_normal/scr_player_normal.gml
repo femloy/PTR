@@ -332,43 +332,48 @@ function state_player_normal()
 	}
 	switch character
 	{
-		case "P":
-			if (key_attack && state != states.handstandjump && (!(place_meeting((x + xscale), y, obj_solid))) && ((!(place_meeting(x, (y + 1), obj_iceblockslope))) or (!(place_meeting((x + (xscale * 5)), y, obj_solid)))) && (!global.kungfu))
+		default:
+			if character != "N" or noisetype == 1
 			{
-				sprite_index = spr_mach1
-				image_index = 0
-				state = states.mach2
-				if (movespeed < 6)
-					movespeed = 6
-			}
-			if (global.kungfu && key_attack && state != states.handstandjump)
-			{
-				state = states.blockstance
-				sprite_index = spr_player_airattack
-				hsp = 0
-				movespeed = 0
-			}
-			break
-		case "N":
-			if (pogochargeactive or pizzapepper > 0)
-			{
-				if key_attack2
+				if (key_attack && state != states.handstandjump && (!(place_meeting((x + xscale), y, obj_solid))) && ((!(place_meeting(x, (y + 1), obj_iceblockslope))) or (!(place_meeting((x + (xscale * 5)), y, obj_solid)))) && (!global.kungfu))
 				{
-					scr_soundeffect(sfx_noisewoah)
-					state = states.Sjumpprep
+					sprite_index = spr_mach1
 					image_index = 0
-					sprite_index = ((!key_up) ? spr_playerN_jetpackstart : spr_superjumpprep)
+					state = states.mach2
+					if (movespeed < 6)
+						movespeed = 6
+				}
+				if (global.kungfu && key_attack && state != states.handstandjump)
+				{
+					state = states.blockstance
+					sprite_index = spr_player_airattack
 					hsp = 0
-					vsp = 0
+					movespeed = 0
 				}
 			}
-			else if (key_attack && (!key_slap2))
+			else
 			{
-				sprite_index = spr_playerN_pogostart
-				image_index = 0
-				state = states.pogo
+				if (pogochargeactive or pizzapepper > 0)
+				{
+					if key_attack2
+					{
+						scr_soundeffect(sfx_noisewoah)
+						state = states.Sjumpprep
+						image_index = 0
+						sprite_index = ((!key_up) ? spr_playerN_jetpackstart : spr_superjumpprep)
+						hsp = 0
+						vsp = 0
+					}
+				}
+				else if (key_attack && (!key_slap2))
+				{
+					sprite_index = spr_playerN_pogostart
+					image_index = 0
+					state = states.pogo
+				}
 			}
 			break
+		
 		case "V":
 			if (key_attack && (!(place_meeting((x + xscale), y, obj_solid))))
 			{
@@ -423,7 +428,6 @@ function state_player_normal()
 		machslideAnim = 0
 		image_speed = 0.45
 	}
-	exit;
 }
 
 function state_pepperman_normal()

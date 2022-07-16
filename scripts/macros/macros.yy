@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "Mod extra",
+    "path": "folders/Scripts/Mod extra.yy",
   },
   "resourceVersion": "1.0",
   "name": "macros",

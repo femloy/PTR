@@ -289,7 +289,7 @@ if instance_exists(baddieID)
 							sprite_index = spr_stompprep
 					}
 				}
-				if other.baddieID.thrown == false && (character == "P" or character == "N")
+				if other.baddieID.thrown == false && character != "S"
 				{
 					movespeed = 0
 					image_index = 0

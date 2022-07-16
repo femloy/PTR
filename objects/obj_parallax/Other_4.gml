@@ -1,8 +1,13 @@
 ds_list_clear(global.roombgs);
+
 var layers = layer_get_all();
+var has_tiles = false;
+
 for (var i = 0; i < array_length(layers); i++)
 {
 	var layery = 0;
+	if !has_tiles && layer_get_visible(layers[i]) && layer_tilemap_get_id(layers[i]) != -1
+		has_tiles = true;
 	
 	// layer depths
 	var layername = layer_get_name(layers[i]);
@@ -55,4 +60,21 @@ for (var i = 0; i < array_length(layers); i++)
 			vsp : layer_get_vspeed(layers[i]),
 		});
 	}
+}
+
+// show invisible objects if the room is unfinished
+if !has_tiles
+{
+	with obj_solid
+		visible = true;
+	with obj_platform
+		visible = true;
+	with obj_slope
+		visible = true;
+	with obj_secretblock
+		visible = true;
+	with obj_secretbigblock
+		visible = true;
+	with obj_secretmetalblock
+		visible = true;
 }

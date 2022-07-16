@@ -12,7 +12,7 @@ for (var yy = 0; yy < 4; yy++)
 {
 	for (var xx = 0; xx < 4; xx++)
 	{
-		create_collect(_x, _y, choose(1563, 1559, 2709, 1561))
+		create_collect(_x, _y, scr_collectsprite())
 		_x += 16
 	}
 	_x = _xstart

@@ -12,6 +12,8 @@ if playerid.state == states.normal
 		scr_changetoppings();
 		
 		noisetype = other.noisetype;
+		ispeppino = true;
+		isgustavo = false;
 		
 		if character != prev
 		or paletteselect != other.sel[0]

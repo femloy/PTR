@@ -11,17 +11,17 @@ with (other)
 		create_particle(x, y, particle.jumpdust, 0)
 		if (boxxed == 0 && isgustavo == 0)
 		{
-			if (character == "P")
+			if character != "N" or noisetype == 1
 			{
-				if (sprite_index != spr_dashpadmach)
+				if sprite_index != spr_dashpadmach
 				{
 					sprite_index = spr_dashpadmach
 					image_index = 0
 				}
 			}
-			else if (character == "N")
+			else
 			{
-				if (sprite_index != spr_crazyrun)
+				if sprite_index != spr_crazyrun
 				{
 					sprite_index = spr_crazyrun
 					image_index = 0

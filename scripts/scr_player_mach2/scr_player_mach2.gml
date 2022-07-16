@@ -170,15 +170,16 @@ function scr_player_mach2()
 			}
 		}
 	}
-	if (((!key_attack) && movespeed >= 8 && grounded && skateboarding == 0) or (character == "S" && move == 0 && grounded))
+	if (!key_attack && movespeed >= 8 && grounded && skateboarding == 0) or (character == "S" && move == 0 && grounded)
 	{
 		image_index = 0
 		state = states.machslide
 		scr_soundeffect(sfx_break)
 		sprite_index = spr_machslidestart
 	}
-	else if ((!key_attack) && movespeed < 8 && grounded && skateboarding == 0)
+	else if (!key_attack && movespeed < 8 && grounded && skateboarding == 0)
 		state = states.normal
+	
 	if (move == (-xscale) && movespeed >= 8 && grounded && skateboarding == 0)
 	{
 		scr_soundeffect(sfx_machslideboost)

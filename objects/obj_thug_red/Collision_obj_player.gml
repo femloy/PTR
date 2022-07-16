@@ -8,7 +8,7 @@ else
 	{
 		if (instakillmove == 1 && baddie.state != states.grabbed && baddie.thrown == false && (!baddie.invincible))
 		{
-			if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" or character == "V"))
+			if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" or character == "V" or (character == "N" && noisetype == 1)))
 			{
 				if (fightball == 0)
 					sprite_index = spr_mach3hit

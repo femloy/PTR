@@ -22,6 +22,9 @@ if ds_list_find_index(global.baddieroom, id) == -1 && (!elite or elitehit <= 0)
 			depth = other.depth
 			sprite_index = spr_pepclone_death
 			image_xscale = other.image_xscale
+			
+			spr_palette = other.spr_palette
+			paletteselect = other.paletteselect
 		}
 	}
 	else if (object_index == obj_ghoul)

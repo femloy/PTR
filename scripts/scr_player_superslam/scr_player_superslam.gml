@@ -60,6 +60,4 @@ function scr_player_superslam()
 		image_speed = 0.35
 	else
 		image_speed = 0.5
-	exit;
 }
-

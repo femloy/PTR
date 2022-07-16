@@ -5,7 +5,7 @@ function Instakill()
 		other.baddieID.grabbedby = 1
 		if (object_index == obj_player2)
 			other.baddieID.grabbedby = 2
-		if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" or character == "V"))
+		if (state == states.mach3 && sprite_index != spr_mach3hit && (character == "P" or character == "V" or (character == "N" && noisetype == 1)))
 		{
 			if (fightball == 0)
 				sprite_index = spr_mach3hit

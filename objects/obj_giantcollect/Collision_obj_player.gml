@@ -20,7 +20,7 @@ if (other.state != states.gotoplayer)
 	{
 		for (var xx = 0; xx < 4; xx++)
 		{
-			create_collect(_x, _y, (obj_player1.ispeppino ? choose(1563, 1559, 2709, 1561) : choose(2080, 2082, 2086, 2087, 2088)))
+			create_collect(_x, _y, scr_collectsprite())
 			_x += 16
 		}
 		_x = _xstart
@@ -29,6 +29,7 @@ if (other.state != states.gotoplayer)
 	with (instance_create((x + 16), y, obj_smallnumber))
 		number = string(val)
 	instance_destroy()
+	
 	if (secret && (!instance_exists(obj_fadeout)))
 	{
 		with (obj_player)

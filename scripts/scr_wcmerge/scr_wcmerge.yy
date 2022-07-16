@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Debug",
-    "path": "folders/Scripts/Debug.yy",
+    "name": "Mod extra",
+    "path": "folders/Scripts/Mod extra.yy",
   },
   "resourceVersion": "1.0",
   "name": "scr_wcmerge",

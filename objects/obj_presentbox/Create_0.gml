@@ -5,7 +5,7 @@ outtimespd = 200
 randomize()
 character = 0
 upspr = spr_noisepresentup
-spr = 2100
+spr = spr_noisepresent
 downspr = spr_noisepresentdown
 deadspr = spr_playerN_hurt
 box = 1

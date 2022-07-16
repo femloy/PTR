@@ -1,16 +1,26 @@
 function scr_changetoppings()
 {
-	with (obj_collect)
+	var spot = obj_player1.spotlight ? obj_player1 : obj_player2;
+	if !instance_exists(spot)
 	{
-		if (!in_saveroom(id))
+		spot = obj_player1;
+		if !instance_exists(spot)
+			exit;
+	}
+	
+	with obj_collect
+	{
+		if !in_saveroom(id)
 		{
-			if ((obj_player1.character == "P" && obj_player1.spotlight == 1) or (obj_player2.character == "P" && obj_player1.spotlight == 0))
-				sprite_index = choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect)
-			if ((obj_player1.character == "N" && obj_player1.spotlight == 1) or (obj_player2.character == "N" && obj_player1.spotlight == 0))
-				sprite_index = choose(spr_halloweencollectibles1, spr_halloweencollectibles2, spr_halloweencollectibles3, spr_halloweencollectibles4, spr_halloweencollectibles5)
-			instance_create((x + (sprite_width / 2)), (y + (sprite_height / 2)), obj_cloudeffect)
-			repeat (3)
-				instance_create(((x + (sprite_width / 2)) + random_range(-5, 5)), ((y + (sprite_height / 2)) + random_range(-5, 5)), obj_cloudeffect)
+			var spriteprev = sprite_index;
+			sprite_index = scr_collectsprite(0, spot.character);
+			
+			if spriteprev != sprite_index
+			{
+				instance_create(x + sprite_width / 2, y + sprite_height / 2, obj_cloudeffect)
+				repeat 3
+					instance_create(x + sprite_width / 2 + random_range(-5, 5), y + sprite_height / 2 + random_range(-5, 5), obj_cloudeffect)
+			}
 		}
 	}
 	with (obj_bigcollect)
@@ -65,6 +75,4 @@ function scr_changetoppings()
 				instance_create(((x + (sprite_width / 2)) + random_range(-10, 10)), ((y + (sprite_height / 2)) + random_range(-5, 5)), obj_cloudeffect)
 		}
 	}
-	exit;
 }
-

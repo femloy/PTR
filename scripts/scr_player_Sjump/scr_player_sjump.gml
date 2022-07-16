@@ -11,7 +11,7 @@ function scr_player_Sjump()
 	crouchslideAnim = 1
 	crouchAnim = 0
 	machhitAnim = 0
-	if ((sprite_index == spr_superjump or sprite_index == spr_superspringplayer) && (character == "N" or character == "P"))
+	if ((sprite_index == spr_superjump or sprite_index == spr_superspringplayer) && character != "V")
 		vsp = sjumpvsp
 	sjumpvsp -= 0.1
 	if (character == "V" && image_index > 3)
@@ -50,10 +50,24 @@ function scr_player_Sjump()
 		state = states.Sjumpland
 		machhitAnim = 0
 	}
-	else if ((key_slap or (global.gameplay == gameplay.remix && key_attack2)) && character == "P" && sprite_index != spr_superspringplayer && sprite_index != spr_player_Sjumpcancelstart)
+	else if (key_slap or (global.gameplay == gameplay.remix && key_attack2)) && sprite_index != spr_superspringplayer && sprite_index != spr_player_Sjumpcancelstart
 	{
-		image_index = 0
-		sprite_index = spr_player_Sjumpcancelstart
+		if character != "N" or noisetype == 1
+		{
+			image_index = 0
+			sprite_index = spr_player_Sjumpcancelstart
+		}
+		else
+		{
+			scr_soundeffect(sfx_noisewoah)
+			state = states.Sjumpprep
+			image_index = 0
+			sprite_index = spr_playerN_jetpackstart
+			hsp = 0
+			vsp = 0
+			if move != 0
+				xscale = move
+		}
 	}
 	if (sprite_index == spr_player_Sjumpcancelstart)
 	{
@@ -71,7 +85,7 @@ function scr_player_Sjump()
 				image_xscale = other.xscale
 		}
 	}
-	if (character == "N" && key_jump2)
+	if (character == "N" && noisetype == 0 && key_jump2)
 	{
 		scr_soundeffect(sfx_jump)
 		scr_soundeffect(sfx_woosh)
@@ -83,7 +97,7 @@ function scr_player_Sjump()
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale
 	}
-	if (character == "N")
+	if (character == "N" && noisetype == 0)
 	{
 		if (move == 1)
 			hsp = 3
@@ -97,6 +111,4 @@ function scr_player_Sjump()
 	}
 	image_speed = 0.5
 	scr_collide_player()
-	exit;
 }
-
