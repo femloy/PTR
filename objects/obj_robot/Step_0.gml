@@ -113,7 +113,7 @@ if (state != states.stun)
 	thrown = false
 if (bombreset > 0)
 	bombreset--
-invincible = state == states.mach2
+invincible = (state == states.mach2)
 targetplayer = instance_nearest(x, y, obj_player)
 if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0)
 {

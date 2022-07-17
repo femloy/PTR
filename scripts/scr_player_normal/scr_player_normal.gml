@@ -215,12 +215,21 @@ function state_player_normal()
 				sprite_index = spr_shotgunidle
 				if (move != 0)
 					sprite_index = spr_shotgunwalk
+				else if key_up
+					sprite_index = spr_player_breakdance
 				image_index = 0
 			}
 		}
 	}
 	else if (shotgunAnim && sprite_index != spr_shotgunshoot && (!machslideAnim))
-		sprite_index = (move == 0 ? spr_shotgunidle : spr_shotgunwalk)
+	{
+		if key_up
+			sprite_index = spr_player_breakdance
+		else if (move != 0)
+			sprite_index = spr_shotgunwalk
+		else
+			sprite_index = spr_shotgunidle
+	}
 	if machslideAnim
 		sprite_index = spr_machslideend
 	if (floor(image_index) == (image_number - 1))

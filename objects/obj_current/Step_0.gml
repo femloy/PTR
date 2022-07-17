@@ -23,6 +23,12 @@ if place_meeting(x, (y - 1), obj_player)
 		}
 		else
 		{
+			if (state == states.trashjump)
+			{
+				image_index = 0
+				sprite_index = spr_player_trashslide
+				state = states.trashroll
+			}
 			vsp = -6
 			image_index = 0
 		}

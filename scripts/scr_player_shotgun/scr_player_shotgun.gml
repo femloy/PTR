@@ -23,8 +23,11 @@ function scr_player_shotgun()
 		dir = xscale
 		movespeed = 2
 	}
+	mach2 = 0
 	move = (key_left + key_right)
 	hsp = (move * movespeed)
+	momemtum = 0
+	jumpstop = 0
 	if (move != 0)
 	{
 		xscale = move

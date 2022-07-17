@@ -1,2 +1,2 @@
-hsp = -1
-vsp = 0
+hsp = 0
+vsp = 1
