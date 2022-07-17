@@ -13,38 +13,24 @@ with (other)
 			sprite_index = spr_tumble
 			other.image_index = 0
 			other.sprite_index = spr_goblinbot_kick
-			var _max = 45
+			var _max = 46
 			y = (other.y - _max)
 			if place_meeting(x, y, obj_platform)
 				y--
 			if scr_solid(x, y)
 			{
-				var i = 0
-				while (i <= _max)
+				for (var i = 0; i <= _max; i++)
 				{
 					if scr_solid(x, y)
-					{
 						x += xscale
-						i++
-						continue
-					}
-					else
-						break
 				}
 			}
 			if scr_solid(x, y)
 			{
-				i = 0
-				while (i <= _max)
+				for (var i = 0; i <= _max; i++)
 				{
 					if scr_solid(x, y)
-					{
-						y--
-						i++
-						continue
-					}
-					else
-						break
+						y++
 				}
 			}
 		}

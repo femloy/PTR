@@ -162,7 +162,7 @@ function scr_player_knightpep()
 		sprite_index = spr_knightpepidle
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_knightpep_doublejump)
 		image_index = (image_number - 1)
-	if ((!instance_exists(obj_cloudeffect)) && grounded && move != 0 && (floor(image_index) == 4 or floor(image_index) == 10))
+	if ((!instance_exists(obj_cloudeffect)) && grounded && move != 0 && sprite_index != spr_knightpepstart && sprite_index != spr_knightpepthunder && (floor(image_index) == 4 or floor(image_index) == 10))
 		instance_create(x, (y + 43), obj_cloudeffect)
 	if (move != 0 && (floor(image_index) == 3 or floor(image_index) == 8) && steppy == 0)
 		steppy = 1

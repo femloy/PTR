@@ -50,15 +50,19 @@ with (ID)
 			break
 		
 		case obj_robot:
+			if (state == states.slap)
+			{
+				other.x = (x + (image_xscale * 32))
+				if (image_index > 21)
+					instance_destroy(other)
+			}
+			else if (state == states.mach2 or state == states.tackle)
+				other.x = (x + (image_xscale * 20))
 			if (state != states.mach2 && state != states.slap && state != states.tackle)
 			{
 				hitboxcreate = 0
 				instance_destroy(other)
 			}
-			else if (state == states.slap)
-				other.x = (x + (image_xscale * 32))
-			else if (state == states.mach2 or state == states.tackle)
-				other.x = (x + (image_xscale * 20))
 			break
 		
 		case obj_soldier:

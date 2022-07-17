@@ -14,6 +14,7 @@ with (other)
 			hsp = (other.image_xscale * 3)
 			image_xscale = (-other.image_xscale)
 			sprite_index = other.spr_dead
+			paletteselect = 1
 		}
 		other.debris = 0
 	}

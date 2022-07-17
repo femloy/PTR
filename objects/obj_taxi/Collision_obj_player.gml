@@ -15,6 +15,7 @@ with (other)
 			sprite_index = spr_taximove
 			hsp = 10
 			obj_player1.cutscene = 1
+			instance_destroy(obj_taxidud)
 			if (global.coop == true)
 			{
 				obj_player2.sprite_index = obj_player2.spr_idle

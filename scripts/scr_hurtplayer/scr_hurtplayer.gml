@@ -9,9 +9,9 @@ function scr_hurtplayer(argument0)
 		else if (state == states.parry or state == states.debugstate or state == states.golf or state == states.slipbanan)
 		{
 		}
-		else if (state == states.handstandjump && flash == 1)
-		{
-		}
+		//else if (state == states.handstandjump && flash == 1)
+		//{
+		//}
 		else if (state == states.backbreaker or state == states.chainsaw)
 		{
 		}
@@ -118,6 +118,12 @@ function scr_hurtplayer(argument0)
 		{
 		}
 		else if (state == states.slipnslide)
+		{
+		}
+		else if (state == states.tube)
+		{
+		}
+		else if (state == states.taxi)
 		{
 		}
 		else if (state == states.boxxedpep)

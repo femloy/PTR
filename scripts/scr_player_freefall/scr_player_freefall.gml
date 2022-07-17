@@ -73,7 +73,7 @@ function scr_player_freefall()
 				else
 					other.movespeed = 8
 				with instance_create(other.x, other.y, obj_jumpdust)
-					image_xscale = -player.xscale
+					image_xscale = sign(player.xscale)
 			}
 		}
 		else

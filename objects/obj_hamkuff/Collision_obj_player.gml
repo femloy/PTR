@@ -25,9 +25,13 @@ if (state != states.stun)
 		state = states.blockstance
 		with (other)
 		{
-			state = states.ratmounthurt
-			xscale = (-other.image_xscale)
-			vsp = -10
+			if (state != states.ratmounthurt)
+			{
+				state = states.ratmounthurt
+				movespeed = 6
+				xscale = (-other.image_xscale)
+				vsp = -10
+			}
 		}
 		with (instance_create(other.x, other.y, obj_brickcomeback))
 		{
