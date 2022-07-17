@@ -4,12 +4,62 @@ function scr_enemy_grabbed()
 	{
 		if instance_exists(grabbedby) && grabbedby.object_index == obj_otherplayer
 		{
-			x = grabbedby.x;
-			y = grabbedby.y - 40;
+			image_xscale = -grabbedby.image_xscale;
+			stunned = 200;
+			
+			x = grabbedby.x + grabbedby.badX;
+			y = grabbedby.y + grabbedby.badY;
+			
+			if grabbedby.state == states.finishingblow
+			{
+				if floor(grabbedby.image_index) >= 4
+				or string_contains(sprite_get_name(sprite_index), "swingdingend")
+				{
+					thrown = true
+					
+					var lag = 5
+					hitLag = lag
+					hitX = x
+					hitY = y
+					
+					instance_create(x, y, obj_parryeffect)
+					alarm[3] = 1
+					
+					state = states.stun
+					repeat 3
+					{
+						instance_create(x, y, obj_slapstar)
+						instance_create(x, y, obj_baddiegibs)
+					}
+					hsp = hithsp
+					vsp = hitvsp
+					linethrown = true
+					
+					if string_contains(sprite_get_name(sprite_index), "uppercut")
+					{
+						hithsp = 0
+						hitvsp = -25
+						linethrown = true
+					}
+					else
+					{
+						hithsp = (-other.image_xscale) * 25
+						hitvsp = -8
+						linethrown = true
+					}
+				}
+				else
+				{
+					x = grabbedby.x + grabbedby.image_xscale * 60
+					y = grabbedby.y
+				}
+				check_grabbed_solid(grabbedby)
+			}
 		}
 		else
 		{
-			var _obj_player = asset_get_index(concat("obj_player", grabbedby))
+			var _obj_player = asset_get_index(concat("obj_player", grabbedby));
+			
 			image_xscale = -_obj_player.xscale
 			stunned = 200
 			_obj_player.baddiegrabbedID = id
@@ -158,6 +208,7 @@ function scr_enemy_grabbed()
 				hitY = y
 				if (object_index != obj_noisey && object_index != obj_tank)
 				{
+					
 				}
 				_obj_player.movespeed = 0
 				_obj_player.hitLag = lag
@@ -477,6 +528,7 @@ function check_grabbed_solid(argument0)
 {
 	if instakilled
 		exit;
+	
 	if ((!(place_meeting(x, y, obj_destructibles))) && (scr_solid(x, y) or collision_line(x, y, argument0.x, argument0.y, obj_solid, false, true) != -4))
 	{
 		var _dist = abs((x - obj_player.x))
@@ -509,6 +561,4 @@ function check_grabbed_solid(argument0)
 			}
 		}
 	}
-	exit;
 }
-

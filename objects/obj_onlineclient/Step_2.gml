@@ -5,6 +5,10 @@ if !connected
 
 with obj_player1
 {
+	var bad = baddiegrabbedID;
+	if !(state == states.grab or state == states.finishingblow or state == states.superslam)
+		bad = noone;
+	
 	packet_write(buffer_u8, network.player_sync);
 	packet_write(buffer_u16, room);
 	packet_write(buffer_bool, visible);
@@ -15,10 +19,17 @@ with obj_player1
 	packet_write(buffer_string, sprite_get_name(sprite_index));
 	packet_write(buffer_s8, xscale);
 	packet_write(buffer_s16, racepos);
-	packet_write(buffer_string, string(baddiegrabbedID));
+	packet_write(buffer_string, string(bad));
 	packet_write(buffer_string, sprite_get_name(spr_palette));
 	packet_write(buffer_u8, paletteselect);
+	packet_write(buffer_u8, state);
 	packet_send();
+	
+	if instance_exists(bad) && state != states.finishingblow
+	{
+		sync_var("badX", buffer_s8, bad.x - x);
+		sync_var("badY", buffer_s8, bad.y - y);
+	}
 }
 if safe_get(obj_pause, "pause")
 {
