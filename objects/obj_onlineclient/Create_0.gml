@@ -16,7 +16,6 @@ gamemode = 0;
 localpaused = false;
 
 global.racerank = 0;
-global.racestarted = false;
 
 // network macros
 enum network
@@ -31,7 +30,6 @@ enum network
 	close_server,
 	error_disconnect,
 	race_start,
-	kill_object,
-	play_sound
+	kill_object
 }
 #macro psyncarray [buffer_u16, buffer_bool, buffer_s16, buffer_s16, buffer_u32, buffer_u8, buffer_string, buffer_s8, buffer_s16, buffer_string, buffer_string, buffer_u8, buffer_u8]
