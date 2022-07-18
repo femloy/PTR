@@ -10,6 +10,7 @@ world_array[2] = "WORLD 3"
 world_array[3] = "WORLD 4"
 world_array[4] = "WORLD 5"
 world_array[5] = "UNUSED"
+world_array[6] = "OLD"
 
 level_array[0][0] = ["ENTRANCE", entrance_1, "entrance"]
 level_array[0][1] = ["MEDIEVAL", medieval_1, "medieval"]
@@ -40,6 +41,8 @@ level_array[5][5] = ["CITY", city_1, "city"]
 level_array[5][6] = ["MANSION", mansion_weird2, "mansion"]
 level_array[5][7] = ["STRONGCOLD", strongcold_10, "strongcold"]
 level_array[5][8] = ["EXIT", exit_1, "exit"]
+
+level_array[6][0] = ["OLD SEWER", floor4_room0, "old sewer"]
 
 toppin_info[0] = [0, spr_toppinshroom] // image_index, sprite
 toppin_info[1] = [0, spr_toppincheese]
