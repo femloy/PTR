@@ -3,7 +3,7 @@ if !global.panic
 	for(var i = 0; i < array_length(room_arr); i++)
 	{
 		var b = room_arr[i]
-		if room == b[0] && !(global.gameplay != gameplay.remix && array_length(b) > 4 && b[4] == true)
+		if room == b[0] && !(global.gameplay != gameplay.remix && array_length(b) > 5 && b[5] == true)
 		{
 			var prevmusic = music
 			music = b[1]
@@ -16,6 +16,17 @@ if !global.panic
 				if b[3]
 					audio_sound_set_track_position(musicID, audio_sound_get_track_position(prevmuID))
 				audio_stop_sound(prevmuID)
+			}
+			
+			if check_race() && !global.racestarted
+			{
+				if array_length(b) > 4
+				{
+					racemusicID = scr_music(b[4])
+					audio_stop_sound(musicID)
+				}
+				else
+					racemusicID = musicID
 			}
 			
 			audio_stop_sound(secretmusicID)
