@@ -51,6 +51,7 @@
   "creationCodeFile": "${project_dir}/rooms/floor4_roomportal/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
+<<<<<<< Updated upstream
     {"name":"inst_BF4C770E","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
     {"name":"inst_43FFE576","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
     {"name":"inst_C8A353EE","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
@@ -62,6 +63,18 @@
     {"name":"inst_E4E7179E","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
     {"name":"inst_799B8506","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
     {"name":"inst_797F98A","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+=======
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+    {"name":"floor4_roomportal","path":"rooms/floor4_roomportal/floor4_roomportal.yy",},
+>>>>>>> Stashed changes
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
