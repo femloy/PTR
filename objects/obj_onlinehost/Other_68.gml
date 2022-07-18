@@ -50,19 +50,9 @@ function received_packet_server(buffer, socket)
 			break;
 		
 		case network.player_sync:
-			var br = [];
-			br[0] = [buffer_u16, buffer_read(buffer, buffer_u16)]
-			br[1] = [buffer_bool, buffer_read(buffer, buffer_bool)]
-			br[2] = [buffer_s16, buffer_read(buffer, buffer_s16)]
-			br[3] = [buffer_s16, buffer_read(buffer, buffer_s16)]
-			br[4] = [buffer_u32, buffer_read(buffer, buffer_u32)]
-			br[5] = [buffer_u8, buffer_read(buffer, buffer_u8)]
-			br[6] = [buffer_string, buffer_read(buffer, buffer_string)]
-			br[7] = [buffer_s8, buffer_read(buffer, buffer_s8)]
-			br[8] = [buffer_s16, buffer_read(buffer, buffer_s16)]
-			br[9] = [buffer_string, buffer_read(buffer, buffer_string)]
-			br[10] = [buffer_string, buffer_read(buffer, buffer_string)]
-			br[11] = [buffer_u8, buffer_read(buffer, buffer_u8)]
+			var br = psyncarray;
+			for(var i = 0; i < array_length(br); i++)
+				br[i] = [br[i], buffer_read(buffer, br[i])];
 			
 			for(var i = 0; i < ds_list_size(socket_list); i++)
 			{

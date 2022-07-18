@@ -17,7 +17,7 @@ localpaused = false;
 
 global.racerank = 0;
 
-// figure out what to do with network data
+// network macros
 enum network
 {
 	player_hello,
@@ -32,3 +32,4 @@ enum network
 	race_start,
 	kill_object
 }
+#macro psyncarray [buffer_u16, buffer_bool, buffer_s16, buffer_s16, buffer_u32, buffer_u8, buffer_string, buffer_s8, buffer_s16, buffer_string, buffer_string, buffer_u8, buffer_u8]

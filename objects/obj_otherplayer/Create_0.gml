@@ -10,3 +10,7 @@ racepos = 0;
 done = false;
 baddiegrabbedID = noone;
 image_speed = 0;
+xscale = 1;
+
+badX = 0;
+badY = 0;
