@@ -144,7 +144,7 @@ function received_packet(buffer)
 					racepos = br[8];
 					baddiegrabbedID = br[9];
 					spr_palette = asset_get_index(br[10]);
-					paletteselect = asset_get_index(br[11]);
+					paletteselect = br[11];
 					state = br[12];
 					
 					done = player_room == rank_room;

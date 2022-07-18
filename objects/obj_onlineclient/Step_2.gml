@@ -45,16 +45,10 @@ else
 }
 
 // make race pos
-var dones = 0;
-
 var racepos_arr = [];
 array_push(racepos_arr, [-1, obj_player1.racepos]);
 with obj_otherplayer
-{
-	array_push(racepos_arr, [socket, racepos]);
-	if done
-		dones++;
-}
+	array_push(racepos_arr, [socket, racepos + (done * 160)]);
 array_sort(racepos_arr, function(a, b) {
     return b[1] - a[1];
 });
@@ -67,7 +61,7 @@ if room != rank_room
 	{
 		if racepos_arr[i][0] == -1
 		{
-			global.racerank = lerp(0, 4, (len - dones - i) / len);
+			global.racerank = lerp(0, 4, (len - i) / len);
 			break;
 		}
 	}
