@@ -48,7 +48,7 @@ room_arr = [
 	[kidsparty_1, mu_kidsparty, mu_tunnelysecret, false], 
 	[minigolf_1, mu_minigolf, mu_golfsecret, false], 
 	[industrial_1, mu_industrial, mu_factorysecret, false], 
-	[street_intro, mu_street, mu_medievalsecret, false], 
+	[street_intro, mu_street, mu_streetsecret, false], 
 	[farm_2, mu_farm, mu_farmsecret, false], 
 	[space_1, mu_pinball, mu_pinballsecret, false], 
 	[graveyard_1, mu_graveyard, mu_phantomsecret, false], 

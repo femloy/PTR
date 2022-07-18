@@ -26,7 +26,8 @@ function scr_pizzagoblin_throw()
         global.throw_data[obj_miniufo] = [3, spr_ufolive_shoot, 100];
         global.throw_data[obj_kentukybomber] = [7, spr_kentukybomber_attack, 100];
         global.throw_data[obj_miniufo_grounded] = [11, spr_ufogrounded_shoot, 100];
-		 global.throw_data[obj_trashOLD] = [2, spr_trash_throw, 100];
+		
+		global.throw_data[obj_trashOLD] = [2, spr_trash_throw, 100];
 	}
 	
 	hsp = 0

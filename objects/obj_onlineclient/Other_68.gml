@@ -142,7 +142,7 @@ function received_packet(buffer)
 					image_xscale = br[7];
 					racepos = br[8];
 					baddiegrabbedID = br[9];
-					sprite_index = asset_get_index(br[10]);
+					spr_palette = asset_get_index(br[10]);
 					paletteselect = asset_get_index(br[11]);
 					state = br[12];
 					
