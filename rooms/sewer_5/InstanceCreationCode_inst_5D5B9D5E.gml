@@ -1,2 +1,3 @@
-hsp = 0
-vsp = -1
+hsp = -1
+vsp = 0
+tube_angle = 0

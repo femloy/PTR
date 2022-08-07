@@ -77,11 +77,16 @@ with (obj_sausageman_dead)
 {
 	if (visible && bbox_in_camera(view_camera[0], 32))
 	{
-		if sprite_exists(spr_palette)
-			pal_swap_set(spr_palette, paletteselect, 0)
 		b = get_dark(image_blend, other.use_dark)
-		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, b, image_alpha)
-		pal_swap_reset()
+		if sprite_exists(spr_palette)
+		{
+			pal_swap_set(spr_palette, paletteselect, 0)
+			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, b, image_alpha)
+			pal_swap_reset()
+		}
+		else
+			draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, angle, b, image_alpha)
+
 	}
 }
 with (obj_heatafterimage)
