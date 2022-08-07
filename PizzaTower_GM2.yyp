@@ -3989,6 +3989,7 @@
     {"id":{"name":"hub_pubentrance","path":"rooms/hub_pubentrance/hub_pubentrance.yy",},"order":20,},
     {"id":{"name":"hub_plains","path":"rooms/hub_plains/hub_plains.yy",},"order":21,},
     {"id":{"name":"hub_entrancelobby","path":"rooms/hub_entrancelobby/hub_entrancelobby.yy",},"order":22,},
+    {"id":{"name":"mu_entrance_race","path":"sounds/mu_entrance_race/mu_entrance_race.yy",},"order":2,},
     {"id":{"name":"plage_shipmain","path":"rooms/plage_shipmain/plage_shipmain.yy",},"order":8,},
     {"id":{"name":"scr_retro_pal_swapper_utilities","path":"scripts/scr_retro_pal_swapper_utilities/scr_retro_pal_swapper_utilities.yy",},"order":1,},
     {"id":{"name":"sewer_12","path":"rooms/sewer_12/sewer_12.yy",},"order":5,},

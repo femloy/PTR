@@ -10,6 +10,7 @@ secretmusic = -4
 musicID = -4
 secretmusicID = -4
 pillarmusicID = -4
+racemusicID = noone
 secret = 0
 secretend = 0
 pillar_on_camera = 0
@@ -18,7 +19,7 @@ prevpillar_on_camera = 0
 room_arr = [
 	[Realtitlescreen, mu_title, mu_medievalsecret, false], 
 	[rm_levelselect, mu_title, mu_medievalsecret, false], 
-	[entrance_1, mu_entrance, mu_entrancesecret, false], 
+	[entrance_1, mu_entrance, mu_entrancesecret, false, mu_entrance_race], 
 	[dungeon_1, mu_dungeon, mu_dungeonsecret, false], 
 	[dungeon_8, mu_dungeon, mu_dungeonsecret, true], 
 	[dungeon_9, mu_dungeondepth, mu_dungeonsecret, true],
@@ -59,5 +60,5 @@ room_arr = [
 	[tower_finalhallway, mu_finalescape, mu_medievalsecret, false],
 	
 	[rm_onlinerace, mu_racehub, mu_medievalsecret, false],
-	[industrial_3, mu_industrial2, mu_factorysecret, true, true], // remix only
+	[industrial_3, mu_industrial2, mu_factorysecret, true, mu_industrial2, true], // remix only
 ]
