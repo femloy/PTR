@@ -28,7 +28,6 @@ if !pause && obj_player1.key_start
 		if check_race()
 		{
 			pause = true;
-			audio_pause_sound(obj_music.musicID);
 		}
 		else
 		{
@@ -68,10 +67,6 @@ if pause && !instance_exists(obj_option)
 		{
 			switch selected
 			{
-				case 0:
-					audio_resume_sound(obj_music.musicID);
-					break;
-				
 				case 1:
 					with obj_onlineclient
 					{

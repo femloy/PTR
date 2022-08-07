@@ -1,8 +1,7 @@
 countdown--;
 if countdown == 0
 {
-	with obj_music
-		musicID = scr_music(music);
+	audio_resume_sound(obj_music.musicID);
 	with obj_racebarrier
 		instance_destroy();
 }

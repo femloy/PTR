@@ -1,7 +1,5 @@
 function scr_playerreset()
 {
-	global.racestarted = false
-	
 	trace("playerreset")
 	global.lap = 0
 	global.laps = 0

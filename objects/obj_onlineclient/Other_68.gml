@@ -75,7 +75,6 @@ function received_packet(buffer)
 			break;
 		
 		case network.race_start:
-			global.racestarted = true;
 			instance_create(0, 0, obj_racecountdown);
 			break;
 		
@@ -174,17 +173,6 @@ function received_packet(buffer)
 					instance_destroy();
 			}
 			ds_list_add(global.saveroom, instid);
-			break;
-		
-		case network.play_sound:
-			var sock = buffer_read(buffer, buffer_u8);
-			var sound = buffer_read(buffer, buffer_u16);
-			
-			with obj_otherplayer
-			{
-				if socket == sock && player_room == room
-					scr_soundeffect(sound);
-			}
 			break;
 	}
 	buffer_delete(buffer);
