@@ -11,3 +11,4 @@ with badID
 	state = states.grabbed;
 	grabbedby = other.id;
 }
+xscale = image_xscale;

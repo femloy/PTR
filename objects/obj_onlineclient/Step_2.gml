@@ -5,6 +5,10 @@ if !connected
 
 with obj_player1
 {
+	var bad = baddiegrabbedID;
+	if !(state == states.grab or state == states.finishingblow or state == states.superslam)
+		bad = noone;
+	
 	packet_write(buffer_u8, network.player_sync);
 	packet_write(buffer_u16, room);
 	packet_write(buffer_bool, visible);
@@ -15,10 +19,17 @@ with obj_player1
 	packet_write(buffer_string, sprite_get_name(sprite_index));
 	packet_write(buffer_s8, xscale);
 	packet_write(buffer_s16, racepos);
-	packet_write(buffer_string, string(baddiegrabbedID));
+	packet_write(buffer_string, string(bad));
 	packet_write(buffer_string, sprite_get_name(spr_palette));
 	packet_write(buffer_u8, paletteselect);
+	packet_write(buffer_u8, state);
 	packet_send();
+	
+	if instance_exists(bad) && state != states.finishingblow
+	{
+		sync_var("badX", buffer_s8, bad.x - x);
+		sync_var("badY", buffer_s8, bad.y - y);
+	}
 }
 if safe_get(obj_pause, "pause")
 {
@@ -34,16 +45,10 @@ else
 }
 
 // make race pos
-var dones = 0;
-
 var racepos_arr = [];
 array_push(racepos_arr, [-1, obj_player1.racepos]);
 with obj_otherplayer
-{
-	array_push(racepos_arr, [socket, racepos]);
-	if done
-		dones++;
-}
+	array_push(racepos_arr, [socket, racepos + (done * 160)]);
 array_sort(racepos_arr, function(a, b) {
     return b[1] - a[1];
 });
@@ -56,7 +61,7 @@ if room != rank_room
 	{
 		if racepos_arr[i][0] == -1
 		{
-			global.racerank = lerp(0, 4, (len - dones - i) / len);
+			global.racerank = lerp(0, 4, (len - i) / len);
 			break;
 		}
 	}

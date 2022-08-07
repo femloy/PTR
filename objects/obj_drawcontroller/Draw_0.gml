@@ -22,6 +22,7 @@ if (finisher_alpha > 0)
 	draw_rectangle_color(-32, -32, (room_width + 32), (room_height + 32), c_black, c_black, c_black, c_black, 0)
 	draw_set_alpha(1)
 }
+
 var _kungfu = global.kungfu
 with (obj_baddie)
 {
@@ -104,18 +105,18 @@ with obj_otherplayer
 			draw_sprite_ext(sprite_index, -1, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 			pal_swap_reset();
 		}
-
+		
 		// username
 		draw_set_colour(c_white);
 		draw_set_font(global.font_small);
 		draw_set_align(fa_center, fa_top);
-
+		
 		var spritey = 0;
 		if sprite_exists(sprite_index)
 			spritey = sprite_get_bbox_top(sprite_index);
-
+		
 		var yy = clamp(spritey + y - 75, 0, room_height - 16);
-
+		
 		// draw it
 		draw_text(x, yy, name);
 	}
@@ -154,7 +155,7 @@ with (obj_baddie)
 with (obj_player)
 {
 	if (visible && flash && bbox_in_camera(view_camera[0], 32))
-		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, image_angle, image_blend, image_alpha)
+		draw_sprite_ext(sprite_index, image_index, x, y, xscale * scale_xs, yscale * scale_ys, image_angle, image_blend, image_alpha)
 }
 with (obj_deadjohnparent)
 {

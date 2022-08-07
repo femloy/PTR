@@ -75,6 +75,7 @@ function received_packet(buffer)
 			break;
 		
 		case network.race_start:
+			global.racestarted = true;
 			instance_create(0, 0, obj_racecountdown);
 			break;
 		
@@ -123,19 +124,10 @@ function received_packet(buffer)
 		
 		case network.player_sync:
 			var sock = buffer_read(buffer, buffer_u8);
-			var br = [];
-			br[0] = buffer_read(buffer, buffer_u16)
-			br[1] = buffer_read(buffer, buffer_bool)
-			br[2] = buffer_read(buffer, buffer_s16)
-			br[3] = buffer_read(buffer, buffer_s16)
-			br[4] = buffer_read(buffer, buffer_u32)
-			br[5] = buffer_read(buffer, buffer_u8)
-			br[6] = buffer_read(buffer, buffer_string)
-			br[7] = buffer_read(buffer, buffer_s8)
-			br[8] = buffer_read(buffer, buffer_s16)
-			br[9] = buffer_read(buffer, buffer_string)
-			br[10] = buffer_read(buffer, buffer_string)
-			br[11] = buffer_read(buffer, buffer_u8)
+			
+			var br = psyncarray;
+			for(var i = 0; i < array_length(br); i++)
+				br[i] = buffer_read(buffer, br[i]);
 			
 			with obj_otherplayer
 			{
@@ -151,8 +143,9 @@ function received_packet(buffer)
 					image_xscale = br[7];
 					racepos = br[8];
 					baddiegrabbedID = br[9];
-					sprite_index = asset_get_index(br[10]);
-					paletteselect = asset_get_index(br[11]);
+					spr_palette = asset_get_index(br[10]);
+					paletteselect = br[11];
+					state = br[12];
 					
 					done = player_room == rank_room;
 					sock = -9999;
@@ -181,6 +174,17 @@ function received_packet(buffer)
 					instance_destroy();
 			}
 			ds_list_add(global.saveroom, instid);
+			break;
+		
+		case network.play_sound:
+			var sock = buffer_read(buffer, buffer_u8);
+			var sound = buffer_read(buffer, buffer_u16);
+			
+			with obj_otherplayer
+			{
+				if socket == sock && player_room == room
+					scr_soundeffect(sound);
+			}
 			break;
 	}
 	buffer_delete(buffer);
