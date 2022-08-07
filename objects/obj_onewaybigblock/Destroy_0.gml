@@ -4,7 +4,7 @@ if (room == rm_editor)
 if (!in_saveroom(id))
 {
 	online_kill(id);
-	with (instance_create((x + 32), (y + 32), obj_sausageman_dead))
+	with (instance_create(x + sprite_width / 2, y + sprite_height / 2, obj_sausageman_dead))
 		sprite_index = spr_bigdoughblockdead
 	scr_sleep(5)
 	if (audio_is_playing(sfx_breakblock1) or audio_is_playing(sfx_breakblock2))
